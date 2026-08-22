@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Training Hub - Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "on-primary-fixed-variant": "#014788",
+                        "on-secondary-container": "#6b4500",
+                        "surface-tint": "#2b5fa1",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#400014",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary": "#825500",
+                        "on-surface": "#1a1c1c",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-background": "#1a1c1c",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "primary-fixed": "#d5e3ff",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dadada",
+                        "primary": "#00305f",
+                        "secondary-fixed": "#ffddb3",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "primary-container": "#004687",
+                        "on-surface-variant": "#424750",
+                        "outline-variant": "#c2c6d2",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "secondary-fixed-dim": "#ffb950",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-primary-container": "#87b6fe",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "tertiary-container": "#8f0037",
+                        "on-tertiary-container": "#ff95a8",
+                        "inverse-primary": "#a7c8ff",
+                        "background": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f3f3f4",
+                        "outline": "#737781",
+                        "surface-bright": "#f9f9f9",
+                        "on-primary-fixed": "#001b3b",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary-fixed": "#291800",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "tertiary": "#650025",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#feae23"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "diagonal-offset": "12deg",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "label-ui": ["JetBrains Mono"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "display-hero": ["Anton"],
+                        "data-metric": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal-bottom {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+        }
+        .clip-diagonal-top {
+            clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%);
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary border-b-2 border-secondary border-none lg:shadow-md">
+<div class="text-headline-md font-headline-md text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<nav class="hidden lg:flex gap-8 items-center">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</nav>
+<button class="hidden lg:block bg-secondary-fixed-dim text-on-secondary-fixed font-headline-lg font-bold uppercase px-6 py-2 rounded-none hover:bg-primary-container hover:text-on-primary transition-colors">
+            Register Now
+        </button>
+<button class="lg:hidden text-on-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<!-- Main Content -->
+<main>
+<!-- Hero / RIDE SMART -->
+<section class="relative min-h-[80vh] w-full flex items-center justify-center bg-primary clip-diagonal-bottom z-10 pt-20 pb-32">
+<div class="absolute inset-0 w-full h-full opacity-30 mix-blend-overlay">
+<div class="bg-cover bg-center w-full h-full" data-alt="A dynamic, high-contrast video loop style image of a cyclist pushing hard on a coastal road in Dar es Salaam at golden hour. The lighting is cinematic, casting long shadows. Elite performance aesthetic with deep royal blues and golden hues. Fast motion blur effect." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAd42fQ-Y4wMFkptMr5mI8Fso6N3ApB_-WmRaBzt1vkfVDy2sPCZYiIvMzCPeB2BSRp0ru3_ttehezkcbMnkXe12BTAB2kjdGZ7UAtq1ZhEMI342pwXB_hev8KNuRALMtc5Nbll4ARylXVA5ICFbxAXXUiO9AJGhtCEz5KRFRG0l652FxOrNNGCI7XsmJ-B0W3veRryyxCGRhYGEeXK7r-jQnyyH0dvMT1PHL_F6x-X7O78e39WH3MYzA')"></div>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2 flex flex-col gap-6">
+<h1 class="text-display-hero font-display-hero text-on-primary uppercase leading-none">
+                        RIDE <br/><span class="text-secondary-fixed-dim">SMART</span>
+</h1>
+<p class="text-body-lg font-body-md text-on-primary/90 max-w-lg border-l-4 border-secondary-fixed-dim pl-4">
+                        Master the coastal winds and elevation of the DSM route. Video guides, pro tips, and essential route intelligence.
+                    </p>
+<div class="flex gap-4 mt-4">
+<button class="bg-secondary-fixed-dim text-on-secondary-fixed font-headline-lg font-bold uppercase px-8 py-3 hover:bg-primary-container hover:text-on-primary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined">play_arrow</span> Watch Guides
+                        </button>
+</div>
+</div>
+<div class="md:w-1/2 w-full relative">
+<div class="absolute -inset-4 border-2 border-secondary-fixed-dim/50 translate-x-4 translate-y-4"></div>
+<div class="bg-cover bg-center w-full aspect-video border border-surface-dim relative overflow-hidden group" data-alt="A stylized, high-contrast map of the Dar es Salaam coastline route for a cycling race. The map uses deep navy blue backgrounds with vibrant gold and pink lines indicating the race path and elevation changes. Technical, editorial sports aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbQC3MB4r46QODCxrO6ijCW92gD9TDNlIT1ZUitkYS_phGieqiXpgDuWdtEK_2np7wv8scVo8lcNz1XU0iQXQq_D1MaungZ6696eU-zBsw6b_YxM7LTYvnCq2Qtp-yT0-DzpmWQrhoLqJf2IEHgf32nYRU08-6s4iQTVbw0E_kK1UwBZf17m46jH2nn4KM0lh0CXlFAMou7zFex3YUNdyaQiExYTiJe-mJ_6YxY9k0pC8ZeZGu8KQFaw')">
+<div class="absolute inset-0 bg-primary/40 group-hover:bg-transparent transition-colors duration-500"></div>
+<div class="absolute bottom-4 left-4 right-4 flex justify-between items-end">
+<div class="bg-primary px-4 py-2 text-on-primary font-label-ui text-label-ui uppercase tracking-widest border-l-2 border-secondary-fixed-dim">Route Intel</div>
+<button class="bg-white/10 backdrop-blur text-white p-2 hover:bg-white/20 transition-colors">
+<span class="material-symbols-outlined">fullscreen</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Expert Programs -->
+<section class="relative w-full py-32 bg-surface-container-lowest z-0 -mt-20">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6 border-b-2 border-primary pb-6">
+<h2 class="text-headline-lg font-headline-lg text-primary uppercase leading-none">
+                        Elite <br/>Coaching
+                    </h2>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-sm text-right">
+                        Structured training plans designed by professional cyclists to peak your performance for race day.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Plan Card 1 -->
+<div class="group relative bg-surface border border-outline-variant p-8 flex flex-col gap-6 hover:border-primary transition-colors">
+<div class="text-headline-md font-headline-md text-primary uppercase">Beginner / 50KM</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">speed</span>
+<span class="font-label-ui text-label-ui text-on-surface-variant uppercase">8 Weeks</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface">Build endurance and basic pack-riding skills. Perfect for first-time coastal riders.</p>
+<button class="mt-auto self-start border-2 border-primary text-primary font-headline-md font-bold uppercase px-6 py-2 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                            View Plan
+                        </button>
+</div>
+<!-- Plan Card 2 (Active/Featured) -->
+<div class="group relative bg-primary p-8 flex flex-col gap-6 transform md:-translate-y-4 shadow-2xl border border-secondary-fixed-dim">
+<div class="absolute top-0 right-0 bg-secondary-fixed-dim text-on-secondary-fixed font-label-ui text-label-ui uppercase px-3 py-1 font-bold">Popular</div>
+<div class="text-headline-md font-headline-md text-on-primary uppercase">Intermediate / 100KM</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-3xl">speed</span>
+<span class="font-label-ui text-label-ui text-on-primary/80 uppercase">12 Weeks</span>
+</div>
+<p class="text-body-md font-body-md text-on-primary/90">Focus on threshold power and pacing strategies for the challenging coastal headwinds.</p>
+<button class="mt-auto self-start bg-secondary-fixed-dim text-on-secondary-fixed font-headline-md font-bold uppercase px-6 py-2 hover:bg-white transition-colors">
+                            View Plan
+                        </button>
+</div>
+<!-- Plan Card 3 -->
+<div class="group relative bg-surface border border-outline-variant p-8 flex flex-col gap-6 hover:border-primary transition-colors">
+<div class="text-headline-md font-headline-md text-primary uppercase">Elite / 150KM</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary-container text-3xl">speed</span>
+<span class="font-label-ui text-label-ui text-on-surface-variant uppercase">16 Weeks</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface">High-intensity intervals, advanced nutrition strategies, and aggressive race tactics.</p>
+<button class="mt-auto self-start border-2 border-primary text-primary font-headline-md font-bold uppercase px-6 py-2 group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                            View Plan
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Nutrition Editorial -->
+<section class="relative w-full py-32 bg-primary clip-diagonal-top clip-diagonal-bottom z-20">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="col-span-1 md:col-span-5 flex flex-col gap-6 z-10">
+<h2 class="text-display-hero font-display-hero text-on-primary uppercase leading-tight">
+                            FUEL <br/><span class="text-tertiary-fixed-dim text-stroke">THE COAST</span>
+</h2>
+<p class="text-body-lg font-body-md text-on-primary/90 border-l-4 border-tertiary-fixed-dim pl-4">
+                            Tropical heat demands specific hydration and fueling strategies. Discover local nutrition hacks for peak endurance.
+                        </p>
+<button class="self-start mt-4 bg-transparent border-2 border-on-primary text-on-primary font-headline-md font-bold uppercase px-8 py-3 hover:bg-on-primary hover:text-primary transition-colors">
+                            Read Guide
+                        </button>
+</div>
+<div class="col-span-1 md:col-span-7 relative">
+<div class="absolute -inset-4 bg-tertiary-container translate-x-4 -translate-y-4"></div>
+<div class="bg-cover bg-center w-full aspect-[4/3] relative z-10 border border-primary" data-alt="Vibrant, high-contrast editorial photography of sports nutrition specific to a tropical coastal environment. Fresh coconuts, local fruits, and performance energy gels arranged aesthetically on a rough texture dark background. High saturation, dramatic lighting, premium athletic lifestyle feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDu-kPeBkd8G1dp758TYRtUknFmjm7qVroaEJgVPBN2DxSgNXanz1I-Ro6hFOBqhOZxWOzL6I_eSQwsZ-moeiWrV9TcnpWoj8tgTCZsIj3KwcyUGye7Oas-VptL_e3-D_tTEM0SaElaai3C1pcEdxEAmDZbgkasNS1WUewV2IiWpTFZSpHCfRA3Odw53X2jqOOiMVO7VepUYqSqj7nl7qSLMumeB6Hf79dTZxpO9EKK2mGotHq-MWriVw')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Leaderboard -->
+<section class="relative w-full py-32 bg-surface-container-lowest z-10 -mt-10">
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="text-headline-lg font-headline-lg text-primary uppercase">Community <span class="text-secondary">Effort</span></h2>
+<p class="font-label-ui text-label-ui text-on-surface-variant uppercase tracking-widest mt-4">Top Training Milestones</p>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Header -->
+<div class="grid grid-cols-12 gap-4 px-6 py-3 border-b-2 border-primary font-label-ui text-label-ui text-on-surface-variant uppercase">
+<div class="col-span-2 md:col-span-1">Rank</div>
+<div class="col-span-6 md:col-span-5">Rider</div>
+<div class="col-span-4 md:col-span-3 text-right">Distance (KM)</div>
+<div class="hidden md:block md:col-span-3 text-right">Elevation (M)</div>
+</div>
+<!-- Row 1 -->
+<div class="grid grid-cols-12 gap-4 px-6 py-4 bg-surface-container-high border-l-4 border-secondary-fixed-dim items-center">
+<div class="col-span-2 md:col-span-1 font-headline-md font-bold text-primary text-2xl">1</div>
+<div class="col-span-6 md:col-span-5 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center font-bold">AK</div>
+<span class="font-bold text-on-surface">Amani K.</span>
+</div>
+<div class="col-span-4 md:col-span-3 text-right font-data-metric text-data-metric text-primary">1,240</div>
+<div class="hidden md:block md:col-span-3 text-right font-body-md text-on-surface-variant">8,400</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-12 gap-4 px-6 py-4 bg-surface items-center border-b border-surface-dim">
+<div class="col-span-2 md:col-span-1 font-headline-md font-bold text-on-surface-variant text-xl">2</div>
+<div class="col-span-6 md:col-span-5 flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container-highest text-on-surface flex items-center justify-center font-bold">SJ</div>
+<span class="font-bold text-on-surface">Sarah J.</span>
+</div>
+<div class="col-span-4 md:col-span-3 text-right font-data-metric text-data-metric text-on-surface text-3xl">1,105</div>
+<div class="hidden md:block md:col-span-3 text-right font-body-md text-on-surface-variant">7,200</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-12 gap-4 px-6 py-4 bg-surface items-center border-b border-surface-dim">
+<div class="col-span-2 md:col-span-1 font-headline-md font-bold text-on-surface-variant text-xl">3</div>
+<div class="col-span-6 md:col-span-5 flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-container-highest text-on-surface flex items-center justify-center font-bold">MR</div>
+<span class="font-bold text-on-surface">Michael R.</span>
+</div>
+<div class="col-span-4 md:col-span-3 text-right font-data-metric text-data-metric text-on-surface text-3xl">980</div>
+<div class="hidden md:block md:col-span-3 text-right font-body-md text-on-surface-variant">6,100</div>
+</div>
+</div>
+<div class="text-center mt-8">
+<button class="bg-transparent border-b-2 border-primary text-primary font-label-ui text-label-ui uppercase pb-1 hover:text-secondary hover:border-secondary transition-colors">
+                        View Full Standings
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<div class="flex flex-wrap justify-center gap-6 mt-4">
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</div>
+<div class="text-body-md font-body-md text-on-primary/50 mt-8">
+            © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+        </div>
+</footer>
+<!-- BottomNavBar for Mobile (Conditional based on JSON relevance) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container h-full w-full" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="text-[10px] font-label-ui uppercase">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container h-full w-full" href="#">
+<span class="material-symbols-outlined mb-1">calendar_today</span>
+<span class="text-[10px] font-label-ui uppercase">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary active:scale-95 transition-transform h-full w-full bg-primary-container/20" href="#">
+<span class="material-symbols-outlined mb-1">fitness_center</span>
+<span class="text-[10px] font-label-ui uppercase font-bold">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container h-full w-full" href="#">
+<span class="material-symbols-outlined mb-1">account_circle</span>
+<span class="text-[10px] font-label-ui uppercase">Profile</span>
+</a>
+</nav>
+</body></html>

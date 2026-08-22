@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary DSM - Training Leaderboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f9f9f9",
+                        "outline-variant": "#c2c6d2",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "tertiary-container": "#8f0037",
+                        "on-secondary-fixed": "#291800",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-secondary-container": "#6b4500",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "surface-container": "#eeeeee",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-fixed": "#001b3b",
+                        "inverse-on-surface": "#f0f1f1",
+                        "inverse-primary": "#a7c8ff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-fixed-variant": "#014788",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#feae23",
+                        "secondary": "#825500",
+                        "surface-bright": "#f9f9f9",
+                        "surface": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "surface-tint": "#2b5fa1",
+                        "surface-container-low": "#f3f3f4",
+                        "tertiary": "#650025",
+                        "outline": "#737781",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "primary-fixed": "#d5e3ff",
+                        "on-surface-variant": "#424750",
+                        "secondary-fixed": "#ffddb3",
+                        "secondary-fixed-dim": "#ffb950",
+                        "primary-container": "#004687",
+                        "on-secondary-fixed-variant": "#624000",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-container": "#87b6fe",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ff95a8",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#00305f",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary-fixed": "#400014"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-ui": ["JetBrains Mono"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "data-metric": ["Anton"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 0, 100% 4vw, 100% 100%, 0 100%);
+        }
+        .watermark {
+            opacity: 0.05;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary text-on-primary">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">TOUR DE ROTARY DSM</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex gap-8 items-center text-label-ui font-label-ui">
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-secondary border-b-2 border-secondary pb-1 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+<button class="bg-secondary text-primary font-display-hero uppercase px-6 py-2 rounded-none hover:bg-primary-container hover:text-on-primary transition-colors">Register Now</button>
+</div>
+</nav>
+<!-- SideNavBar (Desktop - Hidden for this focused canvas, relying on Top Nav) -->
+<!-- Main Content Canvas -->
+<main class="w-full">
+<!-- Hero Section - Broken Grid -->
+<section class="relative w-full pt-16 pb-32 px-margin-desktop flex flex-col md:flex-row items-center justify-between z-10 bg-surface-container-lowest">
+<div class="absolute inset-0 watermark flex items-center justify-center">
+<span class="material-symbols-outlined text-[40vw] text-primary" style="font-variation-settings: 'FILL' 1;">directions_bike</span>
+</div>
+<div class="w-full md:w-5/12 z-20 relative">
+<h1 class="font-display-hero text-display-hero text-primary uppercase leading-none mb-6">COMMUNITY<br/>TRAINING</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-md">The road to Dar es Salaam is paved with consistency. Track your weekly kilometers, celebrate milestones, and ride alongside the community.</p>
+<!-- Filters (Input Fields Style) -->
+<div class="flex gap-6 mt-8 border-b-2 border-primary pb-2 w-full max-w-sm">
+<label class="font-label-ui text-label-ui text-primary uppercase cursor-pointer flex items-center gap-2">
+<input checked="" class="text-secondary focus:ring-secondary border-outline-variant bg-transparent" name="activity" type="radio"/> All
+                    </label>
+<label class="font-label-ui text-label-ui text-on-surface-variant uppercase cursor-pointer flex items-center gap-2">
+<input class="text-secondary focus:ring-secondary border-outline-variant bg-transparent" name="activity" type="radio"/> Cycling
+                    </label>
+<label class="font-label-ui text-label-ui text-on-surface-variant uppercase cursor-pointer flex items-center gap-2">
+<input class="text-secondary focus:ring-secondary border-outline-variant bg-transparent" name="activity" type="radio"/> Running
+                    </label>
+</div>
+</div>
+<!-- Asymmetric Image Offset -->
+<div class="w-full md:w-6/12 mt-12 md:mt-0 z-10">
+<div class="w-full h-[500px] bg-primary relative clip-diagonal">
+<img class="w-full h-full object-cover opacity-90 mix-blend-luminosity" data-alt="A dynamic, high-contrast photograph of cyclists riding along a sunlit coastal road during golden hour. The image features a vibrant blue sky, warm sunlight hitting the athletes, and a strong sense of motion. The style is premium sports editorial, characterized by sharp focus, vivid colors, and an inspiring, active mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdMb_2VUoQO1hSulaKRs39E4b1nhBazL3xDHeWCM-vARNz4mIcy1vUti9hLWzXCE4UbCDpuy7QDjeqw-os1pY1l1wxk_q-AAP8uKcggErYJxt8uc2YRQxFLuh5oDWMe6JmF08M7GPHZbroU22QyXkjBLXa8imamYocQle6siTIjSeX23_HN5pPUmbySa9U4BeyJ_OGRp5tNRcUUe3Ax__PEqacAw4fXOMxoNQqYekT8kLGAEi8M9W8sg"/>
+<!-- Floating Data Card -->
+<div class="absolute bottom-8 left-8 bg-surface-container-lowest p-6 border-l-4 border-secondary max-w-[280px]">
+<p class="font-label-ui text-label-ui text-on-surface-variant uppercase mb-2">Community Total</p>
+<p class="font-data-metric text-data-metric text-primary">14,205 KM</p>
+<p class="font-body-md text-body-md text-tertiary-container mt-1 font-bold">+2,400 KM this week</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Leaderboard Section - High Contrast -->
+<section class="w-full bg-primary py-24 px-margin-desktop clip-diagonal-reverse relative z-20 -mt-12">
+<div class="max-w-6xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-primary uppercase">Weekly Leaders</h2>
+<p class="font-label-ui text-label-ui text-secondary">Updated 2 hours ago</p>
+</div>
+<!-- Leaderboard Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Top 3 Podium (Span 4 cols) -->
+<div class="md:col-span-5 flex flex-col gap-4">
+<!-- #1 Rider -->
+<div class="bg-secondary p-6 flex items-center gap-6 relative overflow-hidden group">
+<div class="absolute right-[-20px] top-[-20px] text-on-secondary opacity-10 font-display-hero text-[120px] leading-none transition-transform group-hover:scale-110">1</div>
+<div class="w-16 h-16 rounded-full bg-surface-container-lowest overflow-hidden border-2 border-primary shrink-0 z-10">
+<img class="w-full h-full object-cover grayscale mix-blend-multiply" data-alt="A close-up portrait of an athletic cyclist wearing sunglasses and a vibrant jersey, smiling confidently. The lighting is bright and outdoor, emphasizing fitness and energy. The aesthetic aligns with high-end sports lifestyle photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfZIPOf9cZ2_vdEH8FHu8UegGs64YjmMfE8xVcIm7GTygSRiECgxuVw1GAEr6IogFznSeKeS3qQ4XghJiKbyKQua7Sqr2HLN8IcELQs96Bt3PLAE5G0vOtnDxruneVD-CKqwF9901dJbTuoAKyAkC2OiSpS1eO7Odv50anJJXQAVNBlI0QqXlvUvVbKwvfzwvGotQx5R-n1yVAuIMGOEzWEQf8p8AgHYzAJFEhwwGIxe3TK-vE56QmEw"/>
+</div>
+<div class="z-10 flex-1">
+<p class="font-headline-md text-headline-md text-on-secondary leading-none mb-1">Rider_Zero</p>
+<div class="flex items-center gap-3 font-label-ui text-label-ui text-on-secondary opacity-90">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">directions_bike</span> 420 km</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">local_fire_department</span> 5 days</span>
+</div>
+</div>
+<div class="z-10 shrink-0 text-primary">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+</div>
+<!-- #2 Rider -->
+<div class="bg-surface-container-lowest p-6 flex items-center gap-6 border-l-4 border-surface-dim">
+<div class="font-display-hero text-headline-md text-surface-dim w-8 text-center shrink-0">2</div>
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A candid profile shot of a female runner in a coastal setting, looking determined. Bright, natural lighting with a blurred background to focus on the subject. Clean, crisp sports editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2YTeY4sv8KcWr2LD26otuvtmOYUn6OoAkwWrFffqz6-SQ1XPoW-VOdhG9R4fC_iSZzoT4A0aaIpNDauT-3V_zpFjV47RRo-787TkjzwUO2C6qgFVFv0F0acuk1h597roAb5JSHPWyJdOz127mapUVtgaMMWfpWm78kWrEBaMpXYJ8Jqi6CLtyczuSeorB_D-ReXdjZ_s4mvHGqwU2kVR0EkIhQlz2bf0SjRr2Qx6A4M-inTs4BWBDhg"/>
+</div>
+<div class="flex-1">
+<p class="font-headline-md text-[24px] text-primary leading-none mb-1">CoastalCruiser</p>
+<p class="font-label-ui text-label-ui text-on-surface-variant">385 km • 4 days</p>
+</div>
+<div class="shrink-0 text-secondary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+<!-- #3 Rider -->
+<div class="bg-surface-container-lowest p-6 flex items-center gap-6 border-l-4 border-surface-dim">
+<div class="font-display-hero text-headline-md text-surface-dim w-8 text-center shrink-0">3</div>
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="An action shot of a cyclist's legs and bike gears moving rapidly. Dynamic blur effect on the wheels to suggest high speed. Gritty, high-contrast athletic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfb3OcA34CfAfyuzqHjGUa-DwfVk_ZLLv6Om8zuvavmxKC7XzRqLPtpK2--XsjOXvnl2JLMXMTrtNlkCqJrNJxua7eMjk0YsE6zPYzDyvWHtfl3GDS-Y2NF6bi2R3gnwpXK8kDXV_xIwApxTKvE-uGTNiBWmAEDQ8O8BULjATWKqKj1zBs351RR0dE0-44zkDim6zhSn4svSPCq3yiqkxCtmTqYlEpZU4Oknbq4BtZ2TDkMYKoB4Znzw"/>
+</div>
+<div class="flex-1">
+<p class="font-headline-md text-[24px] text-primary leading-none mb-1">DSM_Spinner</p>
+<p class="font-label-ui text-label-ui text-on-surface-variant">360 km • 6 days</p>
+</div>
+<div class="shrink-0 text-surface-dim">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</div>
+</div>
+<!-- The Pack (Span 7 cols) -->
+<div class="md:col-span-7 bg-surface-container-lowest p-8 border-t-[12px] border-secondary">
+<h3 class="font-label-ui text-label-ui text-on-surface-variant uppercase mb-6 tracking-widest border-b border-surface-variant pb-2">The Peloton (4-10)</h3>
+<div class="flex flex-col gap-4">
+<!-- Rider 4 -->
+<div class="flex items-center justify-between group hover:bg-surface-container-low p-2 transition-colors">
+<div class="flex items-center gap-4">
+<span class="font-label-ui text-label-ui text-on-surface-variant w-6 text-right">4.</span>
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-ui text-xs">AK</span>
+<span class="font-body-md text-body-md text-primary font-bold">Amani K.</span>
+</div>
+<div class="flex items-center gap-6 font-label-ui text-label-ui text-on-surface-variant">
+<span class="w-16 text-right font-bold text-primary">312 km</span>
+<div class="flex gap-1 text-secondary opacity-80" title="Milestones">
+<span class="material-symbols-outlined text-[16px]">local_cafe</span>
+<span class="material-symbols-outlined text-[16px]">sunny</span>
+</div>
+</div>
+</div>
+<!-- Rider 5 -->
+<div class="flex items-center justify-between group hover:bg-surface-container-low p-2 transition-colors">
+<div class="flex items-center gap-4">
+<span class="font-label-ui text-label-ui text-on-surface-variant w-6 text-right">5.</span>
+<span class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center font-label-ui text-xs">SJ</span>
+<span class="font-body-md text-body-md text-primary font-bold">Sam J.</span>
+</div>
+<div class="flex items-center gap-6 font-label-ui text-label-ui text-on-surface-variant">
+<span class="w-16 text-right font-bold text-primary">298 km</span>
+<div class="flex gap-1 text-secondary opacity-80">
+<span class="material-symbols-outlined text-[16px]">speed</span>
+</div>
+</div>
+</div>
+<!-- Rider 6 -->
+<div class="flex items-center justify-between group hover:bg-surface-container-low p-2 transition-colors">
+<div class="flex items-center gap-4">
+<span class="font-label-ui text-label-ui text-on-surface-variant w-6 text-right">6.</span>
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A small avatar image of a person smiling with a scenic ocean background. Bright and vibrant colors, casual sports style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByyH4722OfzF9Z_fUVws2tXb0rFAZ-_Te9B9IbwIrqTneNTObZIjqhbKIh864azRFwWjTNcIFE1kFywSmEc7b9tIxEHe3bNtbmCGJzT0O7t7cJWP3RDpQ6XqDvuknTcku2D1sTOoMcTE2gAKrsL927a0WNyzBaAC5hdm-dSjhA_p10AFZYQxUjh-cag11iLXsTTXbgLPg27pni_btD6CS7yQFq7cvoQ2FRNO7lbHbvAm33sx-xVUa6hA"/>
+</div>
+<span class="font-body-md text-body-md text-primary font-bold">Elena R.</span>
+</div>
+<div class="flex items-center gap-6 font-label-ui text-label-ui text-on-surface-variant">
+<span class="w-16 text-right font-bold text-primary">275 km</span>
+<div class="flex gap-1 text-secondary opacity-80">
+<span class="material-symbols-outlined text-[16px]">waves</span>
+</div>
+</div>
+</div>
+<!-- Rider 7 -->
+<div class="flex items-center justify-between group hover:bg-surface-container-low p-2 transition-colors">
+<div class="flex items-center gap-4">
+<span class="font-label-ui text-label-ui text-on-surface-variant w-6 text-right">7.</span>
+<span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-ui text-xs">MW</span>
+<span class="font-body-md text-body-md text-primary font-bold">Musa W.</span>
+</div>
+<div class="flex items-center gap-6 font-label-ui text-label-ui text-on-surface-variant">
+<span class="w-16 text-right font-bold text-primary">240 km</span>
+<div class="flex gap-1 text-secondary opacity-80">
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-center">
+<button class="bg-transparent border-2 border-primary text-primary font-headline-md text-[18px] uppercase px-8 py-3 hover:bg-primary hover:text-on-primary transition-colors">View Full Leaderboard</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Feed - Glassmorphism / Image heavy -->
+<section class="w-full py-24 px-margin-desktop bg-surface-container-highest relative z-10 -mt-16 pt-32">
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase mb-12 max-w-4xl">On The Road<br/><span class="text-secondary">Community Moments</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Feed Item 1 -->
+<div class="relative h-[400px] group overflow-hidden bg-primary">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 mix-blend-luminosity" data-alt="A wide-angle landscape photo of a group of cyclists taking a break on a hill overlooking the ocean at sunrise. The lighting is warm and golden. The mood is triumphant and communal. High-contrast, vibrant, and energetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBD1cvU8QvLj_3juZuN09WZ7HIen3wsyaHZ02LdZCuxTCzQ-zGmHErJRtYCZhUU-VR7fNGfd5y05n6nCPat0kznnJ0aLfdy8Vk8iC1gtUBcs7ccZFaH_CwzqlmUrSUmRal-S7MzkKxWOZzaN4JNf6y1fgW0tmQOEDvO4VHhfuOknqHw1wb_2-a9HpTjDx9dNJwD-nRluX8fMEsMBrN-mYHgoiNvr10T2OxnndNFex2ybUP2RRd4YMQGVQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 text-on-primary">
+<div class="flex items-center gap-3 mb-2">
+<span class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center font-label-ui text-xs text-primary">RZ</span>
+<span class="font-label-ui text-label-ui opacity-90">Rider_Zero</span>
+</div>
+<p class="font-body-md text-body-md font-bold">Morning intervals by the coast. Getting those legs ready for the big push! 🌊🚴‍♂️</p>
+</div>
+</div>
+<!-- Feed Item 2 -->
+<div class="relative h-[400px] group overflow-hidden bg-primary md:mt-12">
+<img class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700 mix-blend-luminosity" data-alt="A close-up shot of a bicycle computer mounted on handlebars displaying impressive statistics (like 100km distance). Background is blurred moving asphalt. Gritty, high-performance aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqgee9dXrLQPYwcVk8kcEhIceM2j5yd-v3xMPJTaUGAgD4wGeJxb7qB39SAGZTDxyn1VG3_VFThBoSATTY6GzpKUcS_Qd0D5EYUppvjpXs9y_J8hg_mudqo1QXsdNP0Sdv88nKexY1Cm_Qruyg7GggBRpBwJrL-1f39G3XE4zwE5yq1-XKNA93zaT46EK1R4jA-8Eamivi2fuEYsjEkRGezECUO0M47quABp94TIfAFNpW-B54j7Hwhg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-6 text-on-primary">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Avatar portrait of CoastalCruiser runner." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPKkmi7ek9arlg56I-M9p-wofAq_qz1H5c5PXhgJrfQ9ht73W7XMf1IQcF0ChtX9Obn83OcxWfPeS3gmblAOrPA1Il0Rb50Px3U_jef-92w8fU3U3UXoUmiRNWY1k6hT8dimwqJKbDt669vWe07LcEs0WJv_zdQiA-pXUzN_d6IkWXRzXHWgWaeFxs3kUb0dWIlIKLe-bXD1qFxo_QavwSbA0VrvJ3mk0BBULMr4AUOKAwD2vx7fSuwg"/>
+</div>
+<span class="font-label-ui text-label-ui opacity-90">CoastalCruiser</span>
+</div>
+<p class="font-body-md text-body-md font-bold">First century ride of the season! The headwind was brutal but we pushed through.</p>
+</div>
+</div>
+<!-- Feed Item 3 -->
+<div class="relative h-[400px] group overflow-hidden bg-tertiary-container flex flex-col justify-center p-8 border-r-4 border-secondary">
+<span class="material-symbols-outlined text-[80px] text-tertiary-fixed mb-4 opacity-50">hotel_class</span>
+<h3 class="font-headline-md text-headline-md text-on-tertiary uppercase leading-tight mb-2">Milestone Unlocked</h3>
+<p class="font-body-lg text-body-lg text-tertiary-fixed-dim">The community just surpassed 50,000 Total Kilometers mapped this month!</p>
+<button class="mt-8 self-start bg-tertiary text-on-tertiary font-label-ui text-label-ui uppercase px-6 py-2 border border-tertiary-fixed hover:bg-tertiary-fixed hover:text-tertiary transition-colors">Join The Ride</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-ui text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-ui text-[10px]">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary active:bg-primary-container p-2 scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<span class="font-label-ui text-[10px] font-bold">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-label-ui text-[10px]">Profile</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary pb-24 lg:pb-12">
+<div class="text-headline-md font-headline-lg text-on-primary">TOUR DE ROTARY DSM</div>
+<div class="flex flex-wrap justify-center gap-6 font-label-ui text-label-ui">
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</div>
+<div class="font-body-md text-body-md text-on-primary opacity-50 mt-4">
+            © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+        </div>
+</footer>
+</body></html>

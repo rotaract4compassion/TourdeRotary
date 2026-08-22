@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed": "#291800",
+                      "outline-variant": "#c2c6d2",
+                      "surface-container-low": "#f3f3f4",
+                      "inverse-surface": "#2f3131",
+                      "surface": "#f9f9f9",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed": "#ffddb3",
+                      "on-primary-fixed": "#001b3b",
+                      "on-surface-variant": "#424750",
+                      "on-tertiary-fixed-variant": "#900038",
+                      "on-error": "#ffffff",
+                      "background": "#f9f9f9",
+                      "primary-container": "#004687",
+                      "on-tertiary-fixed": "#400014",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed-dim": "#ffb950",
+                      "on-secondary-container": "#6b4500",
+                      "inverse-primary": "#a7c8ff",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "surface-container": "#eeeeee",
+                      "secondary": "#825500",
+                      "surface-container-high": "#e8e8e8",
+                      "outline": "#737781",
+                      "on-secondary-fixed-variant": "#624000",
+                      "error": "#ba1a1a",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-bright": "#f9f9f9",
+                      "on-tertiary-container": "#ff95a8",
+                      "on-primary-fixed-variant": "#014788",
+                      "on-primary-container": "#87b6fe",
+                      "on-surface": "#1a1c1c",
+                      "tertiary-container": "#8f0037",
+                      "primary-fixed": "#d5e3ff",
+                      "tertiary-fixed": "#ffd9de",
+                      "on-tertiary": "#ffffff",
+                      "primary": "#00305f",
+                      "on-background": "#1a1c1c",
+                      "tertiary-fixed-dim": "#ffb2be",
+                      "surface-tint": "#2b5fa1",
+                      "surface-container-highest": "#e2e2e2",
+                      "error-container": "#ffdad6",
+                      "secondary-container": "#feae23",
+                      "surface-variant": "#e2e2e2",
+                      "surface-dim": "#dadada",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#650025",
+                      "inverse-on-surface": "#f0f1f1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "unit": "8px",
+                      "margin-desktop": "64px",
+                      "diagonal-offset": "12deg",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Anton"
+                      ],
+                      "data-metric": [
+                              "Anton"
+                      ],
+                      "display-hero": [
+                              "Anton"
+                      ],
+                      "label-ui": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg-mobile": [
+                              "Anton"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "data-metric": [
+                              "48px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero": [
+                              "96px",
+                              {
+                                      "lineHeight": "90%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%);
+        }
+        @media (max-width: 1024px) {
+            .clip-diagonal {
+                clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface h-full flex flex-col lg:flex-row font-body-md text-on-surface antialiased overflow-hidden">
+<!-- Left Side: Cinematic Visual (Hidden on smaller screens, prominent on lg) -->
+<div class="relative lg:w-3/5 h-[409px] lg:h-full overflow-hidden order-1 lg:order-2 clip-diagonal lg:clip-diagonal-none z-10 lg:z-0 shadow-lg lg:shadow-none bg-primary">
+<!-- Using a placeholder image tailored to the prompt's athletic/urban vibe -->
+<div class="absolute inset-0 bg-cover bg-center w-full h-full mix-blend-overlay opacity-80" data-alt="Dynamic, high-contrast action shot of elite runners and cyclists speeding through the golden hour sunlit streets of Dar es Salaam. The scene is energetic and gritty, capturing the heat and motion of an urban marathon. Deep coastal blues and rich golden light dominate the color palette, matching a premium, performance-driven editorial aesthetic. Cinematic depth of field with motion blur on the background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAY7zpd9kXquInyBxfXN28siLUgCtZWKFq0SUaMLiUA26ibyPtkTAMWD4o-W_N9BW9-y-qB6b-ou2lrxAmDT_NTD6aOKJFPGJdON59BpLmuQtrseLrYAt5plx8la5orsn5Vpo3X5BEcXMwcNMieIlF5ZzxHRc4bFezH-ndbQxxVL4qKSDYdjza76Juhsg7cHuox4xgVXs-oW5eN42jueaD-RTVYTFfTewGvsuCs1wKL7JBCnpoJNeT3XQ')"></div>
+<!-- Overlay for brand identity -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent flex flex-col justify-end p-margin-mobile lg:p-margin-desktop">
+<h1 class="text-display-hero font-display-hero text-on-primary uppercase max-w-2xl leading-none">
+                Own The<br/><span class="text-secondary-fixed">Route.</span>
+</h1>
+<p class="text-body-lg font-body-lg text-on-primary/90 mt-6 max-w-lg">
+                Join the ultimate urban endurance challenge. Tour de Rotary DSM awaits your return.
+            </p>
+</div>
+</div>
+<!-- Right Side: Login Form Canvas -->
+<div class="lg:w-2/5 h-[614px] lg:h-full bg-surface-container-lowest flex flex-col order-2 lg:order-1 relative z-20">
+<!-- Back to Home Action -->
+<div class="absolute top-0 left-0 p-margin-mobile lg:p-margin-desktop w-full flex justify-between items-center bg-surface-container-lowest/90 backdrop-blur-sm z-30">
+<a class="flex items-center gap-2 text-primary hover:text-secondary transition-colors group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
+<span class="text-label-ui font-label-ui uppercase tracking-widest">Back to Start</span>
+</a>
+<!-- Simplified Brand Anchor -->
+<span class="text-headline-md font-headline-md text-primary uppercase tracking-tighter">TOUR DE ROTARY</span>
+</div>
+<!-- Form Container -->
+<div class="flex-1 flex flex-col justify-center px-margin-mobile lg:px-margin-desktop pt-24 lg:pt-0 max-w-xl w-full mx-auto overflow-y-auto">
+<div class="mb-12">
+<h2 class="text-headline-lg font-headline-lg text-primary uppercase mb-2">Welcome Back</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Log in to track your training, manage events, and view race stats.</p>
+</div>
+<form action="#" class="space-y-8" method="POST">
+<!-- Email Field -->
+<div class="relative group">
+<label class="block text-label-ui font-label-ui text-primary uppercase mb-2 group-focus-within:text-secondary transition-colors" for="email">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-primary text-body-lg font-body-lg text-on-surface focus:ring-0 focus:border-secondary px-0 py-2 placeholder:text-outline-variant transition-colors" id="email" name="email" placeholder="rider@tourderotary.com" required="" type="email"/>
+</div>
+<!-- Password Field -->
+<div class="relative group">
+<div class="flex justify-between items-baseline mb-2">
+<label class="block text-label-ui font-label-ui text-primary uppercase group-focus-within:text-secondary transition-colors" for="password">Password</label>
+<a class="text-label-ui font-label-ui text-outline hover:text-secondary transition-colors underline decoration-1 underline-offset-4" href="#">Forgot Password?</a>
+</div>
+<input class="w-full bg-transparent border-0 border-b-2 border-primary text-body-lg font-body-lg text-on-surface focus:ring-0 focus:border-secondary px-0 py-2 placeholder:text-outline-variant transition-colors" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+<!-- Actions -->
+<div class="pt-4">
+<button class="w-full bg-secondary text-on-secondary text-headline-md font-headline-lg uppercase py-4 px-8 rounded-none hover:bg-primary transition-colors flex justify-between items-center group" type="submit">
+<span>Login</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Social Login Divider -->
+<div class="mt-12 mb-8 flex items-center gap-4">
+<div class="h-px bg-outline-variant flex-1"></div>
+<span class="text-label-ui font-label-ui text-outline-variant uppercase">Or Connect With</span>
+<div class="h-px bg-outline-variant flex-1"></div>
+</div>
+<!-- Social Login Buttons -->
+<div class="grid grid-cols-2 gap-4 pb-margin-mobile">
+<button class="flex items-center justify-center gap-3 py-3 px-4 border-2 border-primary text-primary hover:bg-primary hover:text-on-primary transition-colors rounded-none text-label-ui font-label-ui uppercase">
+<!-- Simple CSS Icon representation for Google -->
+<span class="w-5 h-5 rounded-full border-2 border-current block"></span>
+                    Google
+                </button>
+<button class="flex items-center justify-center gap-3 py-3 px-4 border-2 border-primary text-primary hover:bg-primary hover:text-on-primary transition-colors rounded-none text-label-ui font-label-ui uppercase">
+<!-- Simple CSS Icon representation for FB -->
+<span class="w-5 h-5 flex items-center justify-center font-bold font-sans">f</span>
+                    Facebook
+                </button>
+</div>
+<p class="text-center text-body-md font-body-md text-on-surface-variant mt-auto lg:mt-8 pb-8 lg:pb-0">
+                New to the route? <a class="text-secondary font-bold hover:underline underline-offset-4" href="#">Register here</a>
+</p>
+</div>
+</div>
+</body></html>

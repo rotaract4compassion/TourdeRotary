@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary DSM - Email Verification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#291800",
+                        "outline-variant": "#c2c6d2",
+                        "surface-container-low": "#f3f3f4",
+                        "inverse-surface": "#2f3131",
+                        "surface": "#f9f9f9",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#ffddb3",
+                        "on-primary-fixed": "#001b3b",
+                        "on-surface-variant": "#424750",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-error": "#ffffff",
+                        "background": "#f9f9f9",
+                        "primary-container": "#004687",
+                        "on-tertiary-fixed": "#400014",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#ffb950",
+                        "on-secondary-container": "#6b4500",
+                        "inverse-primary": "#a7c8ff",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-container": "#eeeeee",
+                        "secondary": "#825500",
+                        "surface-container-high": "#e8e8e8",
+                        "outline": "#737781",
+                        "on-secondary-fixed-variant": "#624000",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f9f9f9",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-primary-fixed-variant": "#014788",
+                        "on-primary-container": "#87b6fe",
+                        "on-surface": "#1a1c1c",
+                        "tertiary-container": "#8f0037",
+                        "primary-fixed": "#d5e3ff",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#00305f",
+                        "on-background": "#1a1c1c",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "surface-tint": "#2b5fa1",
+                        "surface-container-highest": "#e2e2e2",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#feae23",
+                        "surface-variant": "#e2e2e2",
+                        "surface-dim": "#dadada",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#650025",
+                        "inverse-on-surface": "#f0f1f1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "diagonal-offset": "12deg",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "data-metric": ["Anton"],
+                        "display-hero": ["Anton"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased h-screen overflow-hidden flex flex-col md:flex-row">
+<!-- Left Side: Image Canvas (Hidden on small mobile, full height on md+) -->
+<div class="hidden md:block w-1/2 h-full relative" style="clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%); z-index: 10;">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A warm, highly detailed photograph of a smiling, diverse volunteer standing near the coastal route of a cycling event during golden hour in Dar es Salaam. The lighting is soft and inviting, highlighting genuine human connection. The image style is premium sports editorial, featuring rich, deep royal navy tones in the background elements and warm, glowing sunlight hitting the subject's face. The overall mood is uplifting, communal, and energetic, perfectly balancing professional photography with a grassroots athletic vibe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJbOZn4Q6W1qrj7m-iTdDloOOX1fJYDKD2j_RwsAQoVbq3QK2aAmH6tSjFWaLnh16hQNUv13vLZqbbswgTfm-bwKPFgzN7C3Wm7ECmUTOWp9_CQcdbjXZ5Wr9NWwzCxznGYZcWm1Wi_0kxV5aKtHTBjhqhjIxSjyHtUHP7BQ4QoWjpTJWRZ42-knpJLtTz555R_LUouqWYYlnnT5UQgx-I5AAb4NubJYdRHKXx0T56x8SOrV6loKqVfw')"></div>
+<div class="absolute inset-0 bg-primary opacity-20"></div>
+<!-- Rotary Gear Watermark -->
+<div class="absolute bottom-[-10%] left-[-10%] w-[120%] h-[120%] opacity-10 pointer-events-none flex items-end justify-start">
+<span class="material-symbols-outlined text-[400px] text-on-primary">settings</span>
+</div>
+</div>
+<!-- Right Side: Interaction Canvas -->
+<div class="w-full md:w-1/2 h-full flex flex-col justify-center items-center px-margin-mobile md:px-margin-desktop bg-surface-container-lowest relative z-0">
+<!-- Brand Header (Top Left of this container) -->
+<div class="absolute top-8 left-margin-mobile md:left-margin-desktop">
+<h1 class="text-headline-md font-headline-md text-primary tracking-tighter uppercase">TOUR DE ROTARY DSM</h1>
+</div>
+<div class="w-full max-w-md flex flex-col gap-8">
+<!-- Icon & Status -->
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="w-20 h-20 bg-primary-container rounded-full flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-4xl text-on-primary-container" style="font-variation-settings: 'FILL' 1;">mark_email_unread</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></div>
+<span class="text-label-ui font-label-ui text-outline uppercase tracking-widest">Verification Pending</span>
+</div>
+</div>
+<!-- Content -->
+<div class="flex flex-col gap-4 text-center md:text-left">
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-primary uppercase">Check Your Inbox</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant">
+                    We've sent a verification link to your email address. Please click the link to confirm your registration and join the ride.
+                </p>
+<div class="border-l-4 border-secondary pl-4 mt-2">
+<p class="text-label-ui font-label-ui text-on-surface">If you don't see it, check your spam folder.</p>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-4 mt-8">
+<button class="w-full bg-secondary text-on-secondary font-headline-lg text-body-lg uppercase py-4 px-8 rounded-none hover:bg-primary transition-colors duration-300 flex items-center justify-center gap-2">
+                    Open Email App
+                    <span class="material-symbols-outlined">open_in_new</span>
+</button>
+<button class="w-full bg-transparent border-2 border-primary text-primary font-body-md text-body-md font-bold py-4 px-8 rounded-none hover:bg-surface-container transition-colors duration-300">
+                    Resend Verification Code
+                </button>
+</div>
+</div>
+<!-- Back to Start (Bottom Left of this container) -->
+<div class="absolute bottom-8 left-margin-mobile md:left-margin-desktop">
+<a class="text-label-ui font-label-ui text-primary hover:text-secondary flex items-center gap-2 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+                Return to Login
+            </a>
+</div>
+</div>
+</body></html>

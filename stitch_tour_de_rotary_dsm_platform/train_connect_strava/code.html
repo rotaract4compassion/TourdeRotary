@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sync Your Ride - Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#737781",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#291800",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "tertiary-fixed": "#ffd9de",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#900038",
+                    "surface-container-low": "#f3f3f4",
+                    "secondary-container": "#feae23",
+                    "on-primary-fixed": "#001b3b",
+                    "secondary": "#825500",
+                    "on-primary-fixed-variant": "#014788",
+                    "primary-container": "#004687",
+                    "surface-container": "#eeeeee",
+                    "error": "#ba1a1a",
+                    "on-surface": "#1a1c1c",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "on-tertiary-container": "#ff95a8",
+                    "on-tertiary-fixed": "#400014",
+                    "inverse-primary": "#a7c8ff",
+                    "on-secondary-fixed-variant": "#624000",
+                    "background": "#f9f9f9",
+                    "inverse-on-surface": "#f0f1f1",
+                    "outline-variant": "#c2c6d2",
+                    "surface": "#f9f9f9",
+                    "surface-variant": "#e2e2e2",
+                    "on-primary-container": "#87b6fe",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-fixed-dim": "#ffb950",
+                    "on-surface-variant": "#424750",
+                    "surface-dim": "#dadada",
+                    "tertiary-container": "#8f0037",
+                    "on-secondary-container": "#6b4500",
+                    "tertiary-fixed-dim": "#ffb2be",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#2b5fa1",
+                    "tertiary": "#650025",
+                    "primary": "#00305f",
+                    "secondary-fixed": "#ffddb3",
+                    "surface-bright": "#f9f9f9",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed": "#d5e3ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "diagonal-offset": "12deg",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "label-ui": [
+                            "JetBrains Mono"
+                    ],
+                    "display-hero": [
+                            "Anton"
+                    ],
+                    "body-lg": [
+                            "Hanken Grotesk"
+                    ],
+                    "data-metric": [
+                            "Anton"
+                    ],
+                    "body-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-lg-mobile": [
+                            "Anton"
+                    ],
+                    "headline-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-lg": [
+                            "Anton"
+                    ]
+            },
+            "fontSize": {
+                    "label-ui": [
+                            "14px",
+                            {
+                                    "lineHeight": "100%",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display-hero": [
+                            "96px",
+                            {
+                                    "lineHeight": "90%",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "20px",
+                            {
+                                    "lineHeight": "160%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "data-metric": [
+                            "48px",
+                            {
+                                    "lineHeight": "100%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "150%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "100%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "120%",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-lg": [
+                            "64px",
+                            {
+                                    "lineHeight": "100%",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+        }
+        @media (min-width: 768px) {
+            .clip-diagonal-md {
+                clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-fixed">
+<div class="flex flex-col md:flex-row min-h-screen">
+<!-- Left Side: Media Split -->
+<div class="relative w-full md:w-1/2 min-h-[512px] md:min-h-screen z-10 clip-diagonal md:clip-diagonal-md">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A dynamic, high-speed photograph of a professional cyclist leaning into a sharp curve on a sun-drenched coastal road. The image captures intense motion blur in the background while the cyclist remains in sharp focus. The lighting features warm, golden hour sunlight highlighting the sweat and determination on the rider's face. The overall aesthetic is premium, energetic, and heavily utilizes the Royal Navy and Gold brand colors." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFbglSapKs0KPLzO9sD0ENqDxVOToKgkb3j0SY-2M7GUlH1jQfq_uR2r7zxuMMWbue5-MlkWpUqajK2A549WUpz7E5M_YMpkfY3gO9GCfwjtx0azVNuxeNcTq0S76vuTC40i8zyjR0ZhZDorhGK0S4uNMYtBcoKmzJ_hhj5pKWgKCmHX3OUwLqqrb5PBNghEtfmo-J9B4Zrc0WnGckbk8b2M17QzHt_P0Is1v8dXCt-XvBLWPGlKLBEQ')"></div>
+<div class="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
+<div class="absolute inset-0 p-margin-mobile md:p-margin-desktop flex flex-col justify-end md:justify-center z-20">
+<h1 class="text-headline-lg-mobile md:text-display-hero font-headline-lg-mobile md:font-display-hero text-on-primary uppercase mb-4 leading-none">Sync<br/>Your<br/>Ride</h1>
+<p class="text-body-lg font-body-lg text-on-primary max-w-md">Connect your Strava account to automatically track your training miles, monitor heart rate zones, and visualize your route progress toward the Tour de Rotary DSM.</p>
+</div>
+</div>
+<!-- Right Side: Content Split -->
+<div class="w-full md:w-1/2 flex flex-col p-margin-mobile md:p-margin-desktop bg-surface z-0 relative">
+<!-- Connection State 1: Disconnected (Prompting Connection) -->
+<div class="flex-1 flex flex-col justify-center max-w-lg mx-auto w-full mb-16">
+<div class="flex items-center gap-4 mb-8">
+<span class="material-symbols-outlined text-[48px] text-[#FC4C02]">directions_bike</span>
+<h2 class="text-headline-md font-headline-md text-primary">Strava Integration</h2>
+</div>
+<div class="bg-surface-container-low p-6 rounded-none border-l-4 border-secondary mb-8">
+<h3 class="text-label-ui font-label-ui uppercase text-on-surface-variant mb-4">Data Access Request</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<div>
+<span class="block text-body-md font-bold text-on-surface">Activities</span>
+<span class="block text-body-md text-on-surface-variant">View your public and private cycling activities.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<div>
+<span class="block text-body-md font-bold text-on-surface">Heart Rate Data</span>
+<span class="block text-body-md text-on-surface-variant">Analyze performance metrics and effort levels.</span>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">check_circle</span>
+<div>
+<span class="block text-body-md font-bold text-on-surface">Route Metadata</span>
+<span class="block text-body-md text-on-surface-variant">Map your training rides against the official course.</span>
+</div>
+</li>
+</ul>
+</div>
+<button class="w-full bg-[#FC4C02] text-white text-headline-lg font-headline-lg uppercase py-4 px-8 rounded-none hover:bg-[#E34402] transition-colors duration-300 flex items-center justify-center gap-2">
+                    Connect Strava
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-label-ui font-label-ui text-on-surface-variant text-center mt-4 uppercase">By connecting, you agree to our Terms of Service.</p>
+</div>
+<!-- Divider -->
+<div class="w-full h-px bg-outline-variant my-8 relative">
+<span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-surface px-4 text-label-ui font-label-ui text-outline uppercase">Demo State Switch</span>
+</div>
+<!-- Connection State 2: Connected -->
+<div class="flex-1 flex flex-col justify-center max-w-lg mx-auto w-full opacity-70 hover:opacity-100 transition-opacity duration-300">
+<div class="bg-surface-container-lowest border-2 border-primary p-6 relative">
+<div class="absolute -top-3 -right-3 bg-secondary text-on-secondary w-8 h-8 flex items-center justify-center rounded-full shadow-lg">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-4">
+<img class="w-16 h-16 rounded-full object-cover border-2 border-surface-container" data-alt="A small, circular avatar image showing a confident amateur cyclist wearing a sleek red helmet and dark sunglasses, smiling against a clear blue sky background. The style is clean, modern, and high-contrast, fitting the premium athletic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrQIiIHBiI2B4FQ7c9Y_H69iWZg-Rprh0XkCxh1FgHyTrZLGHcVH8DgOAfUpT0oxW9hHUMI97OJxfqMCT_bykhgswAVju1X9F_KFrVOCS1I9nRwqdXFImVnIyds5RSw0c-KjaqS1nUZzuU6rE6cZUZQv9id7N5r276rtb8Dyy9OevwmsSa3nbS5uSjlxltbIewlhD54B-nkddVYl7FnFuHZYClDMN5MN9V704DrlKjMnbq0pfBhtZ4qw"/>
+<div>
+<h3 class="text-headline-md font-headline-md text-primary leading-tight">Alex Rider</h3>
+<p class="text-label-ui font-label-ui text-on-surface-variant uppercase mt-1">Connected</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[32px] text-[#FC4C02]">directions_bike</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6">
+<div class="bg-surface-container-low p-3">
+<span class="block text-label-ui font-label-ui text-on-surface-variant uppercase mb-1">Status</span>
+<span class="block text-body-md font-bold text-secondary flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> Syncing Active</span>
+</div>
+<div class="bg-surface-container-low p-3">
+<span class="block text-label-ui font-label-ui text-on-surface-variant uppercase mb-1">Last Sync</span>
+<span class="block text-body-md font-bold text-on-surface">2 mins ago</span>
+</div>
+</div>
+<button class="w-full bg-transparent border-2 border-primary text-primary text-body-lg font-body-lg py-3 px-6 rounded-none hover:bg-primary hover:text-on-primary transition-colors duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">link_off</span>
+                        Disconnect
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</body></html>

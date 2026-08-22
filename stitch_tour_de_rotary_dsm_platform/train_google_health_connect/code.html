@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary - Android Health Sync</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#737781",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#291800",
+                        "on-primary": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "tertiary-fixed": "#ffd9de",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "surface-container-low": "#f3f3f4",
+                        "secondary-container": "#feae23",
+                        "on-primary-fixed": "#001b3b",
+                        "secondary": "#825500",
+                        "on-primary-fixed-variant": "#014788",
+                        "primary-container": "#004687",
+                        "surface-container": "#eeeeee",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1a1c1c",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-tertiary-fixed": "#400014",
+                        "inverse-primary": "#a7c8ff",
+                        "on-secondary-fixed-variant": "#624000",
+                        "background": "#f9f9f9",
+                        "inverse-on-surface": "#f0f1f1",
+                        "outline-variant": "#c2c6d2",
+                        "surface": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-container": "#87b6fe",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-fixed-dim": "#ffb950",
+                        "on-surface-variant": "#424750",
+                        "surface-dim": "#dadada",
+                        "tertiary-container": "#8f0037",
+                        "on-secondary-container": "#6b4500",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#2b5fa1",
+                        "tertiary": "#650025",
+                        "primary": "#00305f",
+                        "secondary-fixed": "#ffddb3",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "surface-container-high": "#e8e8e8",
+                        "primary-fixed": "#d5e3ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "diagonal-offset": "12deg",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "label-ui": ["JetBrains Mono"],
+                        "display-hero": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "data-metric": ["Anton"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"]
+                    },
+                    "fontSize": {
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+        }
+        @media (min-width: 768px) {
+            .clip-diagonal-desktop {
+                clip-path: polygon(0 0, 100% 0, calc(100% - 6vw) 100%, 0 100%);
+            }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col selection:bg-secondary selection:text-on-secondary overflow-x-hidden">
+<!-- Top Navigation (Active: Settings/Profile context implied, but suppressing nav as this is a transactional connection screen) -->
+<main class="flex-grow flex flex-col md:flex-row relative">
+<!-- Left Panel: Form & Info -->
+<section class="w-full md:w-[55%] lg:w-[45%] bg-surface-container-lowest z-10 flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-12 md:py-24 clip-diagonal md:clip-diagonal-none md:clip-diagonal-desktop relative">
+<div class="max-w-xl mx-auto w-full space-y-8">
+<!-- Header -->
+<div class="space-y-2">
+<div class="flex items-center gap-3 text-primary mb-4">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">health_and_safety</span>
+<span class="font-label-ui text-label-ui uppercase tracking-widest text-primary-fixed-variant">Google Health Connect</span>
+</div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase">ANDROID HEALTH SYNC</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mt-4">
+                        Seamlessly sync your rides, runs, and vital stats from your Android device to Tour de Rotary DSM to track your progress and impact.
+                    </p>
+</div>
+<!-- Status Card (Connected State) -->
+<div class="border-2 border-secondary p-6 bg-surface relative overflow-hidden group hover:bg-secondary-container transition-colors duration-300">
+<div class="absolute -right-12 -top-12 opacity-10 text-9xl pointer-events-none transition-transform group-hover:scale-110 duration-700">
+<span class="material-symbols-outlined" data-weight="fill">sync_saved_locally</span>
+</div>
+<div class="flex items-start justify-between relative z-10">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary" data-weight="fill">check_circle</span>
+<h3 class="font-headline-md text-headline-md text-primary">Connected</h3>
+</div>
+<p class="font-label-ui text-label-ui text-on-surface-variant flex items-center gap-2 mt-3">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                                Last sync: Today, 08:42 AM
+                            </p>
+<p class="font-label-ui text-label-ui text-on-surface-variant flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-sm">devices</span>
+                                Device: Pixel 8 Pro
+                            </p>
+</div>
+<button class="font-label-ui text-label-ui text-secondary border-b-2 border-secondary pb-1 hover:text-primary hover:border-primary transition-colors">
+                            MANAGE
+                        </button>
+</div>
+</div>
+<!-- Permissions Info -->
+<div class="space-y-6">
+<h4 class="font-label-ui text-label-ui uppercase text-outline">Active Permissions</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">directions_bike</span>
+<div>
+<h5 class="font-body-md text-body-md font-bold text-primary">Distance &amp; Workouts</h5>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Used to verify your Tour de Rotary event completion and training mileage.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">monitor_heart</span>
+<div>
+<h5 class="font-body-md text-body-md font-bold text-primary">Heart Rate Data</h5>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Allows for detailed effort analysis in your training dashboard.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<h5 class="font-body-md text-body-md font-bold text-primary">Route &amp; Elevation</h5>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Required to map your rides against the official Dar es Salaam routes.</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Privacy Note -->
+<div class="bg-surface-container-low p-4 border-l-4 border-primary">
+<p class="font-body-md text-body-md text-on-surface text-sm flex items-start gap-3">
+<span class="material-symbols-outlined text-primary shrink-0" data-weight="fill">shield</span>
+<span>Your data is encrypted and only used to power your Tour de Rotary experience. We never sell your health metrics. <a class="underline text-secondary font-bold" href="#">Read our Privacy Policy</a>.</span>
+</p>
+</div>
+<!-- Action -->
+<div class="pt-4 flex gap-4">
+<button class="bg-primary text-on-primary font-display-hero text-xl uppercase px-8 py-4 border-2 border-primary hover:bg-surface-container-lowest hover:text-primary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined">sync</span>
+                        Force Sync Now
+                    </button>
+<button class="bg-transparent text-primary font-body-md font-bold px-8 py-4 border-2 border-primary hover:bg-error hover:text-on-error hover:border-error transition-colors uppercase">
+                        Disconnect
+                    </button>
+</div>
+</div>
+</section>
+<!-- Right Panel: High-Impact Photography -->
+<section class="hidden md:block w-[45%] lg:w-[55%] fixed right-0 top-0 h-screen -z-10 bg-primary">
+<div class="absolute inset-0 bg-cover bg-center bg-no-repeat grayscale-[20%] contrast-125" data-alt="A high-contrast, dynamic photograph of an athlete cycling aggressively along a sun-drenched coastal road. The lighting is harsh, midday coastal sun, creating deep shadows and bright highlights on the cyclist's tense muscles and professional gear. The background features the blurred deep blue waters of the Indian Ocean, embodying a premium, high-performance athletic editorial style. The color palette is dominated by intense navy blues, stark whites, and flashes of vibrant gold reflecting off the bike frame." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQME-yMKJMrFH_a3QHnbcx557yYg7B2EMreakFhcYcSiLJERVRJ6-UbypB0Tm-vOwtMRhxfMwEG4Ia5_caVtHpOB53ErNMmwtQ5GgILtZgFlPjrKsoH8XoIPymsAts3XhdZ_n3ZuATB7Rc-w10ptDdADeWlPDsBDirSHfhHoTkvNXvuaccKDoHWIhfdNvM8R6T6zDm6dTdfwkeAnsXxTohs9xS4CMekQkK9ID1V4-QQJA2HCLHNoAS_w')"></div>
+<!-- Duotone/Color overlay for depth -->
+<div class="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent opacity-80"></div>
+</section>
+<!-- Mobile Background Fallback -->
+<div class="md:hidden w-full h-64 relative -mt-16 -z-10">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A dynamic, low-angle shot of running shoes hitting the pavement during a marathon training session. The lighting is early morning golden hour, casting long, dramatic shadows. The focus is sharp on the vibrant, high-performance footwear, while the background is a smooth blur of coastal scenery. The color palette features intense warm golds, deep navy shadows, and crisp white highlights, capturing a sense of speed and athletic dedication." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4EruabWDY2Rnt502GC0u7RH8PV0rF2baENDWv3QCZRsZ3ELtb3wLBb2ZvYGu4FHy_aAdMDl4YzIystAIIFTm5yjuUeeIPiHHZDqdP3Q4vhEdI3xhC9vu9PPvO93c9UhGVjFcPSuna1eqJtKc27y5itzdLTBXmfN0pvRJ3IF5odPjcdWdzf083ePCNU0Q5VNPRA387TYT7ESiz28TlE9iL_Eom354xGRqwElIk6zVP4l6OGIPC5qLSaw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent"></div>
+</div>
+</main>
+</body></html>

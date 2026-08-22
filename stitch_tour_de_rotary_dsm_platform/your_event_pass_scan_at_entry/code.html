@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Check-in QR</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1a1c1c",
+                        "inverse-primary": "#a7c8ff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "primary": "#00305f",
+                        "on-primary-container": "#87b6fe",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#ffddb3",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#d5e3ff",
+                        "background": "#f9f9f9",
+                        "outline-variant": "#c2c6d2",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-container": "#8f0037",
+                        "on-secondary-container": "#6b4500",
+                        "on-tertiary-container": "#ff95a8",
+                        "secondary-fixed-dim": "#ffb950",
+                        "inverse-surface": "#2f3131",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#004687",
+                        "surface-bright": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-fixed": "#400014",
+                        "surface-variant": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "tertiary-fixed": "#ffd9de",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-container": "#eeeeee",
+                        "on-primary-fixed-variant": "#014788",
+                        "secondary-container": "#feae23",
+                        "on-primary-fixed": "#001b3b",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#650025",
+                        "on-surface-variant": "#424750",
+                        "on-secondary-fixed-variant": "#624000",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#825500",
+                        "on-secondary-fixed": "#291800",
+                        "surface-container-low": "#f3f3f4",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#2b5fa1",
+                        "outline": "#737781"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "data-metric": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-hero": ["Anton"],
+                        "label-ui": ["JetBrains Mono"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden min-h-screen pb-24 md:pb-0">
+<!-- TopAppBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary border-b-2 border-secondary md:px-margin-desktop px-margin-mobile">
+<div class="text-headline-md font-headline-md text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</div>
+<div class="hidden md:block">
+<button class="bg-secondary text-on-secondary px-6 py-2 uppercase font-headline-lg font-bold hover:bg-primary-container hover:text-on-primary transition-colors">Register Now</button>
+</div>
+<button class="md:hidden text-on-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</nav>
+<!-- SideNavBar (Hidden on Mobile, shown on lg) -->
+<div class="hidden lg:flex flex-col h-screen fixed left-0 top-0 pt-20 bg-surface-container-lowest border-r border-outline-variant z-40 w-64 h-full left-0 fixed">
+<div class="p-6 border-b border-outline-variant">
+<div class="flex items-center gap-4 mb-2">
+<div class="w-12 h-12 bg-surface-variant rounded-full flex items-center justify-center overflow-hidden">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="A close-up portrait of an athletic cyclist wearing premium gear, looking determined. Bright, natural coastal lighting highlights their features. The background is slightly blurred to focus on the subject. The overall mood is energetic and professional, fitting the high-performance aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtJJ8EnywD-6FUGLOUZksDcR06oiVx3mmtEtGIOlcwbpX2rPzRZJZnuJIgLdgHnpZvTTgBHQZasoPGeU5OaB8nS8cCPB_A0YW6KyeCPTuy4zBhmkf4VyAau2LPdarSg10RKw-zXq0gMygElFbMta-h93jg7VR_Hd6WhCwWPbebbBmCF2zG3FDMyudMzMQPDGyifMFrsS-eNu3SHYiCqSONY4gDi3lBuTjV5RBRGXlMK-2rUi5uvev8RA"/>
+</div>
+<div>
+<h3 class="text-label-ui font-label-ui text-primary font-bold">Rider Profile</h3>
+<p class="text-body-md font-body-md text-on-surface-variant text-sm">Elite Tier</p>
+</div>
+</div>
+<button class="w-full mt-4 bg-primary text-on-primary px-4 py-2 uppercase font-headline-md font-bold text-sm hover:bg-primary-container transition-colors">Log Ride</button>
+</div>
+<div class="flex-1 overflow-y-auto py-4 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui bg-secondary text-on-secondary font-bold rounded-none hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="event">event</span>
+                My Events
+            </a>
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="directions_bike">directions_bike</span>
+                Training
+            </a>
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+                Orders
+            </a>
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="token">token</span>
+                Collectibles
+            </a>
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group_add">group_add</span>
+                Referrals
+            </a>
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+                Profile
+            </a>
+</div>
+<div class="mt-auto py-4 border-t border-outline-variant flex flex-col gap-1">
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+                Support
+            </a>
+</div>
+</div>
+<!-- Main Content Area -->
+<main class="lg:ml-64 w-full flex flex-col items-center justify-start min-h-screen bg-surface-bright relative z-10">
+<!-- Background Decor -->
+<div class="absolute inset-0 z-0 opacity-10 pointer-events-none" data-alt="A subtle, large-scale watermark pattern of a bicycle gear integrated with abstract coastal wave shapes. The design is minimal, using stark black lines against a bright white background, providing a sense of motion and athletic energy to the page layout." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAoiLgOCycZa_dzr4rHuzjAaIipyTovyFfzLDdENasBiXsVRBjuv9hdSYvzg9bLq5EMK82dFKmF6zafNbk39-YRZUkrbk9pmeKZR0pZKENwl_6nQ0xShcoR53yJrZNAiI4x6TYH_I4Z3cLsE7o_s1TIPHaKBSLULzVhENf2bf93FRBQBamRRXG42HeQ7wbtcFsKYSqcWZCSs9tWfWQGr2JWcgt5xmViGZ9VtpgoDQokR4naZIyq-HQd1g')"></div>
+<!-- Ticket Card Container -->
+<div class="w-full max-w-md mt-8 px-margin-mobile md:px-0 relative z-10">
+<div class="bg-surface-container-lowest border-2 border-primary overflow-hidden shadow-[8px_8px_0px_rgba(0,48,95,1)]">
+<!-- Ticket Header -->
+<div class="bg-primary p-6 text-on-primary relative">
+<div class="absolute top-0 right-0 w-32 h-32 opacity-20 pointer-events-none" data-alt="An abstract geometric pattern resembling dynamic speed lines and angular track shapes. It uses bold navy and off-white colors, creating a sense of rapid movement and elite performance, subtly overlaid on the ticket header." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBhQSWhLIk7W1RzwfKww-X0uri7B0n56fgXXHShbY5oXIhJVGLzuSj49eh1zkm9HbS0Zb7Fql51E0DlEWhxXQS03y4NcrZJm9y6yBjl6FFPPHMlEu7x8ipZCxRsVR8EzyH-VDlE6yG1vHCGO4xx9jKTsrInlbRQR12mzBK5eLLWQYC2lgGVbBTxY5xolD2afsLoaki-AWhrE8VBbMTVVM_GjqGcfd2xn_CTaxdN_9IpPAE7oHMgGkB_sA')"></div>
+<p class="font-label-ui text-label-ui uppercase tracking-widest text-secondary-fixed mb-2">Participant Pass</p>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg uppercase leading-none">Tour de Rotary DSM</h1>
+<div class="mt-4 flex items-center gap-2">
+<span class="material-symbols-outlined fill-icon text-secondary-fixed">verified</span>
+<p class="font-label-ui text-label-ui text-on-primary">Status: Confirmed</p>
+</div>
+</div>
+<!-- QR Code Section -->
+<div class="p-8 flex flex-col items-center justify-center border-b-2 border-outline-variant bg-surface-container-lowest relative">
+<div class="w-64 h-64 bg-white border-4 border-on-background p-4 relative mb-4">
+<!-- Simulated QR Code Image -->
+<img alt="Check-in QR Code" class="w-full h-full object-contain" data-alt="A high-contrast, crisp black and white QR code prominently displayed in the center of the frame. It looks functional and clear, essential for event check-in. The surrounding area is clean white, emphasizing the scannability of the code." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0lxt-OtvuurMMS4XMcRncYeK4wy1Mpnv4vRBGdsarjCFZc6yVvVjzN18dc0v_PkUzzZnb55KksE-AL8IxIpWJsSop9qklsviT3Kn1RaKglngSBtetsloW42A2TigoTXnIA6tRmbpZrzeM4CYGCbGlEBn4QfXRFIoiPViJhaaY2u8EyPEPXU2u_yAvk9rR56PdCuOwv2CkEk7eM9a7qiKCBgWcELVHpORwH08XoVdDsTJ118IUszH6Cg"/>
+<!-- Corner Accents -->
+<div class="absolute top-0 left-0 w-4 h-4 border-t-4 border-l-4 border-secondary"></div>
+<div class="absolute top-0 right-0 w-4 h-4 border-t-4 border-r-4 border-secondary"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b-4 border-l-4 border-secondary"></div>
+<div class="absolute bottom-0 right-0 w-4 h-4 border-b-4 border-r-4 border-secondary"></div>
+</div>
+<p class="font-label-ui text-label-ui text-on-surface-variant tracking-widest">TDR-2024-8921</p>
+<p class="font-body-md text-body-md text-primary mt-2 text-center">Present this code at the registration desk or starting line gate.</p>
+</div>
+<!-- Details Section -->
+<div class="p-6 bg-surface-container-low flex flex-col gap-6">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="font-label-ui text-label-ui text-on-surface-variant uppercase mb-1">Rider</p>
+<p class="font-headline-md text-headline-md text-on-background leading-tight">Alex<br/>Mwangi</p>
+</div>
+<div>
+<p class="font-label-ui text-label-ui text-on-surface-variant uppercase mb-1">Category</p>
+<p class="font-headline-md text-headline-md text-primary leading-tight">120KM<br/>Elite</p>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-4">
+<div class="flex items-start gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary mt-1">schedule</span>
+<div>
+<p class="font-label-ui text-label-ui text-on-surface-variant uppercase">Start Time</p>
+<p class="font-body-lg text-body-lg text-on-background font-bold">06:00 AM EAT</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Gate opens 05:00 AM</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary mt-1">location_on</span>
+<div>
+<p class="font-label-ui text-label-ui text-on-surface-variant uppercase">Venue</p>
+<p class="font-body-lg text-body-lg text-on-background font-bold">Oyster Bay Green</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Dar es Salaam, Tanzania</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="bg-surface-container-highest p-4 flex justify-between items-center border-t border-outline-variant">
+<a class="font-label-ui text-label-ui text-error flex items-center gap-2 hover:underline" href="#">
+<span class="material-symbols-outlined text-xl">emergency</span>
+                        Emergency Info
+                    </a>
+<button class="font-label-ui text-label-ui text-primary flex items-center gap-2 hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-xl">download</span>
+                        Save Offline
+                    </button>
+</div>
+</div>
+<!-- Contextual Photography Area -->
+<div class="mt-8 relative h-48 md:h-64 w-full overflow-hidden clip-diagonal-reverse border-b-4 border-secondary shadow-lg">
+<img alt="Event Start Area" class="absolute inset-0 w-full h-full object-cover" data-alt="A vibrant, dynamic photograph of cyclists lining up at a sunny coastal starting gate in Dar es Salaam. Volunteers in bright vests are scanning QR codes on mobile phones. The atmosphere is energetic, communal, and highly active, capturing the essence of the elite grassroots event." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClNsjpvK9OU9Ch3kJO5vPxNNj0OvT38kncGJ9CUuVjuZAnH6ylVH4Ykj09aB2_Fitw-JegvcYNLuLCZ-3T0dD_wJvylz_aeDXhUrqhBlFhgt-w5Ug-HN0bE2qtsSGZ7T144D95DYi5EHu8tW1ws2EWEmhTfOaNVc3kEHzCyIglKye9KOsyKfp3SUGThxWOwCRcR2f4GDJzZGEGbX4W0XW4QLR8FlytLi8x0YWHpVN8Hzt7Ko1E2bQhQA"/>
+<div class="absolute inset-0 bg-primary/40"></div>
+<div class="absolute bottom-4 left-4 z-10 text-on-primary">
+<p class="font-headline-md text-headline-md leading-none">See you at the start line.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary border-t-2 border-secondary shadow-lg px-2">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2 rounded w-16" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="text-[10px] font-label-ui uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary active:scale-95 transition-transform p-2 rounded w-16" href="#">
+<span class="material-symbols-outlined mb-1 fill-icon">calendar_today</span>
+<span class="text-[10px] font-label-ui uppercase tracking-wider font-bold">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2 rounded w-16" href="#">
+<span class="material-symbols-outlined mb-1">fitness_center</span>
+<span class="text-[10px] font-label-ui uppercase tracking-wider">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2 rounded w-16" href="#">
+<span class="material-symbols-outlined mb-1">account_circle</span>
+<span class="text-[10px] font-label-ui uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>
