@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Refund Request - Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#1a1c1c",
+                      "inverse-primary": "#a7c8ff",
+                      "inverse-on-surface": "#f0f1f1",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#dadada",
+                      "surface-container-highest": "#e2e2e2",
+                      "tertiary-fixed-dim": "#ffb2be",
+                      "primary": "#00305f",
+                      "on-primary-container": "#87b6fe",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed": "#ffddb3",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#d5e3ff",
+                      "background": "#f9f9f9",
+                      "outline-variant": "#c2c6d2",
+                      "surface-container-high": "#e8e8e8",
+                      "tertiary-container": "#8f0037",
+                      "on-secondary-container": "#6b4500",
+                      "on-tertiary-container": "#ff95a8",
+                      "secondary-fixed-dim": "#ffb950",
+                      "inverse-surface": "#2f3131",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#004687",
+                      "surface-bright": "#f9f9f9",
+                      "on-surface": "#1a1c1c",
+                      "on-tertiary-fixed": "#400014",
+                      "surface-variant": "#e2e2e2",
+                      "surface": "#f9f9f9",
+                      "tertiary-fixed": "#ffd9de",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "surface-container": "#eeeeee",
+                      "on-primary-fixed-variant": "#014788",
+                      "secondary-container": "#feae23",
+                      "on-primary-fixed": "#001b3b",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#650025",
+                      "on-surface-variant": "#424750",
+                      "on-secondary-fixed-variant": "#624000",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#825500",
+                      "on-secondary-fixed": "#291800",
+                      "surface-container-low": "#f3f3f4",
+                      "on-tertiary-fixed-variant": "#900038",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#2b5fa1",
+                      "outline": "#737781"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "diagonal-offset": "12deg",
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Anton"
+                      ],
+                      "data-metric": [
+                              "Anton"
+                      ],
+                      "headline-lg-mobile": [
+                              "Anton"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-hero": [
+                              "Anton"
+                      ],
+                      "label-ui": [
+                              "JetBrains Mono"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "data-metric": [
+                              "48px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero": [
+                              "96px",
+                              {
+                                      "lineHeight": "90%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+      </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary border-b-2 border-secondary">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</nav>
+<button class="bg-secondary text-on-secondary px-6 py-2 uppercase font-headline-lg text-[20px] rounded hover:bg-primary-container transition-colors hidden md:block border-2 border-transparent">
+            Register Now
+        </button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow relative overflow-hidden">
+<!-- Background Image Container -->
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-20" data-alt="A serene, wide-angle photograph of the Dar es Salaam coastline at dawn. The Indian ocean is calm, reflecting soft pastel morning light. The image features a subtle, desaturated color palette favoring cool blues and soft sandy tones. The aesthetic is peaceful, creating a calm backdrop. High resolution, 8k, cinematic lighting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD-rtneyEpUxedAhUedWMwAqkOqNEgGjZSM1uIYvYRmS-KyhUuoLjd-wS_IcRVM0Q4XuAVskibHaq1mlrBkcjIITWzzZ9ULBLbts1cz1r_4_ecFmtV85scFMocO3cvH_kr6Ub-MssUQUUWto5u7xq4cGWKnnSODmi4fvbB5qJlFABrm3Qfy5WZapg6hUL8YTBiTHhBBAW_rAQs2TKF7UeOsRAMOtZXX_-F6j6EGin2BtRN8CHJ3UXfKRA')"></div>
+<!-- Gradient Overlay for readability -->
+<div class="absolute inset-0 bg-gradient-to-b from-background via-background/80 to-background"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop py-12 md:py-24 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Page Header -->
+<div class="md:col-span-12 mb-8">
+<a class="inline-flex items-center text-primary font-label-ui text-label-ui mb-4 hover:opacity-70 transition-opacity" href="#">
+<span class="material-symbols-outlined mr-2">arrow_back</span>
+                    Back to Orders
+                </a>
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary uppercase mb-2">Request Refund</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">We're sorry to hear you need to cancel your participation or return an item. Please review your order details and provide a reason below.</p>
+</div>
+<!-- Left Column: Order Details & Status -->
+<div class="md:col-span-5 flex flex-col gap-8">
+<!-- Status Card -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 relative shadow-sm">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary-container"></div>
+<h2 class="font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider mb-4">Current Status</h2>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined">pending_actions</span>
+</div>
+<div>
+<p class="font-headline-md text-[24px] text-primary m-0 p-0 leading-none">Pending Submission</p>
+<p class="text-label-ui font-label-ui text-outline mt-1">Order #TRD-2024-8842</p>
+</div>
+</div>
+</div>
+<!-- Order Details Summary -->
+<div class="bg-surface-container-lowest p-8 border-t-4 border-primary">
+<h3 class="font-headline-md text-[24px] text-primary mb-6">Order Details</h3>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between items-start border-b border-surface-variant pb-4">
+<div>
+<p class="font-bold text-on-background">Elite Rider Registration</p>
+<p class="text-label-ui font-label-ui text-on-surface-variant mt-1">Nov 12, 2024</p>
+</div>
+<p class="font-data-metric text-[24px] text-primary">$150.00</p>
+</div>
+<div class="flex justify-between items-start border-b border-surface-variant pb-4">
+<div>
+<p class="font-bold text-on-background">Commemorative Jersey - L</p>
+<p class="text-label-ui font-label-ui text-on-surface-variant mt-1">Pre-order</p>
+</div>
+<p class="font-data-metric text-[24px] text-primary">$45.00</p>
+</div>
+</div>
+<div class="flex justify-between items-center bg-surface p-4">
+<span class="font-headline-md text-[20px] text-primary uppercase">Total Eligible</span>
+<span class="font-data-metric text-[32px] text-primary">$195.00</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Request Form -->
+<div class="md:col-span-7">
+<form class="bg-surface-container-lowest p-8 shadow-sm">
+<div class="mb-8">
+<label class="block font-label-ui text-label-ui text-primary mb-2 uppercase">Reason for Refund *</label>
+<select class="w-full bg-transparent border-0 border-b-2 border-primary text-body-lg font-body-lg text-on-background focus:ring-0 focus:border-secondary p-2 pl-0">
+<option value="">Select a reason...</option>
+<option value="injury">Injury / Medical Reason</option>
+<option value="schedule">Scheduling Conflict</option>
+<option value="item_issue">Issue with Merchandise</option>
+<option value="other">Other</option>
+</select>
+</div>
+<div class="mb-10">
+<label class="block font-label-ui text-label-ui text-primary mb-2 uppercase">Additional Notes</label>
+<textarea class="w-full bg-surface border-0 border-b-2 border-outline-variant text-body-md font-body-md text-on-background focus:ring-0 focus:border-secondary p-4 resize-none" placeholder="Please provide any additional details to help us process your request faster..." rows="4"></textarea>
+</div>
+<div class="bg-surface-container p-4 mb-8 text-label-ui font-label-ui text-on-surface-variant flex gap-3">
+<span class="material-symbols-outlined text-outline">info</span>
+<p>Refunds are typically processed within 5-7 business days after approval. Please note that a 5% processing fee may apply according to our terms of service.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 justify-end">
+<button class="px-8 py-3 bg-transparent border-2 border-primary text-primary font-headline-lg text-[20px] uppercase hover:bg-surface-container transition-colors" type="button">
+                            Cancel
+                        </button>
+<button class="px-8 py-3 bg-secondary text-on-secondary font-headline-lg text-[20px] uppercase hover:bg-primary hover:text-on-primary transition-colors" type="button">
+                            Submit Request
+                        </button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary mt-auto">
+<div class="text-headline-md font-headline-lg text-on-primary">
+            TOUR DE ROTARY DSM
+        </div>
+<div class="flex flex-wrap justify-center gap-6 text-label-ui font-label-ui opacity-70">
+<a class="hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</div>
+<p class="text-body-md font-body-md opacity-50 mt-4 text-center">
+            © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+        </p>
+</footer>
+</body></html>

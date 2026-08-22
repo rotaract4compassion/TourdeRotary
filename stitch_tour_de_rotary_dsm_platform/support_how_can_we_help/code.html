@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Support - Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f9f9f9",
+                        "outline-variant": "#c2c6d2",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "tertiary-container": "#8f0037",
+                        "on-secondary-fixed": "#291800",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-secondary-container": "#6b4500",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "surface-container": "#eeeeee",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-fixed": "#001b3b",
+                        "inverse-on-surface": "#f0f1f1",
+                        "inverse-primary": "#a7c8ff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-fixed-variant": "#014788",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#feae23",
+                        "secondary": "#825500",
+                        "surface-bright": "#f9f9f9",
+                        "surface": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "surface-tint": "#2b5fa1",
+                        "surface-container-low": "#f3f3f4",
+                        "tertiary": "#650025",
+                        "outline": "#737781",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "primary-fixed": "#d5e3ff",
+                        "on-surface-variant": "#424750",
+                        "secondary-fixed": "#ffddb3",
+                        "secondary-fixed-dim": "#ffb950",
+                        "primary-container": "#004687",
+                        "on-secondary-fixed-variant": "#624000",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-container": "#87b6fe",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ff95a8",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#00305f",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary-fixed": "#400014"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-ui": ["JetBrains Mono"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "data-metric": ["Anton"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary text-secondary border-b-2 border-secondary flat no shadows">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<nav class="hidden md:flex gap-8 items-center text-label-ui font-label-ui">
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+<button class="bg-secondary text-primary px-6 py-2 font-bold uppercase tracking-wider hover:bg-secondary-fixed transition-colors">Register Now</button>
+</nav>
+</header>
+<main class="flex-grow w-full max-w-[1440px] mx-auto overflow-hidden">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[409px] md:min-h-[512px] flex items-center pt-12 pb-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest clip-diagonal z-10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter w-full">
+<div class="md:col-span-8 lg:col-span-6 z-20">
+<h1 class="text-headline-lg-mobile md:text-display-hero font-display-hero text-primary uppercase mb-6 leading-none">
+                        Rider <br/> Support.
+                    </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-lg mb-8">
+                        We're here to ensure your Tour de Rotary DSM experience is smooth from registration to the finish line. Find answers or reach out directly.
+                    </p>
+</div>
+<div class="md:col-span-4 lg:col-span-6 absolute md:relative inset-0 md:inset-auto opacity-20 md:opacity-100 -z-10 md:z-0">
+<img alt="Support Staff" class="w-full h-full object-cover grayscale mix-blend-multiply md:clip-diagonal-reverse" data-alt="A professional support staff member in a high-visibility Tour de Rotary vest, smiling confidently while looking at a tablet. The setting is bright and sunny outdoors near a coastal cycling route in Dar es Salaam, conveying a helpful and energetic mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq6_70lzQaf7TBy5VG5jHyUAuWSiayHhok68n604MDCQ78fmU9JFFuXB0vkZQZNjcfwXCPCDvPpK3mB0o8mX0t_9usdTV8iFgq2WStjj_VE2cBICza9vdnzl3Sx1sCzG-AmyCqHdggtA9lq4S3ja5jPcuwASX0Q2010eRsa5nJF_g1asblpOIWo2hu5RxvpuUEQAKS8es8k2gRboawtuqVEECPkGFzE1K1uaRWkTChvEpmkTjKYQU1dg"/>
+</div>
+</div>
+</section>
+<!-- Contact & FAQ Grid -->
+<section class="relative w-full px-margin-mobile md:px-margin-desktop py-24 bg-primary z-0 -mt-12 clip-diagonal-reverse">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Channels -->
+<div class="lg:col-span-5 flex flex-col gap-8 text-on-primary">
+<h2 class="text-headline-md font-headline-md text-secondary">Quick Contact</h2>
+<div class="group flex gap-4 items-start border-l-2 border-secondary pl-4 hover:border-tertiary-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-tertiary-container transition-colors">call</span>
+<div>
+<h3 class="text-label-ui font-label-ui uppercase text-surface-dim mb-1">HQ Hotline</h3>
+<p class="text-body-md font-body-md font-bold">+255 123 456 789</p>
+<p class="text-sm opacity-70">Mon-Fri, 9am - 5pm EAT</p>
+</div>
+</div>
+<div class="group flex gap-4 items-start border-l-2 border-secondary pl-4 hover:border-tertiary-container transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-4xl text-secondary group-hover:text-tertiary-container transition-colors">mail</span>
+<div>
+<h3 class="text-label-ui font-label-ui uppercase text-surface-dim mb-1">Email Us</h3>
+<p class="text-body-md font-body-md font-bold">support@tourderotarydsm.com</p>
+<p class="text-sm opacity-70">24-48 hour response time</p>
+</div>
+</div>
+</div>
+<!-- FAQ Shortcuts -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 shadow-xl border-t-4 border-tertiary-container relative mt-12 lg:mt-0 lg:-mt-24 z-20">
+<h2 class="text-headline-md font-headline-md text-primary mb-8">Top Questions</h2>
+<div class="flex flex-col gap-4">
+<details class="group border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center font-bold text-body-lg font-body-lg cursor-pointer list-none text-primary hover:text-tertiary-container transition-colors">
+                                Can I change my race distance?
+                                <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="text-body-md text-on-surface-variant mt-4 pl-4 border-l-2 border-tertiary-container">
+                                Yes, up to two weeks before event day. Please use the support form below with your order reference.
+                            </p>
+</details>
+<details class="group border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center font-bold text-body-lg font-body-lg cursor-pointer list-none text-primary hover:text-tertiary-container transition-colors">
+                                When is the rider pack collection?
+                                <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="text-body-md text-on-surface-variant mt-4 pl-4 border-l-2 border-tertiary-container">
+                                Packs can be collected at the Rotary HQ starting Thursday before the race weekend.
+                            </p>
+</details>
+<details class="group border-b border-outline-variant pb-4">
+<summary class="flex justify-between items-center font-bold text-body-lg font-body-lg cursor-pointer list-none text-primary hover:text-tertiary-container transition-colors">
+                                Are ebikes allowed?
+                                <span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="text-body-md text-on-surface-variant mt-4 pl-4 border-l-2 border-tertiary-container">
+                                Ebikes are allowed only in the 'Leisure Route' category, not in competitive tiers.
+                            </p>
+</details>
+</div>
+</div>
+</div>
+</section>
+<!-- Support Form -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-24 bg-background">
+<div class="max-w-3xl mx-auto">
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary uppercase text-center mb-12">Submit a Request</h2>
+<form class="flex flex-col gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex flex-col">
+<label class="text-label-ui font-label-ui text-primary uppercase mb-2" for="name">Full Name</label>
+<input class="bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-tertiary-container px-0 py-2 text-body-md" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="text-label-ui font-label-ui text-primary uppercase mb-2" for="email">Email Address</label>
+<input class="bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-tertiary-container px-0 py-2 text-body-md" id="email" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col">
+<label class="text-label-ui font-label-ui text-primary uppercase mb-2" for="order">Order Reference (Optional)</label>
+<input class="bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-tertiary-container px-0 py-2 text-body-md" id="order" placeholder="e.g. TRD-12345" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="text-label-ui font-label-ui text-primary uppercase mb-2" for="topic">Topic</label>
+<select class="bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-tertiary-container px-0 py-2 text-body-md" id="topic">
+<option>Registration Issue</option>
+<option>Payment/Refund</option>
+<option>Event Details</option>
+<option>Sponsorship</option>
+<option>Other</option>
+</select>
+</div>
+<div class="flex flex-col">
+<label class="text-label-ui font-label-ui text-primary uppercase mb-2" for="message">Message</label>
+<textarea class="bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-tertiary-container px-0 py-2 text-body-md resize-none" id="message" placeholder="How can we help you?" rows="4"></textarea>
+</div>
+<button class="self-start bg-tertiary-container text-on-tertiary px-8 py-4 font-headline-lg-mobile text-2xl uppercase tracking-wide hover:bg-tertiary transition-colors border-2 border-transparent focus:outline-none focus:ring-4 focus:ring-tertiary-fixed" type="submit">
+                        Send Message
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary flat">
+<div class="text-headline-md font-headline-lg text-on-primary">TOUR DE ROTARY DSM</div>
+<div class="flex flex-wrap justify-center gap-6 text-label-ui font-label-ui">
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-secondary underline" href="#">FAQ</a>
+</div>
+<div class="text-body-md font-body-md text-on-primary opacity-60 text-center mt-4">
+            © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+        </div>
+</footer>
+</body></html>

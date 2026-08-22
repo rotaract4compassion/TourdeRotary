@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shop - Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 100%);
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px #00305f;
+            color: transparent;
+        }
+        .text-outline-light {
+            -webkit-text-stroke: 1px #ffffff;
+            color: transparent;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-container": "#ff95a8",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "background": "#f9f9f9",
+                      "primary-container": "#004687",
+                      "secondary-fixed": "#ffddb3",
+                      "on-secondary-fixed": "#291800",
+                      "tertiary-fixed-dim": "#ffb2be",
+                      "on-surface": "#1a1c1c",
+                      "tertiary-fixed": "#ffd9de",
+                      "surface-container-high": "#e8e8e8",
+                      "on-background": "#1a1c1c",
+                      "surface-dim": "#dadada",
+                      "tertiary": "#650025",
+                      "on-secondary-container": "#6b4500",
+                      "inverse-surface": "#2f3131",
+                      "on-surface-variant": "#424750",
+                      "on-primary-fixed": "#001b3b",
+                      "primary": "#00305f",
+                      "on-secondary-fixed-variant": "#624000",
+                      "surface": "#f9f9f9",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#feae23",
+                      "on-tertiary-fixed-variant": "#900038",
+                      "outline": "#737781",
+                      "inverse-on-surface": "#f0f1f1",
+                      "on-primary-container": "#87b6fe",
+                      "tertiary-container": "#8f0037",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#e2e2e2",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#014788",
+                      "primary-fixed": "#d5e3ff",
+                      "on-tertiary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-container-highest": "#e2e2e2",
+                      "surface-tint": "#2b5fa1",
+                      "error": "#ba1a1a",
+                      "surface-bright": "#f9f9f9",
+                      "surface-container": "#eeeeee",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed": "#400014",
+                      "surface-container-low": "#f3f3f4",
+                      "outline-variant": "#c2c6d2",
+                      "secondary-fixed-dim": "#ffb950",
+                      "inverse-primary": "#a7c8ff",
+                      "secondary": "#825500"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "diagonal-offset": "12deg",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-ui": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg-mobile": [
+                              "Anton"
+                      ],
+                      "headline-lg": [
+                              "Anton"
+                      ],
+                      "data-metric": [
+                              "Anton"
+                      ],
+                      "display-hero": [
+                              "Anton"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "data-metric": [
+                              "48px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero": [
+                              "96px",
+                              {
+                                      "lineHeight": "90%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "800"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 bg-primary text-on-primary">
+<div class="text-headline-md font-headline-lg uppercase tracking-tighter">TOUR DE ROTARY DSM</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+<button class="bg-secondary-container text-on-secondary-container font-label-ui text-label-ui px-6 py-2 uppercase hover:bg-secondary-fixed transition-colors">Register Now</button>
+</nav>
+<button class="md:hidden text-on-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col pb-24 md:pb-0">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[80vh] flex items-center clip-diagonal bg-primary">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center opacity-40 mix-blend-luminosity" data-alt="A cinematic, high-contrast lifestyle photograph of a professional cyclist riding along the scenic coast of Dar es Salaam during the golden hour. The rider is wearing a premium, sleek navy blue and gold cycling jersey. The light mode aesthetic is emphasized by the warm sun reflecting off the ocean and the sharp, athletic form of the cyclist. The mood is triumphant and elite." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqeW2wptDXoN3IBHrsQkrKkhIXzCnwfN0yjCqwf9srwaSEWfOlVZ_A9ntUaUt3ZnpQBsfZG4Nb66Zfg8r5JTdlLMh-tlixkbVA3t72zc_MnkTPDWWjnUxrxNO7Hy8kpYdGrnCHWCeB4OqaM8lBsNEhRhypMYqVore81RK_jiQ-Fa1hFtrtc7Qse6bOM-jPvrZmmgkZg2dR4OakNjUdd9RcZRvzJXLuTjQkOcTcW-ZiFVZ_vCM-s5g2pQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter py-20">
+<div class="md:col-span-8 lg:col-span-6 flex flex-col justify-center">
+<h1 class="text-display-hero font-display-hero text-on-primary uppercase leading-none mb-6">
+                        GEAR UP <br/>
+<span class="text-secondary-container">RIDE HARD</span>
+</h1>
+<p class="text-body-lg font-body-lg text-on-primary/90 mb-10 max-w-lg">
+                        The official Tour de Rotary DSM collection. Premium performance wear designed for the coast. Every purchase supports our charitable initiatives.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-secondary-container text-on-secondary-container font-label-ui text-label-ui px-8 py-4 uppercase border border-secondary-container hover:bg-primary hover:text-on-primary transition-all duration-300">
+                            Shop Jerseys
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories & Featured -->
+<section class="relative w-full px-margin-mobile md:px-margin-desktop py-20 bg-background -mt-20 z-20">
+<div class="flex justify-between items-end mb-12 border-b-2 border-primary pb-4">
+<h2 class="text-headline-lg font-headline-lg text-primary uppercase">Latest Drops</h2>
+<div class="hidden md:flex gap-6 font-label-ui text-label-ui">
+<a class="text-primary underline underline-offset-4 font-bold" href="#">All Gear</a>
+<a class="text-outline-variant hover:text-primary transition-colors" href="#">Jerseys</a>
+<a class="text-outline-variant hover:text-primary transition-colors" href="#">Accessories</a>
+</div>
+</div>
+<!-- Asymmetric Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Featured Item -->
+<div class="md:col-span-7 lg:col-span-8 group cursor-pointer relative h-[600px] bg-surface-container-lowest overflow-hidden border border-outline-variant/30 hover:border-primary transition-colors duration-300">
+<div class="absolute inset-0 bg-surface-container-low flex items-center justify-center p-12">
+<div class="w-full h-full bg-contain bg-no-repeat bg-center mix-blend-multiply transition-transform duration-700 group-hover:scale-105" data-alt="A high-end product photography shot of the flagship 'Coastal Edition' cycling jersey. The jersey is navy blue with gold accents and a subtle wave pattern. It is presented on a minimalist off-white background with dramatic, stark directional lighting that highlights the premium fabric texture. The aesthetic is clean, modern, and professional sports retail." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAnk5CSlMwE-_D_VDxGPek9E1oiJ1NKg0kRvmHjZdg5YwYBvgK99a2NaQtreg-HlPqAR9Bc8AS51okEKowNY3wamphY-g4jBcPDilU375g3W1WKwHruLKysV5TZrgCGOjWw94nlESM5VSQx6UP5sFtsA_3QeBht-2hl6qo6Nq2PS9HR1xIiNiXdn3UOjqrOYUfrneH5RLXhUcTlVjc0tsVlvjRu2w6pETBLjhB6Nr0q66fRkkN_5TUWYg')"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-primary via-primary/80 to-transparent flex justify-between items-end">
+<div>
+<div class="text-label-ui font-label-ui text-secondary-container mb-2">LIMITED EDITION</div>
+<h3 class="text-headline-md font-headline-md text-on-primary mb-1">Coastal Elite Jersey</h3>
+<p class="text-body-md font-body-md text-on-primary/80">Pro-fit moisture wicking</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-data-metric font-data-metric text-on-primary mb-4">TSh 125,000</span>
+<button class="bg-secondary-container text-on-secondary-container font-label-ui text-label-ui px-6 py-3 uppercase flex items-center gap-2 hover:bg-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+                                Add
+                            </button>
+</div>
+</div>
+</div>
+<!-- Stacked Items -->
+<div class="md:col-span-5 lg:col-span-4 flex flex-col gap-gutter h-[600px]">
+<!-- Item 1 -->
+<div class="flex-1 group cursor-pointer relative bg-surface-container-lowest overflow-hidden border border-outline-variant/30 hover:border-primary transition-colors duration-300 flex">
+<div class="w-1/2 p-6 bg-surface-container-low flex items-center justify-center">
+<div class="w-full h-full bg-contain bg-no-repeat bg-center mix-blend-multiply transition-transform duration-500 group-hover:scale-110" data-alt="A sleek, aerodynamic black and gold cycling water bottle featuring the Tour de Rotary logo. Clean, bright product photography on an off-white background. High contrast, sharp details." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCzXogMo-2ttjzIWsVmUULVDhuum9bfmJ5fMPlQo9PlYsnVL2YWJUuHeTbhj6I97bxnZLVFVR4DE8a_LIhDGXhrc8o5ClKfoXzbm8wMt9QrVkxyceGUXEv6AO-mhdr0CxtZ5Kl1_vKSs0mXg8xOqcsl4G_xOsQtgKG56jth7AzKieqAVeYeOLyzpxJ4HeuyykZFw3W59tO3gJ6qgLqYkALNEOAcNXRng123smIL1g9HStJu1CG_PRkT9Q')"></div>
+</div>
+<div class="w-1/2 p-6 flex flex-col justify-center bg-white">
+<h3 class="text-body-lg font-body-lg font-bold text-primary mb-2">Aero Bidon</h3>
+<p class="text-label-ui font-label-ui text-outline mb-4">750ml</p>
+<span class="text-headline-md font-headline-lg-mobile text-primary mb-4">TSh 25,000</span>
+<button class="w-full border-2 border-primary text-primary font-label-ui text-label-ui py-2 uppercase hover:bg-primary hover:text-white transition-colors">
+                                Add
+                            </button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex-1 group cursor-pointer relative bg-surface-container-lowest overflow-hidden border border-outline-variant/30 hover:border-primary transition-colors duration-300 flex">
+<div class="w-1/2 p-6 flex flex-col justify-center bg-white order-2">
+<h3 class="text-body-lg font-body-lg font-bold text-primary mb-2">Classic Cap</h3>
+<p class="text-label-ui font-label-ui text-outline mb-4">Cotton Blend</p>
+<span class="text-headline-md font-headline-lg-mobile text-primary mb-4">TSh 35,000</span>
+<button class="w-full border-2 border-primary text-primary font-label-ui text-label-ui py-2 uppercase hover:bg-primary hover:text-white transition-colors">
+                                Add
+                            </button>
+</div>
+<div class="w-1/2 p-6 bg-surface-container-low flex items-center justify-center order-1">
+<div class="w-full h-full bg-contain bg-no-repeat bg-center mix-blend-multiply transition-transform duration-500 group-hover:scale-110" data-alt="A classic cotton cycling cap in navy blue with a gold stripe down the center. Clean, minimalist product photography on a stark white background. High light-mode aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDHnA1TY9KZLnXWp41Xk3GuIMKYZa3cWarW0axKBRCyueS8yyeLalBR4My4e9sNVTc-EOE_fSTLVbC6xdR1W63o3ISGbmb9KQW7odFzPC41cn4OPry_DpRNIvF864sH_rSLAugg8LVp5VNG8d3_xThGQ1TUUkQbmMUJNdq4eSPeB8E3Caelsf6DrBxI4dYOE3A_Bdnhz6u0I_hHute48KQGvvot6dw3Eh28y7i8nACx-QLOOhDmlGQLw')"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-primary text-secondary md:hidden border-t border-primary-fixed-dim">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 w-full h-full" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="text-[10px] font-label-ui uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 w-full h-full" href="#">
+<span class="material-symbols-outlined mb-1">calendar_today</span>
+<span class="text-[10px] font-label-ui uppercase tracking-wider">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary w-full h-full bg-primary-container relative" href="#">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span class="text-[10px] font-label-ui uppercase tracking-wider font-bold">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 w-full h-full" href="#">
+<span class="material-symbols-outlined mb-1">account_circle</span>
+<span class="text-[10px] font-label-ui uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary mt-auto hidden md:flex">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter mb-4">TOUR DE ROTARY DSM</div>
+<div class="flex flex-wrap justify-center gap-6 mb-8 text-label-ui font-label-ui">
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</div>
+<p class="text-body-md font-body-md opacity-50 text-center">© 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.</p>
+</footer>
+</body></html>

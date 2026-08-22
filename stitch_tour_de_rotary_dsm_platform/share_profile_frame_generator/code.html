@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary DSM - Frame Generator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "on-tertiary-container": "#ff95a8",
+                            "error-container": "#ffdad6",
+                            "primary-fixed-dim": "#a7c8ff",
+                            "background": "#f9f9f9",
+                            "primary-container": "#004687",
+                            "secondary-fixed": "#ffddb3",
+                            "on-secondary-fixed": "#291800",
+                            "tertiary-fixed-dim": "#ffb2be",
+                            "on-surface": "#1a1c1c",
+                            "tertiary-fixed": "#ffd9de",
+                            "surface-container-high": "#e8e8e8",
+                            "on-background": "#1a1c1c",
+                            "surface-dim": "#dadada",
+                            "tertiary": "#650025",
+                            "on-secondary-container": "#6b4500",
+                            "inverse-surface": "#2f3131",
+                            "on-surface-variant": "#424750",
+                            "on-primary-fixed": "#001b3b",
+                            "primary": "#00305f",
+                            "on-secondary-fixed-variant": "#624000",
+                            "surface": "#f9f9f9",
+                            "surface-container-lowest": "#ffffff",
+                            "secondary-container": "#feae23",
+                            "on-tertiary-fixed-variant": "#900038",
+                            "outline": "#737781",
+                            "inverse-on-surface": "#f0f1f1",
+                            "on-primary-container": "#87b6fe",
+                            "tertiary-container": "#8f0037",
+                            "on-secondary": "#ffffff",
+                            "surface-variant": "#e2e2e2",
+                            "on-primary": "#ffffff",
+                            "on-primary-fixed-variant": "#014788",
+                            "primary-fixed": "#d5e3ff",
+                            "on-tertiary": "#ffffff",
+                            "on-error": "#ffffff",
+                            "surface-container-highest": "#e2e2e2",
+                            "surface-tint": "#2b5fa1",
+                            "error": "#ba1a1a",
+                            "surface-bright": "#f9f9f9",
+                            "surface-container": "#eeeeee",
+                            "on-error-container": "#93000a",
+                            "on-tertiary-fixed": "#400014",
+                            "surface-container-low": "#f3f3f4",
+                            "outline-variant": "#c2c6d2",
+                            "secondary-fixed-dim": "#ffb950",
+                            "inverse-primary": "#a7c8ff",
+                            "secondary": "#825500"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "diagonal-offset": "12deg",
+                            "unit": "8px",
+                            "gutter": "24px",
+                            "margin-mobile": "20px",
+                            "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                            "body-lg": ["Hanken Grotesk"],
+                            "body-md": ["Hanken Grotesk"],
+                            "label-ui": ["JetBrains Mono"],
+                            "headline-lg-mobile": ["Anton"],
+                            "headline-lg": ["Anton"],
+                            "data-metric": ["Anton"],
+                            "display-hero": ["Anton"],
+                            "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                            "body-lg": ["20px", {"lineHeight": "160%", "fontWeight": "400"}],
+                            "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}],
+                            "label-ui": ["14px", {"lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                            "headline-lg-mobile": ["40px", {"lineHeight": "100%", "fontWeight": "400"}],
+                            "headline-lg": ["64px", {"lineHeight": "100%", "fontWeight": "400"}],
+                            "data-metric": ["48px", {"lineHeight": "100%", "fontWeight": "400"}],
+                            "display-hero": ["96px", {"lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                            "headline-md": ["32px", {"lineHeight": "120%", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%); }
+        .asymmetric-overlap { margin-top: -10%; }
+        .wave-bg { background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 bg-primary border-b-2 border-secondary">
+<div class="text-headline-md font-headline-md text-on-primary uppercase tracking-tighter flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pedal_bike</span>
+            TOUR DE ROTARY DSM
+        </div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+<button class="bg-secondary-container text-on-secondary-fixed font-label-ui text-label-ui uppercase px-6 py-2 rounded-none hover:bg-primary hover:text-on-primary border-2 border-transparent hover:border-secondary transition-all duration-300">
+                Register Now
+            </button>
+</nav>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pb-32">
+<!-- Hero Section -->
+<section class="relative bg-primary text-on-primary pt-20 pb-32 clip-diagonal overflow-hidden">
+<div class="absolute inset-0 wave-bg opacity-20 pointer-events-none"></div>
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7">
+<h1 class="text-display-hero font-display-hero uppercase text-secondary-fixed drop-shadow-md leading-none mb-6">
+                        PUT YOUR FACE <br/><span class="text-on-primary">ON THE RIDE</span>
+</h1>
+<p class="text-body-lg font-body-lg text-primary-fixed-dim max-w-xl mb-8">
+                        Join the peloton digitally. Upload your photo, customize your Tour de Rotary frame, and share your commitment to the coastal challenge. Every share spreads the word.
+                    </p>
+</div>
+<div class="lg:col-span-5 relative">
+<!-- Example Portrait Collage -->
+<div class="grid grid-cols-2 gap-4 transform rotate-3">
+<div class="aspect-square bg-surface border-4 border-secondary overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A smiling female cyclist wearing a professional cycling helmet and sleek sunglasses. The lighting is bright and sunny, reflecting a high-energy coastal vibe in Dar es Salaam. The background is slightly blurred but suggests a lively outdoor sporting event. High contrast, vivid colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZogPb6TD-XlU5TkrQOt26_WIGoU8xgSvyXBrqbHEg8n2479afcfXCNJhRcB-R7qkx4NnNOOSo1nglohYz-eRb5xPWKe4K9y2_oafMFtFKEomLet9BgHLnmtXicwWyZ6Ax2VW_fGip68r_110V4ry0QCJ8DOH8-Qz68FJ-UerGoltB0QfoBtLAmsAHVLbNw92EvHJjF-mRc_Q8P0VlBY4nKvy66c7wGwTmk5f9agsOfg95JciHcLVWCQ"/>
+</div>
+<div class="aspect-square bg-surface border-4 border-tertiary-container overflow-hidden shadow-2xl translate-y-6">
+<img class="w-full h-full object-cover" data-alt="A portrait of a male participant in a charity cycling event, laughing and looking directly at the camera. He wears a branded athletic jersey. The scene is bathed in warm golden hour light typical of an East African afternoon. Energetic and premium aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6XH4b17Mq0iTQzfy9BUTq0-0q4ajd4ciSZ0dtbr7aiCBFP_ANMfZHT1FpBbhR0cxo47noWXOrubVpr5Buey-SCqocA2KUxWaoowhA0igKxI2J5p4dFqdKRE0ci_u883Ok5ktO7LhKyTgBw5CP85j0yHlEi9Wt27FtCiZqGp5-o7OnVJjUkeHdZGWSsVO_ti92yXUHhPgFUBzdyt9SflsIumRi2tXXFri3Ql84ADJR2LoIUR2CQqJ4WA"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Generator Workspace -->
+<section class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-20 asymmetric-overlap mb-20">
+<div class="bg-surface-container-lowest border-2 border-outline-variant p-6 md:p-12 shadow-xl grid grid-cols-1 lg:grid-cols-2 gap-12">
+<!-- Left: Controls -->
+<div class="flex flex-col gap-8">
+<div>
+<h2 class="text-headline-md font-headline-md text-primary mb-2">1. Your Photo</h2>
+<div class="border-2 border-dashed border-primary-container bg-surface-container-low p-8 text-center cursor-pointer hover:bg-surface-variant transition-colors group">
+<span class="material-symbols-outlined text-data-metric text-primary-container mb-2 group-hover:scale-110 transition-transform">cloud_upload</span>
+<p class="text-body-md font-body-md text-on-surface-variant">Click to upload or drag &amp; drop</p>
+<p class="text-label-ui font-label-ui text-outline mt-2">JPG, PNG (Max 5MB)</p>
+</div>
+</div>
+<div>
+<h2 class="text-headline-md font-headline-md text-primary mb-4">2. Choose Frame</h2>
+<div class="grid grid-cols-3 gap-4">
+<button class="aspect-square border-4 border-primary bg-primary text-on-primary flex items-center justify-center p-2 relative group focus:ring-4 focus:ring-secondary">
+<div class="absolute inset-0 border-4 border-transparent group-hover:border-white opacity-50 m-2"></div>
+<span class="font-headline-lg-mobile text-headline-lg-mobile uppercase tracking-tighter">NAVY</span>
+</button>
+<button class="aspect-square border-4 border-secondary-container bg-secondary-container text-on-secondary-fixed flex items-center justify-center p-2 relative group focus:ring-4 focus:ring-primary">
+<div class="absolute inset-0 border-4 border-transparent group-hover:border-black opacity-30 m-2"></div>
+<span class="font-headline-lg-mobile text-headline-lg-mobile uppercase tracking-tighter">GOLD</span>
+</button>
+<button class="aspect-square border-4 border-tertiary-container bg-tertiary-container text-on-tertiary flex items-center justify-center p-2 relative group focus:ring-4 focus:ring-primary">
+<div class="absolute inset-0 border-4 border-transparent group-hover:border-white opacity-50 m-2"></div>
+<span class="font-headline-lg-mobile text-headline-lg-mobile uppercase tracking-tighter">PINK</span>
+</button>
+</div>
+</div>
+<div>
+<h2 class="text-headline-md font-headline-md text-primary mb-4">3. Add Details</h2>
+<div class="flex flex-col gap-4">
+<div class="relative">
+<label class="text-label-ui font-label-ui text-primary-container block mb-1">YOUR NAME</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-primary text-body-lg font-body-lg focus:ring-0 focus:border-secondary px-0 py-2" placeholder="e.g. Jane Doe" type="text"/>
+</div>
+<div class="relative mt-2">
+<label class="text-label-ui font-label-ui text-primary-container block mb-1">YOUR ACTIVITY</label>
+<select class="w-full bg-transparent border-0 border-b-2 border-primary text-body-lg font-body-lg focus:ring-0 focus:border-secondary px-0 py-2">
+<option>Rider - 50KM</option>
+<option>Rider - 100KM</option>
+<option>Virtual Rider</option>
+<option>Volunteer</option>
+<option>Supporter</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Preview Canvas -->
+<div class="flex flex-col items-center justify-center bg-surface-container p-8 border-2 border-outline-variant relative">
+<div class="text-label-ui font-label-ui text-outline absolute top-4 left-4 uppercase">Live Preview</div>
+<!-- The Canvas Element (Simulated) -->
+<div class="w-full max-w-md aspect-square bg-surface-container-lowest border-8 border-primary relative overflow-hidden shadow-xl mx-auto flex flex-col justify-end">
+<!-- Placeholder for uploaded image -->
+<div class="absolute inset-0 bg-surface-dim flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-headline-lg">person</span>
+</div>
+<!-- Simulated Frame Overlay -->
+<div class="relative z-10 w-full bg-primary bg-opacity-90 p-4 border-t-4 border-secondary-container">
+<h3 class="text-headline-lg-mobile font-headline-lg-mobile text-on-primary uppercase leading-none truncate">YOUR NAME HERE</h3>
+<p class="text-label-ui font-label-ui text-primary-fixed-dim uppercase tracking-widest mt-1">TOUR DE ROTARY DSM 2024</p>
+</div>
+<!-- Watermark -->
+<div class="absolute top-4 right-4 z-10">
+<span class="material-symbols-outlined text-on-primary drop-shadow-md text-headline-md" style="font-variation-settings: 'FILL' 1;">pedal_bike</span>
+</div>
+</div>
+<button class="mt-8 w-full max-w-md bg-secondary-container text-on-secondary-fixed font-headline-lg-mobile text-headline-lg-mobile uppercase py-4 hover:bg-primary hover:text-on-primary border-2 border-transparent hover:border-secondary transition-all duration-300 flex items-center justify-center gap-2">
+                        GENERATE &amp; DOWNLOAD <span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary relative z-20">
+<div class="text-headline-md font-headline-md text-on-primary flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">pedal_bike</span>
+            TOUR DE ROTARY DSM
+        </div>
+<div class="flex flex-wrap justify-center gap-6 text-label-ui font-label-ui">
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</div>
+<p class="text-body-md font-body-md opacity-60 text-center mt-4">
+            © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+        </p>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2 w-full h-full" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-ui font-label-ui text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2 w-full h-full" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-label-ui font-label-ui text-[10px]">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2 w-full h-full" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="text-label-ui font-label-ui text-[10px]">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary active:bg-primary-container p-2 w-full h-full" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-label-ui font-label-ui text-[10px]">Cause</span>
+</a>
+</nav>
+</body></html>
