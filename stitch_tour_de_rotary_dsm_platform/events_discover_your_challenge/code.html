@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary DSM - Event Discovery</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "on-primary-fixed-variant": "#014788",
+                    "on-secondary-container": "#6b4500",
+                    "surface-tint": "#2b5fa1",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#400014",
+                    "surface-container-high": "#e8e8e8",
+                    "secondary": "#825500",
+                    "on-surface": "#1a1c1c",
+                    "surface-container": "#eeeeee",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-secondary-fixed-variant": "#624000",
+                    "on-background": "#1a1c1c",
+                    "tertiary-fixed-dim": "#ffb2be",
+                    "primary-fixed": "#d5e3ff",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#dadada",
+                    "primary": "#00305f",
+                    "secondary-fixed": "#ffddb3",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "primary-container": "#004687",
+                    "on-surface-variant": "#424750",
+                    "outline-variant": "#c2c6d2",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "secondary-fixed-dim": "#ffb950",
+                    "tertiary-fixed": "#ffd9de",
+                    "on-primary-container": "#87b6fe",
+                    "on-tertiary-fixed-variant": "#900038",
+                    "tertiary-container": "#8f0037",
+                    "on-tertiary-container": "#ff95a8",
+                    "inverse-primary": "#a7c8ff",
+                    "background": "#f9f9f9",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f3f3f4",
+                    "outline": "#737781",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary-fixed": "#001b3b",
+                    "inverse-on-surface": "#f0f1f1",
+                    "on-secondary-fixed": "#291800",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "tertiary": "#650025",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#feae23"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "diagonal-offset": "12deg",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "label-ui": [
+                            "JetBrains Mono"
+                    ],
+                    "body-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-lg-mobile": [
+                            "Anton"
+                    ],
+                    "headline-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-lg": [
+                            "Anton"
+                    ],
+                    "display-hero": [
+                            "Anton"
+                    ],
+                    "data-metric": [
+                            "Anton"
+                    ],
+                    "body-lg": [
+                            "Hanken Grotesk"
+                    ]
+            },
+            "fontSize": {
+                    "label-ui": [
+                            "14px",
+                            {
+                                    "lineHeight": "100%",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "150%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "100%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "120%",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-lg": [
+                            "64px",
+                            {
+                                    "lineHeight": "100%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-hero": [
+                            "96px",
+                            {
+                                    "lineHeight": "90%",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "data-metric": [
+                            "48px",
+                            {
+                                    "lineHeight": "100%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "20px",
+                            {
+                                    "lineHeight": "160%",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 100%);
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+        
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Custom scrollbar for webkit */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f9f9f9; }
+        ::-webkit-scrollbar-thumb { background: #00305f; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #825500; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased selection:bg-secondary selection:text-on-secondary">
+<!-- TopAppBar from JSON -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 bg-primary border-b-2 border-secondary shadow-sm">
+<div class="flex items-center gap-4">
+<span class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">TOUR DE ROTARY DSM</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-secondary border-b-2 border-secondary pb-1 font-label-ui text-label-ui hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-on-primary opacity-80 font-label-ui text-label-ui hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-on-primary opacity-80 font-label-ui text-label-ui hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-on-primary opacity-80 font-label-ui text-label-ui hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-on-primary opacity-80 font-label-ui text-label-ui hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-on-primary opacity-80 font-label-ui text-label-ui hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-secondary text-on-secondary font-label-ui text-label-ui uppercase px-6 py-2 rounded-none hover:bg-primary-container hover:text-on-primary-container transition-colors border border-transparent hover:border-secondary">
+                Register Now
+            </button>
+<button class="md:hidden text-on-primary hover:text-secondary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow flex flex-col relative z-10 overflow-hidden">
+<!-- Hero Section -->
+<section class="relative w-full h-[60vh] md:h-[80vh] flex items-center justify-center bg-primary overflow-hidden clip-diagonal">
+<div class="absolute inset-0 z-0 opacity-40">
+<div class="bg-cover bg-center w-full h-full" data-alt="A wide angle photograph of a vast peloton of cyclists riding along a beautiful sunlit coastal highway in Dar es Salaam. The sparkling blue ocean stretches out to the horizon on one side, while vibrant palm trees line the other. The lighting is golden hour, casting long dramatic shadows and highlighting the intense, focused energy of the riders in their colorful gear. High contrast, professional sports editorial style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB4KHrD2Ff2zcm2FPzy6y7tmyROzUcdp0LddRpkNWdHrLZKgl_dVnBx7Bpp54ZLuBuPjSAltnWgvvf6jhQBENjgYdi-eLNHhqhuhZtb_ba4tR7gyf6VpOr1EPZH5ZVPkKwwXqOy6WKrk9l0Q3AVBO687USghc1PyC57A1u4ZONHx0SaZRQa1fNX-T4VtITjkkbXaJ8KpstXu2EhYExS3dzsKKW1uvc7k_RH_sO_znjZSg9PvCeszO9yDw')"></div>
+<div class="absolute inset-0 bg-primary/60 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile flex flex-col items-center">
+<h1 class="font-display-hero text-headline-lg-mobile md:text-display-hero text-on-primary uppercase mb-4 tracking-tighter">
+                    Discover The Route
+                </h1>
+<p class="font-body-lg text-body-lg text-surface max-w-2xl mx-auto mb-8">
+                    Four distinct challenges mapped across the vibrant heart of Dar es Salaam. Choose your distance, push your limits, and ride for a cause.
+                </p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary text-5xl animate-bounce" style="font-variation-settings: 'FILL' 1;">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Catalog Container -->
+<div class="relative z-20 -mt-20 px-margin-mobile md:px-margin-desktop pb-24 space-y-16 md:space-y-32">
+<!-- Activity 1: The Cyclathon -->
+<section class="relative grid grid-cols-1 md:grid-cols-12 gap-0 min-h-[600px] group">
+<div class="md:col-span-8 relative h-[400px] md:h-full z-10 overflow-hidden border-2 border-primary group-hover:border-secondary transition-colors duration-500">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700" data-alt="A dynamic, low-angle action shot of an elite cyclist leaning into a sharp turn on a coastal road. The blurred background conveys extreme speed and focus. High-contrast lighting highlights the metallic sheen of the bike frame and the vivid colors of the cycling kit against a deep blue sky. Professional sports photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGi2sVGk8LcBmKMlzT9NR6B_t4PMAwWcONeZAd7tXbRXumIVA61GsS40kjxcxIM_-pE4m5foG7-jEtkX18W_SRdEIfkoiHZIYPQY2nSw7tBnYNwViJYwssD58kfVXwbf_-HwZtAJBDTth0sQPNeahtf7wiM5QIsJTKX9jHtsBh75sGxDwoaAWCgmHlw8SdmoNcQmYjRtlzDG-4aSyUwITYTlAoFqMbHZwBRsrNNVzoOGcFCeIxaoRqrQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<h2 class="absolute bottom-8 left-8 font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary uppercase m-0 leading-none">
+                        The<br/><span class="text-secondary">Cyclathon</span>
+</h2>
+</div>
+<div class="md:col-span-5 md:-ml-12 relative z-20 bg-surface-container-lowest p-8 md:p-12 shadow-2xl flex flex-col justify-center border-l-4 border-secondary self-center">
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">The premier endurance test. Navigate the sweeping coastal curves and demanding urban straights in this full-throttle cycling marathon.</p>
+<div class="space-y-4 mb-8 font-label-ui text-label-ui">
+<div class="flex justify-between items-center border-b border-outline-variant pb-2">
+<span class="text-primary opacity-70 uppercase">Distance</span>
+<span class="font-data-metric text-data-metric text-primary">120<span class="text-sm font-label-ui">KM</span></span>
+</div>
+<div class="flex justify-between items-center border-b border-outline-variant pb-2">
+<span class="text-primary opacity-70 uppercase">Difficulty</span>
+<div class="flex gap-1 text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex justify-between items-center pb-2">
+<span class="text-primary opacity-70 uppercase">Entry Fee</span>
+<span class="font-body-md text-body-md font-bold text-on-surface">TSh 150,000</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-label-ui text-label-ui uppercase tracking-widest hover:text-secondary transition-colors group/link w-max" href="#">
+                        Explore Route Details
+                        <span class="material-symbols-outlined group-hover/link:translate-x-2 transition-transform" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- Activity 2: Beach Run (Reversed) -->
+<section class="relative grid grid-cols-1 md:grid-cols-12 gap-0 min-h-[600px] group">
+<div class="md:col-span-5 md:col-start-1 md:mr-[-3rem] relative z-20 bg-primary p-8 md:p-12 shadow-2xl flex flex-col justify-center border-r-4 border-secondary self-center order-2 md:order-1">
+<p class="font-body-md text-body-md text-on-primary opacity-90 mb-6">Trade the tarmac for sand. A grueling yet breathtaking run along the tide lines of Dar's most iconic beaches at sunrise.</p>
+<div class="space-y-4 mb-8 font-label-ui text-label-ui">
+<div class="flex justify-between items-center border-b border-primary-container pb-2">
+<span class="text-surface opacity-70 uppercase">Distance</span>
+<span class="font-data-metric text-data-metric text-secondary">21<span class="text-sm font-label-ui">KM</span></span>
+</div>
+<div class="flex justify-between items-center border-b border-primary-container pb-2">
+<span class="text-surface opacity-70 uppercase">Difficulty</span>
+<div class="flex gap-1 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined opacity-30" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined opacity-30" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex justify-between items-center pb-2">
+<span class="text-surface opacity-70 uppercase">Entry Fee</span>
+<span class="font-body-md text-body-md font-bold text-on-primary">TSh 85,000</span>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 text-secondary font-label-ui text-label-ui uppercase tracking-widest hover:text-on-primary transition-colors group/link w-max" href="#">
+                        Explore Route Details
+                        <span class="material-symbols-outlined group-hover/link:translate-x-2 transition-transform" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</a>
+</div>
+<div class="md:col-span-8 relative h-[400px] md:h-full z-10 overflow-hidden border-2 border-outline group-hover:border-primary transition-colors duration-500 order-1 md:order-2">
+<div class="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700 grayscale hover:grayscale-0" data-alt="A wide panoramic view of runners casting long shadows on a pristine sandy beach at sunrise. The warm golden light illuminates the crashing waves and the determined expressions of the athletes. High-contrast, energetic, and atmospheric coastal sports photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAAREz_vOQ64e6GjacN4M9eBI1-ZUOeK8PFWwN8lsDiaai1aArPfk1N0CtUElDzWUv4mQk0Uq8Z6ahys01P3A4M0yXz7Dk2dnC4CLkx6ZUeDf8bEcBQEIKew3hvitIQNVBXs5wRvf3uRXVXCzH17GwfDaOJDgCqUkzMOsKdqjU_BxJzb6ecDDSqvyaKfRseXAAtA-O3KktwFSSu-oPn5vl7-Wc9pQmqI6oxNgSQCPL2iZh9gVwI89HEog')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<h2 class="absolute top-8 right-8 text-right font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary uppercase m-0 leading-none">
+                        Beach<br/><span class="text-secondary">Run</span>
+</h2>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer from JSON -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary relative z-20">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter mb-4">
+            TOUR DE ROTARY DSM
+        </div>
+<nav class="flex flex-wrap justify-center gap-6 font-label-ui text-label-ui">
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</nav>
+<div class="font-body-md text-body-md text-on-primary opacity-50 mt-8 text-center">
+            © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+        </div>
+</footer>
+</body></html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary - Post Event Impact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#6b4500",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#004687",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary": "#650025",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#424750",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#2b5fa1",
+                        "outline-variant": "#c2c6d2",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#ffd9de",
+                        "surface": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed-dim": "#ffb950",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-primary-fixed": "#001b3b",
+                        "primary-fixed": "#d5e3ff",
+                        "on-surface": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "on-tertiary-fixed": "#400014",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary": "#00305f",
+                        "on-secondary-fixed": "#291800",
+                        "secondary": "#825500",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-secondary-fixed-variant": "#624000",
+                        "inverse-primary": "#a7c8ff",
+                        "on-background": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container": "#eeeeee",
+                        "outline": "#737781",
+                        "secondary-fixed": "#ffddb3",
+                        "tertiary-container": "#8f0037",
+                        "inverse-surface": "#2f3131",
+                        "secondary-container": "#feae23",
+                        "on-primary-container": "#87b6fe",
+                        "on-primary-fixed-variant": "#014788"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-hero": ["Anton"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Anton"],
+                        "data-metric": ["Anton"],
+                        "headline-lg": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%); }
+        .wave-bg {
+            background-color: #00305f;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 50 C 20 20, 80 80, 100 50 L 100 100 L 0 100 Z' fill='%23004687' opacity='0.1'/%3E%3C/svg%3E");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- TopAppBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 bg-primary dark:bg-primary border-b-2 border-secondary">
+<div class="text-headline-md font-headline-md text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center px-6 py-3 bg-secondary text-on-secondary font-label-ui text-label-ui uppercase tracking-wider hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300 rounded-none border-2 border-transparent" href="#">
+            Register Now
+        </a>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center pt-20 pb-32 clip-diagonal bg-primary overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="A sweeping cinematic shot of a massive peloton of cyclists crossing a coastal finish line in Dar es Salaam during the golden hour. The sunlight reflects off the ocean and their bikes, creating a warm, triumphant, and energetic atmosphere. Dust and sweat are visible, emphasizing the grueling yet rewarding effort of the race. High-contrast lighting with deep royal navy shadows and brilliant golden highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw-7kW2IbEYpEE0NOvTgpXqrVZW3sjp-R4hfk6O0Gxkp-7MHZk-CISu0BxMx9mAufugXAPQdiXEfkr1otlpMffYy7nsw__7CwkZUiQYtJJLgn3gE3I9g8tUPkCqAjgYEY91nRgbz_gORvkIj8AOuRae9nzTfXGRALZf3O1CO9Sa3chce9mVHDJX2dPONTi05im7AY72WR47NQZQzvIWyVe1Xw9tkAoJugw7bvdFFRNCwa_1ESzlNPnIA"/>
+</div>
+<!-- Graphic Overlay -->
+<div class="absolute inset-0 z-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="col-span-1 md:col-span-8 lg:col-span-7 flex flex-col items-start gap-6">
+<span class="inline-block px-3 py-1 bg-secondary text-on-secondary font-label-ui text-label-ui tracking-widest uppercase">2024 Event Concluded</span>
+<h1 class="text-display-hero font-display-hero text-on-primary leading-none uppercase max-w-[15ch]">
+                        WE RODE.<br/>
+<span class="text-secondary">WE MOVED.</span><br/>
+                        WE MADE AN IMPACT.
+                    </h1>
+<p class="text-body-lg font-body-lg text-inverse-on-surface max-w-2xl mt-4 border-l-4 border-tertiary pl-4">
+                        The wheels have stopped spinning, but the momentum continues. Thank you to the thousands of riders who pushed their limits along the Tanzanian coastline to support pediatric cancer care.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-8">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-secondary text-[#000000] font-label-ui text-label-ui uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-colors duration-300 rounded-none" href="#highlights">
+                            View Highlights
+                        </a>
+<a class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-secondary text-secondary font-label-ui text-label-ui uppercase tracking-wider hover:bg-secondary/10 transition-colors duration-300 rounded-none" href="#impact">
+                            See What We Achieved
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Metrics Section (Asymmetric) -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop relative z-20 -mt-20" id="impact">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Stat Block 1 -->
+<div class="col-span-1 md:col-span-4 bg-surface text-on-surface p-8 border-t-4 border-secondary shadow-xl hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-primary mb-4" style="font-variation-settings: 'FILL' 0;">group</span>
+<h3 class="text-label-ui font-label-ui text-outline uppercase tracking-wider mb-2">Total Participants</h3>
+<div class="text-data-metric font-data-metric text-primary">3,450+</div>
+<p class="text-body-md font-body-md mt-2 text-on-surface-variant">Riders from 14 countries joined the cause.</p>
+</div>
+<!-- Stat Block 2 (Elevated) -->
+<div class="col-span-1 md:col-span-4 bg-primary text-on-primary p-8 border-t-4 border-tertiary shadow-xl md:-mt-8 hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden">
+<!-- Subtle background wave in stat block -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 10 Q 5 0 10 10 T 20 10\' stroke=\'%23ffffff\' fill=\'none\'/%3E%3C/svg%3E'); background-size: 40px 40px;"></div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl text-tertiary-fixed mb-4" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<h3 class="text-label-ui font-label-ui text-inverse-on-surface opacity-80 uppercase tracking-wider mb-2">Funds Raised</h3>
+<div class="text-data-metric font-data-metric text-tertiary-fixed">$1.2M</div>
+<p class="text-body-md font-body-md mt-2">Directly funding pediatric cancer wards.</p>
+</div>
+</div>
+<!-- Stat Block 3 -->
+<div class="col-span-1 md:col-span-4 bg-surface text-on-surface p-8 border-t-4 border-secondary shadow-xl hover:-translate-y-2 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-primary mb-4" style="font-variation-settings: 'FILL' 0;">route</span>
+<h3 class="text-label-ui font-label-ui text-outline uppercase tracking-wider mb-2">Distance Covered</h3>
+<div class="text-data-metric font-data-metric text-primary">414,000 KM</div>
+<p class="text-body-md font-body-md mt-2 text-on-surface-variant">Combined kilometers ridden by our community.</p>
+</div>
+</div>
+</section>
+<!-- Story / Editorial Section -->
+<section class="py-24 relative overflow-hidden clip-diagonal-reverse bg-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop items-center">
+<div class="col-span-1 md:col-span-5 relative z-10">
+<h2 class="text-headline-lg font-headline-lg text-primary uppercase leading-tight mb-6">
+                        BEYOND THE <br/> FINISH LINE
+                    </h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-8">
+                        The physical exertion was just the beginning. The true triumph lies in the lives touched and the awareness raised. Every drop of sweat contributed to a wave of change for families battling cancer in Tanzania.
+                    </p>
+<a class="inline-flex items-center gap-2 text-tertiary font-label-ui text-label-ui uppercase tracking-wider hover:text-tertiary-container transition-colors group" href="#">
+                        Read the Impact Report 
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</a>
+</div>
+<div class="col-span-1 md:col-span-7 relative h-[500px] md:mt-0 mt-12">
+<!-- Layered Image Effect -->
+<div class="absolute right-0 top-0 w-4/5 h-full z-10 border-l-4 border-b-4 border-secondary shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A poignant, close-up photograph of a tired but deeply emotional cyclist hugging a young child patient at the finish line event. The lighting is soft and golden, highlighting their expressions of joy and relief. The background is slightly blurred but shows other participants and medical staff clapping. The style is editorial, emotional, and raw." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFFzJZlEHHUnPM2PEWtOwUtH74WErsV9mNJYWyTvUeuMV8YlXiwFXD7koPXg6bM893_l2qTT-otGKIyRfwQIZLuQmPTi7Qb3Qum5jZByla-tuw19P4MQLDgezW1Xw0_U8ZJKrqv_ZLDy2dtL6nqvrC-OgrI6UmFHhddzvvUgvoM-wB5yScPUSZ3JBjXh5kwGiZAz2M5ramsIALu2QQmnsLw7HdLgQ6EGueTkJCipZG7vaKvruzY2-FwA"/>
+</div>
+<!-- Offset background block -->
+<div class="absolute right-[10%] top-[10%] w-4/5 h-full bg-primary z-0"></div>
+</div>
+</div>
+</section>
+<!-- Call to Action / Next Year Teaser -->
+<section class="py-32 relative wave-bg text-center flex flex-col items-center justify-center px-margin-mobile">
+<h2 class="text-headline-lg font-headline-lg text-on-primary uppercase mb-4">THE RIDE NEVER TRULY ENDS</h2>
+<p class="text-body-lg font-body-lg text-inverse-on-surface max-w-2xl mx-auto mb-10">
+                Rest up. Recover. Prepare. We return to the coast next year for a bigger, bolder Tour de Rotary.
+            </p>
+<a class="inline-flex items-center justify-center px-8 py-4 bg-tertiary text-on-tertiary font-label-ui text-label-ui uppercase tracking-wider hover:bg-tertiary-container transition-colors duration-300 rounded-none border-2 border-transparent" href="#">
+                Pre-Register for 2025
+            </a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary dark:bg-primary text-on-primary border-t-4 border-secondary flat">
+<div class="text-headline-md font-headline-md text-on-primary">
+            TOUR DE ROTARY DSM
+        </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</div>
+<div class="text-body-md font-body-md text-on-primary opacity-50 mt-4 text-center">
+            © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+        </div>
+</footer>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary dark:bg-primary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="text-label-ui font-label-ui text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary scale-95 transition-transform p-2" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="text-label-ui font-label-ui text-[10px]">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">fitness_center</span>
+<span class="text-label-ui font-label-ui text-[10px]">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+<span class="text-label-ui font-label-ui text-[10px]">Profile</span>
+</a>
+</nav>
+</body></html>

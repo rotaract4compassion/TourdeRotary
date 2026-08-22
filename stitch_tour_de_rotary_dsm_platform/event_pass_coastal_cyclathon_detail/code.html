@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registration Detail &amp; Digital Pass - Tour de Rotary DSM</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e2e2e2",
+                      "tertiary": "#650025",
+                      "outline": "#737781",
+                      "primary": "#00305f",
+                      "surface": "#f9f9f9",
+                      "on-surface": "#1a1c1c",
+                      "background": "#f9f9f9",
+                      "secondary-container": "#feae23",
+                      "surface-bright": "#f9f9f9",
+                      "inverse-surface": "#2f3131",
+                      "surface-container-low": "#f3f3f4",
+                      "on-secondary-fixed-variant": "#624000",
+                      "on-primary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-dim": "#dadada",
+                      "on-error-container": "#93000a",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "primary-container": "#004687",
+                      "on-tertiary-fixed-variant": "#900038",
+                      "secondary-fixed": "#ffddb3",
+                      "primary-fixed": "#d5e3ff",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "on-error": "#ffffff",
+                      "surface-container-highest": "#e2e2e2",
+                      "inverse-primary": "#a7c8ff",
+                      "secondary": "#825500",
+                      "outline-variant": "#c2c6d2",
+                      "on-primary-fixed-variant": "#014788",
+                      "secondary-fixed-dim": "#ffb950",
+                      "on-secondary-fixed": "#291800",
+                      "on-tertiary-container": "#ff95a8",
+                      "tertiary-fixed-dim": "#ffb2be",
+                      "surface-container": "#eeeeee",
+                      "on-tertiary-fixed": "#400014",
+                      "surface-container-high": "#e8e8e8",
+                      "on-tertiary": "#ffffff",
+                      "on-background": "#1a1c1c",
+                      "on-secondary-container": "#6b4500",
+                      "inverse-on-surface": "#f0f1f1",
+                      "tertiary-container": "#8f0037",
+                      "surface-tint": "#2b5fa1",
+                      "on-primary-container": "#87b6fe",
+                      "tertiary-fixed": "#ffd9de",
+                      "on-primary-fixed": "#001b3b",
+                      "on-surface-variant": "#424750"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "diagonal-offset": "12deg",
+                      "margin-mobile": "20px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "label-ui": [
+                              "JetBrains Mono"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-hero": [
+                              "Anton"
+                      ],
+                      "data-metric": [
+                              "Anton"
+                      ],
+                      "headline-lg-mobile": [
+                              "Anton"
+                      ],
+                      "headline-lg": [
+                              "Anton"
+                      ]
+              },
+              "fontSize": {
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "display-hero": [
+                              "96px",
+                              {
+                                      "lineHeight": "90%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "data-metric": [
+                              "48px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%);
+        }
+        .bg-gear-pattern {
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="rgba(0,48,95,0.05)" stroke-width="2" fill="none"/><path d="M50 10 L50 20 M90 50 L80 50 M50 90 L50 80 M10 50 L20 50" stroke="rgba(0,48,95,0.05)" stroke-width="4"/></svg>');
+            background-repeat: repeat;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary text-on-primary border-b-2 border-secondary h-[80px]">
+<div class="text-headline-md font-headline-md uppercase tracking-tighter shrink-0 w-1/4">
+            TOUR DE ROTARY DSM
+        </div>
+<nav class="hidden md:flex flex-1 justify-center gap-6">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</nav>
+<div class="hidden md:flex w-1/4 justify-end">
+<button class="bg-secondary text-on-secondary font-label-ui text-label-ui px-6 py-2 uppercase hover:bg-primary hover:text-on-primary hover:border-secondary border-2 border-transparent transition-all duration-300 whitespace-nowrap">Register Now</button>
+</div>
+<div class="md:hidden flex items-center">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</div>
+</header>
+<div class="flex-1 flex flex-col md:flex-row w-full h-full relative">
+<!-- Side Navigation (Web) -->
+<aside class="hidden md:flex flex-col h-screen sticky top-[80px] w-64 bg-surface-container-lowest border-r border-outline-variant shrink-0 z-40">
+<div class="p-6 border-b border-outline-variant flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-variant overflow-hidden">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="A close-up portrait of a male cyclist wearing a sleek, aerodynamic helmet and reflective sunglasses. The lighting is golden hour, casting warm coastal hues on his face. He is wearing an elite professional cycling jersey in navy blue with subtle gold accents, looking determined against a slightly blurred background of the Indian Ocean." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZW6rWlp_JOStRCzawyKNzVeDZJc3_QSRcumeCWNwYZqqjMyY3tr7gSVOhYkXsjqKNMXfS-c8Q-S91DynBam5Rtel9NFdkVaTBOF-PNQ6kiRl7UN0r_YHQ3Q91gdALfZKjemcb7fgwtE2N8neu6TGPFFRsBdaUgiiCUOxtREUi7sJa82craLUHfOWEes_O00tOEeA7bFRIK19okyHJIYeRPU5inVNvyfmzMeGFQLFyuH8WmgJiCM1T6Q"/>
+</div>
+<div>
+<h2 class="text-headline-md font-headline-md text-primary text-xl">Rider Profile</h2>
+<p class="text-label-ui font-label-ui text-secondary-container">Elite Tier</p>
+</div>
+</div>
+<nav class="flex-1 py-4 overflow-y-auto">
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">dashboard</span>
+                    Dashboard
+                </a>
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui bg-secondary text-on-secondary font-bold translate-x-1 transition-transform group" href="#">
+<span class="material-symbols-outlined">event</span>
+                    My Events
+                </a>
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">directions_bike</span>
+                    Training
+                </a>
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">shopping_bag</span>
+                    Orders
+                </a>
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">token</span>
+                    Collectibles
+                </a>
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">group_add</span>
+                    Referrals
+                </a>
+<a class="flex items-center gap-3 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary">person</span>
+                    Profile
+                </a>
+</nav>
+<div class="p-6 border-t border-outline-variant">
+<button class="w-full bg-primary text-on-primary font-headline-md text-lg uppercase py-3 hover:bg-secondary-container hover:text-on-secondary-container transition-colors duration-300">Log Ride</button>
+<div class="mt-4 space-y-2">
+<a class="flex items-center gap-3 text-label-ui font-label-ui text-on-surface-variant hover:text-primary" href="#">
+<span class="material-symbols-outlined text-sm">settings</span> Settings
+                    </a>
+<a class="flex items-center gap-3 text-label-ui font-label-ui text-on-surface-variant hover:text-primary" href="#">
+<span class="material-symbols-outlined text-sm">help_outline</span> Support
+                    </a>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 min-w-0 bg-surface flex flex-col pb-20 md:pb-0">
+<!-- Hero Section -->
+<div class="relative w-full h-[40vh] md:h-[50vh] clip-diagonal bg-primary overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center w-full h-full mix-blend-overlay opacity-60 group-hover:scale-105 transition-transform duration-[20s] ease-linear" data-alt="A wide, sweeping dynamic shot of the Dar es Salaam coastline at dawn. The Indian Ocean is a deep sapphire blue, with a vibrant golden hour sky casting long, dramatic shadows. Cyclists in silhouette are preparing near the shoreline, their high-end carbon fiber bikes reflecting the early morning light. The composition is asymmetrical, evoking energy and forward momentum, with a slight vignette drawing the eye to the bright horizon." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDoo6pdn8AMDJyneCO_Es6rQk6w-lNduPUB00vvR8vTLLoaqJWfCFszzcB34jIvNWpR3iJVRWCjxy58MSQa5FDxleOMQxSW7hPE9u02iPWsnaSao6xKpNuuTqeFPswpE0XlZTmzrgmnP6LWtKmsxmH8HyrnCJryWK0jvNV3bckY_6OOj95XlCmEo_SDZJeOdYeR6w8gGhi45olZkuHIFTKUi4Cxwdo4V9c8Qs11TbuAd6LDDzlwL_K8jQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/80 to-transparent"></div>
+<div class="absolute bottom-12 md:bottom-24 left-margin-mobile md:left-margin-desktop z-10 w-full md:w-2/3">
+<p class="text-label-ui font-label-ui text-secondary-container uppercase tracking-widest mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">verified</span> Registration Confirmed
+                    </p>
+<h1 class="text-display-hero font-display-hero text-on-primary leading-none uppercase mix-blend-screen drop-shadow-md">Coastal Cyclathon</h1>
+</div>
+</div>
+<!-- Pass & Detail Section -->
+<div class="px-margin-mobile md:px-margin-desktop -mt-16 md:-mt-24 z-20 relative grid grid-cols-1 md:grid-cols-12 gap-gutter mb-24">
+<!-- Digital Pass Card (Bento Style) -->
+<div class="md:col-span-5 flex flex-col gap-6">
+<div class="bg-surface-container-lowest border-2 border-primary p-6 md:p-8 shadow-2xl relative overflow-hidden bg-gear-pattern">
+<!-- Top Accent -->
+<div class="absolute top-0 left-0 w-full h-2 bg-secondary-container"></div>
+<div class="flex justify-between items-start mb-8 relative z-10">
+<div>
+<h3 class="text-headline-md font-headline-md text-primary uppercase leading-tight">Digital<br/>Pass</h3>
+<p class="text-label-ui font-label-ui text-outline mt-1">Tour de Rotary DSM</p>
+</div>
+<div class="w-16 h-16 bg-surface flex items-center justify-center border border-outline-variant">
+<!-- Minimalistic logo placeholder -->
+<span class="material-symbols-outlined text-primary text-4xl">pedal_bike</span>
+</div>
+</div>
+<div class="space-y-6 mb-8 relative z-10">
+<div>
+<p class="text-label-ui font-label-ui text-outline uppercase mb-1">Participant</p>
+<p class="text-headline-md font-headline-md text-on-surface text-2xl uppercase">Juma Mussa</p>
+</div>
+<div class="flex gap-8 border-t border-b border-surface-variant py-4">
+<div>
+<p class="text-label-ui font-label-ui text-outline uppercase mb-1">Tier</p>
+<p class="text-data-metric font-data-metric text-secondary text-3xl uppercase">Elite</p>
+</div>
+<div>
+<p class="text-label-ui font-label-ui text-outline uppercase mb-1">Bib #</p>
+<p class="text-data-metric font-data-metric text-primary text-3xl uppercase">409</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center bg-surface-container p-6 border border-outline-variant mb-6 relative z-10">
+<!-- Placeholder for QR Code, styled to fit the aesthetic -->
+<div class="w-48 h-48 bg-surface-container-lowest border-4 border-primary flex items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCI+PHBhdGggZD0iTTAgMGg0OHY0OEgweiIgZmlsbD0ibm9uZSIvPjxwYXRoIGQ9Ik02IDZoMTR2MTRINnoiIGZpbGw9IiMwMDMwNWYiLz48cGF0aCBkPSJNMjggNmgxNHYxNEgyOHpNNiAyOGgxNHYxNEg2eiIgZmlsbD0iIzAwMzA1ZiIvPjxwYXRoIGQ9Ik0zNiA0MmgydjJIMzZ6TTEwIDEwaDZWMTBoLTZ6TTEwIDMyaDZWNDBoLTZ6TTE4IDI4aDh2OEgxOHpNMTggMThoOHY4SDE4ek0zMiAxMGg2VjEwaC02ek0zMiAzMmg2VjQwaC02eiIgZmlsbD0iI2ZlYWUyMyIvPjwvc3ZnPg==')] bg-repeat bg-center opacity-80 group-hover:opacity-100 transition-opacity"></div>
+<span class="text-label-ui font-label-ui text-primary bg-surface-container-lowest px-2 py-1 absolute">SCAN TO START</span>
+</div>
+<p class="text-label-ui font-label-ui text-outline mt-3">Valid for 1 Entry</p>
+</div>
+<div class="flex flex-col gap-3 relative z-10">
+<button class="w-full bg-primary text-on-primary font-headline-md text-lg uppercase py-4 flex justify-center items-center gap-2 hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">download</span> Download PDF
+                            </button>
+<button class="w-full border-2 border-primary text-primary font-headline-md text-lg uppercase py-3 flex justify-center items-center gap-2 hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">account_balance_wallet</span> Add to Wallet
+                            </button>
+</div>
+</div>
+</div>
+<!-- Event Details (Asymmetric Layout) -->
+<div class="md:col-span-7 flex flex-col gap-8 md:pt-16">
+<div class="bg-surface-container-lowest border border-outline-variant p-8 relative">
+<div class="absolute -top-4 -left-4 w-12 h-12 bg-secondary-container flex items-center justify-center text-on-secondary-container z-10">
+<span class="material-symbols-outlined text-2xl">schedule</span>
+</div>
+<h4 class="text-headline-md font-headline-md text-primary text-2xl uppercase mb-6 pl-4 border-l-4 border-secondary-container">Start Details</h4>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<p class="text-label-ui font-label-ui text-outline uppercase mb-2">Date &amp; Time</p>
+<p class="text-body-lg font-body-lg text-on-surface font-bold">1 Nov 2026</p>
+<p class="text-body-md font-body-md text-on-surface-variant">06:00 EAT (Sharp)</p>
+<button class="mt-4 flex items-center gap-2 text-label-ui font-label-ui text-primary hover:text-secondary underline underline-offset-4 decoration-2">
+<span class="material-symbols-outlined text-sm">calendar_add_on</span> Add to Calendar
+                                </button>
+</div>
+<div>
+<p class="text-label-ui font-label-ui text-outline uppercase mb-2">Location</p>
+<p class="text-body-lg font-body-lg text-on-surface font-bold">Dar es Salaam Yacht Club</p>
+<p class="text-body-md font-body-md text-on-surface-variant">Masaki Peninsula, DSM</p>
+<a class="mt-4 flex items-center gap-2 text-label-ui font-label-ui text-primary hover:text-secondary underline underline-offset-4 decoration-2" href="#">
+<span class="material-symbols-outlined text-sm">map</span> Get Directions
+                                </a>
+</div>
+</div>
+</div>
+<!-- Emergency Info Block (High Contrast) -->
+<div class="bg-tertiary text-on-tertiary p-8 clip-diagonal-reverse relative overflow-hidden shadow-lg mt-4">
+<div class="absolute right-0 top-0 opacity-10 pointer-events-none transform translate-x-1/4 -translate-y-1/4 scale-150">
+<span class="material-symbols-outlined" style="font-size: 200px;">medical_services</span>
+</div>
+<h4 class="text-headline-md font-headline-md text-on-tertiary text-2xl uppercase mb-6 flex items-center gap-3 relative z-10">
+<span class="material-symbols-outlined">health_and_safety</span> Emergency Info
+                        </h4>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
+<div class="border-b border-tertiary-fixed-dim/30 pb-4">
+<p class="text-label-ui font-label-ui text-tertiary-fixed uppercase mb-1">Medical Notes</p>
+<p class="text-body-md font-body-md font-bold">Allergic to Penicillin.</p>
+<p class="text-body-md font-body-md">Blood Type: O+</p>
+</div>
+<div class="border-b border-tertiary-fixed-dim/30 pb-4">
+<p class="text-label-ui font-label-ui text-tertiary-fixed uppercase mb-1">Emergency Contact</p>
+<p class="text-body-md font-body-md font-bold">Sarah Mussa (Wife)</p>
+<p class="text-label-ui font-label-ui mt-1">+255 754 123 456</p>
+</div>
+</div>
+<div class="mt-6 relative z-10 flex justify-end">
+<button class="bg-on-tertiary text-tertiary font-label-ui text-label-ui px-4 py-2 uppercase hover:bg-surface-variant transition-colors border border-on-tertiary">Edit Info</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Bottom Navigation (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary text-secondary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container h-full w-full" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-ui font-label-ui text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary active:bg-primary-container h-full w-full scale-95 transition-transform bg-primary-container/20" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-label-ui font-label-ui text-[10px] mt-1">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container h-full w-full" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="text-label-ui font-label-ui text-[10px] mt-1">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container h-full w-full" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-label-ui font-label-ui text-[10px] mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

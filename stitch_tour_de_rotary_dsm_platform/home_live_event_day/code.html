@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary DSM - Event Day</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#6b4500",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#004687",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary": "#650025",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#424750",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#2b5fa1",
+                        "outline-variant": "#c2c6d2",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#ffd9de",
+                        "surface": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed-dim": "#ffb950",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-primary-fixed": "#001b3b",
+                        "primary-fixed": "#d5e3ff",
+                        "on-surface": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "on-tertiary-fixed": "#400014",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary": "#00305f",
+                        "on-secondary-fixed": "#291800",
+                        "secondary": "#825500",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-secondary-fixed-variant": "#624000",
+                        "inverse-primary": "#a7c8ff",
+                        "on-background": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container": "#eeeeee",
+                        "outline": "#737781",
+                        "secondary-fixed": "#ffddb3",
+                        "tertiary-container": "#8f0037",
+                        "inverse-surface": "#2f3131",
+                        "secondary-container": "#feae23",
+                        "on-primary-container": "#87b6fe",
+                        "on-primary-fixed-variant": "#014788"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-hero": ["Anton"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Anton"],
+                        "data-metric": ["Anton"],
+                        "headline-lg": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .diagonal-clip { clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%); }
+        .diagonal-clip-bottom { clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%); }
+        .material-symbols-outlined { font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; -webkit-font-feature-settings: 'liga'; -webkit-font-smoothing: antialiased; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 bg-primary border-b-2 border-secondary shadow-lg">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">TOUR DE ROTARY DSM</div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</nav>
+<button class="hidden md:block bg-secondary text-on-primary font-label-ui text-label-ui px-6 py-2 rounded-none hover:bg-primary-container transition-colors border border-secondary">
+            Register Now
+        </button>
+<button class="md:hidden text-on-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="w-full relative overflow-hidden">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[90vh] diagonal-clip bg-primary text-on-primary flex items-center pt-20 pb-32">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
+<div class="bg-cover bg-center w-full h-full" data-alt="A cinematic, wide-angle shot of hundreds of cyclists riding along a beautiful coastal road in Dar es Salaam at sunrise. The golden hour light casts long dramatic shadows. The ocean is vibrant blue in the background. The mood is energetic, inspiring, and communal. High contrast, professional sports photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8v4N-qPmyQpSPvt3qiwKPEsaTSkEqWUkH0Kvhg8Ji1QZzOimey2vceFNXA6y7ta3A7zG46p2a6mCoeETJbgJ8PWR4qosgUSqmqTav2uLY3NWTkTzQplpRU26HHXer5Y7zs-qbmX6mTfh-Z08Dllerz0ubUJ0MfBLtvfRWJZRboDHaMTBp3fQh1oOL39AfYCXYPL5mbwT1kDImT3JCa2ZiXvguEJLaG18mwPmQmr7_dGZMLq5xDUofhQ')"></div>
+</div>
+<!-- Graphic Overlay Pattern (Wave simulation via CSS) -->
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none" style="background: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(254, 174, 35, 0.1) 10px, rgba(254, 174, 35, 0.1) 20px);"></div>
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10 grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 flex flex-col justify-center">
+<span class="text-label-ui font-label-ui text-secondary-container mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] animate-pulse">radio_button_checked</span> LIVE • 1 NOV 2026
+                    </span>
+<h1 class="text-headline-lg-mobile md:text-display-hero font-display-hero uppercase text-on-primary mb-6 drop-shadow-lg leading-tight">
+                        TODAY WE RIDE <br/><span class="text-secondary-container">FOR A REASON</span>
+</h1>
+<div class="flex flex-wrap gap-4 mt-8">
+<button class="bg-secondary-container text-on-secondary-fixed font-headline-md text-headline-md px-8 py-3 uppercase tracking-wide hover:bg-primary hover:text-on-primary border-2 border-secondary-container transition-all duration-300">
+                            View Route
+                        </button>
+<button class="bg-transparent text-on-primary font-headline-md text-headline-md px-8 py-3 uppercase border-2 border-on-primary hover:bg-on-primary hover:text-primary transition-all duration-300 flex items-center gap-2">
+                            My Pass <span class="material-symbols-outlined">qr_code_scanner</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-4 mt-12 md:mt-0 flex flex-col justify-end">
+<div class="bg-surface-container/10 backdrop-blur-md p-6 border-l-4 border-secondary-container">
+<h3 class="text-label-ui font-label-ui text-secondary-container mb-2">NEXT UP</h3>
+<p class="text-headline-md font-headline-md text-on-primary">100km Elite Flag Off</p>
+<p class="text-body-md font-body-md text-on-primary/80 mt-1">Starting Line A • 06:30 EAT</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Live Dashboard Section -->
+<section class="py-20 px-margin-mobile md:px-margin-desktop bg-background relative z-10 -mt-16">
+<div class="container mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<!-- Stat Card 1 -->
+<div class="bg-surface-container-highest p-8 border-t-4 border-primary shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<span class="text-label-ui font-label-ui text-on-surface-variant">RIDERS ON COURSE</span>
+<span class="material-symbols-outlined text-primary">pedal_bike</span>
+</div>
+<div class="text-data-metric font-data-metric text-primary">2,408</div>
+<div class="text-body-md font-body-md text-on-surface-variant mt-2">of 3,000 checked in</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-primary text-on-primary p-8 border-t-4 border-secondary-container shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<span class="text-label-ui font-label-ui text-secondary-container">FUNDS RAISED (LIVE)</span>
+<span class="material-symbols-outlined text-secondary-container">volunteer_activism</span>
+</div>
+<div class="text-data-metric font-data-metric text-on-primary">TZS 150M</div>
+<div class="text-body-md font-body-md text-on-primary/80 mt-2">Target: 200M for Polio</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface-container-highest p-8 border-t-4 border-tertiary-container shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<span class="text-label-ui font-label-ui text-on-surface-variant">WEATHER</span>
+<span class="material-symbols-outlined text-tertiary-container">partly_cloudy_day</span>
+</div>
+<div class="text-data-metric font-data-metric text-on-surface">28°C</div>
+<div class="text-body-md font-body-md text-on-surface-variant mt-2">Wind 12km/h • Humidity 75%</div>
+</div>
+</div>
+<!-- Bento Grid Layout for Status -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Live Map/Route Focus (Spans 8 cols) -->
+<div class="md:col-span-8 bg-surface-container-lowest border border-outline-variant p-6 flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-headline-md font-headline-md text-primary">Live Route Status</h2>
+<button class="text-label-ui font-label-ui text-primary underline flex items-center gap-1 hover:text-secondary transition-colors">
+                                Full Map <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+<div class="relative w-full h-64 md:h-96 bg-surface-variant mb-4 overflow-hidden border border-outline-variant group">
+<div class="bg-cover bg-center w-full h-full absolute inset-0 transition-transform duration-700 group-hover:scale-105" data-alt="A stylized, high-contrast digital map interface showing the cycling route along the Dar es Salaam coast. The map uses deep navy blues and bright gold lines to indicate the route. Glowing markers indicate water stations and checkpoints. The aesthetic is modern, clean, and utilitarian, similar to a professional race tracker app." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2Bo4Lt-c1IWlQQoaVaKW3r0XdKw56Y_0APLsWeO5LcUW-4qHFV-wA3A_Ip_Uw-H-6XXKpN3sR9iSFWGfQ7b1SjVg6iJC_5giGHiKwNdMRAL-QPDscJgZwEkWpDDa-0HYCELDKJpVlqLuKKWHzH1cZsht2y6xuHtt68SZjBmojTrbH4RztkO_LHTO8gso0_lEsnEkmjdy13NF9XIwbww1BHT8Nzam9LE5tqh4VKxsd5OCgwm7saeFAjA')"></div>
+<!-- Map Overlay UI -->
+<div class="absolute bottom-4 left-4 right-4 flex gap-2">
+<span class="bg-primary/90 backdrop-blur text-on-primary text-label-ui font-label-ui px-3 py-1 flex items-center gap-1 border border-primary-container"><span class="w-2 h-2 rounded-full bg-secondary-container"></span> Route Clear</span>
+<span class="bg-surface-container/90 backdrop-blur text-on-surface text-label-ui font-label-ui px-3 py-1 flex items-center gap-1 border border-outline-variant"><span class="w-2 h-2 rounded-full bg-error"></span> CP2 Congested</span>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 border-b border-surface-container-high pb-4">
+<div class="bg-primary-container text-on-primary-container w-10 h-10 flex items-center justify-center font-headline-md text-[20px]">CP1</div>
+<div class="flex-1">
+<h4 class="text-body-lg font-body-lg text-on-surface">Msasani Peninsula</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Active • Water &amp; Medical available</p>
+</div>
+<span class="text-label-ui font-label-ui text-primary bg-primary-fixed px-2 py-1">2.4km</span>
+</div>
+<div class="flex items-center gap-4 pb-2 opacity-60">
+<div class="bg-surface-variant text-on-surface-variant w-10 h-10 flex items-center justify-center font-headline-md text-[20px]">CP2</div>
+<div class="flex-1">
+<h4 class="text-body-lg font-body-lg text-on-surface">Oysterbay</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Preparing • Opens in 15m</p>
+</div>
+<span class="text-label-ui font-label-ui text-on-surface-variant bg-surface-container px-2 py-1">12km</span>
+</div>
+</div>
+</div>
+<!-- Updates Stream (Spans 4 cols) -->
+<div class="md:col-span-4 bg-primary text-on-primary p-6 flex flex-col relative overflow-hidden">
+<!-- Abstract BG element -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary-container/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+<h2 class="text-headline-md font-headline-md text-secondary-container mb-6 relative z-10 flex items-center gap-2">
+<span class="material-symbols-outlined">campaign</span> Updates
+                        </h2>
+<div class="flex-1 overflow-y-auto pr-2 space-y-6 relative z-10">
+<!-- Update Item -->
+<div class="border-l-2 border-secondary-container pl-4">
+<span class="text-label-ui font-label-ui text-secondary-container mb-1 block">06:15 AM</span>
+<p class="text-body-md font-body-md text-on-primary">The 50km Fun Ride staging area is now open. Please proceed to Gate B with your QR pass ready.</p>
+</div>
+<!-- Update Item -->
+<div class="border-l-2 border-surface-variant/30 pl-4 opacity-80">
+<span class="text-label-ui font-label-ui text-surface-variant mb-1 block">05:45 AM</span>
+<p class="text-body-md font-body-md text-on-primary">Good morning riders! Weather looks perfect. Registration desks are open.</p>
+</div>
+<!-- Update Item -->
+<div class="border-l-2 border-error pl-4">
+<span class="text-label-ui font-label-ui text-error-container mb-1 block">05:30 AM • ALERT</span>
+<p class="text-body-md font-body-md text-on-primary">Slight delay on medical tent setup near Start Line. Should be resolved by 06:00.</p>
+</div>
+</div>
+<button class="mt-6 w-full py-3 border border-secondary-container text-secondary-container font-label-ui text-label-ui hover:bg-secondary-container hover:text-on-secondary-container transition-colors">
+                            Load More
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Banner -->
+<section class="w-full bg-secondary py-16 px-margin-mobile md:px-margin-desktop diagonal-clip-bottom mb-20">
+<div class="container mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-secondary uppercase mb-2">Not Riding?</h2>
+<p class="text-body-lg font-body-lg text-on-secondary/90">You can still make an impact today. Donate to the Rotary Polio Eradication fund.</p>
+</div>
+<button class="bg-tertiary text-on-tertiary font-headline-md text-headline-md px-10 py-4 uppercase whitespace-nowrap hover:bg-primary transition-colors border-2 border-tertiary shadow-lg">
+                    Donate Now
+                </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 w-full h-full active:bg-primary-container transition-transform" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-ui font-label-ui text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary w-full h-full scale-95 transition-transform bg-primary-container/20" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-label-ui font-label-ui text-[10px]">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 w-full h-full active:bg-primary-container transition-transform" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="text-label-ui font-label-ui text-[10px]">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 w-full h-full active:bg-primary-container transition-transform" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-label-ui font-label-ui text-[10px]">Profile</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary pb-24 lg:pb-12">
+<div class="text-headline-md font-headline-lg text-on-primary text-center">TOUR DE ROTARY DSM</div>
+<div class="flex flex-wrap justify-center gap-6 text-label-ui font-label-ui">
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</div>
+<p class="text-body-md font-body-md text-on-primary/50 mt-4 text-center">© 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.</p>
+</footer>
+</body></html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAQ | Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;500;700;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f9f9f9",
+                        "outline-variant": "#c2c6d2",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "tertiary-container": "#8f0037",
+                        "on-secondary-fixed": "#291800",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-secondary-container": "#6b4500",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "surface-container": "#eeeeee",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-fixed": "#001b3b",
+                        "inverse-on-surface": "#f0f1f1",
+                        "inverse-primary": "#a7c8ff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-fixed-variant": "#014788",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#feae23",
+                        "secondary": "#825500",
+                        "surface-bright": "#f9f9f9",
+                        "surface": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "surface-tint": "#2b5fa1",
+                        "surface-container-low": "#f3f3f4",
+                        "tertiary": "#650025",
+                        "outline": "#737781",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "primary-fixed": "#d5e3ff",
+                        "on-surface-variant": "#424750",
+                        "secondary-fixed": "#ffddb3",
+                        "secondary-fixed-dim": "#ffb950",
+                        "primary-container": "#004687",
+                        "on-secondary-fixed-variant": "#624000",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-container": "#87b6fe",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ff95a8",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#00305f",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary-fixed": "#400014"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-ui": ["JetBrains Mono"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "data-metric": ["Anton"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%); }
+        .faq-item[open] .material-symbols-outlined { transform: rotate(180deg); }
+        .pattern-overlay { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300305f' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 bg-primary border-b-2 border-secondary shadow-sm">
+<a class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter hover:opacity-80 transition-opacity" href="#">
+            TOUR DE ROTARY DSM
+        </a>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1 ml-4 hover:opacity-70 transition-opacity" href="#">FAQ</a>
+<button class="ml-4 bg-secondary-container text-on-secondary-container font-headline-md text-[20px] uppercase px-6 py-2 rounded-none hover:bg-primary hover:text-on-primary hover:border-2 hover:border-secondary transition-all">
+                Register Now
+            </button>
+</nav>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-primary p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col pt-12 md:pt-20">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop mb-16 md:mb-24 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
+<div class="md:col-span-7 z-10">
+<h1 class="font-display-hero text-headline-lg-mobile md:text-display-hero text-primary uppercase mb-6 leading-none">
+                        How can we <br/>help you?
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Everything you need to know about preparing for the coastal ride, fundraising for the cause, and navigating race day logistics.
+                    </p>
+</div>
+<div class="md:col-span-5 relative mt-8 md:mt-0">
+<div class="relative w-full h-16 border-b-2 border-primary flex items-center">
+<span class="material-symbols-outlined absolute left-0 text-primary">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-body-lg font-body-lg text-primary placeholder:text-outline pl-10 pb-2" placeholder="Search questions..." type="text"/>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Categories & Questions Grid -->
+<section class="px-margin-mobile md:px-margin-desktop mb-24 relative">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Sidebar Categories -->
+<aside class="lg:col-span-3 hidden lg:block sticky top-32 h-fit">
+<ul class="space-y-6 border-l-2 border-surface-variant pl-6">
+<li><a class="font-label-ui text-label-ui text-primary uppercase tracking-wider hover:text-secondary transition-colors font-bold" href="#registration">Registration &amp; Prep</a></li>
+<li><a class="font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider hover:text-secondary transition-colors" href="#fundraising">Fundraising</a></li>
+<li><a class="font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider hover:text-secondary transition-colors" href="#raceday">Race Day Logistics</a></li>
+</ul>
+</aside>
+<!-- FAQ Accordions -->
+<div class="lg:col-span-6 space-y-16">
+<!-- Category: Registration -->
+<div class="scroll-mt-32" id="registration">
+<h2 class="font-headline-md text-headline-md text-primary mb-8 border-b-2 border-secondary pb-4 w-fit">Registration &amp; Prep</h2>
+<div class="space-y-4">
+<details class="faq-item group bg-surface-container-lowest border border-outline-variant rounded-none">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-body-lg text-body-lg font-bold text-primary group-hover:bg-surface-container-low transition-colors">
+                                    What is the deadline for early-bird registration?
+                                    <span class="material-symbols-outlined transition-transform duration-300 text-secondary">expand_more</span>
+</summary>
+<div class="p-6 pt-0 font-body-md text-body-md text-on-surface-variant">
+                                    Early-bird registration closes exactly 60 days prior to event day. We highly recommend securing your spot early as grid positions for the starting wave are determined by registration date.
+                                </div>
+</details>
+<details class="faq-item group bg-surface-container-lowest border border-outline-variant rounded-none" open="">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-body-lg text-body-lg font-bold text-primary group-hover:bg-surface-container-low transition-colors">
+                                    Are e-bikes permitted on the route?
+                                    <span class="material-symbols-outlined transition-transform duration-300 text-secondary">expand_more</span>
+</summary>
+<div class="p-6 pt-0 font-body-md text-body-md text-on-surface-variant">
+<p class="mb-4">Yes, Class 1 and Class 3 e-bikes are permitted in the non-competitive casual waves. However, e-bikes are strictly prohibited in the Elite competitive wave to maintain fair timing standards.</p>
+<p>Please ensure your battery is fully charged, as there are no charging stations along the coastal route.</p>
+</div>
+</details>
+<details class="faq-item group bg-surface-container-lowest border border-outline-variant rounded-none">
+<summary class="flex justify-between items-center p-6 cursor-pointer list-none font-body-lg text-body-lg font-bold text-primary group-hover:bg-surface-container-low transition-colors">
+                                    Can I change my wave assignment later?
+                                    <span class="material-symbols-outlined transition-transform duration-300 text-secondary">expand_more</span>
+</summary>
+<div class="p-6 pt-0 font-body-md text-body-md text-on-surface-variant">
+                                    Wave changes are permitted up to 14 days before the event, subject to capacity. You can manage your wave assignment directly through your Rider Dashboard.
+                                </div>
+</details>
+</div>
+</div>
+</div>
+<!-- Support Callout (Asymmetric overlapping element) -->
+<div class="lg:col-span-3 mt-12 lg:mt-0 relative">
+<div class="bg-primary text-on-primary p-8 md:-ml-12 lg:-ml-24 xl:-ml-32 mt-12 relative z-20 shadow-xl border-t-4 border-secondary clip-diagonal-reverse">
+<div class="mb-6 h-32 w-32 rounded-full overflow-hidden border-4 border-secondary mx-auto lg:mx-0">
+<img class="w-full h-full object-cover" data-alt="A vibrant, professional portrait of a cheerful Tanzanian event volunteer wearing a branded bright pink event t-shirt and a lanyard. The background is slightly blurred showing a sunny coastal scene with palm trees. Lighting is golden hour, warm and inviting. High quality editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZUWaJ2x_iBjbl5U0gQMHolCD8ZWTjMr12jkx9sf1rZ5q4gV-k7IOz52AZmevRtWUxZiwi9BeyC3KB2ffMCSzFXGEyreko-Q84bJrgbf5DunnGZknkI2YeIiXro7rEs6AjWYZF1B2_vx8X32nVBt8gb2Jy49MwlpV5BNzoqQ8WlIhgG32XDlCyHSSPLt0TRIqDhQ5PkF7BDcHHMjSBmhHRLmPBonJvKa7zME9pibmXG0X_1fGEWPHOTg"/>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Still need support?</h3>
+<p class="font-body-md text-body-md opacity-80 mb-6">Our volunteer HQ team in Dar es Salaam is ready to assist you with specific inquiries.</p>
+<button class="bg-secondary text-primary font-label-ui text-label-ui uppercase px-6 py-3 font-bold hover:bg-surface-container-lowest hover:text-primary transition-colors border-2 border-transparent hover:border-primary w-full">
+                            Contact HQ
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary clip-diagonal mt-auto">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-label-ui font-label-ui text-secondary underline hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</div>
+<div class="text-body-md font-body-md opacity-50 mt-4 text-center">
+            © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+        </div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]">home</span>
+<span class="text-[10px] font-label-ui">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]">calendar_today</span>
+<span class="text-[10px] font-label-ui">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]">fitness_center</span>
+<span class="text-[10px] font-label-ui">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary active:scale-95 transition-transform p-2 rounded-lg" href="#">
+<span class="material-symbols-outlined mb-1 text-[24px]" style="font-variation-settings: 'FILL' 1;">help</span>
+<span class="text-[10px] font-label-ui font-bold">FAQ</span>
+</a>
+</nav>
+<script>
+        // Simple search filtering logic for FAQ items
+        const searchInput = document.querySelector('input[type="text"]');
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        searchInput.addEventListener('input', function(e) {
+            const term = e.target.value.toLowerCase();
+            faqItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(term)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body></html>

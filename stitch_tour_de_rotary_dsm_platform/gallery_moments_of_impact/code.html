@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary DSM - Archival Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f9f9f9",
+                        "outline-variant": "#c2c6d2",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "tertiary-container": "#8f0037",
+                        "on-secondary-fixed": "#291800",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-secondary-container": "#6b4500",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "surface-container": "#eeeeee",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary-fixed": "#001b3b",
+                        "inverse-on-surface": "#f0f1f1",
+                        "inverse-primary": "#a7c8ff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-fixed-variant": "#014788",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#feae23",
+                        "secondary": "#825500",
+                        "surface-bright": "#f9f9f9",
+                        "surface": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "surface-tint": "#2b5fa1",
+                        "surface-container-low": "#f3f3f4",
+                        "tertiary": "#650025",
+                        "outline": "#737781",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "primary-fixed": "#d5e3ff",
+                        "on-surface-variant": "#424750",
+                        "secondary-fixed": "#ffddb3",
+                        "secondary-fixed-dim": "#ffb950",
+                        "primary-container": "#004687",
+                        "on-secondary-fixed-variant": "#624000",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-container": "#87b6fe",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#ff95a8",
+                        "surface-container-lowest": "#ffffff",
+                        "primary": "#00305f",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary-fixed": "#400014"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-ui": ["JetBrains Mono"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "data-metric": ["Anton"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%); }
+        .masonry-grid { column-count: 1; column-gap: 24px; }
+        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        .masonry-item { break-inside: avoid; margin-bottom: 24px; position: relative; overflow: hidden; }
+        .masonry-item:hover .overlay { opacity: 1; }
+        .masonry-item:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 bg-primary border-b-2 border-secondary shadow-sm transition-all duration-300" id="mainHeader">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1 hover:text-secondary transition-colors duration-300" href="#">Gallery</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+<button class="bg-secondary text-on-secondary font-label-ui text-label-ui uppercase px-6 py-2 rounded-none hover:bg-primary-container hover:text-on-primary transition-colors duration-300 border-2 border-secondary">
+                Register Now
+            </button>
+</nav>
+<button class="md:hidden text-on-primary" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="min-h-screen">
+<!-- Hero Header -->
+<section class="relative bg-primary text-on-primary pt-24 pb-32 px-margin-mobile md:px-margin-desktop clip-diagonal z-10 overflow-hidden">
+<!-- Subtle Background Watermark -->
+<div class="absolute inset-0 opacity-5 pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-size: 80vw; font-variation-settings: 'FILL' 1;">directions_bike</span>
+</div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10">
+<div class="md:col-span-8 lg:col-span-7">
+<h1 class="text-headline-lg-mobile md:text-display-hero font-display-hero uppercase tracking-tighter mb-4">
+                        Visual <span class="text-secondary">Archive</span>
+</h1>
+<p class="text-body-lg font-body-lg text-primary-fixed-dim max-w-2xl mb-12">
+                        Documenting the grit, glory, and coastal beauty of the Tour de Rotary Dar es Salaam. Explore high-resolution captures from past routes, capturing the essence of our elite performance and grassroots community.
+                    </p>
+<!-- Filters -->
+<div class="flex flex-wrap gap-4 items-center">
+<div class="flex flex-col relative w-48">
+<label class="text-label-ui font-label-ui text-secondary mb-1 absolute -top-5 left-0">YEAR</label>
+<select class="bg-transparent border-0 border-b-2 border-secondary text-on-primary font-body-md py-2 focus:ring-0 focus:border-secondary cursor-pointer appearance-none">
+<option class="bg-primary text-on-primary">All Years</option>
+<option class="bg-primary text-on-primary">2024</option>
+<option class="bg-primary text-on-primary">2023</option>
+<option class="bg-primary text-on-primary">2022</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-3 pointer-events-none text-secondary">arrow_drop_down</span>
+</div>
+<div class="flex flex-col relative w-48 mt-4 md:mt-0">
+<label class="text-label-ui font-label-ui text-secondary mb-1 absolute -top-5 left-0">ACTIVITY</label>
+<select class="bg-transparent border-0 border-b-2 border-secondary text-on-primary font-body-md py-2 focus:ring-0 focus:border-secondary cursor-pointer appearance-none">
+<option class="bg-primary text-on-primary">All Activities</option>
+<option class="bg-primary text-on-primary">Pro Race</option>
+<option class="bg-primary text-on-primary">Community Ride</option>
+<option class="bg-primary text-on-primary">Volunteers</option>
+<option class="bg-primary text-on-primary">Ceremonies</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-3 pointer-events-none text-secondary">arrow_drop_down</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Masonry Grid -->
+<section class="px-margin-mobile md:px-margin-desktop py-16 -mt-12 relative z-0 bg-background">
+<div class="max-w-7xl mx-auto masonry-grid">
+<!-- Item 1: Large Feature -->
+<div class="masonry-item group cursor-pointer border border-outline-variant bg-surface-container">
+<img class="w-full h-auto object-cover transition-transform duration-700 ease-out" data-alt="A highly detailed, professional sports photography shot capturing a massive peloton of elite cyclists speeding along the sun-drenched coastal highway of Dar es Salaam. The golden hour lighting casts long, dramatic shadows across the tarmac, emphasizing the dynamic motion and athletic rigor. The scene features a high-contrast aesthetic with deep royal navy shadows and vibrant gold highlights reflecting off the bicycle frames, embodying a premium, high-speed coastal vitality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-7JIyoGIzQKGEqix7yxIp036Fc1xo4nQ1E9zGqPd_apFu3hvceh79MJRQg7fJSO8UcHse-Y51OuVFt3NCoaLTV1U-Z4nzyEeFWqdWSwBHUYOEqB1vjK3yMkOeoeOO6LKA669qSxydShVnlSC7JqexhCDz5ewH8WgJIOLenNTeAltOqad7zvI3e8Tvk4FpL92hIM0Vr1GwQWZKdSjWooMw9qO0EaI2epJw1vWl6QwvMerpRkk6SONAiw"/>
+<div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 overlay">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-label-ui font-label-ui text-secondary mb-2">2024 • ELITE PELOTON</p>
+<h3 class="text-headline-md font-headline-md text-on-primary">The Coastal Sprint</h3>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors" title="Download">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">download</span>
+</button>
+<button class="w-10 h-10 rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors" title="Share">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">share</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2: Stats Overlay -->
+<div class="masonry-item bg-primary text-on-primary border border-secondary p-8 flex flex-col justify-center min-h-[400px]">
+<div class="absolute inset-0 opacity-10 mix-blend-overlay">
+<img class="w-full h-full object-cover grayscale" data-alt="A striking, abstract close-up shot of a racing bicycle's gears and chain in motion, rendered in stark black and white with a subtle golden tint. The high-contrast lighting creates deep shadows and sharp highlights on the metallic surfaces, emphasizing mechanical precision and speed. This archival-style image acts as a textural background, reinforcing the elite performance aesthetic of the Tour de Rotary." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAOu1m74vCjAYtYGuEmml0boOo-51rFTLOq6HpTON_QpgDM7geZZSem1uXH7EUwtoS1Q3QjLfQddVNlzW0r-yv1gTgvL6xmZSdc0JeYaobLJ_YSu1Z3t6kuea3RkwvHNYHfEBwUIhTiEYAAq7uFx0SP9nq2fs2PUTg1stsYOV8j1gVk4ZIpgE1k6uV5Rm6pGKT-Ju1ToqI8FdrGJV-zLzP8r1Nrie7kbqpAw4nzkY21lwZBvEfTXdniA"/>
+</div>
+<div class="relative z-10">
+<p class="text-label-ui font-label-ui text-secondary mb-4 tracking-widest">IMPACT METRIC</p>
+<div class="text-[120px] font-display-hero leading-none text-tertiary-fixed-dim -ml-2">$1.2M</div>
+<h3 class="text-headline-md font-headline-md mt-2">Raised for Clean Water</h3>
+<p class="text-body-md font-body-md mt-4 text-primary-fixed-dim border-t border-secondary/30 pt-4">Community impact from the 2023 coastal route initiative.</p>
+</div>
+</div>
+<!-- Item 3: Volunteer Focus -->
+<div class="masonry-item group cursor-pointer border border-outline-variant bg-surface-container">
+<img class="w-full h-auto object-cover transition-transform duration-700 ease-out" data-alt="An intimate, high-quality portrait of a joyful volunteer at a water station during the Tour de Rotary in Dar es Salaam. The volunteer, wearing a vibrant rotary-branded shirt, is handing a water bottle to an unseen passing cyclist. The background is slightly blurred (shallow depth of field), focusing on the warm smile and the communal, grassroots spirit of the event. The bright, high-key lighting enhances the welcoming and premium aesthetic of the coastal community." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgzeVAw0lF1CEpcwxUkprqkvW5V7BTwOsjlGrmgkxDLBJ6rtZ_WRQx17qEfFcqlmNHV-b8y41uQmw4hbqQgtl1QsdLcXKNKtaC25--094HeqWLaXBgbVCqVnJssCKfxSnQUtjHQkS-o7gahRqGZ6rHzNZddWSs4IKZNK3ZpPTeneqgcTiaBSfypiyr_4Dh5HB_kylRM3umRMtzlp6IushSgN1gO9lDA_JlCwzF2CQwgpaPIGzctHcHdw"/>
+<div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 overlay">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-label-ui font-label-ui text-secondary mb-2">2023 • GRASSROOTS</p>
+<h3 class="text-headline-md font-headline-md text-on-primary">Water Station 4</h3>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 4: Scenic Route -->
+<div class="masonry-item group cursor-pointer border border-outline-variant bg-surface-container">
+<img class="w-full h-auto object-cover transition-transform duration-700 ease-out" data-alt="A breathtaking, wide-angle panoramic photograph of the Dar es Salaam coastline during early morning. The tranquil turquoise Indian ocean contrasts beautifully with a long line of cyclists in bright gear traversing the coastal road. The shot utilizes a diagonal composition, leading the eye along the route. The lighting is soft yet crisp, highlighting the elite performance aesthetic merged with coastal vitality, creating a premium editorial feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmm0w-GKNhERX3KDrVe5IEohlYD6Ylq9FtP7gRnPf-4SWniKm_S8nGI4Zft87WoAbbjTKT2kTWSC_ymmvqip0Ia9dtHHHsk9CGw3xDh7X7J6mdeD7wCh8xMyzWkSPvjIFceI0YbA9MhTs-QE21HbboWytC2Hd2s0bNXG4_SYqui4e1V4m8dnZqMueRwcfb9e71bpROdAz5Qhg5MsjXgiYJNSiCNOvsFBN8wXhlFcSwQHmiPk2ecvNa6g"/>
+<div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 overlay">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-label-ui font-label-ui text-secondary mb-2">2024 • SCENIC ROUTE</p>
+<h3 class="text-headline-md font-headline-md text-on-primary">Oyster Bay Stretch</h3>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 5: Text/Data Block -->
+<div class="masonry-item bg-surface-container text-on-surface border border-outline-variant p-8 flex flex-col justify-between min-h-[300px]">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-4">photo_camera</span>
+<h3 class="text-headline-md font-headline-md">Submit Your Shots</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mt-4">
+                            Were you on the route? We are always looking to expand our archival gallery with participant perspectives.
+                        </p>
+</div>
+<button class="mt-8 bg-transparent border-2 border-primary text-primary font-label-ui text-label-ui uppercase px-6 py-3 w-fit hover:bg-primary hover:text-on-primary transition-colors">
+                        Upload Media
+                    </button>
+</div>
+<!-- Item 6: Finish Line -->
+<div class="masonry-item group cursor-pointer border border-outline-variant bg-surface-container">
+<img class="w-full h-auto object-cover transition-transform duration-700 ease-out" data-alt="A dramatic, action-packed photograph capturing the exact moment a cyclist crosses the finish line of the Tour de Rotary. The rider's arms are raised in a triumphant gesture, face expressing raw exhaustion and exhilaration. The background is a blur of cheering spectators and rotary banners, emphasizing the communal achievement. The image uses a high-contrast processing style, typical of high-end sports journalism, with deep shadows and popping highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhJP3zybBTAZVKx-Y8n56MrAguJJBqZhuxcQLGw3_f3t0vOYQgLnOqHjm2_yfJ1NGnYFuV-WeeegYY79XuRId7cN9AH9_UmUDhtEaBEseBqrll7IP8Fzlp_2YVjefTCGayDitGeNqGjpiEWUSiFfAjp3Hgp3vdOrfD2_qQ1CNzLzONoFJJOecFSriG9raSn0_rV5xvVkcV3ewZ-VPNNNr1JKxBk8MaAXdAkNMz_O3eH4KmhcGhakplxg"/>
+<div class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 overlay">
+<div class="flex justify-between items-end">
+<div>
+<p class="text-label-ui font-label-ui text-secondary mb-2">2022 • VICTORY</p>
+<h3 class="text-headline-md font-headline-md text-on-primary">The Final Push</h3>
+</div>
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full border border-secondary flex items-center justify-center text-secondary hover:bg-secondary hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">download</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-12">
+<button class="bg-primary text-secondary font-label-ui text-label-ui uppercase px-8 py-4 border-2 border-primary hover:bg-transparent hover:text-primary transition-colors">
+                    Load More Archives
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary mt-24 clip-diagonal-reverse relative overflow-hidden">
+<div class="absolute inset-0 opacity-5 pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-size: 100vw; font-variation-settings: 'FILL' 1;">water</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter mb-6">
+                TOUR DE ROTARY DSM
+            </div>
+<nav class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</nav>
+<p class="text-body-md font-body-md text-on-primary opacity-50 text-center">
+                © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+            </p>
+</div>
+</footer>
+<!-- Bottom Nav for Mobile -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-primary border-t-2 border-secondary shadow-lg md:hidden">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-ui font-label-ui text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-label-ui font-label-ui text-[10px]">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary active:bg-primary-container p-2 scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">photo_library</span>
+<span class="text-label-ui font-label-ui text-[10px]">Gallery</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-label-ui font-label-ui text-[10px]">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple header scroll effect
+        const header = document.getElementById('mainHeader');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+    </script>
+</body></html>
