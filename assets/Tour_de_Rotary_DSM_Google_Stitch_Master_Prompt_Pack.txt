@@ -1,0 +1,1328 @@
+TOUR DE ROTARY DSM
+GOOGLE STITCH MASTER UI PROMPT PACK
+2026 EDITION
+
+PURPOSE
+This file is the complete page-by-page prompt system for mocking the Tour de Rotary DSM digital platform in Google Stitch. Generate the product as a connected premium event platform, not as a collection of disconnected screens.
+
+EVENT CONTEXT
+Tour de Rotary DSM is a flagship Dar es Salaam charity cyclathon and multi-activity fundraising event supporting cancer care for children and women.
+Event date: 1 November 2026.
+Production platform handoff target: 15 September 2026.
+
+CORE PRODUCT IDEA
+One digital home for discovery, registration, secure checkout, event participation, merchandise, training preparation, social sharing, digital collectibles, volunteers, sponsors, partners and HQ operations.
+The interface should feel reusable every year and phase-aware across PRE-EVENT, EVENT DAY and POST-EVENT.
+
+DESIGN NORTH STAR
+Think:
+- Tour de France performance culture
+- Dar es Salaam beach energy
+- AAA sports game presentation quality
+- Premium charity campaign credibility
+- Modern African event identity
+
+Do NOT make it look like a gaming dashboard, crypto website, fintech app, generic NGO site or generic ecommerce template.
+Do NOT overuse gradients, glassmorphism, giant rounded cards, excessive shadows, neon colors or dark mode.
+Do NOT make every section visually loud.
+Keep hierarchy disciplined and editorial.
+
+BRAND SYSTEM
+Primary colors:
+- Royal Navy
+- Gold
+- Cranberry Pink
+- White
+- Black
+
+Background rule:
+The core website background is WHITE. Use navy, gold and cranberry as accents, sections, borders, typography, badges, CTAs and graphic moments. Use photography and controlled dark panels for selected hero or immersive moments only.
+
+COLOR BEHAVIOUR
+Royal Navy: major headings, navigation, dark panels, key controls, route diagrams, serious operational surfaces.
+Gold: premium action, achievement, sponsor tier, highlights, milestones, selected buttons, collectible accents.
+Cranberry Pink: charity/cause emphasis, social moments, alerts, selected badges, feminine/health campaign accents.
+White: dominant canvas, breathing room, readability.
+Black: typography and high contrast details, used sparingly.
+
+TYPOGRAPHY
+Bold modern sans-serif with athletic editorial character.
+Large display typography on marketing pages.
+Compact clear UI typography for dashboards.
+Use uppercase sparingly for labels and overlines.
+Never sacrifice readability for style.
+
+IMAGERY
+Dar es Salaam should be visible throughout the visual language:
+- Indian Ocean coastline
+- palm-lined roads
+- city streets
+- sunrise or golden-hour riding
+- beach-side community moments
+- Tanzanian people participating naturally
+- urban architecture and roads
+- cycling, running, walking, Zumba and yoga
+
+Do not stereotype Tanzania with safari imagery unless an event sponsor or story specifically requires it.
+Use real-feeling local urban imagery.
+
+GRAPHIC LANGUAGE
+Use subtle:
+- cycling route lines
+- elevation/profile lines
+- ribbon curves inspired by the cancer ribbon
+- speed lines
+- medal geometry
+- road markings
+- subtle topographic patterns
+- coastline contours
+
+Motion language:
+- scroll-linked counters
+- subtle parallax on major campaign imagery
+- animated route line drawing
+- progress rings
+- smooth number transitions
+- micro-interactions on badges, ticket cards and checkout
+- celebratory but restrained confirmation states
+
+ACCESSIBILITY
+High contrast.
+Large tap targets.
+Clear focus states.
+Avoid color-only status indicators.
+Use labels with icons.
+Design for mobile first, then desktop expansion.
+
+GLOBAL NAVIGATION
+Public desktop navigation:
+Home
+Events
+Train
+Cause
+About
+Shop
+Collectibles
+Sponsors
+[Register Now]
+
+Public mobile navigation:
+Home
+Events
+Train
+Shop
+More
+
+More menu:
+Cause
+About
+Sponsors
+Collectibles
+Gallery
+FAQ
+Contact
+
+AUTHENTICATED NAVIGATION
+Dashboard
+My Events
+Training
+Orders
+Collectibles
+Referrals
+Profile
+Notifications
+
+HQ NAVIGATION
+Overview
+Registrations
+Orders
+Activities
+Merch
+Payments
+Participants
+Volunteers
+Sponsors
+Partners
+Training
+Collectibles
+Communications
+Content
+Analytics
+Reports
+Settings
+Audit Log
+
+GLOBAL INTERACTION PRINCIPLES
+Every page should feel connected.
+Every object that can be edited should have a clear path to the relevant action.
+Use realistic TSh pricing, never dollar symbols in the UI.
+All payment and order states should be visually clear.
+All dashboards should prioritize what needs attention now.
+Design empty states, loading states, success states and error states.
+
+============================================================
+MASTER GENERATION RULE
+============================================================
+For every prompt below, create a polished production-quality page or screen in the Tour de Rotary DSM design system.
+Use the assets supplied by the project owner where indicated. Do not invent alternate logos or redesign the supplied brand mark.
+Keep the visual system consistent across the full product.
+Prefer white canvas with strategic navy, gold and cranberry accents.
+Include responsive behavior for desktop and mobile.
+Use realistic Tanzanian TSh prices and event data.
+Show interaction affordances clearly.
+The screens should feel buildable in a real web application.
+
+============================================================
+PUBLIC EXPERIENCE
+============================================================
+
+PAGE 01: HOME / PRE-EVENT
+PROMPT
+Create the flagship Tour de Rotary DSM homepage for the PRE-EVENT phase.
+Use a white primary canvas with a full-width cinematic hero using the supplied Tour de Rotary cyclist artwork or video asset.
+Overlay a refined navy navigation bar.
+Hero content:
+TOUR DE ROTARY DSM
+Ride. Move. Give.
+1 November 2026
+Dar es Salaam
+CTA buttons: Register Now, Explore the Event
+Large live countdown to 1 November 2026.
+Show a slim fundraising/registration momentum line beneath the hero.
+Then build:
+- three main activity cards: Cyclathon, Marathon/Run, Walkathon
+- additional wellness activities: Zumba, Yoga, Community Walk
+- charity story section with emotional photography and an animated impact counter
+- sponsor wall with Platinum, Gold, Silver and Bronze tiers
+- premium merchandise strip
+- training teaser showing weekly community kilometres
+- social proof section
+- newsletter signup
+- final registration CTA
+Use scroll-based route lines and ribbon motion subtly between sections.
+Do not make every section card-heavy.
+
+PAGE 02: HOME / EVENT DAY
+PROMPT
+Create the EVENT DAY homepage state for 1 November 2026.
+The site should feel alive and active without becoming chaotic.
+Hero:
+TODAY WE RIDE FOR A REASON
+Live status indicator.
+Live participant count.
+Live fundraising total.
+Next schedule item.
+CTA: View Route, My Pass, Live Updates.
+Show live route status, check-in progress, event activities currently active, sponsor moments and emergency/operational updates.
+Keep white background with navy and gold as dominant interface accents.
+
+PAGE 03: HOME / POST-EVENT
+PROMPT
+Create the POST-EVENT homepage state.
+Hero headline:
+WE RODE. WE MOVED. WE MADE AN IMPACT.
+Show event results, community numbers, impact on cancer care, photo highlights and gratitude.
+CTA: View Highlights, My Collectibles, See What We Achieved.
+Add a subtle NEXT YEAR teaser at the bottom.
+Use celebratory editorial photography rather than confetti-heavy UI.
+
+PAGE 04: EVENTS INDEX
+PROMPT
+Create the Tour de Rotary DSM Events page.
+Hero section introducing all activities.
+Feature the Cyclathon as the flagship event with route map visual.
+Activity cards for Marathon/Run, Walkathon, Zumba, Yoga and Community Walk.
+Each card must show distance, difficulty, starting time, ticket price in TSh, remaining capacity and CTA.
+Provide filters by activity type and difficulty.
+Add an event schedule preview and downloadable event guide section.
+
+PAGE 05: CYCLATHON DETAIL
+PROMPT
+Create the flagship Cyclathon activity detail page.
+Use a large route visual inspired by professional cycling race maps.
+Sections:
+- event overview
+- route and distance
+- elevation profile
+- start and finish details
+- what to bring
+- safety information
+- accessibility
+- schedule
+- ticket tiers in TSh
+- capacity and spots remaining
+- FAQ
+CTA remains sticky on mobile: Register for Cyclathon.
+
+PAGE 06: OTHER ACTIVITY DETAIL
+PROMPT
+Create a reusable activity-detail template for Marathon/Run, Walkathon, Zumba, Yoga and Community Walk.
+Show activity hero image, description, duration, difficulty, distance where relevant, ticket price, capacity, perks, requirements, accessibility and FAQ.
+Use the same design system but allow each activity to have a distinct hero image and accent treatment.
+
+PAGE 07: ABOUT TOUR DE ROTARY
+PROMPT
+Create an interactive editorial About page.
+Do not make it a static wall of text.
+Use a horizontal or scroll-based journey showing how Tour de Rotary DSM evolved and what it represents.
+Sections:
+- What Tour de Rotary is
+- Why Dar es Salaam
+- The people behind it
+- Rotary and Rotaract involvement
+- Community movement
+- What the event is becoming
+Use interactive timeline nodes, photography reveal, subtle map movement across Dar es Salaam and short editorial statements.
+Use the supplied logos where appropriate.
+
+PAGE 08: OUR CAUSE
+PROMPT
+Create a premium charity storytelling page focused on cancer care for children and women.
+The page should feel human, cinematic and respectful.
+Start with a powerful editorial hero using real human-centered imagery.
+Sections:
+- the challenge
+- why early detection and care matter
+- who the event supports
+- how participation contributes
+- impact numbers
+- partner and healthcare ecosystem
+- transparent use-of-funds storytelling
+- community voices / testimonials
+- final call to participate or support
+Use interactive impact counters and scroll-driven storytelling.
+Do not use fear-based imagery.
+Do not overuse pink.
+Cranberry is a strategic accent, not the entire page.
+
+PAGE 09: SPONSORS
+PROMPT
+Create a public sponsors page with premium sponsor tier presentation.
+Platinum, Gold, Silver, Bronze.
+Each tier gets logo placement examples, event visibility, activation formats and benefits.
+Add sponsor stories and activation highlights.
+CTA for prospective sponsors: Become a Sponsor.
+
+PAGE 10: SPONSOR INQUIRY
+PROMPT
+Create a clean sponsor inquiry form page.
+Fields:
+organisation name
+contact person
+email
+phone
+interested tier
+activation goals
+message
+CTA: Request Sponsorship Pack.
+Include a visual side panel showing the event reach, audience and digital activation possibilities.
+
+PAGE 11: SHOP
+PROMPT
+Create the Tour de Rotary premium merchandise store.
+White background, polished sports retail aesthetic.
+Categories:
+Jerseys
+Caps
+Bottles
+Wristbands
+Bags
+Limited Editions
+Show product cards with photography, TSh price, stock status, color/size summary and quick add.
+Seasonal drops and flash sale modules can appear at the top.
+
+PAGE 12: PRODUCT DETAIL
+PROMPT
+Create a premium product detail page for an event jersey.
+Large image gallery.
+Product name.
+TSh price.
+Size selector.
+Color selector.
+Quantity.
+Stock indicator.
+Pickup or shipping selector.
+7-day reservation countdown where applicable.
+Add to cart.
+Wishlist.
+Product details, material, size guide and related items.
+
+PAGE 13: DIGITAL COLLECTIBLES HUB
+PROMPT
+Create a premium digital collectibles discovery page.
+Show:
+Participation certificates
+Activity badges
+Sponsor editions
+Patron artwork
+Limited digital releases
+NFT collection / on-chain releases
+Explain the concept without requiring visitors to understand crypto.
+Use elegant collectible-card presentation.
+Each item can show issue year, tier and verification availability.
+
+PAGE 14: PUBLIC COLLECTIBLE DETAIL / VERIFICATION
+PROMPT
+Create a public collectible verification page.
+Large collectible preview.
+Owner name.
+Activity.
+Year.
+Tier.
+Issue date.
+Unique ID.
+Verification status.
+QR-linked authenticity message.
+Optional on-chain proof section with chain/provider and transaction reference when applicable.
+Make authenticity easy to understand.
+
+PAGE 15: FRAME GENERATOR
+PROMPT
+Create a public Twibbon-style Tour de Rotary Frame Generator.
+No login required.
+Hero says: PUT YOUR FACE ON THE RIDE.
+Upload photo control.
+Preview canvas.
+Frame selector.
+Text field for name.
+Activity selector.
+Generate button.
+Download PNG.
+Share buttons.
+Show sample frame variations.
+Keep the interaction joyful and premium.
+
+PAGE 16: TRAIN LANDING
+PROMPT
+Create the public Training page introducing the event preparation experience.
+Headline:
+TRAIN FOR THE DAY. ARRIVE READY.
+Show weekly community distance, active participants, milestone badges and training tips.
+Explain that participants can connect Strava or supported fitness sources with permission.
+CTA: Start Training.
+
+PAGE 17: TRAINING PUBLIC LEADERBOARD
+PROMPT
+Create a public or opt-in community training leaderboard.
+Show weekly kilometres, consistency, training days and milestone badges.
+Use privacy-aware display names.
+Allow filter by friends/community/activity.
+Make competition friendly, not intimidating.
+
+PAGE 18: GALLERY
+PROMPT
+Create the event photo gallery page.
+Editorial masonry or structured grid.
+Filters by year and activity.
+Post-event state should feel archival and premium.
+Include download/share affordances where permitted.
+
+PAGE 19: FAQ
+PROMPT
+Create an elegant FAQ page.
+Categories:
+Registration
+Payments
+Activities
+Merchandise
+Training
+Event day
+Collectibles
+Sponsors
+Use expandable answers and a search field.
+
+PAGE 20: CONTACT / HELP
+PROMPT
+Create a participant support page.
+Show contact channels, FAQ shortcut, payment/order help, event information and a simple support form.
+Include order/reference number field when relevant.
+
+============================================================
+AUTHENTICATION
+============================================================
+
+PAGE 21: SIGN UP
+PROMPT
+Create sign-up page for Tour de Rotary DSM.
+Fields: name, email, password, phone.
+Optional Google sign-in and Facebook sign-in.
+Agree to terms and privacy.
+Premium but simple layout using a split photography panel on desktop and single-column mobile layout.
+
+PAGE 22: LOGIN
+PROMPT
+Create a clean login page with email/password, Google and Facebook sign-in, forgot password and account help.
+
+PAGE 23: EMAIL VERIFICATION
+PROMPT
+Create email verification success/pending page.
+Show clear instructions and resend verification action.
+
+PAGE 24: PASSWORD RESET
+PROMPT
+Create password reset request and new password screens.
+
+============================================================
+PARTICIPANT ACCOUNT
+============================================================
+
+PAGE 25: PARTICIPANT DASHBOARD
+PROMPT
+Create the primary participant dashboard.
+Top greeting.
+Upcoming event card with countdown.
+My registrations.
+Order status.
+Training progress.
+Next badge.
+Collectibles.
+Referral progress.
+Important notifications.
+Quick actions:
+Register
+Train
+Shop
+View Pass
+Collectibles
+Referral
+Use a performance dashboard aesthetic, but keep white space and editorial polish.
+
+PAGE 26: MY EVENTS
+PROMPT
+Create the participant My Events page.
+Show all registered activities with status:
+Confirmed
+Pending Payment
+Completed
+Cancelled
+Each registration opens to full details, QR pass and event information.
+
+PAGE 27: REGISTRATION DETAIL / DIGITAL PASS
+PROMPT
+Create registration detail page.
+Show activity, date, time, route, ticket tier, participant details, payment status and downloadable QR pass.
+Add add-to-calendar and emergency information actions.
+
+PAGE 28: ORDERS
+PROMPT
+Create order history page.
+Tabs:
+All
+Tickets
+Merchandise
+Digital
+Each order shows order ID, date, item summary, TSh total and status.
+
+PAGE 29: ORDER DETAIL
+PROMPT
+Create order detail screen.
+Show itemized products/tickets, TSh totals, payment status, payment method, pickup/shipping status, receipt download and support/refund request.
+
+PAGE 30: PAYMENT RETRY
+PROMPT
+Create a payment recovery page for failed/pending payment.
+Clearly explain status.
+CTA: Retry Payment.
+Show deadline if reservation applies.
+Do not create anxiety-heavy design.
+
+PAGE 31: TRAINING DASHBOARD
+PROMPT
+Create detailed participant training dashboard.
+Show:
+weekly distance
+monthly distance
+training days
+streak
+activity breakdown
+progress toward event goal
+milestone badges
+friends/community comparison
+Training connection cards:
+Strava Connected
+Android Fitness Connected
+Manage permissions
+Disconnect
+Use tasteful charts, route line visuals and progress rings.
+No exact map location sharing by default.
+
+PAGE 32: STRAVA CONNECTION
+PROMPT
+Create Strava OAuth connection screen.
+Explain what data will be accessed and why.
+Show permission summary.
+CTA: Connect Strava.
+After connection show Connected state, last sync and Disconnect action.
+
+PAGE 33: ANDROID FITNESS CONNECTION
+PROMPT
+Create Android fitness connection screen using Google Health Connect as the primary current pathway.
+Explain activity permissions, data access and privacy.
+Show Connected state and last sync.
+
+PAGE 34: FRIENDS / COMMUNITY PROGRESS
+PROMPT
+Create participant friends progress page.
+Show opt-in friends list, weekly distance, training streak, badges and recent milestones.
+Provide privacy controls.
+Default to aggregate or badge-level sharing when participants do not want exact activity details shared.
+
+PAGE 35: BADGES
+PROMPT
+Create badge gallery.
+Categories:
+Training
+Registration
+Fundraising
+Social
+Event Day
+Community
+Show locked and unlocked badges.
+Each badge has requirement and earned date.
+Allow PNG download/share for earned badges.
+
+PAGE 36: COLLECTIBLES GALLERY
+PROMPT
+Create participant collectible gallery.
+Show all certificates, activity badges, sponsor editions, patron artwork and NFT/on-chain claims.
+Each item opens detail.
+Use premium digital-art gallery treatment.
+
+PAGE 37: COLLECTIBLE DETAIL
+PROMPT
+Create participant collectible detail page.
+Large artwork.
+Metadata.
+Owner.
+Issue date.
+Unique ID.
+Verification QR.
+Download PNG.
+Download PDF.
+Share.
+Optional claim/mint CTA when eligible.
+
+PAGE 38: REFERRALS
+PROMPT
+Create participant referral dashboard.
+Unique referral link.
+Copy button.
+Share buttons.
+Conversions.
+Rewards/badges.
+Leaderboard position.
+Recent referrals.
+
+PAGE 39: PROFILE
+PROMPT
+Create participant profile page.
+Avatar.
+Personal details.
+Emergency information where appropriate.
+Phone/email.
+Connected services.
+Preferences.
+Privacy and sharing controls.
+
+PAGE 40: NOTIFICATIONS
+PROMPT
+Create participant notifications and preferences page.
+Email toggle.
+SMS toggle.
+Event reminders.
+Payment reminders.
+Order updates.
+Training updates.
+Collectible updates.
+Marketing/newsletter.
+
+============================================================
+VOLUNTEER PORTAL
+============================================================
+
+PAGE 41: VOLUNTEER DASHBOARD
+PROMPT
+Create volunteer portal dashboard.
+Show assigned event zone, next shift, check-in status, briefing completion, tasks and important updates.
+
+PAGE 42: VOLUNTEER SHIFTS
+PROMPT
+Create volunteer shift selection screen.
+Show date, zone, start time, end time, role, capacity and availability.
+Allow request/join where appropriate.
+
+PAGE 43: VOLUNTEER EVENT CHECK-IN
+PROMPT
+Create volunteer event-day check-in screen.
+Large QR or confirmation control.
+Show assigned zone and shift.
+Start shift button.
+End shift button.
+Incident/report shortcut.
+
+PAGE 44: VOLUNTEER INCIDENT REPORT
+PROMPT
+Create quick incident report form.
+Type, location/zone, urgency, description, attachment, submit.
+Designed for fast mobile use during event day.
+
+============================================================
+SPONSOR PORTAL
+============================================================
+
+PAGE 45: SPONSOR DASHBOARD
+PROMPT
+Create sponsor portal dashboard.
+Show tier, activation status, deliverables, deadlines, event assets, campaign visibility and summary metrics.
+
+PAGE 46: SPONSOR ACTIVATION
+PROMPT
+Create sponsor activation workflow.
+Checklist:
+Organisation info
+Logo upload
+Brand assets
+Activation selections
+Payment/approval
+Final confirmation
+Progress indicator.
+
+PAGE 47: SPONSOR ASSETS
+PROMPT
+Create sponsor asset library.
+Event logos.
+Social artwork.
+Frame assets.
+Campaign links.
+Brand placement previews.
+Download controls.
+
+PAGE 48: SPONSOR REPORT
+PROMPT
+Create sponsor post-event report dashboard.
+Show visibility, digital engagement, participation attributed to sponsor activity, downloadable report and event highlights.
+
+============================================================
+PARTNER PORTAL
+============================================================
+
+PAGE 49: PARTNER DASHBOARD
+PROMPT
+Create partner portal dashboard.
+Show assigned deliverables, status, deadlines, files awaiting approval and messages from HQ.
+
+PAGE 50: PARTNER DELIVERABLE DETAIL
+PROMPT
+Create deliverable detail page.
+Show description, deadline, assigned owner, status, upload area, revision history, HQ comments and approval state.
+
+============================================================
+HQ ADMIN / COMMAND CENTRE
+============================================================
+
+PAGE 51: HQ LOGIN
+PROMPT
+Create secure HQ admin login page.
+Premium but restrained.
+Emphasise secure operational access.
+
+PAGE 52: HQ OVERVIEW
+PROMPT
+Create the main HQ Command Centre.
+This is the most information-dense surface in the product.
+Show:
+Registrations today
+Total registrations
+Revenue
+Pending payments
+Merch stock alerts
+Volunteer fulfilment
+Sponsor activation
+Partner deliverables
+Training activity
+Collectible queue
+SMS/email queue
+System alerts
+Event phase
+Quick actions
+Use modular information hierarchy, not dozens of giant cards.
+Include global search and a persistent event-status bar.
+
+PAGE 53: HQ REGISTRATIONS
+PROMPT
+Create registrations management screen.
+Search.
+Filter by activity, payment status, date, ticket tier, age group if configured, referral and check-in status.
+Bulk actions.
+Export CSV.
+Open participant detail.
+
+PAGE 54: HQ PARTICIPANT DETAIL
+PROMPT
+Create participant 360-degree profile for HQ.
+Registration history.
+Orders.
+Payment state.
+Training connection state.
+Badges.
+Collectibles.
+Referral activity.
+Communications history.
+Notes.
+Consent/privacy state.
+Audit timeline.
+
+PAGE 55: HQ ORDERS
+PROMPT
+Create order management screen.
+Search order ID.
+Filter by payment state, pickup/shipping, date, product type.
+Show payment retries, reservation deadlines and refund status.
+
+PAGE 56: HQ INVENTORY
+PROMPT
+Create merch inventory management screen.
+Products.
+Variants.
+Stock level.
+Reserved units.
+Available units.
+Low stock alerts.
+Price.
+Seasonal drop status.
+Flash sale status.
+Bulk inventory update.
+
+PAGE 57: HQ ACTIVITIES / TICKETS
+PROMPT
+Create activity management page.
+Edit activity name, description, distance, capacity, pricing, early bird deadline, FAQs and guide document.
+Show live registrations and available capacity.
+
+PAGE 58: HQ CONTENT SCHEDULER
+PROMPT
+Create the phase-aware content scheduling system.
+Show timeline for:
+Pre-event
+Event day
+Post-event
+Content blocks with start date, end date, status and channel.
+Preview future state.
+Edit copy, image, video, CTA and placement.
+Show automatic midnight phase transitions.
+
+PAGE 59: HQ EVENT CONFIGURATION
+PROMPT
+Create annual event configuration page.
+Set event name.
+Event date.
+Phase dates.
+Countdown settings.
+Brand assets.
+Homepage sections.
+Activity configurations.
+Sponsor tiers.
+Collectible tiers.
+Operational settings.
+This should make next year's event configurable without code.
+
+PAGE 60: HQ PAYMENTS
+PROMPT
+Create payment operations dashboard.
+Show success, pending, failed, refunded.
+Payment provider status.
+Webhook health.
+Retry counts.
+Reconciliation status.
+Export settlement report.
+
+PAGE 61: HQ COMMUNICATIONS
+PROMPT
+Create communications centre.
+Tabs:
+SMS
+Email
+Templates
+Campaigns
+Queue
+Delivery
+
+PAGE 62: HQ SMS QUEUE
+PROMPT
+Create SMS queue management screen.
+Show scheduled messages, recipient count, delivery status, failed deliveries, retry and manual send.
+Templates include:
+Day 0 reservation confirmation
+Day 4 reminder
+Day 6 final warning
+Day 7 release
+Event morning reminder
+Order updates
+
+PAGE 63: HQ EMAIL CAMPAIGNS
+PROMPT
+Create email campaign management screen.
+Create campaign.
+Schedule.
+Audience.
+Template preview.
+Open/click metrics.
+Delivery status.
+Post-event thank-you campaign.
+Newsletter campaigns.
+
+PAGE 64: HQ USERS / ROLES
+PROMPT
+Create user and permissions management page.
+Roles:
+Super Admin
+Admin
+Volunteer Coordinator
+Sponsor Manager
+Partner Manager
+Communications Manager
+Operations Manager
+Use granular permissions and clear account status.
+
+PAGE 65: HQ VOLUNTEERS
+PROMPT
+Create volunteer management page.
+Roster.
+Shift coverage.
+Zone assignment.
+Check-in status.
+Briefing completion.
+Incident reports.
+Bulk assignment tools.
+
+PAGE 66: HQ SPONSORS
+PROMPT
+Create sponsor management page.
+Show sponsor list, tier, payment state, activation state, deliverables, logos, links and report status.
+
+PAGE 67: HQ PARTNERS
+PROMPT
+Create partner management page.
+Show assigned deliverables, due dates, status, approvals, uploads and communication history.
+
+PAGE 68: HQ TRAINING ANALYTICS
+PROMPT
+Create aggregate training analytics.
+Show active connected participants, weekly kilometres, training days, milestone completions, activity source distribution and community progress.
+Never expose private exact location trails by default.
+
+PAGE 69: HQ COLLECTIBLES STUDIO
+PROMPT
+Create digital collectibles administration studio.
+Manage certificate templates.
+Tier artwork.
+Unique IDs.
+Issuance queue.
+Verification status.
+NFT/on-chain release queue.
+Metadata.
+Sponsor-branded editions.
+Patron artwork assignments.
+Download records.
+
+PAGE 70: HQ REFERRALS
+PROMPT
+Create referral and leaderboard administration screen.
+Top referrers.
+Conversions.
+Reward status.
+Fraud/duplicate detection indicators.
+Exportable report.
+
+PAGE 71: HQ REPORTS / ANALYTICS
+PROMPT
+Create executive analytics screen.
+KPIs:
+Registrations
+Revenue
+Ticket mix
+Merchandise revenue
+Conversion rate
+Payment success rate
+Referral conversions
+Training engagement
+Sponsor activation
+Volunteer fulfilment
+Collectible issuance
+Post-event engagement
+Include date range filters and export.
+
+PAGE 72: HQ EVENT-DAY CONTROL ROOM
+PROMPT
+Create a dedicated event-day operations control room.
+Show:
+Current time
+Live event phase
+Check-ins
+Activity status
+Route status
+Volunteer coverage
+Sponsor activation status
+Payment incidents
+Communication queue
+Critical alerts
+Live participant assistance
+This should feel like an event command centre, not a normal admin table.
+
+PAGE 73: HQ AUDIT LOG
+PROMPT
+Create audit log page.
+Every significant admin action appears with actor, timestamp, object, action, previous state and new state where appropriate.
+Search and filter.
+
+PAGE 74: HQ SETTINGS
+PROMPT
+Create system settings page.
+Organisation information.
+Event configuration.
+Payment provider configuration.
+SMS provider.
+Email provider.
+Social integrations.
+Fitness integrations.
+Collectible provider.
+Domain settings.
+Roles.
+Notifications.
+Privacy and legal content.
+
+============================================================
+TRANSACTION AND SYSTEM STATES
+============================================================
+
+PAGE 75: CHECKOUT CART
+PROMPT
+Create premium cart page combining tickets and merchandise.
+Show itemised TSh pricing.
+Promo code.
+Shipping/pickup.
+Reservation deadlines.
+Subtotal.
+Discount.
+Total.
+CTA: Continue to Payment.
+
+PAGE 76: CHECKOUT CUSTOMER DETAILS
+PROMPT
+Create checkout participant/contact details page.
+Use clear form sections and trust signals.
+Do not overwhelm the user.
+
+PAGE 77: CHECKOUT PAYMENT
+PROMPT
+Create secure payment screen for PayMe Africa.
+Show order summary.
+TSh total.
+Payment method selection.
+Clear processing state.
+Privacy/security messaging.
+
+PAGE 78: PAYMENT SUCCESS
+PROMPT
+Create premium confirmation page.
+Headline: YOU'RE IN.
+Show registration/order confirmation.
+QR pass.
+Receipt download.
+Add to calendar.
+Training CTA.
+Share CTA.
+Collectible teaser.
+
+PAGE 79: PAYMENT PENDING
+PROMPT
+Create calm pending-payment state.
+Show deadline, retry action and instructions.
+
+PAGE 80: PAYMENT FAILED
+PROMPT
+Create friendly failed-payment state.
+Explain that the order remains recoverable where applicable.
+Retry Payment.
+Contact Support.
+
+PAGE 81: REFUND REQUEST
+PROMPT
+Create refund request screen.
+Order details.
+Reason.
+Notes.
+Submit request.
+Show review status.
+
+PAGE 82: EVENT CHECK-IN QR
+PROMPT
+Create mobile-first ticket/pass screen.
+Large QR code.
+Activity.
+Participant name.
+Start time.
+Venue.
+Emergency link.
+Offline-friendly visual treatment.
+
+============================================================
+POST-EVENT AND RETENTION
+============================================================
+
+PAGE 83: POST-EVENT IMPACT REPORT
+PROMPT
+Create public impact report page.
+Show registrations, participation, funds raised, community kilometres, sponsors, volunteer participation and cause impact.
+Use animated counters and editorial storytelling.
+
+PAGE 84: THANK YOU / NEXT YEAR
+PROMPT
+Create the post-event gratitude page.
+Headline: SEE YOU ON THE NEXT RIDE.
+Show highlights, gratitude, collectible call-to-action and early interest signup for next year's edition.
+
+PAGE 85: PARTICIPANT EVENT RECAP
+PROMPT
+Create personal post-event recap page for each participant.
+Show activity completed, training summary, badges, collectible, friends/community milestones, event photos where available and shareable recap card.
+
+PAGE 86: NEXT YEAR INTEREST
+PROMPT
+Create lightweight next-year interest signup page.
+Ask for email/phone and preferred activity.
+Show a small preview of next year's journey.
+
+============================================================
+USER JOURNEY DEMO FLOWS
+============================================================
+
+FLOW A: DISCOVERY TO REGISTRATION
+1. Home
+2. Select Cyclathon
+3. Activity detail
+4. Register
+5. Sign in/create account
+6. Participant details
+7. Cart
+8. PayMe
+9. Confirmation
+10. Participant dashboard
+11. Download QR pass
+
+FLOW B: MERCH RESERVATION
+1. Shop
+2. Product detail
+3. Select size/color
+4. Add to cart
+5. Checkout
+6. Reservation confirmed
+7. Participant dashboard
+8. Day 4 reminder
+9. Day 6 reminder
+10. Payment
+11. Pickup/shipping confirmation
+
+FLOW C: FAILED PAYMENT RECOVERY
+1. Pending order
+2. User receives SMS/email
+3. Open secure payment link
+4. Review order
+5. Retry PayMe
+6. Success
+7. Same order updates, no duplicate order
+
+FLOW D: TRAINING PREPARATION
+1. Participant dashboard
+2. Train
+3. Connect Strava
+4. Permissions
+5. Sync
+6. Weekly progress
+7. Badge earned
+8. Download badge
+9. Share to social
+10. Friends progress
+
+FLOW E: SOCIAL FRAME
+1. Public frame generator
+2. Upload image
+3. Choose activity
+4. Enter name
+5. Generate
+6. Download
+7. Share
+8. Friend clicks share
+9. Friend reaches event landing page
+
+FLOW F: DIGITAL COLLECTIBLE
+1. Eligibility triggered
+2. Collectible created
+3. Participant notified
+4. Open collectible
+5. Verification details
+6. Download PNG/PDF
+7. Share
+8. Optional NFT/on-chain claim
+9. Transaction proof visible when minted
+
+FLOW G: REFERRAL
+1. Dashboard
+2. Referral page
+3. Copy link
+4. Friend opens landing page
+5. Friend registers
+6. Payment confirmed
+7. Conversion tracked
+8. Badge/reward unlocked
+9. Leaderboard updates
+
+FLOW H: VOLUNTEER
+1. Invitation
+2. Volunteer registration
+3. Shift selection
+4. Briefing
+5. Event-day check-in
+6. Zone assignment
+7. Incident report if required
+8. Shift completion
+
+FLOW I: SPONSOR
+1. Sponsorship page
+2. Inquiry
+3. HQ reviews
+4. Sponsor portal access
+5. Activation checklist
+6. Asset upload
+7. HQ approval
+8. Activation live
+9. Post-event report
+
+FLOW J: PARTNER
+1. Partner invitation
+2. Portal login
+3. Deliverable list
+4. Upload
+5. HQ review
+6. Revision if needed
+7. Approval
+8. Deadline tracking
+
+FLOW K: EVENT DAY PARTICIPANT
+1. Morning briefing
+2. Open pass
+3. Route and schedule
+4. Check-in
+5. Participate
+6. Completion recorded
+7. Badge/collectible triggered
+8. Live update
+9. Event recap after the day
+
+FLOW L: HQ EVENT OPERATIONS
+1. HQ login
+2. Command Centre
+3. Monitor registrations/payments
+4. Monitor volunteers
+5. Monitor sponsors
+6. Monitor communications
+7. Handle alerts
+8. Search participant/order
+9. Export report
+10. Event-day control room
+
+FLOW M: POST-EVENT M&E
+1. Automatic post-event phase
+2. Results published
+3. Revenue reconciliation
+4. Participant feedback
+5. Sponsor report
+6. Volunteer review
+7. Collectibles completed
+8. Gallery published
+9. Impact report
+10. Next-year interest capture
+
+============================================================
+STITCH EXECUTION NOTES
+============================================================
+
+When generating each page in Stitch:
+- Maintain the same header, typography, buttons and spacing system.
+- Reuse the supplied Tour de Rotary logo and visual assets.
+- Use the supplied cyclist artwork for hero moments where appropriate.
+- Use Rotary, Rotaract and partner logos only when supplied.
+- Keep the main background white.
+- Use navy for strong structure, gold for achievement/premium, cranberry for cause/social accents.
+- Use black for body typography where appropriate.
+- Make interactions visible in the mockup: hover states, tabs, accordions, progress, counters, selected variants, disabled states, loading, success and error.
+- Desktop should feel spacious and editorial.
+- Mobile should feel focused and operational.
+- Avoid clutter.
+
+============================================================
+OPTIONAL PREMIUM MICRO-INTERACTIONS
+============================================================
+
+Use only where they add meaning:
+- route line animates when entering Cyclathon page
+- countdown numbers tick subtly
+- badge unlock animation
+- gold shimmer on a newly earned collectible
+- sponsor wall logos reveal on scroll
+- charity counters animate once when entering viewport
+- training streak progress fills smoothly
+- checkout step indicator moves cleanly
+- QR pass can expand to full screen on mobile
+- collectible verification can animate from pending to verified
+- event-day control room alerts pulse subtly
+
+============================================================
+CONTENT TONE
+============================================================
+
+Brand voice:
+Confident
+Warm
+Athletic
+Human
+Community-led
+Premium
+Tanzanian
+Purposeful
+
+Avoid:
+Corporate jargon
+Overly inspirational clichés
+Crypto hype
+Medical fear messaging
+Artificial luxury language
+Excessive exclamation marks
+
+Suggested campaign language:
+Ride for a reason.
+Move for more.
+Every kilometre matters.
+Dar rides together.
+Train for the day. Arrive ready.
+The ride is bigger than the road.
+Be part of the movement.
+
+============================================================
+FINAL STITCH MASTER PROMPT
+============================================================
+
+Design Tour de Rotary DSM as a complete premium digital event ecosystem for Dar es Salaam's 1 November 2026 charity cyclathon and multi-activity event.
+The product must feel like Tour de France performance culture meets a Dar es Salaam beach-city celebration, rendered with the polish of a AAA sports game interface but grounded in real-world usability and charity credibility.
+Use the supplied Tour de Rotary brand assets.
+Primary palette is Royal Navy, Gold, Cranberry Pink, White and Black.
+The main background is WHITE.
+Use navy for structure, gold for premium achievement, cranberry for cause/social accents, and black for text.
+Do not turn the entire interface dark.
+Do not overuse gradients, glassmorphism, huge cards, excessive shadows or decorative noise.
+Use strong editorial photography, route graphics, motion-inspired lines and sophisticated typography.
+The product should support public marketing pages, registration, ecommerce, training preparation, social sharing, digital collectibles, volunteer operations, sponsor activation, partner workflows and a powerful HQ command centre.
+The experience should be deeply interactive in the About and Our Cause pages, performance-oriented in Training, premium in Shop and Collectibles, frictionless in Registration and Checkout, and information-dense but controlled in HQ Admin.
+Design responsive desktop and mobile states.
+Treat PRE-EVENT, EVENT DAY and POST-EVENT as first-class product states.
+Create every screen as part of one coherent system.
