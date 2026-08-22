@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout Cart | Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1a1c1c",
+                        "inverse-primary": "#a7c8ff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "primary": "#00305f",
+                        "on-primary-container": "#87b6fe",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#ffddb3",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#d5e3ff",
+                        "background": "#f9f9f9",
+                        "outline-variant": "#c2c6d2",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-container": "#8f0037",
+                        "on-secondary-container": "#6b4500",
+                        "on-tertiary-container": "#ff95a8",
+                        "secondary-fixed-dim": "#ffb950",
+                        "inverse-surface": "#2f3131",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#004687",
+                        "surface-bright": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-fixed": "#400014",
+                        "surface-variant": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "tertiary-fixed": "#ffd9de",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-container": "#eeeeee",
+                        "on-primary-fixed-variant": "#014788",
+                        "secondary-container": "#feae23",
+                        "on-primary-fixed": "#001b3b",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#650025",
+                        "on-surface-variant": "#424750",
+                        "on-secondary-fixed-variant": "#624000",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#825500",
+                        "on-secondary-fixed": "#291800",
+                        "surface-container-low": "#f3f3f4",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#2b5fa1",
+                        "outline": "#737781"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "data-metric": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-hero": ["Anton"],
+                        "label-ui": ["JetBrains Mono"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopAppBar Navigation (Suppressed - Transactional/Checkout Flow) -->
+<!-- As per the Semantic Shell Mandate: Automatic Suppression for Checkout -->
+<!-- Main Checkout Canvas -->
+<main class="flex-grow flex flex-col">
+<!-- Header Section -->
+<header class="w-full bg-primary text-on-primary py-12 px-margin-mobile md:px-margin-desktop clip-diagonal relative z-10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg uppercase text-secondary">Checkout</h1>
+<p class="font-body-lg text-body-lg text-inverse-primary mt-2 max-w-xl">Review your registration and gear before heading to the start line.</p>
+</div>
+<div class="flex items-center gap-2 font-label-ui text-label-ui">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span>SECURE CHECKOUT</span>
+</div>
+</div>
+</header>
+<!-- Cart Content Area -->
+<section class="flex-grow w-full px-margin-mobile md:px-margin-desktop py-12 md:py-24 max-w-7xl mx-auto relative z-0 -mt-8 md:-mt-16">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Items List (Left Column) -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- Ticket Item -->
+<div class="bg-surface-container-lowest border-l-4 border-secondary p-6 md:p-8 flex flex-col md:flex-row gap-6 relative group">
+<div class="w-full md:w-32 h-32 bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 0;">confirmation_number</span>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary uppercase">Elite Rider Ticket</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Full Route Access &amp; Timing Chip</p>
+</div>
+<button aria-label="Remove item" class="text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="font-label-ui text-label-ui text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>Reserves spot until Sep 15</span>
+</div>
+<div class="font-data-metric text-data-metric text-primary">
+                                    TSh 150,000
+                                </div>
+</div>
+</div>
+</div>
+<!-- Merchandise Item (Lifestyle focus) -->
+<div class="bg-surface-container-lowest flex flex-col md:flex-row gap-0 relative group">
+<div class="w-full md:w-48 h-48 md:h-auto shrink-0 relative overflow-hidden">
+<img alt="Official Event Jersey" class="w-full h-full object-cover absolute inset-0" data-alt="A high-quality lifestyle photograph of an athletic male cyclist wearing a premium navy blue and gold cycling jersey. He is adjusting his helmet while standing next to his road bike on a sunlit coastal road in Dar es Salaam. The lighting is bright and warm, capturing a sense of motion and athletic preparation. The overall aesthetic is high-end sports editorial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPYKMeu492er3O5-mgknueB1nGW_m_FSgnYprw6QCM9Qr8mafp87f2P7vL1J6ridlnSVWinAqy6tYEYHT3wxvJ-DQxA6OOCUIHymAyy75jm-tHFfjAHPgo3f9JOfy8of9Y-IKFCqcwOZPOD0lcM9CuXehAt_4AqVy1MbCzwm4UStCeaSmATXanuBYucro4vPHM7y82kCIKQ4cQPADQ8k-mSkRPvOdBhsNiz4JnGUu0uzuB-gOPCMr92g"/>
+</div>
+<div class="p-6 md:p-8 flex-grow flex flex-col justify-between border-y border-r border-surface-container-high md:border-l-0 border-l border-surface-container-high">
+<div class="flex justify-between items-start">
+<div>
+<span class="font-label-ui text-label-ui text-secondary uppercase tracking-widest block mb-1">Official Gear</span>
+<h3 class="font-headline-md text-headline-md text-primary uppercase">Pro Aero Jersey</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Size: L | Color: Royal Navy / Gold</p>
+</div>
+<button aria-label="Remove item" class="text-outline hover:text-error transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="flex items-center gap-4">
+<div class="flex items-center border border-outline-variant">
+<button class="px-3 py-1 text-on-surface hover:bg-surface-container-low">-</button>
+<span class="px-3 py-1 font-label-ui text-label-ui border-x border-outline-variant">1</span>
+<button class="px-3 py-1 text-on-surface hover:bg-surface-container-low">+</button>
+</div>
+</div>
+<div class="font-data-metric text-data-metric text-primary">
+                                    TSh 85,000
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Order Summary (Right Column) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="bg-primary text-on-primary p-8">
+<h2 class="font-headline-md text-headline-md uppercase text-secondary border-b-2 border-secondary pb-4 mb-6">Summary</h2>
+<div class="flex justify-between mb-4 font-body-md text-body-md">
+<span>Subtotal (2 items)</span>
+<span>TSh 235,000</span>
+</div>
+<!-- Shipping Option -->
+<div class="mb-6 pb-6 border-b border-surface-tint">
+<p class="font-label-ui text-label-ui text-inverse-primary mb-2">DELIVERY METHOD</p>
+<label class="flex items-center gap-3 cursor-pointer group mb-2">
+<input checked="" class="form-radio text-secondary focus:ring-secondary border-outline bg-transparent" name="delivery" type="radio"/>
+<span class="font-body-md text-body-md group-hover:text-secondary-fixed transition-colors">HQ Pickup (Free)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-radio text-secondary focus:ring-secondary border-outline bg-transparent" name="delivery" type="radio"/>
+<span class="font-body-md text-body-md group-hover:text-secondary-fixed transition-colors">Courier Delivery (TSh 10,000)</span>
+</label>
+</div>
+<!-- Promo Code -->
+<div class="mb-6">
+<label class="block font-label-ui text-label-ui text-inverse-primary mb-2">PROMO CODE</label>
+<div class="flex border-b-2 border-on-primary focus-within:border-secondary transition-colors">
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-primary placeholder:text-outline p-2 font-label-ui text-label-ui" placeholder="ENTER CODE" type="text"/>
+<button class="px-4 font-label-ui text-label-ui text-secondary hover:text-on-primary transition-colors">APPLY</button>
+</div>
+</div>
+<!-- Total -->
+<div class="flex justify-between items-end mt-8 mb-8">
+<span class="font-body-lg text-body-lg">Total</span>
+<span class="font-data-metric text-data-metric text-secondary">TSh 235,000</span>
+</div>
+<!-- CTA -->
+<button class="w-full bg-secondary text-on-secondary-fixed font-headline-lg text-headline-lg-mobile uppercase py-4 hover:bg-surface-container-lowest hover:text-primary transition-colors flex items-center justify-center gap-2 group">
+                            Continue to Payment
+                            <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="flex items-start gap-3 bg-surface-container-low p-4 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-primary">volunteer_activism</span>
+<p>All proceeds from merchandise directly fund Rotary DSM's community water projects.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Suppressed - Transactional/Checkout Flow) -->
+<!-- As per the Semantic Shell Mandate: Automatic Suppression for Checkout -->
+</body></html>

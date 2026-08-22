@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary DSM - About</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#ffb2be",
+                      "outline": "#737781",
+                      "on-error-container": "#93000a",
+                      "surface-dim": "#dadada",
+                      "secondary": "#825500",
+                      "on-tertiary-fixed-variant": "#900038",
+                      "background": "#f9f9f9",
+                      "on-background": "#1a1c1c",
+                      "tertiary": "#650025",
+                      "surface-tint": "#2b5fa1",
+                      "on-secondary-fixed-variant": "#624000",
+                      "tertiary-container": "#8f0037",
+                      "on-primary-container": "#87b6fe",
+                      "on-secondary-container": "#6b4500",
+                      "on-secondary-fixed": "#291800",
+                      "on-tertiary-container": "#ff95a8",
+                      "surface-container-high": "#e8e8e8",
+                      "on-tertiary-fixed": "#400014",
+                      "outline-variant": "#c2c6d2",
+                      "inverse-surface": "#2f3131",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "surface-container-low": "#f3f3f4",
+                      "surface-container-highest": "#e2e2e2",
+                      "inverse-primary": "#a7c8ff",
+                      "primary-fixed": "#d5e3ff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed": "#ffd9de",
+                      "secondary-fixed-dim": "#ffb950",
+                      "on-primary-fixed-variant": "#014788",
+                      "secondary-fixed": "#ffddb3",
+                      "on-surface-variant": "#424750",
+                      "primary-container": "#004687",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface": "#1a1c1c",
+                      "error": "#ba1a1a",
+                      "surface": "#f9f9f9",
+                      "on-error": "#ffffff",
+                      "surface-variant": "#e2e2e2",
+                      "secondary-container": "#feae23",
+                      "surface-container": "#eeeeee",
+                      "on-secondary": "#ffffff",
+                      "primary": "#00305f",
+                      "inverse-on-surface": "#f0f1f1",
+                      "surface-bright": "#f9f9f9",
+                      "error-container": "#ffdad6",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed": "#001b3b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "margin-mobile": "20px",
+                      "unit": "8px",
+                      "diagonal-offset": "12deg",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Anton"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-hero": [
+                              "Anton"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "data-metric": [
+                              "Anton"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-ui": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg-mobile": [
+                              "Anton"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero": [
+                              "96px",
+                              {
+                                      "lineHeight": "90%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "data-metric": [
+                              "48px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .clip-diagonal-bottom {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+        }
+        .clip-diagonal-top {
+            clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%);
+        }
+        .clip-diagonal-both {
+            clip-path: polygon(0 5vw, 100% 0, 100% calc(100% - 5vw), 0 100%);
+        }
+        
+        .diagonal-stripes {
+            background-image: repeating-linear-gradient(
+                -45deg,
+                transparent,
+                transparent 10px,
+                rgba(0, 48, 95, 0.05) 10px,
+                rgba(0, 48, 95, 0.05) 20px
+            );
+        }
+
+        .scroll-trigger {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .scroll-trigger.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Webkit scrollbar for horizontal scroll */
+        .horizontal-scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar-track {
+            background: #f9f9f9;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar-thumb {
+            background: #00305f;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary border-b-2 border-secondary">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<nav class="hidden md:flex gap-8">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1 opacity-70 transition-opacity" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</nav>
+<a class="hidden md:inline-block bg-secondary-container text-on-secondary-container font-headline-md text-headline-md px-6 py-2 uppercase hover:bg-primary hover:text-on-primary transition-colors border-2 border-transparent" href="#">
+            Register Now
+        </a>
+</header>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 md:hidden bg-primary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-ui font-label-ui mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="text-label-ui font-label-ui mt-1">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<span class="text-label-ui font-label-ui mt-1">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary scale-95 transition-transform active:bg-primary-container" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span class="text-label-ui font-label-ui mt-1">Profile</span>
+</a>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center pt-20 pb-32 clip-diagonal-bottom overflow-hidden bg-surface-variant">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-60 mix-blend-multiply" data-alt="A wide, sweeping aerial photograph of Dar es Salaam at dawn, captured with high contrast and sharp focus, showcasing the city skyline meeting the vibrant coastal waters in an immersive, editorial style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvvUo6g6APfv217uCDwQpbeVL9R0RijyzqxeeoPxO5Tti6IGuoaHsOsYdQwLhXdNAwN8eECRhexn4WP6aayTtPCTRGG2msE4w8ZwTlLTYvunX8CUwq4-xd9UsALLw87Ob66DGmDJMUcld42UaFWBJRPKVEkhEsYB0kBppp4Vg8FKadqTtT9GEHi5AIm4IsXvLhlE4_RSyhlmBMN_egfvsK5HI7y6M6dU_Levtk33hEGRbm6pdP_zfCUw')"></div>
+</div>
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 lg:col-span-6 flex flex-col justify-center">
+<span class="font-label-ui text-label-ui text-primary uppercase tracking-widest mb-4 inline-block border-l-2 border-secondary pl-4">Our Heritage</span>
+<h1 class="font-display-hero text-display-hero text-primary uppercase leading-none mb-6">
+                        More Than <br/>
+<span class="text-secondary">A Ride</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg border-l-4 border-secondary pl-6 py-2 bg-surface/80 backdrop-blur-sm">
+                        Tour de Rotary DSM is a testament to endurance, community, and the transformative power of collective action along the Tanzanian coast.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Evolution Section -->
+<section class="py-32 relative diagonal-stripes clip-diagonal-both bg-background -mt-16 z-20">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 md:col-start-2 scroll-trigger">
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase mb-8">Evolution of Impact</h2>
+<div class="space-y-12 border-l-2 border-outline-variant pl-8 relative before:absolute before:left-[-1px] before:top-0 before:w-0.5 before:h-full before:bg-gradient-to-b before:from-secondary before:to-transparent">
+<div class="relative">
+<div class="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-secondary ring-4 ring-background"></div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">The Inception</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">What began as a localized effort by dedicated Rotarians quickly gained traction, uniting cycling enthusiasts with a shared vision for community betterment.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-primary ring-4 ring-background"></div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Gaining Momentum</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">As participation swelled, the route expanded, capturing the rugged beauty of the coastal landscape and challenging riders to push beyond their limits.</p>
+</div>
+<div class="relative">
+<div class="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-tertiary ring-4 ring-background"></div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">A Premier Event</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Today, it stands as a hallmark event, driving significant charitable contributions and fostering a culture of health and solidarity.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8 relative mt-16 md:mt-0 scroll-trigger">
+<div class="relative z-10 border-4 border-primary">
+<img class="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A documentary-style portrait of an exhausted but triumphant cyclist crossing the finish line, sweat on their brow, shot with a shallow depth of field in warm late afternoon light, high contrast editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZtCpeIvF6TUNG01LbU6t74clqykU7OE5S-GSZ_swX-wshThkLqZ1Q-5uVH9wTTqZ3FF5j6fO6lyYQDhFF8HvT5WfPSLGgK6cjsNCQRZ5ttr27RbXwRNlaU6LDy5r7-ReULaNMz_l_ExKomr83xftewi-xE_3yU3je7J75buKRbgr4TW02MO1z4PvfPFHzi-4ur_bigC6VDCCGk-oP-kFqY3grr-xJZtYNNJV85v2UD57Oc3pBHwVi-w"/>
+</div>
+<div class="absolute -bottom-8 -left-8 w-64 h-64 bg-secondary-container -z-10 hidden md:block"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Dar es Salaam (Map/Context) -->
+<section class="py-32 relative bg-primary text-on-primary clip-diagonal-both -mt-16 z-30">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 relative h-[600px] overflow-hidden border-2 border-secondary scroll-trigger">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-[10s] hover:scale-110" data-alt="A stylized, high-contrast map of Dar es Salaam coastal routes, rendered in dark navy blues and crisp whites with gold accents highlighting the cycling path, exuding a premium, tactical editorial vibe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-Trswzu664-jMwgVnqf6ngVzUFVPSZ2061WxFyJaYsWs-MvhvHHA-XR0rhCreCbQIlct793l_iTd8VE_UgxiBMxZXN-aYCVN39XLo-9HcHk4Hky-aX2cnuD3zWRCe9fHG42uwbJqXPIN7DBcD0QzoOx8cdkbeha0kqIYIO9R1XSFQ1Lf17BjkKbyDa0lYp_miO3YJU9uW6gOBqDVSzEg2njtyZM_syV_easpXEXla6wrY7siod9ijbQ')"></div>
+<div class="absolute bottom-6 right-6 bg-surface-container-lowest text-primary p-4 border border-outline">
+<span class="font-label-ui text-label-ui uppercase block mb-1">Route Context</span>
+<span class="font-headline-md text-headline-md leading-none">Coastal<br/>Velocity</span>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8 flex flex-col justify-center scroll-trigger mt-12 md:mt-0">
+<span class="font-label-ui text-label-ui text-secondary uppercase tracking-widest mb-4 inline-block border-l-2 border-secondary pl-4">The Terrain</span>
+<h2 class="font-headline-lg text-headline-lg text-on-primary uppercase mb-8">Why Dar es<br/>Salaam</h2>
+<p class="font-body-lg text-body-lg text-surface-variant mb-6">
+                        The coastal heat, the unpredictable ocean crosswinds, and the vibrant energy of the city streets make Dar es Salaam an arena like no other. 
+                    </p>
+<p class="font-body-md text-body-md text-surface-dim mb-8">
+                        This isn't merely a backdrop; it's an active participant in the race. The route demands respect, weaving through urban density before opening up to the grueling, yet breathtaking stretches of the Tanzanian coastline.
+                    </p>
+<div class="grid grid-cols-2 gap-4 border-t border-secondary pt-8">
+<div>
+<span class="block font-data-metric text-data-metric text-secondary">32°C</span>
+<span class="font-label-ui text-label-ui text-surface-variant">Avg Temp</span>
+</div>
+<div>
+<span class="block font-data-metric text-data-metric text-secondary">85%</span>
+<span class="font-label-ui text-label-ui text-surface-variant">Humidity Factor</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Rotary & Rotaract Horizontal Journey -->
+<section class="py-32 bg-surface-container-highest relative -mt-16 z-40 clip-diagonal-both">
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase text-center md:text-left">The Driving Force</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-4 text-center md:text-left">The organizational backbone ensuring logistical precision and maximized charitable impact.</p>
+</div>
+<!-- Horizontal scroll container -->
+<div class="horizontal-scroll-container overflow-x-auto flex snap-x snap-mandatory pb-12 px-margin-mobile md:px-margin-desktop gap-8">
+<!-- Rotary Block -->
+<div class="min-w-[85vw] md:min-w-[60vw] lg:min-w-[45vw] snap-center shrink-0 relative bg-surface-container-lowest border border-outline-variant p-8 flex flex-col justify-between">
+<div class="mb-12">
+<span class="font-label-ui text-label-ui text-primary uppercase tracking-widest mb-4 inline-block">Foundation</span>
+<h3 class="font-headline-md text-headline-md text-on-background mb-4">Rotary Involvement</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                         Anchoring the event with decades of philanthropic experience, Rotary clubs coordinate the high-level sponsorships and direct funds to crucial community projects.
+                     </p>
+</div>
+<div class="h-48 md:h-64 relative border-2 border-primary overflow-hidden">
+<img alt="Rotary Involvement" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbFzUiHhkxjdGtFZXz3Ov1I_fGwhHtwfNy29WXf-tUOrphLp1ADOn04Qm-0nfnZZf-3Ns4b6_wKYIFRNiCNsFyesm6LZ6B7vg0TflkVqHQFVl3_b9JhxOetk5CQXT1RY-Wbjns0zFgbdzCP8vlDilLQtDDXshoZHV8zlek7xrGCSkSriwViritCGAd2HpTVJ-hxXTm6qlhYeHlVYdgY2edUOzHNyVspjz8gJ0vyzxn3PMkmOU_ZtKQyX7medhhxRdMKHA"/>
+</div>
+</div>
+<!-- Rotaract Block -->
+<div class="min-w-[85vw] md:min-w-[60vw] lg:min-w-[45vw] snap-center shrink-0 relative bg-primary text-on-primary p-8 flex flex-col justify-between">
+<div class="mb-12">
+<span class="font-label-ui text-label-ui text-secondary uppercase tracking-widest mb-4 inline-block">Energy</span>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-4">Rotaract Power</h3>
+<p class="font-body-md text-body-md text-surface-variant">
+                         The grassroots engine of the Tour. Rotaract volunteers manage the brutal logistics, feed zones, and inject raw enthusiasm into every kilometer of the race.
+                     </p>
+</div>
+<div class="h-48 md:h-64 relative border-2 border-secondary overflow-hidden bg-white">
+<img alt="Rotaract Power" class="w-full h-full object-contain p-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQFhOuO5iOCIZlH7d60eLuftzib5DOpcvFQBIAZ17rXvtkjsp-OllvYPUPNtjdGJPcn_Rf8TBUY7wWuRcv0Ly7q4LjR7u10NQc41dfrSouWcRfHEmL1xGUs7EX8EuNQYQKUKONmiLXK9bahWz61ACrjBFOw693jdkuDNoc4fPJM75QtcsTFzY0uEnVj8cQigEYQsS_7VIOxoMdv2MCKHqmmM2MKIH_69op2jv49oiu8JI0zepyZxgEsnvwJxOpPUJjUVE"/>
+</div>
+</div>
+<!-- Future Block -->
+<div class="min-w-[85vw] md:min-w-[60vw] lg:min-w-[45vw] snap-center shrink-0 relative bg-tertiary-container text-on-tertiary-container p-8 flex flex-col justify-between border-l-8 border-tertiary">
+<div class="mb-12">
+<span class="font-label-ui text-label-ui text-tertiary-fixed-dim uppercase tracking-widest mb-4 inline-block">Vision</span>
+<h3 class="font-headline-md text-headline-md text-on-tertiary-container mb-4">Future Horizon</h3>
+<p class="font-body-md text-body-md text-tertiary-fixed">
+                         Expanding the infrastructure to support international elite pelotons while doubling down on local youth cycling academies.
+                     </p>
+</div>
+<div class="h-48 md:h-64 relative overflow-hidden bg-tertiary flex items-center justify-center group cursor-pointer">
+<span class="material-symbols-outlined text-display-hero text-tertiary-fixed group-hover:scale-125 transition-transform duration-500">public</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary mt-16 relative z-50">
+<div class="text-headline-md font-headline-lg text-on-primary">
+            TOUR DE ROTARY DSM
+        </div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-8">
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</div>
+<div class="text-body-md font-body-md text-on-primary opacity-50 mt-4 text-center">
+            © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+        </div>
+</footer>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.scroll-trigger').forEach((element) => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body></html>

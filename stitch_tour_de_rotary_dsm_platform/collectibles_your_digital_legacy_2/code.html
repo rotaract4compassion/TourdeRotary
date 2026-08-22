@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary DSM - Collectibles Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#825500",
+                        "secondary-fixed": "#ffddb3",
+                        "inverse-on-surface": "#f0f1f1",
+                        "inverse-surface": "#2f3131",
+                        "inverse-primary": "#a7c8ff",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9",
+                        "primary-container": "#004687",
+                        "on-surface": "#1a1c1c",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#624000",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "error-container": "#ffdad6",
+                        "primary": "#00305f",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-secondary-container": "#6b4500",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-primary-fixed": "#001b3b",
+                        "on-primary-fixed-variant": "#014788",
+                        "surface-container": "#eeeeee",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#291800",
+                        "on-background": "#1a1c1c",
+                        "outline": "#737781",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-tertiary-fixed": "#400014",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#87b6fe",
+                        "tertiary-container": "#8f0037",
+                        "secondary-fixed-dim": "#ffb950",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f3f3f4",
+                        "primary-fixed": "#d5e3ff",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-dim": "#dadada",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-container": "#feae23",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#424750",
+                        "surface": "#f9f9f9",
+                        "surface-tint": "#2b5fa1",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary": "#650025",
+                        "outline-variant": "#c2c6d2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "diagonal-offset": "12deg",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "data-metric": ["Anton"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-hero": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Anton"],
+                        "headline-lg": ["Anton"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Fluid Asymmetric Grid overrides */
+        .asymmetric-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3vw));
+        }
+        .asymmetric-clip-reverse {
+            clip-path: polygon(0 calc(0% + 3vw), 100% 0, 100% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-secondary selection:text-on-secondary min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary border-b-2 border-secondary">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</nav>
+<div class="hidden md:block">
+<button class="bg-secondary text-on-background px-6 py-3 font-data-metric uppercase hover:bg-primary-container hover:text-on-primary transition-colors">
+                Register Now
+            </button>
+</div>
+</header>
+<div class="flex flex-1 relative w-full h-full">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-screen fixed left-0 top-0 pt-20 w-64 bg-surface-container-lowest border-r border-outline-variant z-40">
+<div class="p-6 mb-4">
+<div class="text-headline-md font-headline-lg text-primary">Rider Profile</div>
+<div class="text-body-md font-body-md text-on-surface-variant mt-1">Elite Tier</div>
+</div>
+<nav class="flex-1 flex flex-col gap-2 px-4">
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Dashboard
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="event">event</span>
+                    My Events
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="directions_bike">directions_bike</span>
+                    Training
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+                    Orders
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui bg-secondary text-on-secondary font-bold rounded-none translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="token">token</span>
+                    Collectibles
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group_add">group_add</span>
+                    Referrals
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+                    Profile
+                </a>
+</nav>
+<div class="p-6 mt-auto">
+<button class="w-full bg-secondary text-on-background px-4 py-3 font-data-metric uppercase hover:bg-primary-container hover:text-on-primary transition-colors text-center">
+                    Log Ride
+                </button>
+</div>
+<div class="px-4 pb-6 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-2 text-label-ui font-label-ui text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="settings">settings</span>
+                    Settings
+                </a>
+<a class="flex items-center gap-3 px-4 py-2 text-label-ui font-label-ui text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="help_outline">help_outline</span>
+                    Support
+                </a>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="flex-1 lg:ml-64 w-full bg-surface-container-lowest min-h-screen">
+<!-- Hero Section / Editorial Intro -->
+<section class="relative pt-24 pb-16 px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+<!-- Rotary Gear Watermark -->
+<svg class="w-full h-full fill-primary" viewbox="0 0 100 100"><circle cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-width="10"></circle><path d="M50 0 L60 20 L40 20 Z" transform="rotate(0 50 50)"></path><path d="M50 0 L60 20 L40 20 Z" transform="rotate(45 50 50)"></path><path d="M50 0 L60 20 L40 20 Z" transform="rotate(90 50 50)"></path><path d="M50 0 L60 20 L40 20 Z" transform="rotate(135 50 50)"></path><path d="M50 0 L60 20 L40 20 Z" transform="rotate(180 50 50)"></path><path d="M50 0 L60 20 L40 20 Z" transform="rotate(225 50 50)"></path><path d="M50 0 L60 20 L40 20 Z" transform="rotate(270 50 50)"></path><path d="M50 0 L60 20 L40 20 Z" transform="rotate(315 50 50)"></path></svg>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10 items-end">
+<div class="col-span-1 md:col-span-8">
+<h1 class="text-display-hero font-display-hero text-primary mb-4 leading-none uppercase tracking-tighter">The Vault</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl border-l-2 border-secondary pl-6">
+                            A curated exhibition of your achievements. Digital certificates, rare sponsor editions, and authenticated completion tokens from the coastal routes of Dar es Salaam.
+                        </p>
+</div>
+<div class="col-span-1 md:col-span-4 flex md:justify-end mt-8 md:mt-0">
+<div class="relative w-48 h-48 border-2 border-secondary p-2 group">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A striking portrait photograph of an elite cyclist bathed in the golden hour light of Dar es Salaam. The athlete looks resolute, wearing a performance jersey with a subtle rotary emblem. The background features a blurred, high-contrast coastal road. The mood is triumphant and cinematic, capturing the essence of high-end sports editorial photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXrXeNFR8RKrgxHd-C7BCbOmU5ZVYe6L1ArTMNQhClbETEztnnkB5g_XtaBfS-zqZaEsYmvKgZ3kKO4Xz-TmXKXNbmzIiIYsX1cGN5auqPEd4FO66Elh8W9I4ID5BS6ok3FhqqUqmLZfdGiuIs3if0osUaVk3Ld0LXr3x_Bvl_GMqUhi1KzlUH85wnOQ8peginKawEPrCdT82iRbeCAKJbWXNcGDK45w2nQMb-LFa5DhFykLpG8MUtOA"/>
+<div class="absolute -bottom-4 -left-4 bg-primary text-on-primary px-4 py-2 text-label-ui font-label-ui font-bold">
+                                COLLECTOR #084
+                            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Filters -->
+<section class="px-margin-mobile md:px-margin-desktop py-8 border-t border-b border-outline-variant bg-surface sticky top-16 md:top-[72px] z-30">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex gap-4 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 scrollbar-hide">
+<button class="whitespace-nowrap px-6 py-2 border-2 border-primary bg-primary text-on-primary text-label-ui font-label-ui uppercase font-bold">All Items</button>
+<button class="whitespace-nowrap px-6 py-2 border-2 border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary text-label-ui font-label-ui uppercase transition-colors">Certificates</button>
+<button class="whitespace-nowrap px-6 py-2 border-2 border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary text-label-ui font-label-ui uppercase transition-colors">Badges</button>
+<button class="whitespace-nowrap px-6 py-2 border-2 border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary text-label-ui font-label-ui uppercase transition-colors">Sponsor Editions</button>
+</div>
+<div class="flex gap-4 w-full md:w-auto">
+<div class="relative flex-1 md:w-48">
+<select class="w-full appearance-none bg-transparent border-0 border-b-2 border-primary py-2 pl-0 pr-8 text-label-ui font-label-ui focus:ring-0 focus:border-secondary">
+<option>Year: 2024</option>
+<option>Year: 2023</option>
+<option>Year: 2022</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-primary" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+<div class="relative flex-1 md:w-48">
+<select class="w-full appearance-none bg-transparent border-0 border-b-2 border-primary py-2 pl-0 pr-8 text-label-ui font-label-ui focus:ring-0 focus:border-secondary">
+<option>Rarity: All</option>
+<option>Rarity: Legendary</option>
+<option>Rarity: Epic</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-primary" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Grid -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 md:gap-gutter">
+<!-- Item 1: Large Featured -->
+<article class="col-span-1 md:col-span-2 xl:col-span-2 group cursor-pointer">
+<div class="relative aspect-video bg-inverse-surface border border-outline p-6 flex items-center justify-center overflow-hidden mb-4">
+<div class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')]"></div>
+<img class="relative z-10 w-3/4 object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A highly detailed digital illustration of an ornate cycling certificate. The design features sharp, modern typography, gold foil accents, and geometric patterns inspired by the Tanzanian coastline. It is presented floating in an abstract dark studio environment with dramatic top-lighting. The mood is prestigious and elite." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0vUV-1t7et7OHPt_e-miqtcocPosUA4y8mmdo7l205eXlA1TJzVfxY2JyZyFs5ZfnyAuGuvwMmqsJN5osDC1LP08Wk1JtFREwnWCHBARi67KASsenQvYuWnEg6b_a7J7TZvHBLIpH1ub5wEZJz88SasIGrZc9dpDpalXgPvNDNj9K6qa-CY886r54T2XzjraGMJxcfVTxQH4rgnEA0hJbYLu4dhm7QYnAa8cMfRLt83FiB8hy6I4RKQ"/>
+<div class="absolute top-4 left-4 bg-secondary text-on-secondary px-3 py-1 text-label-ui font-label-ui uppercase font-bold tracking-widest z-20">
+                                Legendary
+                            </div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-headline-md font-headline-lg text-primary uppercase">100km Coastal Finisher</h3>
+<p class="text-label-ui font-label-ui text-on-surface-variant mt-1">ISSUED: OCT 2024 • ROTARY DSM</p>
+</div>
+<button class="w-12 h-12 flex items-center justify-center border-2 border-primary hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="north_east">north_east</span>
+</button>
+</div>
+</article>
+<!-- Item 2 -->
+<article class="col-span-1 group cursor-pointer flex flex-col justify-end">
+<div class="relative aspect-square bg-surface-container-high border border-outline p-6 flex items-center justify-center overflow-hidden mb-4">
+<img class="relative z-10 w-2/3 object-contain drop-shadow-xl group-hover:rotate-12 transition-transform duration-500" data-alt="A 3D render of a metallic activity badge shaped like a bicycle gear. The metal has a brushed titanium finish with deep cranial pink enamel inlays. It rests on a pristine white pedestal under soft, diffused gallery lighting. The style is modern, industrial, and highly polished." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiEONGqzFXmvUBObW_JgkIoM0X2_9CJbEtwv5TbRXwOuoeIsDh7ypuW1IgW6IILzJ2jx2hW4EWuxFhlDBIOxpvHLMtnuzVXKvhrBBn6dhl5d58LAC6YU3cdtS76du9BsAKySwLsIGkO2l_dgX7ULP9KgZa-kgQv73_AHFZRuVDjaCqkj7jFEy86w1jSApvoqTBupelRi6rbsHmfxly6B6AHNbJ6PDmViZPUqrNqK24ONfWSfbkgse3hA"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-headline-md font-headline-lg text-primary uppercase text-2xl">Early Bird Registration</h3>
+<p class="text-label-ui font-label-ui text-on-surface-variant mt-1">ISSUED: AUG 2024</p>
+</div>
+</div>
+</article>
+<!-- Item 3 -->
+<article class="col-span-1 group cursor-pointer">
+<div class="relative aspect-square bg-primary-container p-6 flex items-center justify-center overflow-hidden mb-4">
+<div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')]"></div>
+<img class="relative z-10 w-4/5 object-contain drop-shadow-2xl group-hover:-translate-y-2 transition-transform duration-500" data-alt="A sleek, digital collectible card featuring a stylized graphic of the Dar es Salaam skyline at sunset. The card has holographic edges that catch the light. The composition is dynamic and asymmetric, utilizing a palette of royal navy and vibrant sunset orange. The setting is a minimalist digital showcase." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxvbsyOAdVNNbS-crN0n5Y8j9MMFHO4CCiaVCPG7mmXgE4AAceNlow8X-U2-S7nbhYO9YqigDeo0HW-Z29GpJ884sbqY3QdaWHSZDdxy0Bb3m8CO4A5wQZK5cy3kyp7l-UIKEdLTM6Y9pwemgEJq3CK_5z3UF0aS_TZCDQV_YWWXXha3sSs-o_8qd-IckZYtW3ddVEtpzzzEWv9RRlbKgyVOYC7NWrxG4y41pZteXGoh1hA0PdxWmeOw"/>
+<div class="absolute top-4 right-4 border border-on-primary-container text-on-primary-container px-3 py-1 text-label-ui font-label-ui uppercase tracking-widest z-20">
+                                Sponsor Edition
+                            </div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-headline-md font-headline-lg text-primary uppercase text-2xl">Vodacom Sprint Token</h3>
+<p class="text-label-ui font-label-ui text-on-surface-variant mt-1">ISSUED: OCT 2024</p>
+</div>
+</div>
+</article>
+<!-- Item 4 -->
+<article class="col-span-1 group cursor-pointer">
+<div class="relative aspect-square bg-surface-container-high border border-outline p-6 flex items-center justify-center overflow-hidden mb-4">
+<img class="relative z-10 w-2/3 object-contain drop-shadow-xl group-hover:scale-110 transition-transform duration-500" data-alt="A flat-lay photograph of a high-quality woven patch resting on a piece of dark, textured technical cycling fabric. The patch design is bold and graphic, featuring a geometric mountain motif in black and white. The lighting is crisp and even, highlighting the textile textures. The aesthetic is premium sportswear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn9aY5HX60tADp8WmUQuLwvs4TR68yg3IBA4izcUP_voevtPF_lCaENaVPKDp0S8buuRSQsWaFxsjXEa8AmG9zm_J9xZatElIvN4SvHYslym5Lk8J1JLzn4Ge23mD0Oe8tK3ZyLuOQjonqVJGY8ETaW9ku5ZhhvzRB2O4A6wLcUQUl5fIsoDhm2OSswyGXnZwG110KOjx3kaRD_5YrPQFA2y1H53W7gkh2PWUZXKkI_rqvMyUJ0zJGNw"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-headline-md font-headline-lg text-primary uppercase text-2xl">Hill Climber Patch</h3>
+<p class="text-label-ui font-label-ui text-on-surface-variant mt-1">ISSUED: SEP 2024</p>
+</div>
+</div>
+</article>
+<!-- Item 5: Charity Focus -->
+<article class="col-span-1 group cursor-pointer">
+<div class="relative aspect-square bg-tertiary-container p-6 flex items-center justify-center overflow-hidden mb-4">
+<img class="relative z-10 w-3/4 object-contain drop-shadow-2xl group-hover:rotate-6 transition-transform duration-500" data-alt="A luminous, abstract digital sculpture representing community impact. It looks like intertwined ribbons of bright cranberry pink and gold light floating in a dark crimson void. The style is highly conceptual and elegant, serving as a visual metaphor for philanthropic contribution in a digital art gallery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzwqh7HgtDQHLy99LFu1MQ4NTfTQlrqug74ro3MhUZOzYadPkkru0oFZRmh49VqDwvMQHIzTuZj_CzF2AoHV-8GsTZUurzrQ7aUcZfjg0552m-gwOCbHfOENkAay0A7h0adglzNTmMvGWcTSCQCYrqvEqy3edhddk0n4LfXxVy3TNa6PizgwVP6hmVU1XAuZgZ-ijaUj5qpH_j-LOrojLjhx01xs_iUil14HNjO4KY3S7orlpSZtbPmg"/>
+<div class="absolute bottom-4 left-4 text-on-tertiary-container text-label-ui font-label-ui font-bold uppercase tracking-widest z-20">
+                                Top Fundraiser
+                            </div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-headline-md font-headline-lg text-primary uppercase text-2xl">Impact Catalyst</h3>
+<p class="text-label-ui font-label-ui text-on-surface-variant mt-1">ISSUED: OCT 2024</p>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Diagonal Divider -->
+<div class="h-24 w-full bg-primary asymmetric-clip mt-12"></div>
+</main>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 hover:opacity-100 active:bg-primary-container p-2 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="text-[10px] font-label-ui uppercase tracking-wider">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 hover:opacity-100 active:bg-primary-container p-2 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="calendar_today">calendar_today</span>
+<span class="text-[10px] font-label-ui uppercase tracking-wider">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 hover:opacity-100 active:bg-primary-container p-2 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="fitness_center">fitness_center</span>
+<span class="text-[10px] font-label-ui uppercase tracking-wider">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary scale-95 transition-transform p-2" href="#">
+<span class="material-symbols-outlined mb-1 fill" data-icon="account_circle">account_circle</span>
+<span class="text-[10px] font-label-ui uppercase tracking-wider font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

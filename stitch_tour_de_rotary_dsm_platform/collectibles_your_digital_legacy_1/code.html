@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Collectibles - Tour de Rotary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#ff95a8",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "background": "#f9f9f9",
+                        "primary-container": "#004687",
+                        "secondary-fixed": "#ffddb3",
+                        "on-secondary-fixed": "#291800",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "on-surface": "#1a1c1c",
+                        "tertiary-fixed": "#ffd9de",
+                        "surface-container-high": "#e8e8e8",
+                        "on-background": "#1a1c1c",
+                        "surface-dim": "#dadada",
+                        "tertiary": "#650025",
+                        "on-secondary-container": "#6b4500",
+                        "inverse-surface": "#2f3131",
+                        "on-surface-variant": "#424750",
+                        "on-primary-fixed": "#001b3b",
+                        "primary": "#00305f",
+                        "on-secondary-fixed-variant": "#624000",
+                        "surface": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#feae23",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "outline": "#737781",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-primary-container": "#87b6fe",
+                        "tertiary-container": "#8f0037",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed-variant": "#014788",
+                        "primary-fixed": "#d5e3ff",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-tint": "#2b5fa1",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#400014",
+                        "surface-container-low": "#f3f3f4",
+                        "outline-variant": "#c2c6d2",
+                        "secondary-fixed-dim": "#ffb950",
+                        "inverse-primary": "#a7c8ff",
+                        "secondary": "#825500"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "diagonal-offset": "12deg",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Anton"],
+                        "headline-lg": ["Anton"],
+                        "data-metric": ["Anton"],
+                        "display-hero": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["20px", {"lineHeight": "160%", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}],
+                        "label-ui": ["14px", {"lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["40px", {"lineHeight": "100%", "fontWeight": "400"}],
+                        "headline-lg": ["64px", {"lineHeight": "100%", "fontWeight": "400"}],
+                        "data-metric": ["48px", {"lineHeight": "100%", "fontWeight": "400"}],
+                        "display-hero": ["96px", {"lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "120%", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        .diagonal-clip {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+        }
+        .diagonal-clip-bottom {
+            clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%);
+        }
+        
+        .card-hover-effect {
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 48, 95, 0.2), 0 10px 10px -5px rgba(0, 48, 95, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary border-b-2 border-secondary hidden md:flex">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<div class="flex gap-8 items-center">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</div>
+<button class="bg-secondary text-on-secondary font-label-ui text-label-ui uppercase px-6 py-3 rounded-none hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300">
+            Register Now
+        </button>
+</nav>
+<div class="flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-screen fixed left-0 top-0 pt-20 bg-surface-container-lowest w-64 border-r border-outline-variant z-40">
+<div class="px-6 pb-8">
+<h2 class="font-headline-md text-headline-md text-primary">Rider Profile</h2>
+<p class="font-label-ui text-label-ui text-outline mt-1">Elite Tier</p>
+</div>
+<nav class="flex flex-col flex-1 gap-2 px-4">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-ui text-label-ui">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="event">event</span>
+<span class="font-label-ui text-label-ui">My Events</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="directions_bike">directions_bike</span>
+<span class="font-label-ui text-label-ui">Training</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-ui text-label-ui">Orders</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 bg-secondary text-on-secondary font-bold rounded-none translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined fill-icon" data-icon="token">token</span>
+<span class="font-label-ui text-label-ui">Collectibles</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group_add">group_add</span>
+<span class="font-label-ui text-label-ui">Referrals</span>
+</a>
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-ui text-label-ui">Profile</span>
+</a>
+</nav>
+<div class="px-4 pb-6 mt-auto">
+<button class="w-full bg-primary text-on-primary font-label-ui text-label-ui uppercase px-4 py-3 mb-4 rounded-none hover:bg-primary-container transition-colors">
+                    Log Ride
+                </button>
+<div class="flex justify-between px-2 text-outline">
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="settings">settings</span></a>
+<a class="hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="help_outline">help_outline</span></a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-64 w-full">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[614px] flex items-center bg-primary diagonal-clip overflow-hidden">
+<div class="absolute inset-0 opacity-20 bg-[url('placeholder')] bg-cover bg-center" data-alt="A high-contrast, dramatic black and white photograph of a cyclist climbing a steep hill near the Tanzanian coast at dawn. The image focuses on the determination in the rider's posture, with harsh lighting highlighting the texture of the asphalt and the silhouette of coastal trees in the background. The mood is intense, athletic, and premium." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDckSJUNUnsRWgFdff3I_TH8MwBlEITGDoJU0ajMd0rBPtdbWhMjuqITtbj6lF6YUkIqbl7go28HjQmlWrKsdNtEuNqg3ZxKoycO5yjSp-W1DbiLp826OHvppIvVZpsPzmqPT4WeawqMORhc7MMnnLCfgjfNcaKrJvEyns6wfn9WMn61Cms5DXuNckJ6SM5wKb8kll_SqPewtaySKQONwHVLNsaYouPWtHBkvxVxrPbNFJ-7WpsvU1hzw')"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-primary to-transparent z-10"></div>
+<div class="relative z-20 w-full px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 lg:col-span-6 text-on-primary py-20">
+<h1 class="font-display-hero text-display-hero uppercase text-secondary mb-6 leading-none">The Archive</h1>
+<p class="font-body-lg text-body-lg mb-8 max-w-xl text-surface-container-high">
+                            Digital Proof of Achievement. A curated gallery of your participation, verified miles, and limited edition drops commemorating the Tour de Rotary Dar es Salaam.
+                        </p>
+<div class="flex gap-4">
+<button class="bg-secondary text-on-secondary font-label-ui text-label-ui uppercase px-8 py-4 rounded-none hover:bg-primary hover:text-on-primary transition-colors border border-transparent hover:border-secondary">
+                                View My Collection
+                            </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-ui text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-ui text-[10px] mt-1">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="font-label-ui text-[10px] mt-1">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined fill-icon" data-icon="token">token</span>
+<span class="font-label-ui text-[10px] mt-1">Collectibles</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-label-ui text-[10px] mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
