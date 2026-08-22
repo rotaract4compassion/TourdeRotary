@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HQ Control | Mission Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#825500",
+                        "on-surface-variant": "#424750",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed": "#291800",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#6b4500",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-bright": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "secondary-fixed-dim": "#ffb950",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#ffd9de",
+                        "outline": "#737781",
+                        "on-primary-fixed-variant": "#014788",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-container": "#feae23",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-tint": "#2b5fa1",
+                        "on-primary-container": "#87b6fe",
+                        "tertiary-container": "#8f0037",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-surface": "#1a1c1c",
+                        "tertiary": "#650025",
+                        "on-background": "#1a1c1c",
+                        "primary-container": "#004687",
+                        "surface-dim": "#dadada",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "outline-variant": "#c2c6d2",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-primary": "#ffffff",
+                        "primary": "#00305f",
+                        "secondary-fixed": "#ffddb3",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "surface-container-low": "#f3f3f4",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#a7c8ff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#001b3b",
+                        "on-tertiary-fixed": "#400014"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Anton"],
+                        "display-hero": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "data-metric": ["Anton"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-lg": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+        }
+        .clip-diagonal-top {
+            clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%);
+        }
+        .bg-wave-pattern {
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0, 48, 95, 0.05) 10px, rgba(0, 48, 95, 0.05) 20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 bg-primary text-on-primary">
+<div class="flex items-center gap-4">
+<span class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">TOUR DE ROTARY DSM</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center text-label-ui font-label-ui">
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+<a class="text-secondary border-b-2 border-secondary pb-1 opacity-70 transition-opacity" href="#">Dashboard</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center border-b-2 border-outline-variant pb-1">
+<span class="material-symbols-outlined text-outline-variant mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-label-ui font-label-ui text-on-primary placeholder-outline-variant p-0 w-48" placeholder="Global Search..." type="text"/>
+</div>
+<button class="bg-secondary text-on-secondary font-label-ui text-label-ui uppercase px-6 py-3 hover:bg-primary-container transition-colors">Register Now</button>
+</div>
+</header>
+<!-- SideNavBar & Main Content Wrapper -->
+<div class="flex">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-screen fixed left-0 top-0 pt-20 w-64 bg-surface-container-lowest text-primary border-r border-outline-variant z-40">
+<div class="p-6 border-b border-outline-variant mb-4">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container font-headline-md">
+<span class="material-symbols-outlined">person</span>
+</div>
+<div>
+<h2 class="text-label-ui font-label-ui font-bold">Rider Profile</h2>
+<p class="text-label-ui font-label-ui text-outline">Elite Tier</p>
+</div>
+</div>
+<button class="w-full bg-secondary text-on-secondary font-label-ui text-label-ui uppercase py-3 border-2 border-secondary hover:bg-transparent hover:text-secondary transition-colors">Log Ride</button>
+</div>
+<nav class="flex-1 flex flex-col gap-2 px-4">
+<a class="flex items-center gap-4 p-3 bg-secondary text-on-secondary font-bold font-label-ui text-label-ui translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                    Dashboard
+                </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200 font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined">event</span>
+                    My Events
+                </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200 font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined">directions_bike</span>
+                    Training
+                </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200 font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+                    Orders
+                </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200 font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined">token</span>
+                    Collectibles
+                </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200 font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined">group_add</span>
+                    Referrals
+                </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200 font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined">person</span>
+                    Profile
+                </a>
+</nav>
+<div class="mt-auto border-t border-outline-variant p-4">
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </a>
+<a class="flex items-center gap-4 p-3 text-on-surface-variant hover:bg-surface-container-low transition-all duration-200 font-label-ui text-label-ui" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+                    Support
+                </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-64 bg-background pb-24 lg:pb-0">
+<!-- Mission Status Bar -->
+<section class="bg-primary text-on-primary py-3 px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-4 border-b border-on-primary-fixed-variant">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary animate-pulse" style="font-variation-settings: 'FILL' 1;">radio_button_checked</span>
+<span class="font-label-ui text-label-ui uppercase tracking-widest text-secondary-fixed">Phase: Pre-Event Build-Up</span>
+</div>
+<div class="flex gap-6 text-label-ui font-label-ui">
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">schedule</span> T-Minus: 14 Days</div>
+<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">thermostat</span> Weather Est: 28°C / Clear</div>
+</div>
+</section>
+<!-- Hero Header -->
+<section class="px-margin-mobile md:px-margin-desktop py-12 md:py-20 relative bg-wave-pattern">
+<div class="relative z-10 max-w-4xl">
+<h1 class="text-display-hero font-display-hero text-primary mb-4 uppercase">HQ Control</h1>
+<p class="text-headline-md font-headline-md text-secondary">Mission Overview &amp; Live Telemetry</p>
+</div>
+<!-- Abstract Graphic -->
+<div class="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none hidden md:block">
+<span class="material-symbols-outlined text-[300px] text-primary" style="font-variation-settings: 'FILL' 1;">settings</span>
+</div>
+</section>
+<!-- Dashboard Grid -->
+<section class="px-margin-mobile md:px-margin-desktop pb-24">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Top Metrics Row -->
+<div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+<!-- Registrations -->
+<div class="bg-surface-container-lowest p-8 border-t-2 border-secondary relative overflow-hidden group hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-[120px] text-surface-container-high opacity-50 group-hover:scale-110 transition-transform">group</span>
+<h3 class="text-label-ui font-label-ui text-on-surface-variant uppercase mb-2">Registrations (Total / Today)</h3>
+<div class="flex items-end gap-4">
+<span class="text-data-metric font-data-metric text-primary">4,208</span>
+<span class="text-headline-md font-headline-md text-secondary mb-1">/ +142</span>
+</div>
+<div class="w-full bg-surface-container mt-4 h-2">
+<div class="bg-secondary h-full" style="width: 85%;"></div>
+</div>
+<p class="text-label-ui font-label-ui text-outline mt-2 text-right">85% to Goal</p>
+</div>
+<!-- Revenue -->
+<div class="bg-surface-container-lowest p-8 border-t-2 border-tertiary relative overflow-hidden group hover:bg-surface-bright transition-colors">
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-[120px] text-surface-container-high opacity-50 group-hover:scale-110 transition-transform">payments</span>
+<h3 class="text-label-ui font-label-ui text-on-surface-variant uppercase mb-2">Total Raised (TZS)</h3>
+<div class="flex items-end gap-4">
+<span class="text-data-metric font-data-metric text-tertiary">124.5M</span>
+</div>
+<div class="w-full bg-surface-container mt-4 h-2">
+<div class="bg-tertiary h-full" style="width: 62%;"></div>
+</div>
+<p class="text-label-ui font-label-ui text-outline mt-2 text-right">62% to Charity Goal</p>
+</div>
+</div>
+<!-- Alert Panel -->
+<div class="md:col-span-4 bg-error text-on-error p-8 relative overflow-hidden">
+<div class="absolute inset-0 bg-wave-pattern opacity-20"></div>
+<div class="relative z-10 flex flex-col h-full">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">warning</span>
+<h3 class="text-headline-md font-headline-md uppercase">System Alerts</h3>
+</div>
+<ul class="space-y-4 flex-1">
+<li class="border-b border-on-error/20 pb-4">
+<p class="text-label-ui font-label-ui font-bold">Route Blockage: Mbezi Beach</p>
+<p class="text-sm opacity-80 mt-1">Construction reported at KM 12. Alternate route planning required.</p>
+</li>
+<li class="border-b border-on-error/20 pb-4">
+<p class="text-label-ui font-label-ui font-bold">Low Merch Stock: Jersey L</p>
+<p class="text-sm opacity-80 mt-1">Only 15 units remaining in primary warehouse.</p>
+</li>
+</ul>
+<button class="mt-auto border-2 border-on-error text-on-error font-label-ui text-label-ui uppercase py-2 hover:bg-on-error hover:text-error transition-colors">Acknowledge All</button>
+</div>
+</div>
+<!-- Complex Data Block: Route & Logistics -->
+<div class="md:col-span-12 grid grid-cols-1 lg:grid-cols-12 gap-gutter mt-8">
+<!-- Map View -->
+<div class="lg:col-span-7 bg-surface-container-lowest border-2 border-primary p-2 flex flex-col h-[500px]">
+<div class="flex justify-between items-center p-4 border-b-2 border-primary mb-2">
+<h3 class="text-label-ui font-label-ui font-bold text-primary uppercase">Live Route Telemetry</h3>
+<div class="flex gap-2">
+<span class="bg-primary text-on-primary px-3 py-1 text-xs font-label-ui uppercase">Dar es Salaam</span>
+</div>
+</div>
+<div class="flex-1 relative overflow-hidden" data-location="Dar es Salaam" style="">
+<!-- Simulated Map Area -->
+<div class="bg-cover bg-center w-full h-full absolute inset-0 mix-blend-luminosity opacity-80" data-alt="A highly detailed overhead satellite view of a vibrant coastal city map (Dar es Salaam) displayed on a digital command screen. The map is rendered in high-contrast navy and gold tones, showing intricate road networks, coastal edges, and topographical details. The lighting implies a modern, high-tech interface with crisp, sharp edges. The mood is analytical and strategic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAm724eU5EM7EjQp0oyWb8h8PAOK139bRiN4mBhgQbiOW7IVB_l0akWjmjipAWguVKy9OcRXXrjTi_m8HXK_hnqbArwie7byud-87S9fYMzWoOBXnRKhbA-zrY--V0k1aIkQp9Q30Cx8GRb3otKYeVKwQX8tM_SuHaCNuPragTK5sr0J5iq_uGCVuG6kW29xdZwLWfvp7wsZiyFZY-b2fxE9wZw_oK5-IPFMVqR4rM5K8PEFXswVdalUQ')"></div>
+<div class="absolute inset-0 bg-primary/10"></div>
+<!-- Map UI Overlays -->
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<button class="w-10 h-10 bg-surface-container-lowest border border-outline flex items-center justify-center hover:bg-surface-bright"><span class="material-symbols-outlined">add</span></button>
+<button class="w-10 h-10 bg-surface-container-lowest border border-outline flex items-center justify-center hover:bg-surface-bright"><span class="material-symbols-outlined">remove</span></button>
+</div>
+<!-- Waypoints -->
+<div class="absolute top-1/3 left-1/4 w-4 h-4 bg-secondary rounded-full border-2 border-surface-container-lowest shadow-[0_0_15px_rgba(130,85,0,0.8)] animate-pulse"></div>
+<div class="absolute top-1/2 right-1/3 w-4 h-4 bg-tertiary rounded-full border-2 border-surface-container-lowest"></div>
+<div class="absolute bottom-1/4 left-1/2 w-4 h-4 bg-primary rounded-full border-2 border-surface-container-lowest"></div>
+<!-- Route Path SVG Simulation -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M25,33 Q40,50 50,75 T66,50" fill="none" stroke="#825500" stroke-dasharray="2,1" stroke-width="0.5"></path>
+</svg>
+</div>
+</div>
+<!-- Logistics List -->
+<div class="lg:col-span-5 flex flex-col gap-gutter">
+<!-- Volunteers -->
+<div class="bg-primary text-on-primary p-6 relative">
+<div class="flex justify-between items-end mb-6 border-b border-on-primary-fixed-variant pb-2">
+<h3 class="text-label-ui font-label-ui uppercase tracking-wider">Volunteer Fulfillment</h3>
+<span class="text-headline-md font-headline-md">340/500</span>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm font-label-ui">
+<span>Water Stations</span>
+<div class="flex-1 mx-4 h-1 bg-primary-container">
+<div class="h-full bg-secondary" style="width: 90%;"></div>
+</div>
+<span>90%</span>
+</div>
+<div class="flex justify-between items-center text-sm font-label-ui">
+<span>Route Marshals</span>
+<div class="flex-1 mx-4 h-1 bg-primary-container">
+<div class="h-full bg-tertiary" style="width: 45%;"></div>
+</div>
+<span>45%</span>
+</div>
+<div class="flex justify-between items-center text-sm font-label-ui">
+<span>Medical Tents</span>
+<div class="flex-1 mx-4 h-1 bg-primary-container">
+<div class="h-full bg-secondary" style="width: 100%;"></div>
+</div>
+<span>100%</span>
+</div>
+</div>
+<button class="mt-6 w-full bg-transparent border-2 border-secondary text-secondary font-label-ui text-label-ui py-2 uppercase hover:bg-secondary hover:text-primary transition-colors">Manage Roster</button>
+</div>
+<!-- Operations Queue -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 flex-1 flex flex-col">
+<h3 class="text-label-ui font-label-ui text-primary uppercase border-b border-outline-variant pb-2 mb-4">Operations Queue</h3>
+<div class="flex-1 overflow-y-auto space-y-3">
+<div class="flex items-start gap-3 p-3 bg-surface-bright border-l-4 border-tertiary">
+<span class="material-symbols-outlined text-tertiary mt-1">pending_actions</span>
+<div>
+<p class="font-bold text-sm">Pending Sponsor Payments</p>
+<p class="text-xs text-on-surface-variant mt-1">3 Gold Tier sponsors awaiting invoice clearance.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-surface-bright border-l-4 border-secondary">
+<span class="material-symbols-outlined text-secondary mt-1">check_box</span>
+<div>
+<p class="font-bold text-sm">Permit Clearance</p>
+<p class="text-xs text-on-surface-variant mt-1">City council road closure permits approved.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-3 bg-surface-bright border-l-4 border-outline">
+<span class="material-symbols-outlined text-outline mt-1">inventory_2</span>
+<div>
+<p class="font-bold text-sm">Partner Deliverables</p>
+<p class="text-xs text-on-surface-variant mt-1">Awaiting banner artwork from 2 media partners.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary shadow-lg border-t-2 border-secondary">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2 w-full h-full" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="text-label-ui font-label-ui text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2 w-full h-full" href="#">
+<span class="material-symbols-outlined mb-1">calendar_today</span>
+<span class="text-label-ui font-label-ui text-[10px]">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2 w-full h-full" href="#">
+<span class="material-symbols-outlined mb-1">fitness_center</span>
+<span class="text-label-ui font-label-ui text-[10px]">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary p-2 w-full h-full bg-primary-container scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-label-ui font-label-ui text-[10px] font-bold">Dashboard</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary lg:ml-64 lg:w-[calc(100%-16rem)] mb-16 lg:mb-0">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<div class="flex flex-wrap justify-center gap-6 text-label-ui font-label-ui">
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</div>
+<div class="text-body-md font-body-md text-on-primary opacity-50 mt-8 text-center">
+            © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+        </div>
+</footer>
+</body></html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Athletic HQ - Content Scheduler</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1a1c1c",
+                        "on-surface-variant": "#424750",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-tint": "#2b5fa1",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-container-low": "#f3f3f4",
+                        "outline-variant": "#c2c6d2",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-primary-fixed-variant": "#014788",
+                        "secondary-container": "#feae23",
+                        "primary-container": "#004687",
+                        "tertiary-fixed": "#ffd9de",
+                        "inverse-surface": "#2f3131",
+                        "inverse-primary": "#a7c8ff",
+                        "primary": "#00305f",
+                        "surface-dim": "#dadada",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#825500",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#650025",
+                        "background": "#f9f9f9",
+                        "on-primary-fixed": "#001b3b",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#6b4500",
+                        "secondary-fixed-dim": "#ffb950",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "outline": "#737781",
+                        "secondary-fixed": "#ffddb3",
+                        "on-primary-container": "#87b6fe",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "tertiary-container": "#8f0037",
+                        "on-tertiary-fixed": "#400014",
+                        "on-secondary-fixed": "#291800",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "data-metric": ["Anton"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "display-hero": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2vw), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 2vw, 100% 0, 100% 100%, 0 100%); }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #c2c6d2; border-radius: 9999px; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col md:flex-row overflow-x-hidden">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col h-full py-unit bg-surface-container-lowest dark:bg-inverse-surface fixed left-0 top-16 bottom-0 w-64 z-40 border-r-2 border-on-surface">
+<div class="px-gutter mb-8">
+<h1 class="font-headline-md text-headline-md text-primary">Command Center</h1>
+<p class="font-label-ui text-label-ui uppercase text-on-surface-variant mt-2">Phase: Live Event</p>
+</div>
+<div class="flex-1 overflow-y-auto custom-scrollbar flex flex-col gap-2 px-unit">
+<a class="flex items-center gap-3 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-high hover:bg-surface-container-highest transition-all duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-ui text-label-ui uppercase">HQ Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-high hover:bg-surface-container-highest transition-all duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined">how_to_reg</span>
+<span class="font-label-ui text-label-ui uppercase">Registrations</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-high hover:bg-surface-container-highest transition-all duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-ui text-label-ui uppercase">Inventory</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-high hover:bg-surface-container-highest transition-all duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined">directions_bike</span>
+<span class="font-label-ui text-label-ui uppercase">Activities</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded bg-secondary text-on-secondary font-bold border-l-4 border-primary transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined">video_library</span>
+<span class="font-label-ui text-label-ui uppercase">Content</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded text-on-surface-variant hover:bg-surface-container-high hover:bg-surface-container-highest transition-all duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-ui text-label-ui uppercase">Payments</span>
+</a>
+</div>
+<div class="px-gutter mt-auto pt-4 border-t border-outline-variant">
+<button class="w-full bg-error text-on-error font-label-ui text-label-ui uppercase py-3 rounded shadow-sm hover:opacity-90 transition-opacity mb-4">Emergency Broadcast</button>
+<a class="flex items-center gap-3 py-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-ui text-label-ui uppercase">Support</span>
+</a>
+<a class="flex items-center gap-3 py-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-ui text-label-ui uppercase">System Status</span>
+</a>
+</div>
+</nav>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center h-16 px-gutter bg-primary dark:bg-primary text-on-primary dark:text-on-primary border-b-2 border-secondary">
+<div class="font-headline-md text-headline-md uppercase tracking-tighter text-secondary">Athletic HQ</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center bg-primary-container rounded-full px-4 py-1">
+<span class="material-symbols-outlined text-on-primary-container mr-2 text-sm">search</span>
+<input class="bg-transparent border-none text-on-primary-container placeholder-on-primary-container/70 focus:ring-0 font-label-ui text-label-ui w-48" placeholder="Search..." type="text"/>
+</div>
+<span class="material-symbols-outlined cursor-pointer hover:bg-primary-container transition-colors p-2 rounded-full active:opacity-90">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-primary-container transition-colors p-2 rounded-full active:opacity-90">settings</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-primary-container transition-colors p-2 rounded-full active:opacity-90">cloud_done</span>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 mt-16 md:ml-64 relative min-h-[calc(100vh-64px)] flex flex-col bg-surface">
+<!-- Header Section with Diagonal Cut -->
+<div class="relative bg-primary text-on-primary pt-8 pb-16 px-gutter md:px-margin-desktop clip-diagonal z-10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<div>
+<h2 class="font-display-hero text-headline-lg-mobile md:text-headline-lg uppercase mb-2">Content Scheduler</h2>
+<p class="font-body-md text-primary-fixed-dim max-w-2xl">Phase-aware orchestration system. Automatic Midnight Phase Transitions enabled.</p>
+</div>
+<div class="flex items-center gap-4 bg-primary-container p-3 rounded-lg border border-outline/30">
+<span class="font-label-ui text-label-ui uppercase text-primary-fixed">Preview Future State</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Layout Grid for Scheduler & Editor -->
+<div class="flex-1 max-w-7xl w-full mx-auto px-gutter md:px-margin-desktop py-8 grid grid-cols-1 lg:grid-cols-12 gap-8 z-20 -mt-12 relative">
+<!-- Timeline View (Left/Main Col) -->
+<div class="lg:col-span-8 bg-surface-container-lowest border-2 border-on-surface p-6 shadow-sm relative overflow-hidden">
+<!-- Watermark -->
+<div class="absolute -bottom-20 -right-20 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[300px]">history_toggle_off</span>
+</div>
+<div class="flex justify-between items-center mb-8 border-b-2 border-on-surface pb-4">
+<h3 class="font-headline-md text-body-lg uppercase font-bold text-on-surface tracking-wide">Publishing Timeline</h3>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant font-label-ui text-label-ui border border-outline-variant">Filter: All Channels</span>
+</div>
+</div>
+<!-- Timeline Tracks -->
+<div class="relative min-h-[400px] border-l-2 border-dashed border-outline-variant ml-4 pl-8 py-4 space-y-12">
+<!-- Phase: Pre-Event -->
+<div class="relative">
+<div class="absolute -left-[43px] top-0 bg-surface-container-lowest border-2 border-on-surface w-20 text-center py-1 font-label-ui text-label-ui text-xs font-bold uppercase rotate-90 origin-left translate-y-8 bg-surface-container">Pre-Event</div>
+<!-- Content Block 1 -->
+<div class="group relative border-2 border-secondary bg-surface-bright p-4 hover:border-primary transition-colors cursor-pointer mb-6 shadow-[4px_4px_0px_#825500]">
+<div class="absolute -left-10 top-4 w-6 h-6 rounded-full bg-secondary border-2 border-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary text-[14px]">check</span>
+</div>
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-ui text-label-ui text-secondary px-2 py-0.5 bg-secondary-fixed rounded-sm uppercase text-xs">Past</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">mail</span>
+<span class="material-symbols-outlined text-on-surface-variant text-sm">language</span>
+</div>
+</div>
+<h4 class="font-headline-md text-body-lg text-on-surface mb-1">Route Announcement Teaser</h4>
+<p class="font-label-ui text-label-ui text-on-surface-variant">Sep 12, 10:00 AM - Sep 14, Midnight</p>
+</div>
+</div>
+<!-- Phase: Event Day (Current) -->
+<div class="relative">
+<div class="absolute -left-[43px] top-0 bg-primary text-on-primary border-2 border-primary w-24 text-center py-1 font-label-ui text-label-ui text-xs font-bold uppercase rotate-90 origin-left translate-y-10 shadow-sm">Live Event</div>
+<!-- Current Time Indicator -->
+<div class="absolute -left-[35px] top-8 w-full border-t-2 border-error border-dotted z-0 pointer-events-none">
+<span class="absolute right-0 -top-6 bg-error text-on-error font-label-ui text-[10px] px-2 py-1 uppercase">Current Time</span>
+</div>
+<!-- Content Block 2 -->
+<div class="group relative border-2 border-primary bg-primary-fixed/20 p-4 hover:bg-primary-fixed/40 transition-colors cursor-pointer mb-6 z-10 shadow-[4px_4px_0px_#00305f]">
+<div class="absolute -left-10 top-4 w-6 h-6 rounded-full bg-primary border-2 border-surface-container-lowest flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-on-primary text-[14px]">radio_button_checked</span>
+</div>
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-ui text-label-ui text-primary px-2 py-0.5 bg-primary-fixed rounded-sm uppercase text-xs">Live</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">sms</span>
+</div>
+</div>
+<h4 class="font-headline-md text-body-lg text-on-surface mb-1">Starting Line Alert - Wave A</h4>
+<p class="font-label-ui text-label-ui text-on-surface-variant">Oct 05, 06:00 AM - Oct 05, 06:30 AM</p>
+</div>
+</div>
+<!-- Phase: Post-Event -->
+<div class="relative">
+<div class="absolute -left-[43px] top-0 bg-surface-container-lowest border-2 border-outline-variant text-on-surface-variant w-24 text-center py-1 font-label-ui text-label-ui text-xs font-bold uppercase rotate-90 origin-left translate-y-10">Post-Event</div>
+<!-- Content Block 3 -->
+<div class="group relative border-2 border-outline-variant bg-surface p-4 hover:border-on-surface transition-colors cursor-pointer opacity-70 hover:opacity-100">
+<div class="absolute -left-10 top-4 w-6 h-6 rounded-full bg-surface-variant border-2 border-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-outline-variant text-[14px]">schedule</span>
+</div>
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-ui text-label-ui text-on-surface-variant px-2 py-0.5 border border-outline-variant rounded-sm uppercase text-xs">Scheduled</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">mail</span>
+</div>
+</div>
+<h4 class="font-headline-md text-body-lg text-on-surface mb-1">Results &amp; Thank You Digest</h4>
+<p class="font-label-ui text-label-ui text-on-surface-variant">Oct 06, 09:00 AM</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Editor Panel (Right Col) -->
+<div class="lg:col-span-4 bg-surface-container-lowest border-2 border-on-surface p-6 shadow-sm h-fit">
+<div class="flex justify-between items-center mb-6 border-b-2 border-on-surface pb-4">
+<h3 class="font-headline-md text-body-lg uppercase font-bold text-on-surface tracking-wide">Edit Block</h3>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block font-label-ui text-label-ui text-on-surface-variant mb-1 uppercase text-xs">Internal Title</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-on-surface focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-on-surface" type="text" value="Starting Line Alert - Wave A"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-label-ui text-label-ui text-on-surface-variant mb-1 uppercase text-xs">Start Date</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-on-surface focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-on-surface text-sm" type="datetime-local" value="2024-10-05T06:00"/>
+</div>
+<div>
+<label class="block font-label-ui text-label-ui text-on-surface-variant mb-1 uppercase text-xs">End Date</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-on-surface focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-on-surface text-sm" type="datetime-local" value="2024-10-05T06:30"/>
+</div>
+</div>
+<div>
+<label class="block font-label-ui text-label-ui text-on-surface-variant mb-1 uppercase text-xs">Channels</label>
+<div class="flex gap-2">
+<label class="flex-1 border-2 border-primary bg-primary-fixed/20 text-center py-2 cursor-pointer font-label-ui text-label-ui uppercase text-xs transition-colors">
+<input checked="" class="sr-only" type="checkbox"/>
+                                SMS
+                            </label>
+<label class="flex-1 border-2 border-outline-variant hover:border-on-surface text-center py-2 cursor-pointer font-label-ui text-label-ui uppercase text-xs transition-colors text-on-surface-variant hover:text-on-surface">
+<input class="sr-only" type="checkbox"/>
+                                Email
+                            </label>
+<label class="flex-1 border-2 border-outline-variant hover:border-on-surface text-center py-2 cursor-pointer font-label-ui text-label-ui uppercase text-xs transition-colors text-on-surface-variant hover:text-on-surface">
+<input class="sr-only" type="checkbox"/>
+                                Web
+                            </label>
+</div>
+</div>
+<div>
+<label class="block font-label-ui text-label-ui text-on-surface-variant mb-1 uppercase text-xs">Copy Draft</label>
+<textarea class="w-full bg-surface-container-low border-2 border-outline-variant focus:border-primary focus:ring-0 p-3 font-body-md text-on-surface resize-none" rows="4">Wave A participants: Please proceed to the start line staging area. Race begins in 15 minutes. Good luck!</textarea>
+</div>
+<div class="pt-4 border-t border-outline-variant flex justify-end gap-3">
+<button class="px-6 py-2 border-2 border-primary text-primary font-headline-md text-body-md uppercase font-bold hover:bg-primary-fixed/10 transition-colors" type="button">Discard</button>
+<button class="px-6 py-2 bg-secondary text-on-secondary font-headline-md text-body-md uppercase font-bold hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-sm" type="button">Save Changes</button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-dim dark:bg-surface-dim border-t border-outline-variant flex justify-between items-center px-desktop py-unit md:ml-64 px-gutter py-4 z-30 relative">
+<div class="font-label-ui text-label-ui text-primary uppercase">© 2024 Elite Performance HQ. All rights reserved.</div>
+<div class="flex gap-6">
+<a class="font-label-ui text-label-ui text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-ui text-label-ui text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-colors" href="#">Terms of Service</a>
+<a class="font-label-ui text-label-ui text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-colors" href="#">API Documentation</a>
+</div>
+</footer>
+</body></html>

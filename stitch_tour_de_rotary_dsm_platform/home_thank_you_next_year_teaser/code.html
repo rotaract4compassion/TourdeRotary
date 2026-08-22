@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Thank You | Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#650025",
+                        "primary-container": "#004687",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "surface-container-low": "#f3f3f4",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-dim": "#dadada",
+                        "outline": "#737781",
+                        "secondary-fixed": "#ffddb3",
+                        "primary-fixed": "#d5e3ff",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#a7c8ff",
+                        "background": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "on-surface-variant": "#424750",
+                        "surface": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#624000",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "tertiary-fixed": "#ffd9de",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "tertiary-container": "#8f0037",
+                        "inverse-surface": "#2f3131",
+                        "surface-variant": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#c2c6d2",
+                        "on-tertiary-container": "#ff95a8",
+                        "secondary-fixed-dim": "#ffb950",
+                        "primary": "#00305f",
+                        "on-secondary-container": "#6b4500",
+                        "on-tertiary-fixed": "#400014",
+                        "on-primary-fixed-variant": "#014788",
+                        "on-background": "#1a1c1c",
+                        "surface-container": "#eeeeee",
+                        "on-primary-fixed": "#001b3b",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#825500",
+                        "secondary-container": "#feae23",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-fixed": "#291800",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#87b6fe",
+                        "surface-tint": "#2b5fa1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-hero": ["Anton"],
+                        "headline-lg": ["Anton"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Anton"],
+                        "data-metric": ["Anton"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%);
+        }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-lg antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary border-b-2 border-secondary flat no shadows docked full-width top-0">
+<a class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter" href="#">TOUR DE ROTARY DSM</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</nav>
+<button class="bg-secondary text-on-secondary px-6 py-3 font-headline-lg uppercase hover:bg-primary hover:text-on-primary transition-all duration-300 border-2 border-transparent hover:border-secondary">Register Now</button>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center justify-center clip-diagonal bg-primary text-on-primary overflow-hidden">
+<div class="absolute inset-0 parallax-bg opacity-40" data-alt="A massive, cinematic wide shot of a cycling event finish line at sunset on the Tanzanian coast. The golden hour lighting casts long, dramatic shadows. Cyclists are raising their hands in triumph as they cross the line, surrounded by a blur of cheering spectators. The atmosphere is highly energetic, emotional, and premium, styled like high-end sports editorial photography with rich contrast and deep navy and gold tones globally." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCke_Ew4bHSZwu7Hn_WI1LbG4bpnxG-zN3_wcYbPnjoUxTCRgzkNQP_W8MCm6h5EWBTtmU5FoCSHIgg119C21TxBmMjpu3jI4btNRBeiKQl3ygivXtJVLvvNJsEoDJ1WIyFflFAZSr8ChwKBkaE5I_ua8asoUkDORHQ6o4Kjr3ZeeLQg0s-bSjgNB57OZo3BuW8-iTaTvRUuscPPmqHZXZQPwLWTEnqN3wLBwVHBNurHpq0cW9D-GQtrw')"></div>
+<div class="relative z-10 container mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center pt-20 pb-32">
+<div class="md:col-span-8 md:col-start-2 text-center md:text-left">
+<h1 class="text-display-hero font-display-hero text-secondary mb-6 leading-none mix-blend-lighten">SEE YOU ON THE NEXT RIDE.</h1>
+<p class="text-body-lg font-body-lg max-w-2xl text-on-primary opacity-90 mb-10">To every rider who pushed their limits, every volunteer who shared their energy, and every sponsor who believed in the coastal vitality of Dar es Salaam—thank you. You didn't just ride a route; you powered a movement.</p>
+<div class="flex flex-wrap gap-4 justify-center md:justify-start">
+<a class="inline-block bg-tertiary text-on-tertiary px-8 py-4 font-headline-lg uppercase hover:bg-primary-container transition-colors duration-300 shadow-[4px_4px_0px_0px_rgba(254,174,35,1)] hover:shadow-[0px_0px_0px_0px_rgba(254,174,35,1)] hover:translate-y-1 hover:translate-x-1" href="#legacy">Claim Your Digital Legacy</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary flat">
+<div class="text-headline-md font-headline-lg text-on-primary">TOUR DE ROTARY DSM</div>
+<div class="flex flex-wrap justify-center gap-6 mb-4">
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</div>
+<div class="text-body-md font-body-md opacity-60 text-center">
+            © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+        </div>
+</footer>
+</body></html>

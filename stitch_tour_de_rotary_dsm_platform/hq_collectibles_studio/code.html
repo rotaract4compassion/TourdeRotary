@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HQ Collectibles Studio | Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "inverse-primary": "#a7c8ff",
+                        "inverse-surface": "#2f3131",
+                        "outline": "#737781",
+                        "secondary-fixed": "#ffddb3",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#400014",
+                        "surface-dim": "#dadada",
+                        "primary-fixed": "#d5e3ff",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#291800",
+                        "on-primary-fixed-variant": "#014788",
+                        "surface-tint": "#2b5fa1",
+                        "on-surface-variant": "#424750",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-secondary-container": "#6b4500",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#8f0037",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-primary-fixed": "#001b3b",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-primary-container": "#87b6fe",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary": "#825500",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "primary-container": "#004687",
+                        "on-error": "#ffffff",
+                        "tertiary": "#650025",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed-dim": "#ffb950",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-low": "#f3f3f4",
+                        "secondary-container": "#feae23",
+                        "outline-variant": "#c2c6d2",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary": "#00305f",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb2be"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg"
+                    },
+                    "fontFamily": {
+                        "data-metric": ["Anton"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Anton"],
+                        "display-hero": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 0, 100% 3vw, 100% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col md:flex-row">
+<!-- Shared Component: SideNavBar (Desktop) -->
+<nav class="hidden lg:flex flex-col h-screen fixed left-0 top-0 pt-20 bg-surface-container-lowest dark:bg-surface-container-lowest border-r border-outline-variant h-full w-64 z-40">
+<div class="px-gutter mb-8">
+<h2 class="text-headline-md font-headline-lg text-primary uppercase">Rider Profile</h2>
+<p class="text-label-ui font-label-ui text-on-surface-variant mt-2">Elite Tier</p>
+</div>
+<ul class="flex flex-col gap-2 px-4 flex-grow">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">event</span>
+                    My Events
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">directions_bike</span>
+                    Training
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+                    Orders
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary text-on-secondary font-bold rounded-none translate-x-1 transition-transform text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">token</span>
+                    Collectibles
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">group_add</span>
+                    Referrals
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">person</span>
+                    Profile
+                </a>
+</li>
+</ul>
+<div class="px-4 mt-auto mb-8">
+<button class="w-full py-3 bg-secondary text-on-secondary font-data-metric uppercase tracking-wider hover:bg-primary hover:text-on-primary transition-colors duration-300">Log Ride</button>
+</div>
+<ul class="flex flex-col gap-2 px-4 pb-8 border-t border-outline-variant pt-4">
+<li>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container-low text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:bg-surface-container-low text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+                    Support
+                </a>
+</li>
+</ul>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-64 w-full overflow-x-hidden">
+<!-- Header / Hero Section -->
+<header class="relative w-full min-h-[40vh] flex items-end pb-gutter clip-diagonal bg-primary text-on-primary z-10 pt-24 px-margin-desktop">
+<div class="absolute inset-0 z-0 opacity-20" data-alt="Abstract geometric wave pattern in deep blue and gold. The shapes flow dynamically across the frame, suggesting movement and coastal energy. The aesthetic is clean, sharp, and modern, blending digital art precision with high-performance sports editorial style. High contrast lighting emphasizes the edges of the abstract forms." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBXER1iiK5LQSKCPEIbX_Ny1Wx_auQeSKUzcKP-nQH-Yj8dCNwgbQpoF0EXXtcrZSLf39--eH4QVw9NGI8UrR9DXvokVmPe3mmYHIQ0gsycaOyjR_qRm2Ztx0UwPezR2e2HPlQZvS3F7lGMNAJVEZyMNF3pRuaJ63ugRb2LQFm7Ow5MgiS_JJI-UVffbiUl13vxHYgc2sQvVDYnm-wiBuOdfzeVcLm5BcGTti92tyn--Yq_k2_wxbDaWw')"></div>
+<div class="relative z-10 max-w-4xl grid grid-cols-1 md:grid-cols-12 gap-gutter items-end w-full">
+<div class="col-span-1 md:col-span-8">
+<p class="font-label-ui text-label-ui text-secondary uppercase tracking-widest mb-4">Archive Management</p>
+<h1 class="font-display-hero text-headline-lg-mobile md:text-display-hero uppercase leading-none">HQ Collectibles<br/>Studio</h1>
+</div>
+<div class="col-span-1 md:col-span-4 flex justify-start md:justify-end pb-2">
+<button class="bg-secondary text-on-secondary px-6 py-4 font-data-metric uppercase hover:bg-primary-container transition-colors border-2 border-transparent">Batch Mint NFTs</button>
+</div>
+</div>
+</header>
+<!-- Main Workspace Grid -->
+<section class="px-margin-mobile md:px-margin-desktop py-12 -mt-10 relative z-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Pending Issuance Queue -->
+<div class="col-span-1 lg:grid-cols-1 lg:col-span-5 flex flex-col gap-8">
+<div class="bg-surface-container-lowest border-2 border-outline-variant p-6 relative">
+<div class="absolute top-0 right-0 bg-primary text-on-primary px-3 py-1 font-label-ui text-label-ui">Queue</div>
+<h2 class="font-headline-md text-headline-md mb-6 uppercase border-b-2 border-primary pb-2">Issuance Pipeline</h2>
+<!-- Queue Item 1 -->
+<div class="group flex items-start gap-4 mb-6 hover:bg-surface-container-low transition-colors p-2 -mx-2">
+<div class="w-16 h-16 bg-surface-dim flex-shrink-0 border border-outline relative">
+<img class="w-full h-full object-cover" data-alt="Close up of a premium digital certificate design. It features intricate geometric borders in gold and deep blue, with a central holographic emblem denoting achievement. The style is modern archival, resembling a high-end physical document but with digital flair. High contrast, sharp details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_vA_CwQ04Kf4S9fD5Jj3OgR_pCDcNpnAKgbaVh0aVTgWCP6WEyGaPvdcL0PlhGIvjCNZjB8dTlE8EISldx1_LbdGd7DUtMjNV4xtsc8Mrtbpoeey8DDTFBGEcwpKCaZgKyzcoutfPJ5qa12e_hv_3FpNquTIiikKgewF-ilj30lNVZDOHkZh7m6HrbgxNfSDLFX8S3TNSDb24Y2khRLWY87_3Wq43qTlXCz6aaW4v9GFtF-5sQneQAA"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-data-metric text-body-lg uppercase leading-none mb-1 group-hover:text-primary transition-colors">Century Finisher Badge</h3>
+<p class="font-label-ui text-label-ui text-on-surface-variant">ID: #TDR-2024-C001</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-block w-2 h-2 bg-secondary-container rounded-full"></span>
+<span class="font-label-ui text-xs text-on-surface-variant uppercase">Awaiting Verification</span>
+</div>
+</div>
+<button class="text-primary hover:text-secondary transition-colors p-2">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Queue Item 2 -->
+<div class="group flex items-start gap-4 mb-6 hover:bg-surface-container-low transition-colors p-2 -mx-2">
+<div class="w-16 h-16 bg-surface-dim flex-shrink-0 border border-outline relative">
+<img class="w-full h-full object-cover" data-alt="A stylized 3D render of a gold bicycle gear, designed to look like a physical medal or token. The metal is highly polished, reflecting a simulated studio light setup. The background is a stark, dark neutral to make the gold pop. Cinematic lighting, high-performance aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUryC-9iXNsmffWop5B7JRtK8WAoDPFVhUCyv1pRKDmA53_FZW6xqjoX0Qow3giGVyKBvnrNwi0Lz-xv8jNUQh7KHJ-ogE-Ma4YbJVgD_6j0z4cMuFntKrBIjK0WhJeXxjFbq5N8eI_6Mwsb9kETRBc5IfBdq3JVZ5v80vBiwemVpvMnGnet_yQU0n051KXagfV_BuY1wyfzhttvwreBtNDWZ__SDvP5jwGjnKAm-w0E0ZDJ_zvjNhOw"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-data-metric text-body-lg uppercase leading-none mb-1 group-hover:text-primary transition-colors">Elite Climber Token</h3>
+<p class="font-label-ui text-label-ui text-on-surface-variant">ID: #TDR-2024-E045</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-block w-2 h-2 bg-error rounded-full"></span>
+<span class="font-label-ui text-xs text-on-surface-variant uppercase">Artwork Missing</span>
+</div>
+</div>
+<button class="text-primary hover:text-secondary transition-colors p-2">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<button class="w-full py-3 border-2 border-primary text-primary font-label-ui text-label-ui uppercase hover:bg-primary hover:text-on-primary transition-colors mt-4">View All Pending</button>
+</div>
+<!-- Template Controls -->
+<div class="bg-primary text-on-primary p-6 clip-diagonal-reverse pb-12">
+<h2 class="font-headline-md text-headline-md mb-6 uppercase">Template Master</h2>
+<ul class="flex flex-col gap-3 font-label-ui text-label-ui">
+<li class="flex justify-between items-center border-b border-on-primary/20 pb-2 hover:text-secondary cursor-pointer">
+<span>Base Certificate Layout</span>
+<span class="material-symbols-outlined text-sm">edit</span>
+</li>
+<li class="flex justify-between items-center border-b border-on-primary/20 pb-2 hover:text-secondary cursor-pointer">
+<span>Tier Metadata Schema</span>
+<span class="material-symbols-outlined text-sm">edit</span>
+</li>
+<li class="flex justify-between items-center pb-2 hover:text-secondary cursor-pointer">
+<span>Watermark Configuration</span>
+<span class="material-symbols-outlined text-sm">edit</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Right Column: Active Record / Verification Studio (Bento Grid Style) -->
+<div class="col-span-1 lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Main Artwork Display (Spans 2 columns) -->
+<div class="md:col-span-2 relative bg-surface-container-high min-h-[400px] flex items-center justify-center border-2 border-outline-variant overflow-hidden group">
+<div class="absolute inset-0 z-0 bg-surface-container-highest" data-alt="A highly detailed, large-scale digital artwork of a cyclist navigating a challenging coastal route. The style is an elevated, graphic interpretation resembling a premium vintage travel poster combined with modern vector art. Bold colors, strong diagonal lines conveying speed, set against a golden hour sky. Archival quality presentation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWhjdFsjAnBHLQdfZ-CpogxjF3esCk0uObZqOWowdRvfUGQXcK6VFws2xGKRBegpv18RVZbHcL5hfxznvRPvqqL-FFcl58GCwnhEXR3mjxUlhPVAChwvFnRjTy-QJrRzz4K4j5hloDMX1Bz4iCaUH-CaZGjA97n9lYbtOeoYLsABhVKeRHCImd7tX5JmTpDvWajzHkmD5lqJ4a3mD08Fk9VC_9RZcq-TVB1MXUcc6bMKac7s7qYd_xFQ')"></div>
+<!-- Overlay UI -->
+<div class="absolute top-4 left-4 bg-surface-container-lowest/90 backdrop-blur px-3 py-2 border border-outline font-label-ui text-label-ui z-10 shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary">verified</span>
+                             Asset: #TDR-2024-C001
+                         </div>
+<div class="absolute bottom-4 right-4 z-10 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-primary text-on-primary p-2 border border-outline"><span class="material-symbols-outlined">zoom_in</span></button>
+<button class="bg-primary text-on-primary p-2 border border-outline"><span class="material-symbols-outlined">swap_horiz</span></button>
+</div>
+</div>
+<!-- Participant Portrait -->
+<div class="bg-surface-container-lowest border border-outline p-4 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-label-ui text-label-ui uppercase text-on-surface-variant">Linked Profile</h3>
+<span class="bg-secondary/10 text-secondary px-2 py-1 text-xs font-label-ui uppercase border border-secondary/20">Matched</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-20 h-20 rounded-none bg-surface-dim border-2 border-primary overflow-hidden">
+<img class="w-full h-full object-cover grayscale mix-blend-multiply" data-alt="Black and white portrait of a determined cyclist, wearing a helmet and looking forward. High contrast, gritty athletic editorial style. The lighting highlights the sweat and intensity on their face. The image has a raw, authentic feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0dTAEeJ9qyTcKWRo8wyGGnEQljnMCQx7iphTcyLk-rZM8ppShMMOhqlTcMOMpBieI78kvEyL6oTB9jC0kc8f239kecDuZWDLg9rN160-s2jGiXth1fWxNS_xbF4vBAsvAxPhc7omdmvNkBPYcEZ1qLpeQIF77AlJv4N2S5GzWryA84TcqXeYt7KsuxThJxrt7226JikbWZQQWypY4mEcrHfL3MfhxMUbgUTmBiYWX-rxZ1AXGFjlXMw"/>
+</div>
+<div>
+<p class="font-data-metric text-body-lg uppercase leading-none">Sarah Jenkins</p>
+<p class="font-label-ui text-label-ui text-on-surface-variant">Bib: #8492</p>
+<p class="font-label-ui text-xs text-primary mt-1 border-b border-primary inline-block">View Full Record</p>
+</div>
+</div>
+</div>
+<!-- Verification & Release -->
+<div class="bg-secondary text-on-secondary p-6 flex flex-col justify-between relative overflow-hidden">
+<!-- Abstract gear watermark -->
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-[120px] opacity-10 pointer-events-none" style="font-variation-settings: 'FILL' 1;">settings</span>
+<div>
+<h3 class="font-label-ui text-label-ui uppercase mb-2 border-b border-on-secondary/30 pb-2">Verification Status</h3>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-3xl">task_alt</span>
+<span class="font-data-metric text-headline-md uppercase leading-none">Ready</span>
+</div>
+</div>
+<div class="flex justify-between items-end mt-4">
+<div class="w-16 h-16 bg-on-secondary p-1">
+<!-- Fake QR Code -->
+<img class="w-full h-full object-contain mix-blend-multiply" data-alt="A clean, high-contrast black and white QR code graphic. Designed to look sharp and scan-ready, fitting into a modern digital interface. No background details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBscFkYj8453wJt5YFkmD67PUn-OIPH3zQ2o2wXub5ANFadYeNlxQsD78a5n7IlJqU2yKnaGKGV0qCK6ZedJ3W248QMCNxZFzYa4GJlv2WVu_Uzf_--ywDNmlzfTkqKvlvR1J8NnORItNxc4MCtXsTtLXg3dk1lAj4zffSgVzzuJC9IVLLXc6x1dICmxABhVvTFGHEFQVHyPzTFHxKtztXfQ_FJBw9n1H3muL3bAmUpADz4gu1wEIlCJQ"/>
+</div>
+<button class="bg-on-secondary text-secondary font-data-metric uppercase px-4 py-2 hover:bg-primary hover:text-on-primary transition-colors border-2 border-on-secondary">Issue Asset</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Metadata Entry Row (Diagonal separated) -->
+<section class="mt-12 bg-surface-container-high py-16 px-margin-mobile md:px-margin-desktop clip-diagonal">
+<div class="max-w-6xl mx-auto">
+<h2 class="font-headline-md text-headline-md mb-8 uppercase text-primary border-b-4 border-secondary inline-block pr-8 pb-1">Edit Master Record</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="flex flex-col">
+<label class="font-label-ui text-label-ui text-on-surface-variant mb-2">Collectible Title</label>
+<input class="bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-secondary font-data-metric text-body-lg uppercase p-2 px-0 transition-colors" type="text" value="Century Finisher Badge"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-ui text-label-ui text-on-surface-variant mb-2">Event Category</label>
+<input class="bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-secondary font-label-ui text-body-md p-2 px-0 transition-colors" type="text" value="Endurance - 100km"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-ui text-label-ui text-on-surface-variant mb-2">Rarity Tier</label>
+<select class="bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-secondary font-label-ui text-body-md p-2 px-0 transition-colors uppercase">
+<option>Common</option>
+<option>Rare</option>
+<option selected="">Epic (Gold)</option>
+<option>Legendary</option>
+</select>
+</div>
+</div>
+<div class="mt-8 flex justify-end">
+<button class="px-8 py-3 bg-primary text-on-primary font-data-metric uppercase hover:bg-secondary transition-colors">Save Changes</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Shared Component: BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary dark:bg-primary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container text-label-ui font-label-ui w-full h-full" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container text-label-ui font-label-ui w-full h-full" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">calendar_today</span>
+<span class="text-[10px] mt-1">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container text-label-ui font-label-ui w-full h-full" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">fitness_center</span>
+<span class="text-[10px] mt-1">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container text-label-ui font-label-ui w-full h-full" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_circle</span>
+<span class="text-[10px] mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

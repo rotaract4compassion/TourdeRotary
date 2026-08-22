@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary DSM - HQ Control Room</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;500;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f3f3f4",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-highest": "#e2e2e2",
+                        "outline": "#737781",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "on-secondary-container": "#6b4500",
+                        "on-background": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#a7c8ff",
+                        "on-tertiary-container": "#ff95a8",
+                        "secondary": "#825500",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary-fixed": "#400014",
+                        "outline-variant": "#c2c6d2",
+                        "surface-container": "#eeeeee",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-primary-fixed-variant": "#014788",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed": "#ffddb3",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-primary": "#ffffff",
+                        "primary": "#00305f",
+                        "on-secondary-fixed": "#291800",
+                        "on-primary-container": "#87b6fe",
+                        "secondary-container": "#feae23",
+                        "surface": "#f9f9f9",
+                        "on-surface-variant": "#424750",
+                        "surface-bright": "#f9f9f9",
+                        "primary-container": "#004687",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "surface-tint": "#2b5fa1",
+                        "tertiary-container": "#8f0037",
+                        "secondary-fixed-dim": "#ffb950",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "tertiary": "#650025",
+                        "on-surface": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#001b3b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "data-metric": ["Anton"],
+                        "display-hero": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-lg": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #f9f9f9; color: #1a1c1c; }
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 100%); }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md bg-background">
+<!-- TopAppBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary text-secondary border-b-2 border-secondary shadow-none">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">TOUR DE ROTARY DSM</div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1 hover:text-secondary transition-colors duration-300" href="#">Control Room</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+</div>
+<button class="bg-secondary text-on-secondary font-label-ui text-label-ui px-4 py-2 uppercase hover:bg-primary hover:text-on-primary transition-colors border border-transparent">SYSTEM STATUS</button>
+</nav>
+<div class="flex flex-1 relative">
+<!-- Main Canvas Area -->
+<main class="flex-1 w-full bg-background pb-32">
+<!-- Header Section -->
+<section class="w-full bg-primary text-on-primary pt-12 pb-24 px-margin-desktop clip-diagonal relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none" data-alt="A massive, faint rotary gear watermark blending into a dark navy blue background. The aesthetic is subtle, mechanical, and elite, providing a textured backdrop for high-contrast white text in a digital control room setting. Lighting is non-existent, relying purely on the graphic contrast." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLzWQRJxvtdko2m3-9mmZmw3ayw4lWXQbiBT1s_MUwqef1CXjT8hB4dFjBDJkfWqrFMj2-Q1BCN5sHDtbCtZRpxClAaGonqNrXg1691BI4tJN-pQoPqedvRAh4FtIMW2UYTUglB3H--1e_TQdodmJpo1-EKf0i_C66OO5XsSdNW5FwPEjb_iqW0ivOK54tqZjam49ByTucqFZxgOoE7RVJTZo_cqek5ifLknjX3GnOlXT9LM0aI9BDZQ')"></div>
+<div class="relative z-10 flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="max-w-2xl">
+<h1 class="text-display-hero font-display-hero uppercase tracking-tighter mb-4 text-secondary">LIVE OPERATIONS</h1>
+<p class="text-body-lg font-body-lg opacity-80">Event Day Control. All systems go. Real-time telemetry active.</p>
+</div>
+<div class="flex gap-8 items-center bg-inverse-surface p-6 border-l-4 border-error">
+<div>
+<span class="block text-label-ui font-label-ui text-outline-variant mb-1 uppercase">Current Phase</span>
+<span class="text-headline-md font-headline-md text-error">RACE IN PROGRESS</span>
+</div>
+<div class="text-right">
+<span class="block text-label-ui font-label-ui text-outline-variant mb-1 uppercase">Local Time</span>
+<span class="text-data-metric font-data-metric text-on-primary" id="clock">07:42:15</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Metrics Grid -->
+<section class="px-margin-desktop -mt-12 relative z-20 grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest border-t-4 border-secondary p-6 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<span class="text-label-ui font-label-ui text-on-surface-variant uppercase">Check-ins</span>
+<span class="material-symbols-outlined text-secondary" data-icon="how_to_reg">how_to_reg</span>
+</div>
+<div class="text-data-metric font-data-metric text-on-surface">1,402</div>
+<div class="text-body-md font-body-md text-outline mt-2 text-sm">92% of registered</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest border-t-4 border-primary p-6 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<span class="text-label-ui font-label-ui text-on-surface-variant uppercase">Active Riders</span>
+<span class="material-symbols-outlined text-primary" data-icon="directions_bike">directions_bike</span>
+</div>
+<div class="text-data-metric font-data-metric text-on-surface">1,385</div>
+<div class="text-body-md font-body-md text-outline mt-2 text-sm">17 Finished, 0 DNF</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest border-t-4 border-tertiary-container p-6 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<span class="text-label-ui font-label-ui text-on-surface-variant uppercase">Funds Raised</span>
+<span class="material-symbols-outlined text-tertiary-container" data-icon="volunteer_activism">volunteer_activism</span>
+</div>
+<div class="text-data-metric font-data-metric text-on-surface">$142K</div>
+<div class="text-body-md font-body-md text-outline mt-2 text-sm">105% of Goal</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest border-t-4 border-error p-6 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<span class="text-label-ui font-label-ui text-on-surface-variant uppercase">Open Incidents</span>
+<span class="material-symbols-outlined text-error" data-icon="warning">warning</span>
+</div>
+<div class="text-data-metric font-data-metric text-error">3</div>
+<div class="text-body-md font-body-md text-outline mt-2 text-sm">Requires Attention</div>
+</div>
+</section>
+<!-- Dashboard Content -->
+<section class="px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+<!-- Left Column (Main Map) -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<div class="bg-surface-container-lowest p-1 relative min-h-[500px]">
+<div class="absolute top-4 left-4 z-10 flex gap-2">
+<span class="bg-primary text-on-primary text-label-ui font-label-ui px-3 py-1 uppercase border border-primary">LIVE ROUTE</span>
+<span class="bg-surface-container-lowest text-primary text-label-ui font-label-ui px-3 py-1 uppercase border border-outline-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span> Tracking
+                            </span>
+</div>
+<img class="w-full h-full object-cover grayscale opacity-90" data-alt="A high-contrast, dark-mode satellite map visualization of Dar es Salaam coastline. The map shows glowing neon gold and cranberry pink lines indicating cycling routes. Small abstract glowing dots represent active riders clustered tightly along the paths. The aesthetic is highly technical, detailed, and resembles an elite military or high-end sports tracking interface." data-location="Dar es Salaam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC77cKrHq_5H5r57omlKAUc8g9XHsUdhcoGX7c5y4lv_wGewPP78hpMgpsD9nC2xbI-e6AK0KlIqhmwf5_yoLlydA0PaAEUxjIghDky50u1lWFCxThJv39cAGgLP0ieoeyFxqv3ibgrtyjsweSpw_HleUqF13OGG0IsiiKwruUzkd5SHhVuJEsDfuavy1Ff7QTGBAIP9V3H5geKqnijlxBXyrCqmwbkLxI12ZpgM0Hsu7LFsKexHGhzGg"/>
+</div>
+</div>
+<!-- Right Column (Alerts & Comms) -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Critical Alerts -->
+<div class="bg-error-container p-6">
+<div class="flex items-center gap-2 mb-4 text-on-error-container border-b-2 border-on-error-container pb-2">
+<span class="material-symbols-outlined" data-icon="crisis_alert">crisis_alert</span>
+<h3 class="text-headline-md font-headline-md uppercase text-xl">Critical Alerts</h3>
+</div>
+<ul class="flex flex-col gap-4">
+<li class="bg-surface-container-lowest p-4 border-l-4 border-error">
+<span class="text-label-ui font-label-ui text-error block mb-1">MEDICAL - KM 42</span>
+<p class="text-body-md font-body-md text-on-surface mb-2">Rider 402 reported minor scrape. Medic unit Beta en route. ETA 3 mins.</p>
+<button class="text-label-ui font-label-ui text-on-surface underline">Acknowledge</button>
+</li>
+<li class="bg-surface-container-lowest p-4 border-l-4 border-secondary">
+<span class="text-label-ui font-label-ui text-secondary block mb-1">LOGISTICS - WATER STOP 2</span>
+<p class="text-body-md font-body-md text-on-surface mb-2">Ice supplies running low. Re-supply truck dispatched from HQ.</p>
+<button class="text-label-ui font-label-ui text-on-surface underline">Acknowledge</button>
+</li>
+</ul>
+</div>
+<!-- Comms Queue -->
+<div class="bg-primary text-on-primary p-6">
+<div class="flex items-center gap-2 mb-4 border-b-2 border-secondary pb-2">
+<span class="material-symbols-outlined text-secondary" data-icon="headset_mic">headset_mic</span>
+<h3 class="text-headline-md font-headline-md uppercase text-xl text-secondary">Comms Queue</h3>
+</div>
+<ul class="flex flex-col gap-3">
+<li class="flex justify-between items-center py-2 border-b border-outline opacity-80 hover:opacity-100 transition-opacity">
+<div>
+<span class="text-label-ui font-label-ui block text-secondary">Volunteer Ch. 4</span>
+<span class="text-body-md font-body-md text-sm">"Route clear at junction A."</span>
+</div>
+<span class="text-label-ui font-label-ui text-xs">1m ago</span>
+</li>
+<li class="flex justify-between items-center py-2 border-b border-outline opacity-80 hover:opacity-100 transition-opacity">
+<div>
+<span class="text-label-ui font-label-ui block text-secondary">Sweep Vehicle</span>
+<span class="text-body-md font-body-md text-sm">"Picking up DNF rider at km 15."</span>
+</div>
+<span class="text-label-ui font-label-ui text-xs">4m ago</span>
+</li>
+</ul>
+<button class="mt-4 w-full bg-transparent border-2 border-secondary text-secondary font-label-ui text-label-ui py-2 uppercase hover:bg-secondary hover:text-primary transition-colors">Broadcast All</button>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary mt-auto">
+<div class="text-headline-md font-headline-lg text-on-primary">TOUR DE ROTARY DSM</div>
+<div class="flex gap-6">
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+</div>
+<div class="text-body-md font-body-md text-on-primary opacity-70 text-sm">© 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-label-ui font-label-ui text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary active:bg-primary-container p-2 scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="text-label-ui font-label-ui text-[10px]">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+<span class="text-label-ui font-label-ui text-[10px]">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="text-label-ui font-label-ui text-[10px]">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple clock update
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { hour12: false });
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+</body></html>

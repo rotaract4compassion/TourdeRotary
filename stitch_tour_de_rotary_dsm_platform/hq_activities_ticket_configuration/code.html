@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Athletic HQ - Activities Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1a1c1c",
+                        "on-surface-variant": "#424750",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-tint": "#2b5fa1",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-container-low": "#f3f3f4",
+                        "outline-variant": "#c2c6d2",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-primary-fixed-variant": "#014788",
+                        "secondary-container": "#feae23",
+                        "primary-container": "#004687",
+                        "tertiary-fixed": "#ffd9de",
+                        "inverse-surface": "#2f3131",
+                        "inverse-primary": "#a7c8ff",
+                        "primary": "#00305f",
+                        "surface-dim": "#dadada",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#825500",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#650025",
+                        "background": "#f9f9f9",
+                        "on-primary-fixed": "#001b3b",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#6b4500",
+                        "secondary-fixed-dim": "#ffb950",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "outline": "#737781",
+                        "secondary-fixed": "#ffddb3",
+                        "on-primary-container": "#87b6fe",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "tertiary-container": "#8f0037",
+                        "on-tertiary-fixed": "#400014",
+                        "on-secondary-fixed": "#291800",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "data-metric": ["Anton"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "display-hero": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2vw), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 0, 100% calc(100% - 2vw), 100% 100%, 0 100%); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 1; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="bg-primary dark:bg-primary text-on-primary dark:text-on-primary fixed top-0 w-full z-50 border-b-2 border-secondary flex justify-between items-center h-16 px-gutter">
+<div class="font-headline-md text-headline-md uppercase tracking-tighter text-secondary">
+            Athletic HQ
+        </div>
+<div class="hidden md:flex space-x-8 font-label-ui text-label-ui">
+<a class="text-on-primary opacity-80 hover:bg-primary-container transition-colors cursor-pointer active:opacity-90 px-3 py-2 rounded" href="#">HQ Overview</a>
+<a class="text-on-primary opacity-80 hover:bg-primary-container transition-colors cursor-pointer active:opacity-90 px-3 py-2 rounded" href="#">Registrations</a>
+<a class="text-on-primary opacity-80 hover:bg-primary-container transition-colors cursor-pointer active:opacity-90 px-3 py-2 rounded" href="#">Inventory</a>
+<a class="text-secondary-fixed font-bold hover:bg-primary-container transition-colors cursor-pointer active:opacity-90 px-3 py-2 rounded flex flex-col" href="#">Activities</a>
+<a class="text-on-primary opacity-80 hover:bg-primary-container transition-colors cursor-pointer active:opacity-90 px-3 py-2 rounded" href="#">Content</a>
+<a class="text-on-primary opacity-80 hover:bg-primary-container transition-colors cursor-pointer active:opacity-90 px-3 py-2 rounded" href="#">Payments</a>
+</div>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined cursor-pointer hover:bg-primary-container transition-colors p-2 rounded" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-primary-container transition-colors p-2 rounded" data-icon="settings">settings</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-primary-container transition-colors p-2 rounded" data-icon="cloud_done">cloud_done</span>
+</div>
+</header>
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden md:flex bg-surface-container-lowest dark:bg-inverse-surface text-primary dark:text-inverse-primary fixed left-0 top-16 bottom-0 w-64 z-40 border-r-2 border-on-surface flex-col h-full py-unit">
+<div class="px-gutter py-4 mb-4 border-b border-surface-variant">
+<div class="flex items-center space-x-3 mb-2">
+<div class="w-10 h-10 rounded-full bg-surface-variant overflow-hidden">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A professional headshot of an athletic event coordinator in high-contrast coastal lighting, wearing a navy polo. Clean, bright background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-3B8T_M1p8-MitT3wFJ9jYJv6kxMlSPUUrBLjilb4oxMhiKldVzQHqP9sV3nlMLGw5MXI7Eob9IWRYf3-BoFS7ziAqsvfTu76YjzA3Ts8jjeqPjaIy70yMoUkfY8FW1moXCmbhvoovraWvJdhU4sSA0BH3FcHH5cL0w5LEdaGqol2mfs7gEFbOMlCRgUedohJwIdkrqLrGTEu20GWAYONd069tO_rmkPJfbTlO6jkqraCapa15hIRDw"/>
+</div>
+<div>
+<h2 class="font-headline-md text-[20px] leading-tight">Command Center</h2>
+<p class="font-label-ui text-label-ui text-on-surface-variant text-[10px]">Phase: Live Event</p>
+</div>
+</div>
+</div>
+<div class="flex-grow space-y-2 px-unit">
+<a class="flex items-center px-gutter py-3 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-150 active:scale-95 font-label-ui text-label-ui uppercase" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="dashboard">dashboard</span> HQ Overview
+            </a>
+<a class="flex items-center px-gutter py-3 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-150 active:scale-95 font-label-ui text-label-ui uppercase" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="how_to_reg">how_to_reg</span> Registrations
+            </a>
+<a class="flex items-center px-gutter py-3 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-150 active:scale-95 font-label-ui text-label-ui uppercase" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="inventory_2">inventory_2</span> Inventory
+            </a>
+<a class="flex items-center px-gutter py-3 bg-secondary text-on-secondary font-bold border-l-4 border-primary hover:bg-surface-container-highest transition-all duration-150 active:scale-95 font-label-ui text-label-ui uppercase" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="directions_bike">directions_bike</span> Activities
+            </a>
+<a class="flex items-center px-gutter py-3 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-150 active:scale-95 font-label-ui text-label-ui uppercase" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="video_library">video_library</span> Content
+            </a>
+<a class="flex items-center px-gutter py-3 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-150 active:scale-95 font-label-ui text-label-ui uppercase" href="#">
+<span class="material-symbols-outlined mr-4" data-icon="payments">payments</span> Payments
+            </a>
+</div>
+<div class="mt-auto px-unit mb-4">
+<button class="w-full bg-error text-on-error font-data-metric text-[20px] uppercase py-3 rounded-DEFAULT hover:bg-on-error-container transition-colors">Emergency Broadcast</button>
+</div>
+<div class="border-t border-surface-variant pt-4 px-unit space-y-2">
+<a class="flex items-center px-gutter py-2 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-150 active:scale-95 font-label-ui text-label-ui uppercase text-[12px]" href="#">
+<span class="material-symbols-outlined mr-3 text-[18px]" data-icon="help">help</span> Support
+            </a>
+<a class="flex items-center px-gutter py-2 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-150 active:scale-95 font-label-ui text-label-ui uppercase text-[12px]" href="#">
+<span class="material-symbols-outlined mr-3 text-[18px]" data-icon="analytics">analytics</span> System Status
+            </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-16 min-h-screen flex flex-col bg-surface-bright">
+<!-- Header Section with Asymmetric Layout -->
+<section class="relative bg-primary pt-12 pb-24 px-gutter clip-diagonal overflow-hidden z-10">
+<!-- Background Watermark -->
+<div class="absolute inset-0 opacity-10 pointer-events-none flex justify-end items-center -mr-32">
+<span class="material-symbols-outlined text-[400px] text-secondary" data-icon="settings_b_roll">settings_b_roll</span>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-12 gap-8 max-w-7xl mx-auto">
+<div class="md:col-span-8 z-10">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-primary mb-4 uppercase">Activity Configuration</h1>
+<p class="font-body-lg text-body-lg text-inverse-primary max-w-2xl">Manage event parameters, ticketing structures, and live logistics for the upcoming Dar es Salaam coastal series.</p>
+</div>
+<div class="md:col-span-4 flex items-end justify-end z-10 hidden md:flex">
+<div class="bg-secondary-container text-on-secondary-container px-6 py-4 rounded-tl-xl border-l-4 border-on-secondary-fixed">
+<p class="font-label-ui text-label-ui mb-1 uppercase opacity-80">Global Status</p>
+<p class="font-data-metric text-data-metric text-[32px]">LIVE REGISTRATION</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Content Grid -->
+<section class="px-gutter -mt-16 pb-24 relative z-20">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Primary Config Panel -->
+<div class="lg:col-span-8 space-y-8">
+<!-- Event Selector -->
+<div class="flex space-x-2 overflow-x-auto pb-4 hide-scrollbar">
+<button class="bg-primary text-on-primary font-headline-md text-[20px] px-8 py-4 uppercase border-b-4 border-secondary whitespace-nowrap">Cyclathon 100K</button>
+<button class="bg-surface-container-high text-on-surface-variant font-headline-md text-[20px] px-8 py-4 uppercase border-b-4 border-transparent hover:bg-surface-container-highest transition-colors whitespace-nowrap">Marathon 42K</button>
+<button class="bg-surface-container-high text-on-surface-variant font-headline-md text-[20px] px-8 py-4 uppercase border-b-4 border-transparent hover:bg-surface-container-highest transition-colors whitespace-nowrap">Coastal Walk 10K</button>
+</div>
+<!-- Config Form Card -->
+<div class="bg-surface-container-lowest p-8 border-2 border-primary shadow-[8px_8px_0px_0px_rgba(0,48,95,1)]">
+<h2 class="font-headline-md text-[24px] uppercase text-primary border-b-2 border-surface-variant pb-4 mb-6">Base Parameters</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-6">
+<div>
+<label class="block font-label-ui text-label-ui text-on-surface-variant mb-2">Activity Name</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-secondary px-0 py-2 font-headline-md text-[20px]" type="text" value="Coastal Cyclathon Classic"/>
+</div>
+<div>
+<label class="block font-label-ui text-label-ui text-on-surface-variant mb-2">Distance (KM)</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-secondary px-0 py-2 font-data-metric text-[24px]" type="number" value="100"/>
+</div>
+</div>
+<div>
+<label class="block font-label-ui text-label-ui text-on-surface-variant mb-2">Description</label>
+<textarea class="w-full bg-surface-container border-0 border-b-2 border-primary focus:ring-0 focus:border-secondary p-4 font-body-md resize-none" rows="4">A high-endurance coastal route spanning the Dar es Salaam peninsula, featuring elevation changes and coastal winds. Recommended for advanced riders.</textarea>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t-2 border-surface-variant">
+<h2 class="font-headline-md text-[24px] uppercase text-primary mb-6">Ticketing &amp; Capacity</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface p-4 border border-outline-variant">
+<label class="block font-label-ui text-label-ui text-on-surface-variant mb-2">Total Capacity</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-on-surface focus:ring-0 focus:border-primary px-0 py-1 font-data-metric text-[24px]" type="number" value="500"/>
+</div>
+<div class="bg-surface p-4 border border-outline-variant">
+<label class="block font-label-ui text-label-ui text-on-surface-variant mb-2">Base Price (TZS)</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-on-surface focus:ring-0 focus:border-primary px-0 py-1 font-data-metric text-[24px]" type="number" value="150000"/>
+</div>
+<div class="bg-surface p-4 border border-outline-variant">
+<label class="block font-label-ui text-label-ui text-on-surface-variant mb-2">Early Bird Deadline</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-on-surface focus:ring-0 focus:border-primary px-0 py-1 font-label-ui text-label-ui" type="date" value="2024-09-15"/>
+</div>
+</div>
+</div>
+<div class="mt-8 flex justify-end gap-4">
+<button class="px-6 py-3 border-2 border-primary text-primary font-headline-md text-[16px] uppercase hover:bg-surface-container-high transition-colors">Discard Changes</button>
+<button class="px-8 py-3 bg-secondary text-on-secondary font-headline-md text-[16px] uppercase hover:bg-secondary-fixed-dim transition-colors flex items-center">
+<span class="material-symbols-outlined mr-2" data-icon="save">save</span> Update Configuration
+                            </button>
+</div>
+</div>
+</div>
+<!-- Secondary Live Status Panel -->
+<div class="lg:col-span-4 space-y-8">
+<!-- Live Stats Widget -->
+<div class="bg-primary text-on-primary p-6 border-l-4 border-secondary relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-20">
+<span class="material-symbols-outlined text-[120px]" data-icon="bar_chart">bar_chart</span>
+</div>
+<h3 class="font-label-ui text-label-ui uppercase opacity-80 mb-4 tracking-widest relative z-10">Live Registration Status</h3>
+<div class="space-y-6 relative z-10">
+<div>
+<div class="flex justify-between items-end mb-1">
+<span class="font-headline-md text-[16px]">Cyclathon 100K</span>
+<span class="font-data-metric text-[24px]">412/500</span>
+</div>
+<div class="w-full bg-primary-fixed-dim h-2">
+<div class="bg-secondary h-2" style="width: 82%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-end mb-1">
+<span class="font-headline-md text-[16px]">Marathon 42K</span>
+<span class="font-data-metric text-[24px]">890/1000</span>
+</div>
+<div class="w-full bg-primary-fixed-dim h-2">
+<div class="bg-secondary h-2" style="width: 89%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Route Map Thumbnail -->
+<div class="bg-surface-container-lowest border-2 border-on-surface p-4">
+<h3 class="font-headline-md text-[18px] uppercase border-b-2 border-surface-variant pb-2 mb-4">Route Validation</h3>
+<div class="aspect-square bg-surface-variant relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" data-alt="A stylized high-contrast satellite map thumbnail of the Dar es Salaam coastline, highlighting a cycling route in vibrant orange against dark blue terrain. Premium editorial map design." data-location="Dar es Salaam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvwlXJrULzBdnY3OXjUNwvg4z29iyS8_Mvgc5FOr6WhcKzEXpH6mxZ_qxxt8zvr64ek0PcCSEhiXAFJAJuatZYEGB3aC3X36uo9vsZgOsXKscODcdRRQSQ5zKt6ya77muWhk3vSy0Hcw407vjoaTM8jznLmheJ3oQaoXu7DLTKl_-gShFK8EvYwYdwRuo6uHcmuPZbaKd9LAc3DK0bd0bZIBNRimaYjTrTioJ6PhiNH4RsLLAMF8Z2Wg"/>
+<div class="absolute bottom-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-ui text-[12px] uppercase flex items-center">
+<span class="material-symbols-outlined text-[16px] mr-1" data-icon="route">route</span> Confirmed
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-dim dark:bg-surface-dim text-on-surface dark:text-on-surface border-t border-outline-variant flex flex-col md:flex-row justify-between items-center px-desktop py-unit">
+<div class="font-label-ui text-label-ui text-primary mb-2 md:mb-0">
+                © 2024 Elite Performance HQ. All rights reserved.
+            </div>
+<div class="flex space-x-6 font-label-ui text-label-ui">
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-colors" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary underline-offset-4 hover:underline transition-colors" href="#">API Documentation</a>
+</div>
+</footer>
+</main>
+</body></html>

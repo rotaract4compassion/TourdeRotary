@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary DSM - Ride. Move. Give.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#6b4500",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#004687",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary": "#650025",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#424750",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#2b5fa1",
+                        "outline-variant": "#c2c6d2",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#ffd9de",
+                        "surface": "#f9f9f9",
+                        "surface-dim": "#dadada",
+                        "secondary-fixed-dim": "#ffb950",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-primary-fixed": "#001b3b",
+                        "primary-fixed": "#d5e3ff",
+                        "on-surface": "#1a1c1c",
+                        "surface-container-low": "#f3f3f4",
+                        "on-tertiary-fixed": "#400014",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary": "#00305f",
+                        "on-secondary-fixed": "#291800",
+                        "secondary": "#825500",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-secondary-fixed-variant": "#624000",
+                        "inverse-primary": "#a7c8ff",
+                        "on-background": "#1a1c1c",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container": "#eeeeee",
+                        "outline": "#737781",
+                        "secondary-fixed": "#ffddb3",
+                        "tertiary-container": "#8f0037",
+                        "inverse-surface": "#2f3131",
+                        "secondary-container": "#feae23",
+                        "on-primary-container": "#87b6fe",
+                        "on-primary-fixed-variant": "#014788"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-hero": ["Anton"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Anton"],
+                        "data-metric": ["Anton"],
+                        "headline-lg": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%); }
+        .clip-diagonal-both { clip-path: polygon(0 4vw, 100% 0, 100% calc(100% - 4vw), 0 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 bg-primary border-b-2 border-secondary transition-all duration-300 shadow-md">
+<div class="text-headline-md font-headline-md text-on-primary uppercase tracking-tighter shrink-0 flex items-center gap-2">
+<span class="material-symbols-outlined text-4xl text-secondary">directions_bike</span>
+<span class="hidden sm:inline">TOUR DE ROTARY DSM</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center text-label-ui font-label-ui">
+<a class="text-secondary border-b-2 border-secondary pb-1 transition-colors duration-300" href="#">Events</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</nav>
+<button class="bg-secondary text-on-secondary font-headline-md px-6 py-2 uppercase hover:bg-primary-container transition-colors shrink-0">
+            Register Now
+        </button>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center bg-primary clip-diagonal overflow-hidden pb-20">
+<div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
+<img alt="Cyclists riding along the Tanzanian coastline during golden hour, cinematic lighting, motion blur" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFuu7gKR5g5y31OweOQc2qFxJTO7iXuspqXP_NZcZOerVA0VQXjufoYtPUnTpivQGJ1uWnhWw87v4Z_jBzvQGBueB82pvx9KeU3oMARs6-_Qf9cNEn1k-3vU6xdhit9tlFSeyjB3oTDO0ZfqIQT5wql4bGd9kyJJzBGKi9zjj9Q-W4OMWfSjmUXUxEYhpIl0o3kunBnTuWDS0cDEryXzVM2Dl0jHYt3CPf4lTvnJa9_EkmNfEaebeLeygFYcXISADAnXM"/>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-8 lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 text-secondary font-label-ui text-label-ui uppercase tracking-widest bg-on-primary/10 w-max px-4 py-2 border border-secondary">
+<span class="material-symbols-outlined">calendar_today</span>
+                        1 Nov 2026 | Dar es Salaam
+                    </div>
+<h1 class="font-display-hero text-headline-lg-mobile md:text-display-hero text-on-primary uppercase leading-none drop-shadow-lg">
+                        TOUR DE <span class="text-secondary block">ROTARY DSM</span>
+</h1>
+<p class="font-headline-md text-headline-md text-surface-variant max-w-2xl">
+                        Ride. Move. Give. Join the ultimate coastal cycling and wellness festival driving impactful change in Tanzania.
+                    </p>
+<div class="flex flex-wrap gap-4 mt-8">
+<button class="bg-secondary text-on-secondary font-headline-md px-8 py-4 uppercase hover:bg-surface hover:text-primary transition-all border-2 border-secondary">
+                            Register Now
+                        </button>
+<button class="bg-transparent text-on-primary border-2 border-on-primary font-headline-md px-8 py-4 uppercase hover:bg-on-primary hover:text-primary transition-all flex items-center gap-2">
+                            Explore Event <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="md:col-span-4 lg:col-span-4 lg:col-start-9 hidden md:flex flex-col items-end justify-center">
+<div class="bg-surface/10 backdrop-blur-md p-6 border-l-4 border-secondary text-right">
+<p class="font-label-ui text-label-ui text-on-primary uppercase mb-2">Registration Closes In</p>
+<div class="font-data-metric text-data-metric text-secondary flex gap-4 justify-end">
+<div><span class="block">42</span><span class="text-sm font-label-ui text-surface-variant">DAYS</span></div>
+<div><span class="block">18</span><span class="text-sm font-label-ui text-surface-variant">HRS</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Activities Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface relative z-10 -mt-20 clip-diagonal-both">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16 md:w-2/3">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mb-4">CHOOSE YOUR <span class="text-secondary">CHALLENGE</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Whether you're an elite rider or moving for wellness, there's a starting line for you.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Cyclathon -->
+<div class="group relative overflow-hidden bg-primary aspect-[4/5] flex items-end p-6 border border-outline-variant hover:border-secondary transition-all">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Dynamic shot of a professional cyclist leaning into a curve on a coastal road, bright sunlight, high contrast, elite performance vibe" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdi-nysMF3EmyfCAJHkiLzne1l1kddc1r2BbaF5YqQWutdpuKYHjM7yXg2qVqzG-o6auRJWYn0EoK-IpQ62QkpHSzsexg8lv90uoUII3avKZvWSz4CNWvo5FdmWM_oAByhHc9xEsWcDXUSzGxehk3X3SXmZc_HgjXohEr5qe6N5b-D-x0DeL04O0MM6NRPriMP7yyYiumigmuN5I6eSwAPK-3MIej2Xo2Scl11Z-83oq7NOSNoU46ONA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full">
+<div class="flex justify-between items-center mb-4">
+<span class="bg-secondary text-on-secondary font-label-ui px-3 py-1 text-xs uppercase">Elite &amp; Amateur</span>
+<span class="material-symbols-outlined text-secondary text-3xl">directions_bike</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary uppercase mb-2">Cyclathon</h3>
+<p class="font-body-md text-body-md text-surface-variant mb-6">100km &amp; 50km coastal routes testing endurance and speed.</p>
+<a class="inline-flex items-center gap-2 font-label-ui text-secondary hover:text-on-primary transition-colors uppercase" href="#">
+                                View Routes <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Marathon -->
+<div class="group relative overflow-hidden bg-primary aspect-[4/5] flex items-end p-6 border border-outline-variant hover:border-secondary transition-all md:translate-y-12">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Group of marathon runners crossing a scenic bridge in Dar es Salaam, early morning mist, vibrant athletic wear, sense of communal achievement" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBztbHJI7MAHT-01DXKJ0_Ypfs-ZqUsJUe2fBDa8STffBmUIFOjpYXCQYO1NmqJ3XMCvusQ2ZiCD0KdMnrHKuEmdJ0kvciN4OVKwyJMYHOaOlVGDxuPzNFsPEc6nS_L0p_AWSSbP6cCULpfK4xqEqeh8sbYzsCTaXiM3LWUOvSyp6zRG8bCMNWSlDHVqvsM3MmO7GekaDf0Zs0iSkXIJaBtNBNXNtDCWzMN500DuqGgHC-PL52KNQCTVQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full">
+<div class="flex justify-between items-center mb-4">
+<span class="bg-secondary text-on-secondary font-label-ui px-3 py-1 text-xs uppercase">Runners</span>
+<span class="material-symbols-outlined text-secondary text-3xl">sprint</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary uppercase mb-2">Marathon</h3>
+<p class="font-body-md text-body-md text-surface-variant mb-6">Full, Half, and 10K races along the pristine shoreline.</p>
+<a class="inline-flex items-center gap-2 font-label-ui text-secondary hover:text-on-primary transition-colors uppercase" href="#">
+                                View Details <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+</div>
+<!-- Wellness -->
+<div class="group relative overflow-hidden bg-primary aspect-[4/5] flex items-end p-6 border border-outline-variant hover:border-secondary transition-all md:translate-y-24">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Large outdoor yoga and zumba session with diverse participants, bright sunny day, joyful atmosphere, energetic community vibe" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWvtNkSAEAHTDiZpVa1K4ItEmlXe4BVD7VI-O69WRyqpYDusvmMDQfPbxcrEDWmK19DQ9YGpIQydpJkizqeEjTFOgRxnrBIhpmJvwC7umt7IbPIT7Mye-kjSl--62xQLJDYnVD_MGyZGkoxPo1xrcwt2sVnVHJgGj-yFK78y88S9G9yXFi38k10UEU8GF5r_0TKsjU8rqrFtTAaQyuXgvHAf7bs_hOLl67E1DyYsPylvhmafMvwZZBaQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full">
+<div class="flex justify-between items-center mb-4">
+<span class="bg-tertiary text-on-tertiary font-label-ui px-3 py-1 text-xs uppercase">Community</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-3xl">self_improvement</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary uppercase mb-2">Walk &amp; Wellness</h3>
+<p class="font-body-md text-body-md text-surface-variant mb-6">5K Walkathon, Zumba, and Yoga sessions for all ages.</p>
+<a class="inline-flex items-center gap-2 font-label-ui text-secondary hover:text-on-primary transition-colors uppercase" href="#">
+                                Join the Fun <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Impact Section -->
+<section class="py-24 bg-surface-container-lowest relative">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+<div class="p-margin-mobile md:p-margin-desktop flex flex-col justify-center bg-tertiary text-on-tertiary clip-diagonal md:clip-none md:clip-path-polygon-[0_0,100%_0,90%_100%,0_100%]">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-6">Pedal for a <span class="text-tertiary-fixed-dim">Purpose</span></h2>
+<p class="font-body-lg text-body-lg mb-8 opacity-90 max-w-md">
+                        Every kilometer logged and every ticket purchased goes directly towards funding vital community healthcare initiatives across Tanzania.
+                    </p>
+<div class="mb-8">
+<div class="flex justify-between font-label-ui text-label-ui mb-2 uppercase">
+<span>Fundraising Goal</span>
+<span class="text-tertiary-fixed-dim">65% Reached</span>
+</div>
+<div class="w-full bg-on-tertiary/20 h-2">
+<div class="bg-secondary h-2" style="width: 65%"></div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8 mb-10">
+<div>
+<div class="font-data-metric text-data-metric text-secondary">TZS 150M+</div>
+<div class="font-label-ui text-label-ui opacity-80 uppercase">Raised so far</div>
+</div>
+<div>
+<div class="font-data-metric text-data-metric text-secondary">10,000+</div>
+<div class="font-label-ui text-label-ui opacity-80 uppercase">Lives Impacted</div>
+</div>
+</div>
+<button class="self-start bg-secondary text-on-secondary font-headline-md px-8 py-3 uppercase hover:bg-surface hover:text-primary transition-all">
+                        Donate Now
+                    </button>
+</div>
+<div class="h-[50vh] md:h-auto relative">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Heartwarming photo of Rotary volunteers interacting with children in a Tanzanian community clinic, bright natural light, genuine smiles, documentary style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwqw0E953GPmzhkiaje-DUxgPrO5PTgFywJzpLzofAJH6EC3znIVC_OdX5lXGt2afxEE2cWV83zXBGYb_kxmicuid3Pkyos86_UrheurXk88GqVDzy9zxyGe5E5yMsWPLKH-RNOVCdtFzCITwcG0AonPrnSbdQOzQNnuxzO6ZUi_ZBAMGi1zi6FMwsihD1uyjV4FrWfQteKRWaw3FDlWWMSf_7C2CxITkcTPT98PvBQ3JxlsPikC-zXg"/>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary">
+<div class="text-headline-md font-headline-md text-on-primary uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">directions_bike</span>
+            TOUR DE ROTARY DSM
+        </div>
+<nav class="flex flex-wrap justify-center gap-6 font-label-ui text-label-ui">
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors uppercase" href="#">Privacy Policy</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors uppercase" href="#">Terms of Service</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors uppercase" href="#">Contact HQ</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors uppercase" href="#">Volunteer</a>
+<a class="text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors uppercase" href="#">FAQ</a>
+</nav>
+<p class="font-body-md text-body-md opacity-50 mt-4 text-center">
+            © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+        </p>
+</footer>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-primary border-t-2 border-secondary shadow-lg md:hidden">
+<a class="flex flex-col items-center justify-center text-secondary active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-ui text-[10px] uppercase mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-label-ui text-[10px] uppercase mt-1">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="font-label-ui text-[10px] uppercase mt-1">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-label-ui text-[10px] uppercase mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

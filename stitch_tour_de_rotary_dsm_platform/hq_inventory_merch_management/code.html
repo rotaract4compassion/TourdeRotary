@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HQ INVENTORY - Tour de Rotary DSM</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface": "#1a1c1c",
+                        "on-surface-variant": "#424750",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-tint": "#2b5fa1",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-container-low": "#f3f3f4",
+                        "outline-variant": "#c2c6d2",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-primary-fixed-variant": "#014788",
+                        "secondary-container": "#feae23",
+                        "primary-container": "#004687",
+                        "tertiary-fixed": "#ffd9de",
+                        "inverse-surface": "#2f3131",
+                        "inverse-primary": "#a7c8ff",
+                        "primary": "#00305f",
+                        "surface-dim": "#dadada",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#825500",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#650025",
+                        "background": "#f9f9f9",
+                        "on-primary-fixed": "#001b3b",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#6b4500",
+                        "secondary-fixed-dim": "#ffb950",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "outline": "#737781",
+                        "secondary-fixed": "#ffddb3",
+                        "on-primary-container": "#87b6fe",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "tertiary-container": "#8f0037",
+                        "on-tertiary-fixed": "#400014",
+                        "on-secondary-fixed": "#291800",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px"
+                    },
+                    fontFamily: {
+                        "data-metric": ["Anton"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "display-hero": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "data-metric": ["48px", { lineHeight: "100%", fontWeight: "400" }],
+                        "label-ui": ["14px", { lineHeight: "100%", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "headline-md": ["32px", { lineHeight: "120%", fontWeight: "800" }],
+                        "body-md": ["16px", { lineHeight: "150%", fontWeight: "400" }],
+                        "headline-lg": ["64px", { lineHeight: "100%", fontWeight: "400" }],
+                        "display-hero": ["96px", { lineHeight: "90%", letterSpacing: "-0.02em", fontWeight: "400" }],
+                        "headline-lg-mobile": ["40px", { lineHeight: "100%", fontWeight: "400" }],
+                        "body-lg": ["20px", { lineHeight: "160%", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%); }
+        /* Hide scrollbar for clean table view */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body-md antialiased overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-primary dark:bg-primary fixed top-0 w-full z-50 border-b-2 border-secondary flex justify-between items-center h-16 px-gutter">
+<div class="font-headline-md text-headline-md uppercase tracking-tighter text-secondary">
+            Athletic HQ
+        </div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-on-primary dark:text-on-primary">
+<span class="material-symbols-outlined cursor-pointer active:opacity-90 hover:bg-primary-container transition-colors p-2 rounded-none" style="font-variation-settings: 'FILL' 0;">notifications</span>
+<span class="material-symbols-outlined cursor-pointer active:opacity-90 hover:bg-primary-container transition-colors p-2 rounded-none" style="font-variation-settings: 'FILL' 0;">settings</span>
+<span class="material-symbols-outlined cursor-pointer active:opacity-90 hover:bg-primary-container transition-colors p-2 rounded-none" style="font-variation-settings: 'FILL' 0;">cloud_done</span>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="bg-surface-container-lowest dark:bg-inverse-surface fixed left-0 top-16 bottom-0 w-64 z-40 border-r-2 border-on-surface flex flex-col h-full py-unit hidden md:flex">
+<div class="px-gutter py-6 border-b border-outline-variant">
+<h2 class="font-headline-md text-headline-md text-primary truncate">Command Center</h2>
+<p class="font-label-ui text-label-ui text-on-surface-variant uppercase mt-1 truncate">Phase: Live Event</p>
+</div>
+<ul class="flex-grow py-4 overflow-y-auto no-scrollbar">
+<!-- Inactive -->
+<li class="px-4 py-1">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-150 active:scale-95 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">dashboard</span>
+<span class="font-label-ui text-label-ui uppercase group-hover:text-primary transition-colors">HQ Overview</span>
+</a>
+</li>
+<li class="px-4 py-1">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-150 active:scale-95 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">how_to_reg</span>
+<span class="font-label-ui text-label-ui uppercase group-hover:text-primary transition-colors">Registrations</span>
+</a>
+</li>
+<!-- Active -->
+<li class="px-4 py-1">
+<a class="flex items-center gap-4 px-4 py-3 bg-secondary text-on-secondary font-bold border-l-4 border-primary transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+<span class="font-label-ui text-label-ui uppercase">Inventory</span>
+</a>
+</li>
+<!-- Inactive -->
+<li class="px-4 py-1">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-150 active:scale-95 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">directions_bike</span>
+<span class="font-label-ui text-label-ui uppercase group-hover:text-primary transition-colors">Activities</span>
+</a>
+</li>
+<li class="px-4 py-1">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-150 active:scale-95 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">video_library</span>
+<span class="font-label-ui text-label-ui uppercase group-hover:text-primary transition-colors">Content</span>
+</a>
+</li>
+<li class="px-4 py-1">
+<a class="flex items-center gap-4 px-4 py-3 text-on-surface-variant hover:bg-surface-container-highest transition-all duration-150 active:scale-95 group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors" style="font-variation-settings: 'FILL' 0;">payments</span>
+<span class="font-label-ui text-label-ui uppercase group-hover:text-primary transition-colors">Payments</span>
+</a>
+</li>
+</ul>
+<div class="px-4 py-4 border-t border-outline-variant pb-20">
+<button class="w-full bg-error text-on-error font-label-ui text-label-ui uppercase py-3 px-4 hover:bg-on-error-container transition-colors duration-150 active:scale-95 flex items-center justify-center gap-2 rounded-none">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">campaign</span>
+                Emergency Broadcast
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-16 min-h-screen flex flex-col bg-surface-container-lowest">
+<!-- Header Section -->
+<div class="px-margin-desktop py-8 flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 border-b-2 border-on-surface bg-surface-bright pb-12 z-10 relative">
+<!-- Diagonal Graphic Element (Background) -->
+<div class="absolute inset-0 bg-surface-container-highest opacity-30 clip-diagonal pointer-events-none -z-10"></div>
+<div>
+<p class="font-label-ui text-label-ui text-primary uppercase tracking-widest mb-2">Command Center / Operations</p>
+<h1 class="font-display-hero text-display-hero text-on-surface leading-none uppercase">HQ Inventory</h1>
+</div>
+<button class="bg-secondary-container text-on-surface font-label-ui text-label-ui uppercase py-4 px-8 hover:bg-primary-container hover:text-on-primary transition-colors duration-300 border-2 border-transparent hover:border-on-primary rounded-none flex items-center gap-3">
+<span class="material-symbols-outlined">dataset</span>
+                Bulk Inventory Update
+            </button>
+</div>
+<!-- Split Screen Editorial Layout -->
+<div class="flex-grow grid grid-cols-1 lg:grid-cols-12 gap-0 relative">
+<!-- Left Panel: Table & Filters (8 cols) -->
+<div class="lg:col-span-8 bg-surface-container-lowest border-r-2 border-on-surface flex flex-col">
+<!-- Filters Bar -->
+<div class="border-b-2 border-on-surface px-margin-desktop py-6 flex flex-wrap gap-8 items-end bg-surface-bright">
+<div class="flex flex-col gap-2">
+<label class="font-label-ui text-label-ui text-on-surface-variant uppercase">Category</label>
+<select class="bg-transparent border-0 border-b-2 border-on-surface p-0 pb-1 font-body-md text-body-md text-on-surface focus:ring-0 focus:border-primary w-40 cursor-pointer rounded-none">
+<option>All Apparel</option>
+<option>Jerseys</option>
+<option>Headwear</option>
+<option>Accessories</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-ui text-label-ui text-on-surface-variant uppercase">Status</label>
+<select class="bg-transparent border-0 border-b-2 border-on-surface p-0 pb-1 font-body-md text-body-md text-on-surface focus:ring-0 focus:border-primary w-40 cursor-pointer rounded-none">
+<option>All Status</option>
+<option>Low Stock</option>
+<option>In Stock</option>
+<option>Out of Stock</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 flex-grow max-w-md ml-auto">
+<label class="font-label-ui text-label-ui text-on-surface-variant uppercase">Search Product</label>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b-2 border-on-surface p-0 pb-1 pr-8 font-body-md text-body-md text-on-surface focus:ring-0 focus:border-primary rounded-none" placeholder="SKU or Name..." type="text"/>
+<span class="material-symbols-outlined absolute right-0 bottom-2 text-on-surface-variant pointer-events-none text-sm">search</span>
+</div>
+</div>
+</div>
+<!-- Data Dense Table -->
+<div class="overflow-x-auto flex-grow px-margin-desktop py-8">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b-2 border-on-surface">
+<th class="py-4 pr-4 font-label-ui text-label-ui uppercase text-on-surface-variant w-1/4">Product</th>
+<th class="py-4 px-4 font-label-ui text-label-ui uppercase text-on-surface-variant">Variant</th>
+<th class="py-4 px-4 font-label-ui text-label-ui uppercase text-on-surface-variant text-right">Total</th>
+<th class="py-4 px-4 font-label-ui text-label-ui uppercase text-on-surface-variant text-right">Rsvd</th>
+<th class="py-4 px-4 font-label-ui text-label-ui uppercase text-on-surface-variant text-right">Avail</th>
+<th class="py-4 px-4 font-label-ui text-label-ui uppercase text-on-surface-variant text-right">Price</th>
+<th class="py-4 pl-4 font-label-ui text-label-ui uppercase text-on-surface-variant text-right">Flags</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface">
+<!-- Row 1: Active selection style -->
+<tr class="border-b border-outline-variant bg-surface-container-highest cursor-pointer hover:bg-surface-variant transition-colors group">
+<td class="py-5 pr-4 align-top">
+<div class="font-headline-md text-[20px] font-bold uppercase leading-tight">Pro Aero Jersey</div>
+<div class="font-label-ui text-label-ui text-on-surface-variant mt-1">SKU: PAJ-24-NVY</div>
+</td>
+<td class="py-5 px-4 align-top">Navy / M</td>
+<td class="py-5 px-4 align-top text-right font-data-metric text-[24px]">450</td>
+<td class="py-5 px-4 align-top text-right font-data-metric text-[24px] text-on-surface-variant">50</td>
+<td class="py-5 px-4 align-top text-right font-data-metric text-[24px] text-primary">400</td>
+<td class="py-5 px-4 align-top text-right">$145</td>
+<td class="py-5 pl-4 align-top text-right">
+<span class="inline-block px-2 py-1 bg-surface-tint text-on-primary font-label-ui text-[11px] uppercase ml-1">Drop 1</span>
+</td>
+</tr>
+<!-- Row 2: Low Stock Alert -->
+<tr class="border-b border-outline-variant hover:bg-surface-variant transition-colors cursor-pointer">
+<td class="py-5 pr-4 align-top">
+<div class="font-headline-md text-[20px] font-bold uppercase leading-tight">Pro Aero Jersey</div>
+<div class="font-label-ui text-label-ui text-on-surface-variant mt-1">SKU: PAJ-24-GLD</div>
+</td>
+<td class="py-5 px-4 align-top">Gold / L</td>
+<td class="py-5 px-4 align-top text-right font-data-metric text-[24px]">120</td>
+<td class="py-5 px-4 align-top text-right font-data-metric text-[24px] text-on-surface-variant">105</td>
+<td class="py-5 px-4 align-top text-right font-data-metric text-[24px] text-error flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+                                    15
+                                </td>
+<td class="py-5 px-4 align-top text-right">$145</td>
+<td class="py-5 pl-4 align-top text-right">
+<span class="inline-block px-2 py-1 bg-error text-on-error font-label-ui text-[11px] uppercase ml-1">Flash</span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="border-b border-outline-variant hover:bg-surface-variant transition-colors cursor-pointer">
+<td class="py-5 pr-4 align-top">
+<div class="font-headline-md text-[20px] font-bold uppercase leading-tight">Coastal Wind Vest</div>
+<div class="font-label-ui text-label-ui text-on-surface-variant mt-1">SKU: CWV-24-WHT</div>
+</td>
+<td class="py-5 px-4 align-top">White / S</td>
+<td class="py-5 px-4 align-top text-right font-data-metric text-[24px]">300</td>
+<td class="py-5 px-4 align-top text-right font-data-metric text-[24px] text-on-surface-variant">0</td>
+<td class="py-5 px-4 align-top text-right font-data-metric text-[24px]">300</td>
+<td class="py-5 px-4 align-top text-right">$95</td>
+<td class="py-5 pl-4 align-top text-right">
+<span class="inline-block px-2 py-1 bg-surface-tint text-on-primary font-label-ui text-[11px] uppercase ml-1">Drop 1</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="border-b border-outline-variant hover:bg-surface-variant transition-colors cursor-pointer">
+<td class="py-5 pr-4 align-top">
+<div class="font-headline-md text-[20px] font-bold uppercase leading-tight">Rotary Core Bib</div>
+<div class="font-label-ui text-label-ui text-on-surface-variant mt-1">SKU: RCB-24-BLK</div>
+</td>
+<td class="py-5 px-4 align-top">Black / M</td>
+<td class="py-5 px-4 align-top text-right font-data-metric text-[24px]">600</td>
+<td class="py-5 px-4 align-top text-right font-data-metric text-[24px] text-on-surface-variant">150</td>
+<td class="py-5 px-4 align-top text-right font-data-metric text-[24px]">450</td>
+<td class="py-5 px-4 align-top text-right">$180</td>
+<td class="py-5 pl-4 align-top text-right">
+<span class="inline-block px-2 py-1 bg-outline text-surface-container-lowest font-label-ui text-[11px] uppercase ml-1">Core</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Right Panel: Image & Quick Edit (4 cols) -->
+<div class="lg:col-span-4 bg-primary-container text-on-primary flex flex-col relative z-0">
+<!-- Editorial Image Container -->
+<div class="h-96 w-full relative z-10 clip-diagonal">
+<div class="absolute inset-0 bg-primary opacity-20 mix-blend-multiply z-10"></div>
+<img class="w-full h-full object-cover grayscale-[20%] contrast-125" data-alt="A high-end editorial sports photograph of a professional cyclist leaning against a modern bicycle along the Tanzanian coastline during golden hour, wearing an elite performance aerodynamic jersey in deep navy. The lighting is warm and dramatic, casting long diagonal shadows and highlighting the fabric texture. The aesthetic is premium, energetic, and visually arresting, blending athletic rigor with coastal vitality. High contrast, sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7kYLDa8TPJj1TDCUBRRUKAwjFfsxLoxHHX-M5ldDZNdGnxc6AhJ1aOjgi2xELI2UmH9gVSu_rA7uuMq7bplxwgHIWawc1I-ksqnmsk6whdc1py-Y81bYIqd_xpUkAY2LISSJRXaisUwljHlJxfdaltS-J_yzSlkoxuaLqq9JkNQvMUF7GhrptJGDI9WLrqU1S3dD-fTUh97bydXR6NeA0Wr3ZN8xY24j43nVPXL5lF7vsH8zHltpjAg"/>
+<!-- Decorative Graphic over image -->
+<div class="absolute top-6 right-6 z-20 font-display-hero text-[120px] leading-none text-secondary-container opacity-50 mix-blend-overlay select-none pointer-events-none">
+                        01
+                    </div>
+</div>
+<!-- Quick Edit Form Area -->
+<div class="flex-grow p-8 flex flex-col -mt-12 pt-20 z-0">
+<div class="mb-8">
+<p class="font-label-ui text-label-ui text-secondary-fixed uppercase tracking-widest mb-1">Selected Asset</p>
+<h3 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg leading-none uppercase mb-2">Pro Aero Jersey</h3>
+<p class="font-body-md text-on-primary-container">Navy / M — SKU: PAJ-24-NVY</p>
+</div>
+<form class="flex flex-col gap-6 flex-grow">
+<div class="grid grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-ui text-label-ui text-on-primary-container uppercase">Add Stock</label>
+<input class="bg-transparent border-0 border-b-2 border-outline-variant p-0 pb-2 font-data-metric text-[32px] text-on-primary focus:ring-0 focus:border-secondary-container rounded-none text-right" type="number" value="0"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-ui text-label-ui text-on-primary-container uppercase">Reserve</label>
+<input class="bg-transparent border-0 border-b-2 border-outline-variant p-0 pb-2 font-data-metric text-[32px] text-on-primary focus:ring-0 focus:border-secondary-container rounded-none text-right" type="number" value="50"/>
+</div>
+</div>
+<div class="flex flex-col gap-2 mt-4">
+<label class="font-label-ui text-label-ui text-on-primary-container uppercase">Price Adjust (USD)</label>
+<input class="bg-transparent border-0 border-b-2 border-outline-variant p-0 pb-2 font-body-md text-body-md text-on-primary focus:ring-0 focus:border-secondary-container rounded-none" type="number" value="145.00"/>
+</div>
+<div class="flex flex-col gap-4 mt-6">
+<label class="font-label-ui text-label-ui text-on-primary-container uppercase border-b border-on-primary-fixed-variant pb-2">Status Flags</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="form-checkbox bg-transparent border-2 border-on-primary text-secondary-container focus:ring-0 rounded-none w-5 h-5" type="checkbox"/>
+<span class="font-body-md text-on-primary group-hover:text-secondary-fixed transition-colors">Seasonal Drop 1</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox bg-transparent border-2 border-on-primary text-secondary-container focus:ring-0 rounded-none w-5 h-5" type="checkbox"/>
+<span class="font-body-md text-on-primary group-hover:text-secondary-fixed transition-colors">Flash Sale Active</span>
+</label>
+</div>
+<div class="mt-auto pt-8 flex gap-4">
+<button class="flex-grow bg-transparent border-2 border-secondary-container text-secondary-container font-headline-md text-[18px] uppercase py-3 px-4 hover:bg-secondary-container hover:text-on-surface transition-colors duration-300 rounded-none text-center" type="button">
+                                Commit Changes
+                            </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</main>
+</body></html>

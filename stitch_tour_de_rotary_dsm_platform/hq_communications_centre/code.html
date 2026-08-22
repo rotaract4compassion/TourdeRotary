@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HQ Communications Centre - Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#ffb950",
+                      "inverse-surface": "#2f3131",
+                      "on-secondary-fixed-variant": "#624000",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#014788",
+                      "on-tertiary-fixed-variant": "#900038",
+                      "outline-variant": "#c2c6d2",
+                      "surface-bright": "#f9f9f9",
+                      "primary": "#00305f",
+                      "secondary": "#825500",
+                      "inverse-primary": "#a7c8ff",
+                      "on-primary-fixed": "#001b3b",
+                      "surface": "#f9f9f9",
+                      "surface-container": "#eeeeee",
+                      "on-primary-container": "#87b6fe",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed": "#400014",
+                      "on-surface": "#1a1c1c",
+                      "secondary-container": "#feae23",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed-dim": "#ffb2be",
+                      "tertiary-fixed": "#ffd9de",
+                      "surface-variant": "#e2e2e2",
+                      "outline": "#737781",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f3f3f4",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#8f0037",
+                      "surface-tint": "#2b5fa1",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#424750",
+                      "tertiary": "#650025",
+                      "background": "#f9f9f9",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-tertiary-container": "#ff95a8",
+                      "on-background": "#1a1c1c",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed": "#291800",
+                      "on-secondary-container": "#6b4500",
+                      "surface-dim": "#dadada",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "secondary-fixed": "#ffddb3",
+                      "surface-container-high": "#e8e8e8",
+                      "inverse-on-surface": "#f0f1f1",
+                      "primary-container": "#004687",
+                      "primary-fixed": "#d5e3ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "diagonal-offset": "12deg",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "display-hero": ["Anton"],
+                      "label-ui": ["JetBrains Mono"],
+                      "data-metric": ["Anton"],
+                      "headline-md": ["Hanken Grotesk"],
+                      "headline-lg": ["Anton"],
+                      "body-md": ["Hanken Grotesk"],
+                      "headline-lg-mobile": ["Anton"],
+                      "body-lg": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "display-hero": ["96px", {"lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "label-ui": ["14px", {"lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "data-metric": ["48px", {"lineHeight": "100%", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "120%", "fontWeight": "800"}],
+                      "headline-lg": ["64px", {"lineHeight": "100%", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["40px", {"lineHeight": "100%", "fontWeight": "400"}],
+                      "body-lg": ["20px", {"lineHeight": "160%", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 calc(4vw), 100% 0, 100% 100%, 0 100%); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- Top Navigation (Desktop) -->
+<nav aria-label="Top Navigation" class="sticky top-0 z-50 hidden md:flex justify-between items-center w-full px-margin-desktop py-4 bg-primary text-secondary border-b-2 border-secondary">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<ul class="flex gap-gutter items-center">
+<li><a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a></li>
+<li><a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a></li>
+<li><a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a></li>
+<li><a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a></li>
+<li><a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a></li>
+<li><a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a></li>
+<li>
+<button class="bg-secondary text-on-secondary font-label-ui text-label-ui uppercase px-6 py-2 hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300 border border-secondary">
+                    Register Now
+                </button>
+</li>
+</ul>
+</nav>
+<!-- Side Navigation & Main Layout Container -->
+<div class="flex h-screen md:h-[calc(100vh-80px)] overflow-hidden">
+<!-- SideNav (Desktop) -->
+<aside class="hidden lg:flex flex-col h-full w-64 flex-shrink-0 bg-surface-container-lowest text-primary border-r border-outline-variant py-8 relative z-40">
+<div class="px-6 mb-8">
+<div class="w-16 h-16 rounded-full bg-surface-variant overflow-hidden mb-4 border-2 border-primary relative">
+<img class="w-full h-full object-cover" data-alt="A close-up studio portrait of a professional cyclist wearing a sleek, aerodynamic helmet and dark, reflective sunglasses. The lighting is high-contrast and dramatic, casting strong shadows against a stark white background. The cyclist looks focused and determined. The overall aesthetic is clean, athletic, and premium, fitting a professional cycling brand. The colors are predominantly black and white with subtle hints of royal navy blue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKcV3UiOBCZ6zoPunigvo31odmbaH5VrJ5tbX1V5yav3tep8_kx7jdkBfZ5VLwBujAkLv5n5uHxbpjEldeSCZjrnLX0waZVYwLHWHMPT7M4oAE5JuGrLReXKZeNpyD1ez_wjTHfBwUaC7SiLZzUHVwf67R_pEdhheDdkfRjwHcWvzOXC-aWypGGKGi6OWKnJEUbm33cKPijI6sxQAaAa4P72wxlaAGz20i2S_oJMHtnPll2m4ZqiJufA"/>
+</div>
+<h2 class="text-headline-md font-headline-md text-primary leading-tight">HQ Comm Centre</h2>
+<p class="text-label-ui font-label-ui text-on-surface-variant mt-1">Admin Access</p>
+</div>
+<nav class="flex-1 overflow-y-auto px-4 space-y-2">
+<a class="flex items-center gap-4 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Dashboard
+                </a>
+<a class="flex items-center gap-4 px-4 py-3 text-label-ui font-label-ui bg-secondary text-on-secondary font-bold translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="campaign" data-weight="fill" style="font-variation-settings: 'FILL' 1;">campaign</span> Campaigns
+                </a>
+<a class="flex items-center gap-4 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span> Riders
+                </a>
+<a class="flex items-center gap-4 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span> Analytics
+                </a>
+<a class="flex items-center gap-4 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span> Settings
+                </a>
+</nav>
+<div class="px-6 mt-auto pt-6">
+<button class="w-full bg-secondary text-on-secondary font-label-ui text-label-ui uppercase py-3 border border-secondary hover:bg-primary hover:text-on-primary transition-colors duration-200">
+                    New Campaign
+                </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto relative bg-surface-bright">
+<!-- Hero Header -->
+<header class="relative px-margin-mobile md:px-margin-desktop py-12 bg-primary text-on-primary overflow-hidden clip-diagonal">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<img class="w-full h-full object-cover" data-alt="A high-contrast, black and white abstract graphic of a spinning bicycle wheel and a rotary gear interlocking. The design is sleek, modern, and geometric, feeling like a high-speed motion blur. The image serves as a subtle background texture for a premium athletic brand, utilizing negative space and sharp lines to convey energy and precision. No text is visible, just pure, dynamic shapes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi7CnzTfl3gLqGfpgBZXXNUN07neV9FGDoXUgOH47tLcZ_3Zs0nSqe0cqkQ9AVmSXGm2Y-pkfhn98sDWvGBgrDjgzc1tTnGPOflTjTeJ9AzPX44GV_T6skK4TIWqPjo_yUuF4oY09LqoipPAvOOPqHHxx8xCV4lrYXZDUnTdVCn5irE41T1OMRUsooFXiYNwu237jH_xNMIdsy4jJ5wrkTexWSPOSLUrunNZw-Jgw2ycoP-_2v3KyKkg"/>
+</div>
+<div class="relative z-10 max-w-4xl">
+<h1 class="text-display-hero font-display-hero text-on-primary uppercase tracking-tighter mb-4">Comm Centre</h1>
+<p class="text-body-lg font-body-lg opacity-90 max-w-2xl">Manage rider communications, broadcast urgent route updates, and track engagement across SMS and Email channels.</p>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="px-margin-mobile md:px-margin-desktop py-8 -mt-8 relative z-20">
+<!-- Quick Stats -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
+<div class="bg-surface p-6 border-l-4 border-secondary shadow-sm">
+<div class="text-label-ui font-label-ui text-on-surface-variant uppercase mb-2">Total Sent (30d)</div>
+<div class="text-data-metric font-data-metric text-primary">124.5K</div>
+</div>
+<div class="bg-surface p-6 border-l-4 border-primary shadow-sm">
+<div class="text-label-ui font-label-ui text-on-surface-variant uppercase mb-2">Open Rate</div>
+<div class="text-data-metric font-data-metric text-primary">68%</div>
+</div>
+<div class="bg-surface p-6 border-l-4 border-tertiary shadow-sm">
+<div class="text-label-ui font-label-ui text-on-surface-variant uppercase mb-2">SMS Delivery</div>
+<div class="text-data-metric font-data-metric text-primary">99.2%</div>
+</div>
+<div class="bg-primary text-on-primary p-6 border-l-4 border-secondary shadow-sm flex flex-col justify-center items-start cursor-pointer hover:bg-primary-container transition-colors">
+<div class="text-headline-md font-headline-md uppercase mb-1 flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="flash_on">flash_on</span> Quick Broadcast
+                        </div>
+<div class="text-label-ui font-label-ui opacity-80">Send urgent alert</div>
+</div>
+</div>
+<!-- Main Layout Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Active Campaigns & Queue -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Active Campaigns -->
+<section class="bg-surface border border-outline-variant p-0 relative">
+<div class="bg-primary text-on-primary px-6 py-4 flex justify-between items-center border-b-2 border-secondary">
+<h3 class="text-headline-md font-headline-md uppercase text-xl">Active Campaigns</h3>
+<button class="text-label-ui font-label-ui hover:text-secondary flex items-center gap-1">
+                                    View All <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="divide-y divide-outline-variant">
+<!-- Campaign Item -->
+<div class="p-6 hover:bg-surface-container-low transition-colors cursor-pointer flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+<div class="w-12 h-12 flex-shrink-0 bg-primary-container text-on-primary-container flex items-center justify-center rounded-none">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 bg-secondary text-on-secondary text-xs font-label-ui uppercase tracking-wider">Sending</span>
+<h4 class="text-body-md font-body-md font-bold truncate">Pre-Race Day Briefing</h4>
+</div>
+<div class="text-label-ui font-label-ui text-on-surface-variant truncate">Target: Registered Riders (Elite) • Progress: 45%</div>
+</div>
+<div class="w-full sm:w-32 bg-surface-container-high h-2 rounded-none overflow-hidden self-center">
+<div class="bg-secondary h-full" style="width: 45%"></div>
+</div>
+</div>
+<!-- Campaign Item -->
+<div class="p-6 hover:bg-surface-container-low transition-colors cursor-pointer flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+<div class="w-12 h-12 flex-shrink-0 bg-surface-container-high text-on-surface-variant flex items-center justify-center rounded-none">
+<span class="material-symbols-outlined" data-icon="sms">sms</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 border border-outline text-on-surface-variant text-xs font-label-ui uppercase tracking-wider">Scheduled</span>
+<h4 class="text-body-md font-body-md font-bold truncate">Weather Alert Check</h4>
+</div>
+<div class="text-label-ui font-label-ui text-on-surface-variant truncate">Target: All Participants • Scheduled: Tomorrow, 06:00 AM</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Preview Pane -->
+<div class="lg:col-span-5">
+<section class="bg-surface border border-outline-variant h-full flex flex-col sticky top-24">
+<div class="px-6 py-4 border-b border-outline-variant flex justify-between items-center bg-surface-container-lowest">
+<h3 class="text-headline-md font-headline-md text-lg uppercase">Message Preview</h3>
+<div class="flex gap-2">
+<button class="p-1 border border-primary text-primary hover:bg-primary hover:text-on-primary transition-colors"><span class="material-symbols-outlined" data-icon="phone_iphone">phone_iphone</span></button>
+<button class="p-1 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="desktop_windows">desktop_windows</span></button>
+</div>
+</div>
+<div class="flex-1 p-6 bg-surface-container-low flex justify-center items-center">
+<!-- Mobile Preview Frame -->
+<div class="w-full max-w-[320px] bg-surface-container-lowest border border-outline-variant shadow-lg h-[500px] flex flex-col relative overflow-hidden">
+<!-- Mobile Header Fake -->
+<div class="h-12 bg-primary text-on-primary flex items-center px-4 justify-between flex-shrink-0">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_back">arrow_back</span>
+<span class="font-label-ui text-sm uppercase">Tour de Rotary</span>
+<span class="material-symbols-outlined text-sm" data-icon="more_vert">more_vert</span>
+</div>
+<!-- Message Body -->
+<div class="p-4 flex-1 overflow-y-auto text-sm font-body-md">
+<p class="mb-4"><strong>Subject:</strong> Important: Route Update Sector 4</p>
+<p class="mb-4">Hi {First_Name},</p>
+<p class="mb-4">Due to unexpected road works near the coastal highway, Sector 4 has been slightly rerouted. The new path adds 1.2km but avoids rough terrain.</p>
+<p class="mb-4">Please review the updated map linked below before race day.</p>
+<div class="bg-primary text-on-primary text-center py-2 px-4 uppercase font-label-ui mb-4">View Updated Map</div>
+<p class="text-xs text-on-surface-variant">Stay safe, <br/>Race Control HQ</p>
+</div>
+</div>
+</div>
+<div class="p-4 border-t border-outline-variant bg-surface-container-lowest flex gap-4">
+<button class="flex-1 border-2 border-primary text-primary font-label-ui uppercase py-2 hover:bg-primary-container hover:text-on-primary-container transition-colors">Edit</button>
+<button class="flex-1 bg-secondary text-on-secondary font-label-ui uppercase py-2 border-2 border-secondary hover:bg-primary hover:text-on-primary transition-colors">Send Test</button>
+</div>
+</section>
+</div>
+</div>
+</div>
+<!-- Bottom spacing -->
+<div class="h-24 md:h-12 w-full"></div>
+</main>
+</div>
+<!-- Bottom Navigation (Mobile) -->
+<nav aria-label="Bottom Navigation" class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-primary text-secondary border-t-2 border-secondary shadow-lg lg:hidden">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container w-full h-full" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-label-ui font-label-ui text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container w-full h-full" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="text-label-ui font-label-ui text-[10px] mt-1">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary w-full h-full relative" href="#">
+<div class="absolute inset-0 bg-primary-container opacity-20"></div>
+<span class="material-symbols-outlined" data-icon="campaign" data-weight="fill" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span class="text-label-ui font-label-ui text-[10px] mt-1 font-bold">Comms</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container w-full h-full" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="text-label-ui font-label-ui text-[10px] mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

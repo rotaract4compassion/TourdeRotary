@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HQ Command | Secure Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#825500",
+                    "on-surface-variant": "#424750",
+                    "surface-container": "#eeeeee",
+                    "on-secondary-fixed": "#291800",
+                    "on-secondary-fixed-variant": "#624000",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#6b4500",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#d5e3ff",
+                    "surface-bright": "#f9f9f9",
+                    "background": "#f9f9f9",
+                    "secondary-fixed-dim": "#ffb950",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#ffd9de",
+                    "outline": "#737781",
+                    "on-primary-fixed-variant": "#014788",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-container": "#feae23",
+                    "surface-container-high": "#e8e8e8",
+                    "surface-tint": "#2b5fa1",
+                    "on-primary-container": "#87b6fe",
+                    "tertiary-container": "#8f0037",
+                    "surface-variant": "#e2e2e2",
+                    "inverse-on-surface": "#f0f1f1",
+                    "on-surface": "#1a1c1c",
+                    "tertiary": "#650025",
+                    "on-background": "#1a1c1c",
+                    "primary-container": "#004687",
+                    "surface-dim": "#dadada",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "tertiary-fixed-dim": "#ffb2be",
+                    "inverse-surface": "#2f3131",
+                    "on-tertiary-fixed-variant": "#900038",
+                    "outline-variant": "#c2c6d2",
+                    "on-tertiary-container": "#ff95a8",
+                    "on-primary": "#ffffff",
+                    "primary": "#00305f",
+                    "secondary-fixed": "#ffddb3",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#f9f9f9",
+                    "surface-container-low": "#f3f3f4",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#a7c8ff",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#001b3b",
+                    "on-tertiary-fixed": "#400014"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "diagonal-offset": "12deg",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Anton"],
+                    "display-hero": ["Anton"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "data-metric": ["Anton"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-ui": ["JetBrains Mono"],
+                    "headline-lg": ["Anton"],
+                    "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["40px", {"lineHeight": "100%", "fontWeight": "400"}],
+                    "display-hero": ["96px", {"lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "120%", "fontWeight": "800"}],
+                    "data-metric": ["48px", {"lineHeight": "100%", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}],
+                    "label-ui": ["14px", {"lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["64px", {"lineHeight": "100%", "fontWeight": "400"}],
+                    "body-lg": ["20px", {"lineHeight": "160%", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+        }
+        @media (min-width: 768px) {
+            .clip-diagonal-desktop {
+                clip-path: polygon(0 0, 100% 0, calc(100% - 5vw) 100%, 0 100%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-primary text-on-primary min-h-screen flex flex-col md:flex-row overflow-hidden font-body-md text-body-md antialiased selection:bg-secondary selection:text-on-secondary">
+<!-- Left Side: Cinematic Media -->
+<div class="relative w-full md:w-3/5 h-64 md:h-screen clip-diagonal md:clip-diagonal-desktop md:border-r-2 border-secondary z-10 flex-shrink-0">
+<div class="absolute inset-0 bg-primary opacity-60 z-10 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent z-20 md:hidden"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-primary z-20 hidden md:block"></div>
+<div class="w-full h-full bg-cover bg-center absolute inset-0 z-0 scale-105 transform transition-transform duration-[20s] hover:scale-100 ease-out" data-alt="A cinematic, blurred night view of Dar es Salaam, Tanzania, taken from a high vantage point. The city lights glow warmly in shades of gold and amber against the deep royal navy night sky. The image has a moody, restrained, and premium aesthetic, reminiscent of a silent command center overseeing an elite operation. The focus is soft, creating an atmospheric background that does not distract from foreground elements." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDv64fzdABUcfrzTkROJUdGF2_lC_TDwT0iDURLluR9SJsACFxc_I5efPO30I40F1P0bKSWtEwPCWr4k3_xFxLqhw2FB5REShN9jxZhS5bFGbDz6lH52hyr9K-5qLMUtu0WGJ0PA9ieMUnVMmJBj9AEchviGlepZVxlJKLBp26r0_kSJmMTmOXLbP2-NW36lUzIiAV3QUIgaDcz5VV0_iCVb2_ZKfxxtAWNC1FRodGUH4k_oznbqg1Qyg')"></div>
+<div class="absolute bottom-margin-mobile md:bottom-margin-desktop left-margin-mobile md:left-margin-desktop z-30 max-w-md">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-secondary uppercase tracking-wider opacity-90 drop-shadow-md">HQ Command</h1>
+<p class="font-label-ui text-label-ui text-on-primary mt-4 opacity-80 border-l-2 border-secondary pl-4 py-1">TOUR DE ROTARY DSM <br/> SECURE ACCESS NODE</p>
+</div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="w-full md:w-2/5 flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-12 md:py-0 relative z-20 bg-primary h-full md:h-screen overflow-y-auto">
+<div class="max-w-sm w-full mx-auto relative">
+<div class="mb-12">
+<span class="material-symbols-outlined text-4xl text-secondary mb-4 block" style="font-variation-settings: 'FILL' 1;">security</span>
+<h2 class="font-headline-md text-headline-md text-on-primary">Operational Login</h2>
+<p class="font-body-md text-body-md text-on-primary opacity-70 mt-2">Enter credentials to access the secure command center.</p>
+</div>
+<form class="space-y-8">
+<!-- Organization Email -->
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 text-on-primary font-body-md text-body-md px-0 py-2 transition-colors duration-300 placeholder-transparent" id="email" placeholder="Organizational Email" required="" type="email"/>
+<label class="absolute left-0 -top-5 text-label-ui font-label-ui text-outline-variant peer-focus:text-secondary peer-focus:-top-5 peer-placeholder-shown:top-2 peer-placeholder-shown:text-body-md peer-placeholder-shown:font-body-md transition-all duration-300 cursor-text" for="email">Organizational Email</label>
+</div>
+<!-- Password -->
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant focus:border-secondary focus:ring-0 text-on-primary font-body-md text-body-md px-0 py-2 transition-colors duration-300 placeholder-transparent" id="password" placeholder="Passcode" required="" type="password"/>
+<label class="absolute left-0 -top-5 text-label-ui font-label-ui text-outline-variant peer-focus:text-secondary peer-focus:-top-5 peer-placeholder-shown:top-2 peer-placeholder-shown:text-body-md peer-placeholder-shown:font-body-md transition-all duration-300 cursor-text" for="password">Passcode</label>
+</div>
+<!-- 2FA Prompt Area -->
+<div class="bg-surface-tint bg-opacity-20 border border-outline-variant p-4 flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">vpn_key</span>
+<div>
+<p class="font-label-ui text-label-ui text-on-primary">Two-Factor Authentication</p>
+<p class="font-body-md text-body-md text-on-primary opacity-70 text-sm mt-1">A secure token will be required upon successful credential validation.</p>
+</div>
+</div>
+<!-- Actions -->
+<div class="pt-4 flex flex-col gap-6">
+<button class="w-full bg-secondary text-on-secondary-fixed font-headline-md text-headline-md uppercase py-4 hover:bg-primary-container hover:text-on-primary transition-colors duration-300 text-center tracking-wide" type="submit">
+                        Authenticate
+                    </button>
+<div class="flex justify-between items-center border-t border-outline-variant pt-6">
+<a class="font-label-ui text-label-ui text-on-primary opacity-60 hover:text-secondary hover:opacity-100 transition-colors flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-sm">lock_reset</span>
+                            Recover Access
+                        </a>
+<a class="font-label-ui text-label-ui text-secondary hover:text-on-primary transition-colors flex items-center gap-2" href="#">
+                            Request Access
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</form>
+<div class="mt-16 text-center md:text-left">
+<p class="font-label-ui text-label-ui text-on-primary opacity-40 text-xs uppercase tracking-widest">
+                    SYSTEM SECURED BY ROTARY IT INFRASTRUCTURE
+                </p>
+</div>
+</div>
+</div>
+</body></html>
