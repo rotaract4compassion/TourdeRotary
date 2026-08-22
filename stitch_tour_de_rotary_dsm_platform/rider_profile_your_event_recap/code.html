@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Event Recap - Tour de Rotary</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#650025",
+                    "primary-container": "#004687",
+                    "surface-bright": "#f9f9f9",
+                    "tertiary-fixed-dim": "#ffb2be",
+                    "surface-container-low": "#f3f3f4",
+                    "inverse-on-surface": "#f0f1f1",
+                    "surface-dim": "#dadada",
+                    "outline": "#737781",
+                    "secondary-fixed": "#ffddb3",
+                    "primary-fixed": "#d5e3ff",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#a7c8ff",
+                    "background": "#f9f9f9",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-container-high": "#e8e8e8",
+                    "on-surface-variant": "#424750",
+                    "surface": "#f9f9f9",
+                    "on-secondary-fixed-variant": "#624000",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "tertiary-fixed": "#ffd9de",
+                    "error": "#ba1a1a",
+                    "on-tertiary-fixed-variant": "#900038",
+                    "tertiary-container": "#8f0037",
+                    "inverse-surface": "#2f3131",
+                    "surface-variant": "#e2e2e2",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c2c6d2",
+                    "on-tertiary-container": "#ff95a8",
+                    "secondary-fixed-dim": "#ffb950",
+                    "primary": "#00305f",
+                    "on-secondary-container": "#6b4500",
+                    "on-tertiary-fixed": "#400014",
+                    "on-primary-fixed-variant": "#014788",
+                    "on-background": "#1a1c1c",
+                    "surface-container": "#eeeeee",
+                    "on-primary-fixed": "#001b3b",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#825500",
+                    "secondary-container": "#feae23",
+                    "error-container": "#ffdad6",
+                    "on-surface": "#1a1c1c",
+                    "on-secondary-fixed": "#291800",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#87b6fe",
+                    "surface-tint": "#2b5fa1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "diagonal-offset": "12deg"
+            },
+            "fontFamily": {
+                    "body-lg": [
+                            "Hanken Grotesk"
+                    ],
+                    "label-ui": [
+                            "JetBrains Mono"
+                    ],
+                    "headline-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "display-hero": [
+                            "Anton"
+                    ],
+                    "headline-lg": [
+                            "Anton"
+                    ],
+                    "body-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-lg-mobile": [
+                            "Anton"
+                    ],
+                    "data-metric": [
+                            "Anton"
+                    ]
+            },
+            "fontSize": {
+                    "body-lg": [
+                            "20px",
+                            {
+                                    "lineHeight": "160%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-ui": [
+                            "14px",
+                            {
+                                    "lineHeight": "100%",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "120%",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "display-hero": [
+                            "96px",
+                            {
+                                    "lineHeight": "90%",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "64px",
+                            {
+                                    "lineHeight": "100%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "150%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "100%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "data-metric": [
+                            "48px",
+                            {
+                                    "lineHeight": "100%",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+          }
+        },
+      }
+    </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%);
+        }
+        .text-outline-gold {
+            -webkit-text-stroke: 1px #feae23;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- JSON Component: SideNavBar (Visible on Desktop) -->
+<nav class="hidden lg:flex flex-col h-screen fixed left-0 top-0 pt-20 bg-surface-container-lowest dark:bg-surface-container-lowest text-primary dark:text-primary h-full w-64 left-0 fixed border-r border-outline-variant flat no shadows z-40">
+<div class="px-6 pb-8 border-b border-outline-variant/30 flex flex-col items-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-highest overflow-hidden mb-4 border-2 border-secondary-container">
+<img class="w-full h-full object-cover" data-alt="A close-up studio portrait of an athletic cyclist wearing a premium dark navy and gold cycling jersey. The lighting is dramatic and directional, creating a sense of intense focus and elite performance. The background is a clean, bright white to isolate the subject, fitting seamlessly into a high-end sports editorial UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeUAalbPyocSmxhwXs8TkRrnfHCKh279M1TRh9YQC73uKqB8XJdyLrkumUO4bPga_StfKUdYuVXKKEuFcyL7Jn9Q0w2M4gKe1DpA4ZoPEd9GVYmaQe8v-skV6qwKhwGhJn4ZqI6XckY0J0XsTv-_kljTde9itW6WOKvzvvKnHqzx7Ijnip2sTVH5GP3K94Nn233Hu9rQ9pykZiKz_5Ia01HYiO2bS7lPuvLcbZv64JHVfA3Youf5zzmw"/>
+</div>
+<h2 class="text-headline-md font-headline-md text-primary text-center">Rider Profile</h2>
+<p class="text-label-ui font-label-ui text-secondary mt-1">Elite Tier</p>
+<button class="mt-6 w-full bg-secondary text-on-secondary font-label-ui text-label-ui uppercase py-3 px-4 hover:bg-primary transition-colors duration-200">Log Ride</button>
+</div>
+<div class="flex-1 overflow-y-auto py-4">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary-container transition-colors">dashboard</span>
+                        Dashboard
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui bg-secondary text-on-secondary font-bold rounded-none translate-x-1 transition-transform group" href="#">
+<span class="material-symbols-outlined text-secondary-container">event</span>
+                        My Events
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary-container transition-colors">directions_bike</span>
+                        Training
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary-container transition-colors">shopping_bag</span>
+                        Orders
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary-container transition-colors">token</span>
+                        Collectibles
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary-container transition-colors">group_add</span>
+                        Referrals
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary-container transition-colors">person</span>
+                        Profile
+                    </a>
+</li>
+</ul>
+</div>
+<div class="px-6 py-4 border-t border-outline-variant/30">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-4 py-2 text-label-ui font-label-ui text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-outline">settings</span>
+                        Settings
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-4 py-2 text-label-ui font-label-ui text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-outline">help_outline</span>
+                        Support
+                    </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="lg:ml-64 relative">
+<!-- JSON Component: TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary text-secondary dark:text-secondary-fixed docked full-width top-0 border-b-2 border-secondary flat no shadows">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">
+                TOUR DE ROTARY DSM
+            </div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1 opacity-70 transition-opacity" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</nav>
+<button class="bg-secondary text-on-secondary font-label-ui text-label-ui uppercase py-2 px-6 rounded-none hover:bg-primary-container transition-colors">Register Now</button>
+</header>
+<!-- Hero Recap Intro -->
+<section class="relative w-full min-h-[819px] flex items-center bg-primary clip-diagonal overflow-hidden pt-12 pb-32">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-40 mix-blend-overlay" data-alt="A breathtaking, wide-angle shot of a lone cyclist conquering a steep coastal road at golden hour in Dar es Salaam. The warm, low-angle sunlight casts long shadows and illuminates the Indian Ocean in the background. The mood is triumphant and inspiring. The image uses high-contrast lighting and deep navy tones mixed with vibrant gold highlights, perfectly aligning with a premium sports editorial design system." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAvflJugqFQMAhvCmLinOMoUER1C91PX5dmnnl-Vos5hiSP82jYbwyGhBe4IofogUU6YnYB2uAXGBGCyKxdZ0c-tl9kakyWtL-ZAPh5fQR0TlMr9xWqnVgF3Y9f8cg7ofGhpuUEWMolUp6pYpfi3qdz8txjRDFsbBkWbFB38zO8fr7MglhnPSDgBwq5IOHDfTW_lBnk5n-8imNOwG1439BbY74--1e0tLPdF2CjdRk_aWTtFUi7mgb98A')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-transparent"></div>
+</div>
+<div class="container mx-auto px-margin-mobile lg:px-margin-desktop relative z-10 grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-8 lg:col-span-7">
+<p class="text-secondary-container font-label-ui text-label-ui tracking-[0.2em] uppercase mb-4">Official Finisher Recap</p>
+<h1 class="text-display-hero font-display-hero text-on-primary uppercase leading-[0.85] mb-6 drop-shadow-2xl">
+                        You Crushed <br/>
+<span class="text-secondary-container">100KM Coastal</span><br/>
+                        Cyclathon
+                    </h1>
+<p class="text-body-lg font-body-lg text-primary-fixed mb-10 max-w-xl">
+                        The grit. The headwind. The victory. You took on the coastline and etched your name into the Tour de Rotary history books. Here is the story of your ride.
+                    </p>
+</div>
+</div>
+<!-- Rotary Gear watermark overlay -->
+<div class="absolute -bottom-20 -right-20 w-[600px] h-[600px] opacity-5 pointer-events-none text-on-primary">
+<span class="material-symbols-outlined text-[600px] leading-none" style="font-variation-settings: 'FILL' 1;">settings</span>
+</div>
+</section>
+<!-- Shareable Card Section (Overlapping layout) -->
+<section class="relative z-20 -mt-32 pb-24 px-margin-mobile lg:px-margin-desktop">
+<div class="container mx-auto max-w-6xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0 shadow-2xl">
+<!-- Shareable Graphic Left -->
+<div class="lg:col-span-7 bg-surface-container-lowest relative p-8 md:p-12 border-t-4 border-secondary-container flex flex-col justify-between overflow-hidden group">
+<!-- Watermark inside card -->
+<div class="absolute -top-10 -right-10 text-outline-variant opacity-10">
+<span class="material-symbols-outlined text-[300px]" style="font-variation-settings: 'FILL' 1;">directions_bike</span>
+</div>
+<div class="relative z-10 flex justify-between items-start mb-16">
+<div>
+<h3 class="text-headline-md font-headline-md text-primary uppercase leading-tight">Official<br/>Finisher</h3>
+<p class="text-label-ui font-label-ui text-on-surface-variant mt-2">Tour de Rotary DSM 2024</p>
+</div>
+<div class="bg-primary text-on-primary font-headline-lg text-headline-lg px-4 py-2 border-2 border-secondary-container">
+                                #342
+                            </div>
+</div>
+<div class="relative z-10 grid grid-cols-2 gap-8 mb-8">
+<div>
+<p class="text-label-ui font-label-ui text-outline uppercase mb-1">Time</p>
+<p class="text-data-metric font-data-metric text-primary">04:12:45</p>
+</div>
+<div>
+<p class="text-label-ui font-label-ui text-outline uppercase mb-1">Avg Speed</p>
+<p class="text-data-metric font-data-metric text-primary">23.7<span class="text-headline-md">km/h</span></p>
+</div>
+<div>
+<p class="text-label-ui font-label-ui text-outline uppercase mb-1">Elevation</p>
+<p class="text-data-metric font-data-metric text-primary">850<span class="text-headline-md">m</span></p>
+</div>
+<div>
+<p class="text-label-ui font-label-ui text-outline uppercase mb-1">Impact</p>
+<p class="text-data-metric font-data-metric text-tertiary-container">TSh 2.5M</p>
+</div>
+</div>
+</div>
+<!-- Share Actions Right -->
+<div class="lg:col-span-5 bg-primary p-8 md:p-12 flex flex-col justify-center border-t-4 border-primary-fixed-dim">
+<h4 class="text-headline-md font-headline-md text-on-primary mb-4">Claim Your Glory</h4>
+<p class="text-body-md font-body-md text-primary-fixed-dim mb-8">
+                            This recap graphic is optimized for your social feeds. Download or share directly to celebrate your achievement with your network.
+                        </p>
+<div class="flex flex-col gap-4">
+<button class="flex items-center justify-center gap-3 bg-secondary-container text-on-secondary-fixed-variant font-label-ui text-label-ui uppercase py-4 px-6 hover:bg-secondary transition-colors group">
+<span class="material-symbols-outlined">download</span>
+                                Download Graphic
+                            </button>
+<button class="flex items-center justify-center gap-3 bg-transparent border-2 border-secondary-container text-secondary-container font-label-ui text-label-ui uppercase py-4 px-6 hover:bg-secondary-container hover:text-on-secondary-fixed-variant transition-colors">
+<span class="material-symbols-outlined">share</span>
+                                Share to Instagram
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- JSON Component: BottomNavBar (Visible on Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary dark:bg-primary text-secondary dark:text-secondary docked full-width bottom-0 border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-label-ui mt-1 uppercase">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary active:bg-primary-container scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="text-[10px] font-label-ui mt-1 uppercase">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="text-[10px] font-label-ui mt-1 uppercase">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-label-ui mt-1 uppercase">Profile</span>
+</a>
+</nav>
+<!-- JSON Component: Footer -->
+<footer class="w-full px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary flat pb-24 lg:pb-12">
+<div class="text-headline-md font-headline-lg text-on-primary">
+                TOUR DE ROTARY
+            </div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors uppercase" href="#">Privacy Policy</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors uppercase" href="#">Terms of Service</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors uppercase" href="#">Contact HQ</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors uppercase" href="#">Volunteer</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors uppercase" href="#">FAQ</a>
+</nav>
+<p class="text-body-md font-body-md text-on-primary opacity-50 mt-4 text-center">
+                © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+            </p>
+</footer>
+</main>
+</body></html>

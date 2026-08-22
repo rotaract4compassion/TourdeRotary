@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reset Your Password - Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#291800",
+                    "outline-variant": "#c2c6d2",
+                    "surface-container-low": "#f3f3f4",
+                    "inverse-surface": "#2f3131",
+                    "surface": "#f9f9f9",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#ffddb3",
+                    "on-primary-fixed": "#001b3b",
+                    "on-surface-variant": "#424750",
+                    "on-tertiary-fixed-variant": "#900038",
+                    "on-error": "#ffffff",
+                    "background": "#f9f9f9",
+                    "primary-container": "#004687",
+                    "on-tertiary-fixed": "#400014",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#ffb950",
+                    "on-secondary-container": "#6b4500",
+                    "inverse-primary": "#a7c8ff",
+                    "primary-fixed-dim": "#a7c8ff",
+                    "surface-container": "#eeeeee",
+                    "secondary": "#825500",
+                    "surface-container-high": "#e8e8e8",
+                    "outline": "#737781",
+                    "on-secondary-fixed-variant": "#624000",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#f9f9f9",
+                    "on-tertiary-container": "#ff95a8",
+                    "on-primary-fixed-variant": "#014788",
+                    "on-primary-container": "#87b6fe",
+                    "on-surface": "#1a1c1c",
+                    "tertiary-container": "#8f0037",
+                    "primary-fixed": "#d5e3ff",
+                    "tertiary-fixed": "#ffd9de",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#00305f",
+                    "on-background": "#1a1c1c",
+                    "tertiary-fixed-dim": "#ffb2be",
+                    "surface-tint": "#2b5fa1",
+                    "surface-container-highest": "#e2e2e2",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#feae23",
+                    "surface-variant": "#e2e2e2",
+                    "surface-dim": "#dadada",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#650025",
+                    "inverse-on-surface": "#f0f1f1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "diagonal-offset": "12deg",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-md": [
+                            "Hanken Grotesk"
+                    ],
+                    "headline-lg": [
+                            "Anton"
+                    ],
+                    "data-metric": [
+                            "Anton"
+                    ],
+                    "display-hero": [
+                            "Anton"
+                    ],
+                    "label-ui": [
+                            "JetBrains Mono"
+                    ],
+                    "headline-lg-mobile": [
+                            "Anton"
+                    ],
+                    "body-lg": [
+                            "Hanken Grotesk"
+                    ]
+            },
+            "fontSize": {
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "150%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "120%",
+                                    "fontWeight": "800"
+                            }
+                    ],
+                    "headline-lg": [
+                            "64px",
+                            {
+                                    "lineHeight": "100%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "data-metric": [
+                            "48px",
+                            {
+                                    "lineHeight": "100%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-hero": [
+                            "96px",
+                            {
+                                    "lineHeight": "90%",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-ui": [
+                            "14px",
+                            {
+                                    "lineHeight": "100%",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "100%",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "20px",
+                            {
+                                    "lineHeight": "160%",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+<style>
+        .diagonal-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
+        }
+        @media (min-width: 1024px) {
+            .diagonal-clip-lg {
+                clip-path: polygon(0 0, 100% 0, calc(100% - 8vw) 100%, 0 100%);
+            }
+        }
+        
+        .input-underline {
+            border: none;
+            border-bottom: 2px solid #1a1c1c; /* on-surface */
+            border-radius: 0;
+            padding-left: 0;
+            padding-right: 0;
+            background-color: transparent;
+        }
+        .input-underline:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: #00305f; /* primary */
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background h-full font-body-md overflow-x-hidden">
+<!-- Split Screen Layout -->
+<div class="flex flex-col lg:flex-row min-h-screen">
+<!-- Left Side: Image / Hero (Desktop: 7 cols) -->
+<div class="relative w-full lg:w-7/12 h-[409px] lg:h-screen diagonal-clip lg:diagonal-clip-lg overflow-hidden bg-primary">
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-overlay" data-alt="A breathtaking full-height aerial shot of the Dar es Salaam coastline during golden hour. The Indian Ocean sparkles in deep Royal Navy blues, contrasting with the golden sandy beaches. A coastal road winds along the shore, bathed in warm, vibrant sunlight. The aesthetic is premium, energetic, and slightly asymmetrical, fitting a high-end sports editorial vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq9RsmLw69o8-2ohjVUusMbVpf2RVuX3WDPFcJ0fJLoszUHGIj0ahgLpgdsPFhk20o6nd9dBFP43JPGhwJyS4MAbxR1vBwkCLWVJ_GVbdIMXeIQ5s-rJSokUC3BhHo-mTp5h2jPA8IxAKUNxgKlCtLPS1g1CsxOoMPeHoQqT31ElhMSxkzrjGLy3uTtKp4VSYyAGmH3ag7SeJ724iBvBshSVQFLqt7N_Y8pzMEQ3zDFT9EbPgQqKDFzQ"/>
+<!-- Overlay Content (Optional, adds to premium feel) -->
+<div class="absolute inset-0 p-margin-mobile lg:p-margin-desktop flex flex-col justify-end lg:justify-center bg-gradient-to-t from-primary/80 to-transparent lg:bg-none">
+<h2 class="font-display-hero text-display-hero text-on-primary max-w-lg mb-4 hidden lg:block uppercase mix-blend-screen opacity-90">
+                    Find Your Edge.
+                </h2>
+<p class="font-body-lg text-body-lg text-on-primary/90 max-w-md hidden lg:block border-l-4 border-secondary pl-4">
+                    Rejoin the ride. Secure your account and prepare for the ultimate coastal challenge.
+                </p>
+</div>
+</div>
+<!-- Right Side: Form Content (Desktop: 5 cols offset) -->
+<div class="w-full lg:w-5/12 flex items-center justify-center p-margin-mobile lg:p-margin-desktop bg-surface-container-lowest z-10 -mt-12 lg:mt-0 lg:-ml-12 relative">
+<!-- Rotary Gear Watermark -->
+<div class="absolute right-0 bottom-0 pointer-events-none opacity-5 w-96 h-96 -mr-24 -mb-24">
+<svg class="text-primary w-full h-full" fill="currentColor" viewbox="0 0 100 100">
+<circle cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-width="8"></circle>
+<!-- Simplified Gear Teeth -->
+<rect height="20" width="10" x="45" y="0"></rect>
+<rect height="20" width="10" x="45" y="80"></rect>
+<rect height="10" width="20" x="0" y="45"></rect>
+<rect height="10" width="20" x="80" y="45"></rect>
+<circle cx="50" cy="50" fill="currentColor" r="20"></circle>
+</svg>
+</div>
+<div class="w-full max-w-md relative z-10">
+<!-- Brand / Top Nav Anchor (Simplied for transactional page) -->
+<div class="mb-12">
+<span class="font-headline-lg text-headline-md text-primary uppercase tracking-tighter block mb-2">TOUR DE ROTARY DSM</span>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase leading-none">
+                        Reset Your Password
+                    </h1>
+</div>
+<!-- Form: Request Reset Link -->
+<form class="space-y-8 block" id="resetRequestForm">
+<div class="relative">
+<label class="font-label-ui text-label-ui text-outline block mb-2 uppercase" for="email">Email Address</label>
+<input class="w-full input-underline font-body-md text-body-md text-on-surface bg-transparent focus:ring-0 placeholder-on-surface-variant/50" id="email" name="email" placeholder="rider@example.com" required="" type="email"/>
+</div>
+<button class="w-full bg-secondary text-on-surface hover:bg-primary hover:text-on-primary font-headline-lg text-headline-md py-4 px-6 uppercase transition-colors duration-300 border-2 border-secondary hover:border-primary" onclick="showSuccessState()" type="button">
+                        Send Reset Link
+                    </button>
+<div class="text-center pt-4 border-t border-surface-variant">
+<a class="font-label-ui text-label-ui text-primary hover:text-secondary flex items-center justify-center gap-2 transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+                            Return to Login
+                        </a>
+</div>
+</form>
+<!-- Success State (Hidden by default) -->
+<div class="space-y-6 hidden text-center border-t-4 border-secondary pt-8 bg-surface-container-low p-8 relative overflow-hidden" id="successState">
+<!-- Subtle background element -->
+<div class="absolute inset-0 bg-primary opacity-5 transform -skew-y-6 origin-bottom-left"></div>
+<div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary/20 text-secondary mb-4 relative z-10">
+<span class="material-symbols-outlined" style="font-size: 32px; font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary uppercase relative z-10">Link Sent</h3>
+<p class="font-body-md text-body-md text-on-surface-variant relative z-10">
+                        If an account exists for that email, we have sent instructions to reset your password. Please check your inbox.
+                    </p>
+<div class="pt-6 relative z-10">
+<a class="inline-flex items-center justify-center gap-2 font-label-ui text-label-ui text-on-surface border-b-2 border-on-surface hover:text-secondary hover:border-secondary transition-colors uppercase pb-1" href="#">
+                            Return to Login
+                        </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+        function showSuccessState() {
+            const form = document.getElementById('resetRequestForm');
+            const success = document.getElementById('successState');
+            
+            // Basic validation check (visual only for prototype)
+            const email = document.getElementById('email').value;
+            if(email) {
+                form.style.display = 'none';
+                success.classList.remove('hidden');
+                success.classList.add('block');
+            } else {
+                document.getElementById('email').focus();
+            }
+        }
+    </script>
+</body></html>
