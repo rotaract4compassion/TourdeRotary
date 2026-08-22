@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rotary Cares - Pediatric Oncology Impact</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#ffb2be",
+                      "outline": "#737781",
+                      "on-error-container": "#93000a",
+                      "surface-dim": "#dadada",
+                      "secondary": "#825500",
+                      "on-tertiary-fixed-variant": "#900038",
+                      "background": "#f9f9f9",
+                      "on-background": "#1a1c1c",
+                      "tertiary": "#650025",
+                      "surface-tint": "#2b5fa1",
+                      "on-secondary-fixed-variant": "#624000",
+                      "tertiary-container": "#8f0037",
+                      "on-primary-container": "#87b6fe",
+                      "on-secondary-container": "#6b4500",
+                      "on-secondary-fixed": "#291800",
+                      "on-tertiary-container": "#ff95a8",
+                      "surface-container-high": "#e8e8e8",
+                      "on-tertiary-fixed": "#400014",
+                      "outline-variant": "#c2c6d2",
+                      "inverse-surface": "#2f3131",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "surface-container-low": "#f3f3f4",
+                      "surface-container-highest": "#e2e2e2",
+                      "inverse-primary": "#a7c8ff",
+                      "primary-fixed": "#d5e3ff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed": "#ffd9de",
+                      "secondary-fixed-dim": "#ffb950",
+                      "on-primary-fixed-variant": "#014788",
+                      "secondary-fixed": "#ffddb3",
+                      "on-surface-variant": "#424750",
+                      "primary-container": "#004687",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface": "#1a1c1c",
+                      "error": "#ba1a1a",
+                      "surface": "#f9f9f9",
+                      "on-error": "#ffffff",
+                      "surface-variant": "#e2e2e2",
+                      "secondary-container": "#feae23",
+                      "surface-container": "#eeeeee",
+                      "on-secondary": "#ffffff",
+                      "primary": "#00305f",
+                      "inverse-on-surface": "#f0f1f1",
+                      "surface-bright": "#f9f9f9",
+                      "error-container": "#ffdad6",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed": "#001b3b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "margin-mobile": "20px",
+                      "unit": "8px",
+                      "diagonal-offset": "12deg",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Anton"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-hero": [
+                              "Anton"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "data-metric": [
+                              "Anton"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-ui": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg-mobile": [
+                              "Anton"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero": [
+                              "96px",
+                              {
+                                      "lineHeight": "90%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "data-metric": [
+                              "48px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 calc(0% + 10vw), 100% 0, 100% 100%, 0 100%);
+        }
+        .clip-diagonal-top {
+            clip-path: polygon(0 10vw, 100% 0, 100% 100%, 0 100%);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-tertiary-container selection:text-on-tertiary">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 bg-primary text-on-primary">
+<div class="text-headline-md font-headline-lg uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1 opacity-70 transition-opacity" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</nav>
+<button class="bg-secondary-container text-on-secondary-fixed font-headline-lg uppercase px-6 py-3 rounded-none hover:bg-primary-container hover:text-on-primary transition-colors duration-300 text-label-ui hidden md:block">
+            Register Now
+        </button>
+<button class="md:hidden text-on-primary">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</header>
+<main class="relative pb-32">
+<!-- Hero Section -->
+<section class="relative h-[90vh] w-full bg-primary flex items-end clip-diagonal">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-60 mix-blend-overlay" data-alt="A deeply touching, cinematic, wide-angle photograph capturing a moment of genuine connection between a dedicated pediatric oncologist and a smiling young patient in a bright, modern, well-lit hospital ward in Tanzania. Warm, golden hour light filters through large windows, creating an uplifting, hopeful atmosphere. The scene is shot with high-end editorial quality, avoiding any fear-inducing elements, emphasizing care, humanity, and progress. Deep navy and crisp white tones dominate the environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU2r6-bweTv3yR7fJN2rxWNDGnuRxsqiJXmZLHSm49J3WsCmPNuE48YjR0UO3K60wLt8cRSqtDB6eFzeUfdxdWloYXybz1SAA2xC5W9vI-kOh0rMlMvZ20BIwxkx_IEeW6cEkHa0ECSo8ISvrvtub494jG3xVP6lQo9qCSib5OsuUlq6ah_aN54HUqBwo23GjWZpB-mSu6dpb9fxoz2SHBioqjMmmlYALteBXZNgKXtI3nVTJIhCgDxA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop pb-24 md:pb-32 flex flex-col md:flex-row gap-8 items-end justify-between">
+<div class="max-w-3xl">
+<h1 class="text-headline-lg-mobile md:text-display-hero font-display-hero text-on-primary mb-6 uppercase leading-[0.9]">
+                        Hope Rides On <br/>
+<span class="text-tertiary-container">Every Mile</span>
+</h1>
+<p class="text-body-lg font-body-lg text-primary-fixed mb-8 max-w-xl">
+                        Our mission goes beyond the finish line. We ride to bring world-class pediatric cancer care to the children of Tanzania, turning endurance into early detection and survival.
+                    </p>
+<button class="bg-tertiary-container text-on-tertiary font-headline-lg uppercase px-8 py-4 text-headline-md hover:bg-tertiary transition-colors">
+                        Support The Cause
+                    </button>
+</div>
+<div class="hidden md:flex flex-col gap-4 text-right">
+<p class="text-label-ui font-label-ui text-secondary-fixed tracking-widest uppercase">Beneficiary</p>
+<p class="text-headline-md font-headline-md text-on-primary">Muhimbili National Hospital<br/>Pediatric Oncology Ward</p>
+</div>
+</div>
+</section>
+<!-- The Challenge -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest relative z-10">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-gutter">
+<div class="md:col-span-5 flex flex-col justify-center">
+<span class="text-label-ui font-label-ui text-tertiary-container uppercase tracking-widest mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">vital_signs</span> The Reality
+                    </span>
+<h2 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-primary uppercase leading-tight mb-6">
+                        Time is the <br/>Greatest Obstacle
+                    </h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-6">
+                        In pediatric cancer, early detection is often the difference between life and loss. Currently, many families in rural areas face insurmountable distances and lack of resources to reach specialized care in time.
+                    </p>
+<p class="text-body-md font-body-md text-on-surface-variant">
+                        Our goal is to dismantle these barriers, equipping regional centers and supporting families so that distance never dictates a child's chance at a future.
+                    </p>
+</div>
+<div class="md:col-span-7 relative h-[60vh] md:h-auto min-h-[400px]">
+<div class="absolute inset-0 bg-primary translate-x-4 translate-y-4"></div>
+<img class="absolute inset-0 w-full h-full object-cover grayscale contrast-125 border-2 border-primary" data-alt="A striking, editorial-style photograph of a winding, dusty rural road in Tanzania leading towards a distant modern city skyline at sunrise. The image conveys distance and journey. The lighting is cinematic and dramatic, emphasizing the contrast between the remote origins of many patients and the centralized care facilities. High contrast, sharp focus, integrating warm earth tones with the cool blues of the early morning sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlsdnF5GeuHuHWZPAc7ZOU3bwkyNxD1rsZk7C49LNJxZ2H7SmWBdBGQrmGhw_PumrEVZ-hmRkBrkYmUSRowgqtYlBmWKG7Cr0TtJ0J0sX8BtiGZC2BM0C9NNsKcBxSKr0ji3qTp66ER-LrPRdOY_Qe1HTwzfs7kTbUcwWVCHi3_5dBWd2lHxQXew4nONNF0Zj0j11bDZ3ZKHYqsSZrkwFScwGlNiyBJV0E1HRijqGzyoysu0SrXma4wQ"/>
+</div>
+</div>
+</section>
+<!-- Impact Numbers -->
+<section class="py-32 bg-primary relative clip-diagonal-top">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 divide-y md:divide-y-0 md:divide-x divide-primary-fixed-dim/30">
+<div class="flex flex-col items-center text-center pt-8 md:pt-0">
+<span class="material-symbols-outlined text-secondary-container mb-4" style="font-size: 48px; font-variation-settings: 'FILL' 1;">medical_services</span>
+<div class="text-display-hero font-data-metric text-on-primary mb-2">450+</div>
+<div class="text-label-ui font-label-ui text-primary-fixed-dim uppercase tracking-wider">Children Treated Annually</div>
+</div>
+<div class="flex flex-col items-center text-center pt-8 md:pt-0">
+<span class="material-symbols-outlined text-tertiary-container mb-4" style="font-size: 48px; font-variation-settings: 'FILL' 1;">family_home</span>
+<div class="text-display-hero font-data-metric text-on-primary mb-2">100%</div>
+<div class="text-label-ui font-label-ui text-primary-fixed-dim uppercase tracking-wider">Treatment Covered</div>
+</div>
+<div class="flex flex-col items-center text-center pt-8 md:pt-0">
+<span class="material-symbols-outlined text-secondary-container mb-4" style="font-size: 48px; font-variation-settings: 'FILL' 1;">directions_bike</span>
+<div class="text-display-hero font-data-metric text-on-primary mb-2">$2.5M</div>
+<div class="text-label-ui font-label-ui text-primary-fixed-dim uppercase tracking-wider">Raised Through Cycling</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary mt-auto">
+<div class="text-headline-md font-headline-lg text-on-primary">
+            TOUR DE ROTARY DSM
+        </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</div>
+<div class="text-body-md font-body-md text-on-primary opacity-50 mt-4 text-center">
+            © 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.
+        </div>
+</footer>
+</body></html>

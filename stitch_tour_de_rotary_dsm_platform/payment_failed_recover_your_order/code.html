@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payment Failed - Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#1a1c1c",
+                      "inverse-primary": "#a7c8ff",
+                      "inverse-on-surface": "#f0f1f1",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#dadada",
+                      "surface-container-highest": "#e2e2e2",
+                      "tertiary-fixed-dim": "#ffb2be",
+                      "primary": "#00305f",
+                      "on-primary-container": "#87b6fe",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed": "#ffddb3",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#d5e3ff",
+                      "background": "#f9f9f9",
+                      "outline-variant": "#c2c6d2",
+                      "surface-container-high": "#e8e8e8",
+                      "tertiary-container": "#8f0037",
+                      "on-secondary-container": "#6b4500",
+                      "on-tertiary-container": "#ff95a8",
+                      "secondary-fixed-dim": "#ffb950",
+                      "inverse-surface": "#2f3131",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#004687",
+                      "surface-bright": "#f9f9f9",
+                      "on-surface": "#1a1c1c",
+                      "on-tertiary-fixed": "#400014",
+                      "surface-variant": "#e2e2e2",
+                      "surface": "#f9f9f9",
+                      "tertiary-fixed": "#ffd9de",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "surface-container": "#eeeeee",
+                      "on-primary-fixed-variant": "#014788",
+                      "secondary-container": "#feae23",
+                      "on-primary-fixed": "#001b3b",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#650025",
+                      "on-surface-variant": "#424750",
+                      "on-secondary-fixed-variant": "#624000",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary": "#825500",
+                      "on-secondary-fixed": "#291800",
+                      "surface-container-low": "#f3f3f4",
+                      "on-tertiary-fixed-variant": "#900038",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#2b5fa1",
+                      "outline": "#737781"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "diagonal-offset": "12deg",
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Anton"
+                      ],
+                      "data-metric": [
+                              "Anton"
+                      ],
+                      "headline-lg-mobile": [
+                              "Anton"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-hero": [
+                              "Anton"
+                      ],
+                      "label-ui": [
+                              "JetBrains Mono"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "data-metric": [
+                              "48px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero": [
+                              "96px",
+                              {
+                                      "lineHeight": "90%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md selection:bg-secondary selection:text-on-secondary overflow-x-hidden">
+<!-- Top Navigation (Excluded as this is a transactional dead-end state, but keeping brand header for continuity if needed, however the rules say transactional screens hide the shell. We'll use a minimal brand anchor instead) -->
+<header class="w-full px-margin-desktop py-6 flex justify-start items-center absolute top-0 left-0 z-50">
+<a class="font-headline-lg text-headline-md md:text-headline-lg text-primary uppercase tracking-tighter" href="#">TOUR DE ROTARY DSM</a>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center relative w-full pt-32 pb-24 px-margin-mobile md:px-margin-desktop z-10">
+<!-- Graphic / Visual Anchor -->
+<div class="relative w-full max-w-3xl flex flex-col items-center">
+<div class="mb-12 w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-outline-variant flex items-center justify-center bg-surface-container-low relative">
+<div class="w-full h-full bg-cover bg-center absolute inset-0 opacity-80" data-alt="A close-up, high-quality photograph of a friendly customer support representative wearing a headset, looking reassuringly at the camera. The background is slightly blurred showing a bright, modern office space with coastal sunlight streaming in. The lighting is warm and natural, emphasizing a helpful and human connection. The color palette aligns with a light-mode aesthetic, featuring soft off-whites and hints of navy blue in their attire." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAo4s2qHvLkYHSPcjN4U0oZLAY9LOHHfLYKFoiS9U7NdFsSVrtW_HTFHAkZJPyBdjt17ddWcRQy3W_-IRISmGUawDtrkIg89xxJTD78gLy_xztrXgx36nGmUeqT1MGuwIqP63L3bb78Eo1BN_SK61uUYgX65DqH0-EF-_gYO9eJ2_09dhmByTzS_GLwxzmYi7uLt5t2osavivZZ9meJStve1NdXbs1zH8br8d4SY3N6EPgjmqB-o0Hq5w')"></div>
+<!-- Overlay to ensure text readability if any, or just to tint -->
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+<!-- Icon Overlay -->
+<div class="absolute -bottom-4 -right-4 w-16 h-16 bg-surface-container-highest rounded-full border-2 border-surface flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-outline text-3xl" data-icon="error" data-weight="fill" style="font-variation-settings: 'FILL' 1;">error</span>
+</div>
+</div>
+<!-- Typography & Messaging -->
+<div class="text-center max-w-2xl mx-auto z-10 relative">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mb-6 tracking-wide">
+                    Let's Try That Again
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-4">
+                    We couldn't process your payment for the Tour de Rotary registration. Don't worry—your spot is held, and your order details are securely saved.
+                </p>
+<p class="font-body-md text-body-md text-outline mb-10 max-w-lg mx-auto">
+                    This usually happens due to a typo in the card details or a temporary bank issue. You can retry your payment below.
+                </p>
+<!-- Actions -->
+<div class="flex flex-col md:flex-row items-center justify-center gap-6 w-full mt-8">
+<button class="bg-secondary text-on-secondary font-headline-lg text-headline-md uppercase px-8 py-4 w-full md:w-auto hover:bg-primary transition-colors duration-300 shadow-md">
+                        Retry Payment
+                    </button>
+<button class="bg-transparent text-primary font-body-lg text-body-lg border-2 border-primary px-8 py-4 w-full md:w-auto hover:bg-surface-container-low transition-colors duration-300 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span>
+                        Contact Support
+                    </button>
+</div>
+</div>
+<!-- Subtle background elements for depth -->
+<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] -z-10 opacity-5 pointer-events-none">
+<!-- Using a generic pattern placeholder to represent the 'wave' or 'gear' watermark mentioned in guidance -->
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="20" id="diagonalHatch" patterntransform="rotate(45 0 0)" patternunits="userSpaceOnUse" width="20">
+<line stroke="currentColor" stroke-width="2" x1="0" x2="0" y1="0" y2="20"></line>
+</pattern>
+</defs>
+<rect class="text-primary" fill="url(#diagonalHatch)" height="100%" width="100%"></rect>
+</svg>
+</div>
+</div>
+</main>
+<!-- Footer excluded as per transactional flow rules, keeping focus on the action -->
+</body></html>

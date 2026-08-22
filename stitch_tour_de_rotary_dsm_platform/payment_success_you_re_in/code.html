@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payment Success - Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1a1c1c",
+                        "inverse-primary": "#a7c8ff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "primary": "#00305f",
+                        "on-primary-container": "#87b6fe",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#ffddb3",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#d5e3ff",
+                        "background": "#f9f9f9",
+                        "outline-variant": "#c2c6d2",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-container": "#8f0037",
+                        "on-secondary-container": "#6b4500",
+                        "on-tertiary-container": "#ff95a8",
+                        "secondary-fixed-dim": "#ffb950",
+                        "inverse-surface": "#2f3131",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#004687",
+                        "surface-bright": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-fixed": "#400014",
+                        "surface-variant": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "tertiary-fixed": "#ffd9de",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-container": "#eeeeee",
+                        "on-primary-fixed-variant": "#014788",
+                        "secondary-container": "#feae23",
+                        "on-primary-fixed": "#001b3b",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#650025",
+                        "on-surface-variant": "#424750",
+                        "on-secondary-fixed-variant": "#624000",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#825500",
+                        "on-secondary-fixed": "#291800",
+                        "surface-container-low": "#f3f3f4",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#2b5fa1",
+                        "outline": "#737781"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "data-metric": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-hero": ["Anton"],
+                        "label-ui": ["JetBrains Mono"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "120%", "fontWeight": "800"}],
+                        "headline-lg": ["64px", {"lineHeight": "100%", "fontWeight": "400"}],
+                        "data-metric": ["48px", {"lineHeight": "100%", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["40px", {"lineHeight": "100%", "fontWeight": "400"}],
+                        "body-lg": ["20px", {"lineHeight": "160%", "fontWeight": "400"}],
+                        "display-hero": ["96px", {"lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "label-ui": ["14px", {"lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative overflow-x-hidden">
+<!-- Suppressed TopAppBar and BottomNavBar for transactional screen -->
+<main class="flex-grow flex flex-col relative z-10 w-full md:grid md:grid-cols-12 md:gap-gutter px-margin-mobile md:px-margin-desktop py-12 md:py-24 max-w-7xl mx-auto">
+<!-- Left Column: Celebration & Headline -->
+<div class="md:col-span-6 flex flex-col justify-center relative z-20 md:pr-12">
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-primary uppercase mb-6 leading-none">
+                YOU'RE IN.
+            </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-12">
+                Your registration is confirmed. Welcome to the Tour de Rotary DSM. Get ready for an epic coastal ride.
+            </p>
+<!-- Event Image overlapping with background block -->
+<div class="relative w-full aspect-video md:aspect-square clip-diagonal overflow-hidden mb-12 md:mb-0 bg-primary-container">
+<img alt="Celebration Image" class="object-cover w-full h-full mix-blend-luminosity opacity-80" data-alt="A dynamic, high-contrast, editorial-style photograph of cyclists crossing a finish line in a coastal setting at golden hour. The image features a bright, optimistic light-mode aesthetic with deep royal navy shadows and vibrant gold highlights. The scene conveys communal achievement, elite performance, and a sense of coastal vitality, characteristic of professional sports photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJBgRogL1cGwp_D98RQUZwA6ku_h7hcTeTYaRBpXoVqkKv9HsBIZhzx5XZ9Nux5fyUuYpYxnEqhAe7_EKHp1yG0rywfFJthkFiyzYXDCuTpZbeIsBjgzcwHpxMRcazx5vnq9qurXrfr6VPYyDClqRunvDE96DfyPQ-I9fyFbq_7JzCSV_w7OKZNQQ-jiBA576GfRrGAPbUg9p8Jd88cEJ2I_lwivYBGd6cHXktygMUHNrzMFPfX7j3cw"/>
+</div>
+</div>
+<!-- Right Column: Pass & Actions -->
+<div class="md:col-span-6 flex flex-col relative z-30 pt-12 md:pt-0">
+<!-- Pass Card Container -->
+<div class="bg-surface-container-lowest border-2 border-primary p-6 md:p-8 relative shadow-xl transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 w-16 h-16 bg-secondary-container rounded-bl-full opacity-20"></div>
+<div class="absolute bottom-0 left-0 w-16 h-16 bg-tertiary-container rounded-tr-full opacity-10"></div>
+<div class="flex justify-between items-start border-b border-outline-variant pb-6 mb-6">
+<div>
+<p class="text-label-ui font-label-ui text-on-surface-variant uppercase tracking-widest mb-1">Pass Details</p>
+<h2 class="text-headline-md font-headline-md text-primary">Rider Pass</h2>
+<p class="text-body-md font-body-md text-on-surface mt-2 font-bold">Elite Tier - 120km Route</p>
+</div>
+<!-- QR Code Placeholder -->
+<div class="w-24 h-24 bg-surface-variant flex items-center justify-center border border-outline-variant">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant" style="font-variation-settings: 'FILL' 0;">qr_code_2</span>
+</div>
+</div>
+<!-- Order Info -->
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div>
+<p class="text-label-ui font-label-ui text-on-surface-variant uppercase mb-1">Order #</p>
+<p class="text-label-ui font-label-ui text-on-surface">TRD-24-8902</p>
+</div>
+<div>
+<p class="text-label-ui font-label-ui text-on-surface-variant uppercase mb-1">Date</p>
+<p class="text-label-ui font-label-ui text-on-surface">Oct 24, 2024</p>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-4">
+<button class="w-full bg-secondary text-on-secondary font-headline-lg text-body-lg uppercase py-4 rounded-none hover:bg-primary hover:text-on-primary transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">download</span>
+                        Download Receipt
+                    </button>
+<button class="w-full bg-transparent border-2 border-primary text-primary font-headline-md text-body-md py-4 rounded-none hover:bg-surface-variant transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">calendar_add_on</span>
+                        Add to Calendar
+                    </button>
+</div>
+</div>
+<!-- Next Steps & Collectible Teaser -->
+<div class="mt-12 bg-surface-container-high p-6 md:p-8 border-l-4 border-tertiary-container clip-diagonal-reverse relative overflow-hidden">
+<!-- Background Graphic -->
+<span class="material-symbols-outlined text-[120px] text-tertiary-fixed-dim absolute right-0 bottom-0 translate-x-1/4 translate-y-1/4 opacity-30 rotate-12" style="font-variation-settings: 'FILL' 1;">token</span>
+<h3 class="text-headline-md font-headline-md text-on-surface mb-4">Next Steps</h3>
+<div class="flex flex-col gap-4 mb-6">
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-10 h-10 bg-primary text-on-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">directions_bike</span>
+</div>
+<span class="text-body-md font-body-md font-bold group-hover:text-primary transition-colors underline decoration-2 underline-offset-4">Start Training Plan</span>
+</a>
+<a class="flex items-center gap-4 group" href="#">
+<div class="w-10 h-10 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">share</span>
+</div>
+<span class="text-body-md font-body-md font-bold group-hover:text-primary transition-colors underline decoration-2 underline-offset-4">Share with Squad</span>
+</a>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant">
+<p class="text-label-ui font-label-ui text-on-surface-variant uppercase tracking-wider mb-2">Exclusive Collectible Unlocked</p>
+<p class="text-body-md font-body-md text-on-surface">You've earned the 'Early Bird Coastal' digital badge. View it in your Profile.</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Suppressed Footer for focused transactional outcome -->
+</body></html>

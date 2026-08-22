@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payment Pending - Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#1a1c1c",
+                        "inverse-primary": "#a7c8ff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dadada",
+                        "surface-container-highest": "#e2e2e2",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "primary": "#00305f",
+                        "on-primary-container": "#87b6fe",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#ffddb3",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#d5e3ff",
+                        "background": "#f9f9f9",
+                        "outline-variant": "#c2c6d2",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary-container": "#8f0037",
+                        "on-secondary-container": "#6b4500",
+                        "on-tertiary-container": "#ff95a8",
+                        "secondary-fixed-dim": "#ffb950",
+                        "inverse-surface": "#2f3131",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#004687",
+                        "surface-bright": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "on-tertiary-fixed": "#400014",
+                        "surface-variant": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "tertiary-fixed": "#ffd9de",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-container": "#eeeeee",
+                        "on-primary-fixed-variant": "#014788",
+                        "secondary-container": "#feae23",
+                        "on-primary-fixed": "#001b3b",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#650025",
+                        "on-surface-variant": "#424750",
+                        "on-secondary-fixed-variant": "#624000",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#825500",
+                        "on-secondary-fixed": "#291800",
+                        "surface-container-low": "#f3f3f4",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-error-container": "#93000a",
+                        "surface-tint": "#2b5fa1",
+                        "outline": "#737781"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "data-metric": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-hero": ["Anton"],
+                        "label-ui": ["JetBrains Mono"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-x-hidden">
+<!-- Top Navigation (Transactional - Suppressed) -->
+<!-- Nav omitted as this is a transactional page -->
+<main class="flex-grow flex flex-col md:flex-row relative">
+<!-- Asymmetric Background Image -->
+<div class="hidden md:block absolute inset-0 z-0 pointer-events-none" style="clip-path: polygon(55% 0, 100% 0, 100% 100%, 45% 100%);">
+<div class="w-full h-full bg-cover bg-center opacity-80" data-alt="A serene morning scene of professional cyclists stretching and preparing their bikes near the coast of Dar es Salaam. Golden hour sunlight casts long shadows on the pavement. The mood is calm, focused, and anticipatory. High contrast lighting with deep coastal blues and warm sunrise tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCU6F1O3JdXw5Sjx_2ZmTHjxs3xcDB1VeAKQa8gIMapJDD3v3mGWxRJ4AydlnbUfQG91pw5bMCQkWacS6LZqvX88Dzpn3uwc2845olgXncq0SY53ndND1dLGdWCGOudLydRs7koneW423m_6oaDwSXmlmS0GNffbYm3LUmDCG_vRwvldC9i8foNDJuTt4yxEkEyJ5VjmBwy6M7ZTgTpuJNElCN3VC7g-e2qpXOQycLvjuqa2D7e2AZT9A')"></div>
+<div class="absolute inset-0 bg-primary opacity-20 mix-blend-multiply"></div>
+</div>
+<!-- Content Canvas -->
+<div class="relative z-10 flex flex-col justify-center items-center md:items-start w-full md:w-1/2 p-margin-mobile md:p-margin-desktop min-h-[819px] bg-surface-container-lowest md:bg-transparent">
+<div class="w-full max-w-lg bg-surface-container-lowest p-8 border-2 border-outline-variant relative overflow-hidden group">
+<!-- Subtle Wave Pattern Watermark -->
+<div class="absolute -right-20 -bottom-20 opacity-5 pointer-events-none transition-transform duration-700 group-hover:scale-110">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">water</span>
+</div>
+<!-- Status Icon -->
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center mb-6 border border-outline">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl">hourglass_empty</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary uppercase mb-2">Payment Pending</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">We are waiting for confirmation from your payment provider. This usually takes a few moments.</p>
+<!-- Order Details Box -->
+<div class="bg-surface p-6 border-l-4 border-secondary-container mb-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-ui text-label-ui text-outline uppercase">Order Number</span>
+<span class="font-body-md text-body-md font-bold">#TRD-8842</span>
+</div>
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-ui text-label-ui text-outline uppercase">Amount Due</span>
+<span class="font-data-metric text-data-metric text-primary">TZS 150,000</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-label-ui text-label-ui text-outline uppercase">Deadline</span>
+<span class="font-body-md text-body-md text-error font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 14:59 mins
+                        </span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-4">
+<button class="w-full bg-secondary text-on-secondary font-headline-md text-headline-md py-4 uppercase tracking-wider hover:bg-primary transition-colors duration-300">
+                        Check Status Again
+                    </button>
+<button class="w-full border-2 border-primary text-primary font-body-lg text-body-lg font-bold py-3 hover:bg-surface-container-low transition-colors duration-200">
+                        Change Payment Method
+                    </button>
+</div>
+<!-- Instructions -->
+<div class="mt-8 pt-6 border-t border-outline-variant">
+<h3 class="font-label-ui text-label-ui uppercase text-on-surface mb-2">Instructions</h3>
+<ul class="font-body-md text-body-md text-on-surface-variant space-y-2 list-disc list-inside">
+<li>Do not close this window if you are using mobile money.</li>
+<li>Check your phone for a USSD push prompt.</li>
+<li>If the timer expires, you can restart the payment process.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Mobile Image Treatment -->
+<div class="md:hidden w-full h-64 relative border-t-4 border-secondary" style="clip-path: polygon(0 12deg, 100% 0, 100% 100%, 0 100%);">
+<div class="w-full h-full bg-cover bg-center" data-alt="Close up of a professional racing bicycle gears and chain in focus. Soft blurred background of a coastal road at sunrise. The lighting highlights the metallic textures of the bike components, suggesting preparation and readiness for a long ride. High contrast, cool blue and warm gold palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCPc0qqsPynwLubfswwGoCDf4T16yNOiUQLDSBktGm0VYOBCnq2JijjkLVP0HwpLmDhqvkr8vTuRzQHGhhJxu2jCo0FycVH-nW5btu6u_C56dCSxX3lCsO7FlggwrLn_6KWOqwIGiibsV4pmMjEnOvra5DHBdwstLU8Y6TQGzR00vMxLpkuTFSnXLjSRX3o5lg8YckRxh92NdY753gCPC8hodVW8gdvc3NjtqWwjDEa_mbIdiKhlydwg')"></div>
+</div>
+</main>
+<!-- Footer omitted for transactional purity, but included as per shared components requested structure if needed. Leaving out to adhere to 'hide shell on transactional' rule. -->
+</body></html>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary DSM - Notifications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#825500",
+                        "secondary-fixed": "#ffddb3",
+                        "inverse-on-surface": "#f0f1f1",
+                        "inverse-surface": "#2f3131",
+                        "inverse-primary": "#a7c8ff",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9",
+                        "primary-container": "#004687",
+                        "on-surface": "#1a1c1c",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed-variant": "#624000",
+                        "background": "#f9f9f9",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "error-container": "#ffdad6",
+                        "primary": "#00305f",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-secondary-container": "#6b4500",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-primary-fixed": "#001b3b",
+                        "on-primary-fixed-variant": "#014788",
+                        "surface-container": "#eeeeee",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#291800",
+                        "on-background": "#1a1c1c",
+                        "outline": "#737781",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-tertiary-fixed": "#400014",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#87b6fe",
+                        "tertiary-container": "#8f0037",
+                        "secondary-fixed-dim": "#ffb950",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f3f3f4",
+                        "primary-fixed": "#d5e3ff",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-dim": "#dadada",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-container": "#feae23",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#424750",
+                        "surface": "#f9f9f9",
+                        "surface-tint": "#2b5fa1",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "tertiary": "#650025",
+                        "outline-variant": "#c2c6d2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "diagonal-offset": "12deg",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "data-metric": [
+                            "Anton"
+                        ],
+                        "label-ui": [
+                            "JetBrains Mono"
+                        ],
+                        "headline-md": [
+                            "Hanken Grotesk"
+                        ],
+                        "display-hero": [
+                            "Anton"
+                        ],
+                        "body-lg": [
+                            "Hanken Grotesk"
+                        ],
+                        "headline-lg-mobile": [
+                            "Anton"
+                        ],
+                        "headline-lg": [
+                            "Anton"
+                        ],
+                        "body-md": [
+                            "Hanken Grotesk"
+                        ]
+                    },
+                    "fontSize": {
+                        "data-metric": [
+                            "48px",
+                            {
+                                "lineHeight": "100%",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "label-ui": [
+                            "14px",
+                            {
+                                "lineHeight": "100%",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "headline-md": [
+                            "32px",
+                            {
+                                "lineHeight": "120%",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "display-hero": [
+                            "96px",
+                            {
+                                "lineHeight": "90%",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "body-lg": [
+                            "20px",
+                            {
+                                "lineHeight": "160%",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-lg-mobile": [
+                            "40px",
+                            {
+                                "lineHeight": "100%",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "headline-lg": [
+                            "64px",
+                            {
+                                "lineHeight": "100%",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "150%",
+                                "fontWeight": "400"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+        }
+        .clip-diagonal-top {
+            clip-path: polygon(0 4vw, 100% 0, 100% 100%, 0 100%);
+        }
+        
+        /* Custom Toggle Switch Styles based on Material/Tailwind */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #00305f; /* primary */
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #00305f; /* primary */
+        }
+        .toggle-checkbox:checked + .toggle-label:after {
+            transform: translateX(100%);
+            border-color: white;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary border-b-2 border-secondary shadow-none hidden md:flex">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">TOUR DE ROTARY DSM</div>
+<div class="flex gap-gutter items-center">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+<a class="text-label-ui font-label-ui text-secondary border-b-2 border-secondary pb-1 hover:text-secondary transition-colors duration-300" href="#">Profile</a> <!-- Assuming this is under Profile -->
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-none font-label-ui uppercase tracking-wider hover:bg-primary hover:text-on-primary border border-secondary transition-colors ml-4">Register Now</button>
+</div>
+</nav>
+<div class="flex flex-1 relative">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-screen fixed left-0 top-0 pt-20 bg-surface-container-lowest border-r border-outline-variant w-64 z-40">
+<div class="p-6 border-b border-outline-variant">
+<img class="w-16 h-16 rounded-full mb-4 object-cover" data-alt="A close-up studio portrait of an athletic cyclist wearing premium dark navy and gold cycling gear. The lighting is crisp and dramatic, highlighting determination. The background is a clean, bright white to match a light-mode UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgkc3bK1cT8ym83SbRAy7mqett-FrGLCqV52ctwASPuY7EhJILlzYKVagrClRUT4Ep1r-RuZktv8Ckqfj3P673Sl4MbtJsV--Nz2owI_VZh_CQMs7kfLko_UtPXrDv4pcJFj-0OutOQa9Vj055KahCYQ3sHWWO7zqd9S_2NGUKaWquwDyJhRZkC242qsnjYLU1pZUncUuJqJN2O-vMS-Z7wFtAdSQyK5THLyb0jcz8oo1d9jTTU0neiA"/>
+<h2 class="text-headline-md font-headline-lg text-primary">Rider Profile</h2>
+<p class="text-label-ui font-label-ui text-secondary mt-1">Elite Tier</p>
+<button class="mt-6 w-full bg-primary text-on-primary py-3 font-label-ui uppercase tracking-wider hover:bg-secondary transition-colors">Log Ride</button>
+</div>
+<div class="flex-1 overflow-y-auto py-4">
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">event</span>
+                    My Events
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">directions_bike</span>
+                    Training
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+                    Orders
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">token</span>
+                    Collectibles
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">group_add</span>
+                    Referrals
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui bg-secondary text-on-secondary font-bold translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+                    Profile
+                </a>
+</div>
+<div class="mt-auto border-t border-outline-variant py-4">
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </a>
+<a class="flex items-center gap-4 px-6 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low transition-all duration-200" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+                    Support
+                </a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-64 w-full relative z-10 pb-32">
+<!-- Hero Section -->
+<section class="relative bg-primary text-on-primary pt-24 pb-32 px-margin-mobile md:px-margin-desktop clip-diagonal">
+<div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-8 z-10">
+<h1 class="text-display-hero font-display-hero mb-4">NOTIFICATIONS</h1>
+<p class="text-body-lg font-body-lg opacity-80 max-w-2xl">Manage how we communicate with you. Stay in the loop with event updates, training tips, and community news without the noise.</p>
+</div>
+</div>
+</section>
+<!-- Preferences Content -->
+<section class="px-margin-mobile md:px-margin-desktop py-16 -mt-16 relative z-20">
+<div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Left Column: Toggles -->
+<div class="md:col-span-7 flex flex-col gap-12">
+<!-- Group 1: Events -->
+<div class="bg-surface-container-lowest p-8 border-l-4 border-secondary shadow-sm">
+<h3 class="text-headline-md font-headline-md text-primary mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-3xl">event</span>
+                                Event Updates
+                            </h3>
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-bold text-body-lg">Registration Reminders</p>
+<p class="text-on-surface-variant text-sm mt-1">Get alerted before price jumps and deadlines.</p>
+</div>
+<div class="flex items-center gap-4">
+<label class="flex items-center cursor-pointer">
+<div class="relative">
+<input checked="" class="sr-only" type="checkbox"/>
+<div class="block bg-outline-variant w-14 h-8 rounded-full"></div>
+<div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition transform translate-x-6 bg-primary"></div>
+</div>
+<span class="ml-3 text-label-ui font-label-ui">Email</span>
+</label>
+</div>
+</div>
+<hr class="border-surface-variant"/>
+<div class="flex items-center justify-between">
+<div>
+<p class="font-bold text-body-lg">Race Day Logistics</p>
+<p class="text-on-surface-variant text-sm mt-1">Critical updates on routing, weather, and start times.</p>
+</div>
+<div class="flex items-center gap-4">
+<label class="flex items-center cursor-pointer">
+<div class="relative">
+<input checked="" class="sr-only" type="checkbox"/>
+<div class="block bg-outline-variant w-14 h-8 rounded-full"></div>
+<div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition transform translate-x-6 bg-primary"></div>
+</div>
+<span class="ml-3 text-label-ui font-label-ui">SMS</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- Group 2: Training -->
+<div class="bg-surface-container-lowest p-8 border-l-4 border-primary shadow-sm">
+<h3 class="text-headline-md font-headline-md text-primary mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl">directions_bike</span>
+                                Training &amp; Activity
+                            </h3>
+<div class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-bold text-body-lg">Weekly Training Plans</p>
+<p class="text-on-surface-variant text-sm mt-1">Receive customized training schedules every Sunday.</p>
+</div>
+<div class="flex items-center gap-4">
+<label class="flex items-center cursor-pointer">
+<div class="relative">
+<input class="sr-only" type="checkbox"/>
+<div class="block bg-outline-variant w-14 h-8 rounded-full"></div>
+<div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+</div>
+<span class="ml-3 text-label-ui font-label-ui">Email</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Context & Newsletter -->
+<div class="md:col-span-5 flex flex-col gap-8">
+<!-- Newsletter Block -->
+<div class="bg-primary text-on-primary p-8 relative overflow-hidden">
+<div class="absolute -bottom-10 -right-10 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined" style="font-size: 200px;">mail</span>
+</div>
+<h3 class="text-headline-md font-headline-md mb-4 relative z-10">The Peloton Press</h3>
+<p class="mb-6 relative z-10 text-body-md opacity-90">Subscribe to our monthly newsletter for stories from the coast, impact reports, and exclusive gear drops.</p>
+<form class="relative z-10">
+<div class="flex flex-col gap-4">
+<div class="relative border-b-2 border-secondary">
+<label class="text-label-ui font-label-ui text-secondary mb-1 block">Email Address</label>
+<input class="w-full bg-transparent border-none focus:ring-0 text-on-primary placeholder-on-primary/50 py-2 px-0 text-body-lg" placeholder="rider@example.com" type="email"/>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-3 font-label-ui uppercase tracking-wider hover:bg-white hover:text-primary transition-colors self-start mt-2" type="button">Subscribe</button>
+</div>
+</form>
+</div>
+<!-- Human Element Support Card -->
+<div class="bg-surface-container-high p-6 flex items-start gap-6 relative">
+<img class="w-24 h-24 rounded-none object-cover border-2 border-secondary shadow-md" data-alt="A warm, candid portrait of a female volunteer wearing a bright yellow high-visibility vest over a Rotary t-shirt. She is smiling encouragingly at the camera. The setting is a sunny, coastal outdoor environment with a slightly blurred background to emphasize her supportive expression. Clean, vibrant lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqjOQAtDnbuSpTax_B5CA3VA6ROfVU0GwJFWhj10dkJlly-iYIeklx8SnZ8VPzjNPk-onYB2KSsSHkH_pT3Jcx9rz1FQqMSejVKH-9JgOuriVyUhM25lY2Yg-jEqNwFErJ0VjElibvc1JumNcDR1j28AbHT73_PHzjEylTuiyExSOe0Y27z3D-Mn8h_Cn7kXpUxKiUnDFMsL1hsA_RqLUTN5-oyJADoMQYoV9Zzeqs3mkZhszul6aLiw"/>
+<div>
+<h4 class="text-body-lg font-bold text-primary mb-1">Need help?</h4>
+<p class="text-sm text-on-surface-variant mb-4">Our support crew is on standby to help you manage your account settings.</p>
+<a class="text-secondary font-label-ui text-label-ui uppercase hover:underline flex items-center gap-1" href="#">
+                                     Contact Support <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-primary border-t-2 border-secondary shadow-lg lg:hidden pb-safe">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 hover:opacity-100 active:bg-primary-container p-2 rounded transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-ui font-label-ui text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 hover:opacity-100 active:bg-primary-container p-2 rounded transition-all" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-label-ui font-label-ui text-[10px]">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 hover:opacity-100 active:bg-primary-container p-2 rounded transition-all" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="text-label-ui font-label-ui text-[10px]">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary active:scale-95 transition-transform p-2 rounded" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span class="text-label-ui font-label-ui text-[10px]">Profile</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-12 flex flex-col items-center gap-6 bg-primary text-on-primary border-t-4 border-secondary mt-auto relative z-20 pb-24 lg:pb-12 lg:ml-64 w-[calc(100%-256px)]">
+<div class="text-headline-md font-headline-lg text-on-primary text-center">TOUR DE ROTARY DSM</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Contact HQ</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">Volunteer</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-70 hover:text-tertiary-fixed-dim transition-colors" href="#">FAQ</a>
+</div>
+<p class="text-body-md font-body-md text-center opacity-70">© 2024 Tour de Rotary Dar es Salaam. All Rights Reserved.</p>
+</footer>
+<script>
+        // Simple JS for toggle visual logic if needed, though handled mostly by CSS
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => {
+                const dot = e.target.parentElement.querySelector('.dot');
+                if(e.target.checked) {
+                    dot.classList.add('translate-x-6', 'bg-primary');
+                } else {
+                    dot.classList.remove('translate-x-6', 'bg-primary');
+                }
+            })
+        })
+    </script>
+</body></html>
