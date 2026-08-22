@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HQ SMS Queue - Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#ffb950",
+                      "inverse-surface": "#2f3131",
+                      "on-secondary-fixed-variant": "#624000",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#014788",
+                      "on-tertiary-fixed-variant": "#900038",
+                      "outline-variant": "#c2c6d2",
+                      "surface-bright": "#f9f9f9",
+                      "primary": "#00305f",
+                      "secondary": "#825500",
+                      "inverse-primary": "#a7c8ff",
+                      "on-primary-fixed": "#001b3b",
+                      "surface": "#f9f9f9",
+                      "surface-container": "#eeeeee",
+                      "on-primary-container": "#87b6fe",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed": "#400014",
+                      "on-surface": "#1a1c1c",
+                      "secondary-container": "#feae23",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed-dim": "#ffb2be",
+                      "tertiary-fixed": "#ffd9de",
+                      "surface-variant": "#e2e2e2",
+                      "outline": "#737781",
+                      "error": "#ba1a1a",
+                      "surface-container-low": "#f3f3f4",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#8f0037",
+                      "surface-tint": "#2b5fa1",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#424750",
+                      "tertiary": "#650025",
+                      "background": "#f9f9f9",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-tertiary-container": "#ff95a8",
+                      "on-background": "#1a1c1c",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed": "#291800",
+                      "on-secondary-container": "#6b4500",
+                      "surface-dim": "#dadada",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "secondary-fixed": "#ffddb3",
+                      "surface-container-high": "#e8e8e8",
+                      "inverse-on-surface": "#f0f1f1",
+                      "primary-container": "#004687",
+                      "primary-fixed": "#d5e3ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "diagonal-offset": "12deg",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "display-hero": [
+                              "Anton"
+                      ],
+                      "label-ui": [
+                              "JetBrains Mono"
+                      ],
+                      "data-metric": [
+                              "Anton"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Anton"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg-mobile": [
+                              "Anton"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "display-hero": [
+                              "96px",
+                              {
+                                      "lineHeight": "90%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "data-metric": [
+                              "48px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%);
+        }
+        
+        /* Ensure font weights are correct */
+        .font-headline-lg, .font-display-hero, .font-data-metric, .font-headline-lg-mobile {
+            font-family: 'Anton', sans-serif;
+            font-weight: 400;
+        }
+        .font-headline-md {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 800;
+        }
+        .font-body-md, .font-body-lg {
+            font-family: 'Hanken Grotesk', sans-serif;
+            font-weight: 400;
+        }
+        .font-label-ui {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col md:flex-row font-body-md">
+<!-- SideNavBar (Desktop Only) -->
+<nav class="hidden lg:flex flex-col h-screen fixed left-0 top-0 pt-20 bg-surface-container-lowest dark:bg-surface-container-lowest text-primary dark:text-primary h-full w-64 left-0 fixed border-r border-outline-variant flat no shadows z-40">
+<div class="px-6 mb-8">
+<h2 class="text-headline-md font-headline-lg text-primary">Rider Profile</h2>
+<p class="text-label-ui font-label-ui text-on-surface-variant mt-1">Elite Tier</p>
+</div>
+<div class="flex flex-col gap-2 px-4 flex-grow">
+<!-- Labels: text-label-ui font-label-ui. Body: text-body-md font-body-md -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-none bg-secondary text-on-secondary font-bold hover:bg-primary hover:text-on-primary transition-all duration-200 translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-label-ui font-label-ui">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="text-label-ui font-label-ui">My Events</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined">directions_bike</span>
+<span class="text-label-ui font-label-ui">Training</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-label-ui font-label-ui">Orders</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined">token</span>
+<span class="text-label-ui font-label-ui">Collectibles</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined">group_add</span>
+<span class="text-label-ui font-label-ui">Referrals</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-ui font-label-ui">Profile</span>
+</a>
+</div>
+<div class="p-6">
+<button class="w-full bg-secondary-container text-on-secondary-container font-headline-md text-headline-md uppercase py-3 rounded-none border border-transparent hover:border-on-secondary-container transition-colors">
+                Log Ride
+            </button>
+</div>
+<div class="flex flex-col gap-2 px-4 pb-8 border-t border-outline-variant pt-4">
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-label-ui font-label-ui">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span class="text-label-ui font-label-ui">Support</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-64 relative min-h-screen">
+<!-- TopAppBar (Desktop) -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-primary docked full-width top-0 border-b-2 border-secondary flat no shadows hidden md:flex">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">
+                TOUR DE ROTARY DSM
+            </div>
+<nav class="flex gap-8">
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Events</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Train</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Cause</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">About</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Shop</a>
+<a class="text-label-ui font-label-ui text-on-primary opacity-80 hover:text-secondary transition-colors duration-300" href="#">Sponsors</a>
+</nav>
+<button class="bg-secondary text-on-secondary px-6 py-2 font-headline-md text-headline-md uppercase border-2 border-transparent hover:bg-primary hover:text-secondary hover:border-secondary transition-all">
+                Register Now
+            </button>
+</header>
+<!-- Page Content -->
+<div class="p-margin-mobile md:p-margin-desktop pt-8 pb-32">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+<div>
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg uppercase text-primary mb-2">HQ SMS Queue</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">Manage scheduled communications, monitor delivery status, and trigger manual broadcasts to riders.</p>
+</div>
+<button class="flex items-center gap-2 bg-secondary text-on-secondary font-headline-md text-headline-md uppercase px-6 py-3 border-2 border-secondary hover:bg-transparent hover:text-secondary transition-colors whitespace-nowrap">
+<span class="material-symbols-outlined">send</span>
+                    Manual Send
+                </button>
+</div>
+<!-- Stats Overview - Asymmetric Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-16">
+<div class="md:col-span-5 bg-primary text-on-primary p-8 border-l-4 border-secondary relative overflow-hidden">
+<!-- Decor -->
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl opacity-10" style="font-variation-settings: 'FILL' 1;">sms</span>
+<div class="text-label-ui font-label-ui opacity-80 mb-2">Total Queued Today</div>
+<div class="text-data-metric font-data-metric text-secondary-fixed">14,208</div>
+<div class="mt-8 flex gap-4">
+<div>
+<div class="text-label-ui font-label-ui opacity-60">Delivered</div>
+<div class="text-headline-md font-headline-md">12,100</div>
+</div>
+<div class="w-px bg-on-primary opacity-20"></div>
+<div>
+<div class="text-label-ui font-label-ui opacity-60">Pending</div>
+<div class="text-headline-md font-headline-md">2,050</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 bg-tertiary-container text-on-tertiary-container p-8 relative">
+<div class="text-label-ui font-label-ui opacity-80 mb-2">Failed Deliveries</div>
+<div class="text-data-metric font-data-metric text-tertiary-fixed">58</div>
+<button class="mt-8 flex items-center gap-2 text-label-ui font-label-ui border-b border-on-tertiary-container pb-1 hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" style="font-size: 16px;">refresh</span>
+                        Retry All Failed
+                    </button>
+</div>
+<div class="md:col-span-3 bg-surface-container-high p-8 border border-outline-variant flex flex-col justify-between">
+<div>
+<div class="text-label-ui font-label-ui text-on-surface-variant mb-2">System Status</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-[#10B981]"></div>
+<span class="text-headline-md font-headline-md text-primary">Gateway OK</span>
+</div>
+</div>
+<div class="text-label-ui font-label-ui text-on-surface-variant mt-4">
+                        Last ping: 2 mins ago
+                    </div>
+</div>
+</div>
+<!-- Operational Panels - Queue List -->
+<h2 class="text-headline-md font-headline-lg uppercase text-primary mb-6 border-b-2 border-primary pb-2 inline-block">Scheduled Batches</h2>
+<div class="flex flex-col gap-4">
+<!-- Item 1: Event Morning (Pending) -->
+<div class="bg-surface-bright border-l-4 border-secondary-container p-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 relative group">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 text-label-ui font-label-ui uppercase tracking-widest text-xs">Event Morning</span>
+<span class="text-label-ui font-label-ui text-on-surface-variant">Scheduled: Oct 12, 05:00 AM</span>
+</div>
+<h3 class="text-body-lg font-body-lg text-primary font-bold mb-1">Race Day Logistics &amp; Weather Update</h3>
+<p class="text-body-md font-body-md text-on-surface-variant truncate max-w-2xl">"Tour de Rotary: Good morning riders! Weather is clear, 24C. Gates open at 05:30. Ensure your bib is pinned..."</p>
+</div>
+<div class="flex items-center gap-8 w-full lg:w-auto justify-between lg:justify-end border-t lg:border-t-0 border-outline-variant pt-4 lg:pt-0">
+<div class="text-right">
+<div class="text-headline-md font-headline-md text-primary">4,500</div>
+<div class="text-label-ui font-label-ui text-on-surface-variant">Recipients</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="flex items-center gap-2 text-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<span class="text-label-ui font-label-ui font-bold">Pending</span>
+</div>
+<button class="text-label-ui font-label-ui text-primary underline hover:text-secondary transition-colors">Edit Batch</button>
+</div>
+</div>
+</div>
+<!-- Item 2: Day 0 Confirmation (Delivered) -->
+<div class="bg-surface-bright border-l-4 border-[#10B981] p-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="bg-primary-container text-on-primary-container px-2 py-1 text-label-ui font-label-ui uppercase tracking-widest text-xs">Day 0 Confirmation</span>
+<span class="text-label-ui font-label-ui text-on-surface-variant">Sent: Today, 09:00 AM</span>
+</div>
+<h3 class="text-body-lg font-body-lg text-primary font-bold mb-1">Registration Success Auto-Reply</h3>
+<p class="text-body-md font-body-md text-on-surface-variant truncate max-w-2xl">"Welcome to Tour de Rotary! Your registration for the 50km route is confirmed. Check email for receipt..."</p>
+</div>
+<div class="flex items-center gap-8 w-full lg:w-auto justify-between lg:justify-end border-t lg:border-t-0 border-outline-variant pt-4 lg:pt-0">
+<div class="text-right">
+<div class="text-headline-md font-headline-md text-primary">120</div>
+<div class="text-label-ui font-label-ui text-on-surface-variant">Recipients</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="flex items-center gap-2 text-[#10B981]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-label-ui font-label-ui font-bold">Delivered</span>
+</div>
+<button class="text-label-ui font-label-ui text-primary underline hover:text-secondary transition-colors">View Report</button>
+</div>
+</div>
+</div>
+<!-- Item 3: Day 7 Release (Failed/Partial) -->
+<div class="bg-tertiary-fixed text-on-tertiary-fixed border-l-4 border-tertiary p-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="bg-tertiary text-on-tertiary px-2 py-1 text-label-ui font-label-ui uppercase tracking-widest text-xs">Day 7 Release</span>
+<span class="text-label-ui font-label-ui opacity-80">Sent: Today, 08:30 AM</span>
+</div>
+<h3 class="text-body-lg font-body-lg font-bold mb-1">Fundraising Milestone Unlocked</h3>
+<p class="text-body-md font-body-md opacity-90 truncate max-w-2xl">"Incredible! We just passed 50M TZS for the clean water initiative. Thank you for riding with purpose..."</p>
+</div>
+<div class="flex items-center gap-8 w-full lg:w-auto justify-between lg:justify-end border-t lg:border-t-0 border-tertiary/20 pt-4 lg:pt-0">
+<div class="text-right">
+<div class="text-headline-md font-headline-md">2,400</div>
+<div class="text-label-ui font-label-ui opacity-80">Recipients</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">error</span>
+<span class="text-label-ui font-label-ui font-bold">58 Failed</span>
+</div>
+<button class="text-label-ui font-label-ui underline hover:opacity-70 transition-opacity">Retry Failed</button>
+</div>
+</div>
+</div>
+<!-- Item 4: Day 4 Reminder (Pending) -->
+<div class="bg-surface-bright border-l-4 border-secondary-container p-6 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6 relative group">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<span class="bg-primary-container text-on-primary-container px-2 py-1 text-label-ui font-label-ui uppercase tracking-widest text-xs">Day 4 Reminder</span>
+<span class="text-label-ui font-label-ui text-on-surface-variant">Scheduled: Oct 08, 12:00 PM</span>
+</div>
+<h3 class="text-body-lg font-body-lg text-primary font-bold mb-1">Kit Collection Reminder</h3>
+<p class="text-body-md font-body-md text-on-surface-variant truncate max-w-2xl">"Tour de Rotary: Don't forget to collect your rider kit this weekend at the Masaki Rotary Club..."</p>
+</div>
+<div class="flex items-center gap-8 w-full lg:w-auto justify-between lg:justify-end border-t lg:border-t-0 border-outline-variant pt-4 lg:pt-0">
+<div class="text-right">
+<div class="text-headline-md font-headline-md text-primary">3,120</div>
+<div class="text-label-ui font-label-ui text-on-surface-variant">Recipients</div>
+</div>
+<div class="flex flex-col items-end gap-2">
+<div class="flex items-center gap-2 text-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">schedule</span>
+<span class="text-label-ui font-label-ui font-bold">Pending</span>
+</div>
+<button class="text-label-ui font-label-ui text-primary underline hover:text-secondary transition-colors">Edit Batch</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Action Image Break -->
+<div class="mt-16 relative w-full h-64 clip-diagonal overflow-hidden flex items-center justify-center">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-multiply" data-alt="A striking digital installation art piece featuring glowing, generative geometric shapes suspended in a vast, minimalist gallery space. The room is illuminated by high-key, soft white lighting that creates a bright, modern light-mode aesthetic. The artwork relies on a sophisticated palette of deep blacks and pristine whites, punctuated by intense accents of vibrant red. The mood is serene yet technologically advanced." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOuqPFtZdJ7H9kEx5wBHa-EdXHflw4KnsTrc7hJlwvavPNJ4uuatwSY0RBhAtmZWgG05QDRkTorJMOvoiJmcKv3ABUiam1T1vswvx-oavwLJ4bMSbfFe4E_1fkwgBFbsQOVhIT9vS5a_3CIWlz4KNFr-bQlFMcsLZyf4eV8Fi7EmNhdm4bPjWxDqOvKxz5aBOlq_yL77ZKMOGKXDo9_drxz6ivUTMF3DaeildMYXHb6-Ir7GpGUD3oSQ')"></div>
+<div class="absolute inset-0 bg-primary/80"></div>
+<div class="relative z-10 text-center px-4">
+<h3 class="text-headline-md font-headline-lg text-on-primary uppercase mb-4">Need to broadcast an emergency update?</h3>
+<button class="bg-tertiary text-on-tertiary px-8 py-3 font-headline-md text-headline-md uppercase hover:bg-tertiary-container transition-colors shadow-lg">
+                        Override Queue
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary dark:bg-primary text-secondary dark:text-secondary docked full-width bottom-0 border-t-2 border-secondary shadow-lg">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-ui font-label-ui text-[10px]">Home</span>
+</a>
+<!-- Events -->
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-label-ui font-label-ui text-[10px]">Events</span>
+</a>
+<!-- Training -->
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="text-label-ui font-label-ui text-[10px]">Training</span>
+</a>
+<!-- Profile (Active) -->
+<a class="flex flex-col items-center justify-center text-secondary active:bg-primary-container scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+<span class="text-label-ui font-label-ui text-[10px]">Profile</span>
+</a>
+</nav>
+</body></html>

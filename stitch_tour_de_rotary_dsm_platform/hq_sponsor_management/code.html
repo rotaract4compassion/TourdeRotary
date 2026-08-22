@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary DSM - HQ Sponsor Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#f9f9f9",
+                      "background": "#f9f9f9",
+                      "surface-container": "#eeeeee",
+                      "inverse-primary": "#a7c8ff",
+                      "inverse-surface": "#2f3131",
+                      "outline": "#737781",
+                      "secondary-fixed": "#ffddb3",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed": "#400014",
+                      "surface-dim": "#dadada",
+                      "primary-fixed": "#d5e3ff",
+                      "on-secondary-fixed-variant": "#624000",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-fixed": "#291800",
+                      "on-primary-fixed-variant": "#014788",
+                      "surface-tint": "#2b5fa1",
+                      "on-surface-variant": "#424750",
+                      "error-container": "#ffdad6",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "on-secondary-container": "#6b4500",
+                      "error": "#ba1a1a",
+                      "tertiary-container": "#8f0037",
+                      "on-tertiary-container": "#ff95a8",
+                      "on-primary-fixed": "#001b3b",
+                      "on-error-container": "#93000a",
+                      "on-background": "#1a1c1c",
+                      "surface": "#f9f9f9",
+                      "on-surface": "#1a1c1c",
+                      "tertiary-fixed": "#ffd9de",
+                      "on-primary-container": "#87b6fe",
+                      "inverse-on-surface": "#f0f1f1",
+                      "secondary": "#825500",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed-variant": "#900038",
+                      "primary-container": "#004687",
+                      "on-error": "#ffffff",
+                      "tertiary": "#650025",
+                      "surface-container-high": "#e8e8e8",
+                      "secondary-fixed-dim": "#ffb950",
+                      "surface-variant": "#e2e2e2",
+                      "surface-container-low": "#f3f3f4",
+                      "secondary-container": "#feae23",
+                      "outline-variant": "#c2c6d2",
+                      "surface-container-highest": "#e2e2e2",
+                      "primary": "#00305f",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb2be"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "diagonal-offset": "12deg"
+              },
+              "fontFamily": {
+                      "data-metric": [
+                              "Anton"
+                      ],
+                      "label-ui": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg-mobile": [
+                              "Anton"
+                      ],
+                      "display-hero": [
+                              "Anton"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Anton"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "data-metric": [
+                              "48px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero": [
+                              "96px",
+                              {
+                                      "lineHeight": "90%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%); }
+        .clip-diagonal-both { clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%); }
+        
+        /* Thin scrollbar for dense data tables */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f3f3f4; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c2c6d2; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #737781; 
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col md:flex-row overflow-x-hidden">
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden lg:flex flex-col h-screen fixed left-0 top-0 pt-20 bg-surface-container-lowest text-primary border-r border-outline-variant w-64 z-40">
+<div class="px-6 mb-8">
+<h1 class="text-headline-md font-headline-lg text-primary tracking-tighter">TOUR DE ROTARY DSM</h1>
+</div>
+<div class="px-6 py-4 border-b border-outline-variant mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold">HQ</div>
+<div>
+<h2 class="font-label-ui text-label-ui font-bold">Admin HQ</h2>
+<p class="font-label-ui text-[12px] opacity-70">Super User</p>
+</div>
+</div>
+</div>
+<ul class="flex flex-col gap-1 px-4 flex-grow">
+<li><a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low font-label-ui text-label-ui hover:text-on-primary hover:bg-primary transition-all duration-200" href="#"><span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Dashboard</a></li>
+<li><a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low font-label-ui text-label-ui hover:text-on-primary hover:bg-primary transition-all duration-200" href="#"><span class="material-symbols-outlined" data-icon="event">event</span> Events</a></li>
+<li><a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low font-label-ui text-label-ui hover:text-on-primary hover:bg-primary transition-all duration-200" href="#"><span class="material-symbols-outlined" data-icon="group">group</span> Riders</a></li>
+<li><a class="flex items-center gap-3 px-4 py-3 bg-secondary text-on-secondary font-bold font-label-ui text-label-ui transition-all duration-200 translate-x-1" href="#"><span class="material-symbols-outlined" data-icon="handshake">handshake</span> Sponsors</a></li>
+<li><a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low font-label-ui text-label-ui hover:text-on-primary hover:bg-primary transition-all duration-200" href="#"><span class="material-symbols-outlined" data-icon="payments">payments</span> Finances</a></li>
+</ul>
+<ul class="flex flex-col gap-1 px-4 pb-6 mt-auto">
+<li><a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container-low font-label-ui text-label-ui hover:text-on-primary hover:bg-primary transition-all duration-200" href="#"><span class="material-symbols-outlined" data-icon="settings">settings</span> Settings</a></li>
+</ul>
+</nav>
+<!-- TopAppBar (Mobile/Tablet) -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile py-4 bg-primary text-secondary lg:hidden">
+<h1 class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">TOUR DE ROTARY</h1>
+<button class="text-secondary"><span class="material-symbols-outlined">menu</span></button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full lg:ml-64 relative">
+<!-- Hero Section with Diagonal Cut -->
+<section class="relative bg-primary text-on-primary pb-24 pt-12 px-margin-mobile md:px-margin-desktop clip-diagonal z-10">
+<div class="absolute inset-0 opacity-10 pointer-events-none" data-alt="A subtle, repeating geometric wave pattern overlay, reminiscent of rolling hills or coastal tides, styled in a dark navy blue vector graphic format to act as a watermark background." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0IEpfwiwRRsGKCjRc51V5FD3WdGQGl428bkbKQOY_vb7RBknGYP7DXWPucDYb-9z6hrvdIBFhe-auYvhmv7aY9kwi8Wzleqh0REVFxw-sUvBI8okYtxaRzUdGycuIREHcOnSYl46uPHDY-O_wq_z-yHruGgb1__skOdk4VYUCovqpbhmnPzyFwGl2x0rYXXavK93Py-etqDsSMVuDuZT2lWmLzgAJMHi0q6yqlW-e4KPy1XrER04M-g')"></div>
+<div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<div>
+<p class="font-label-ui text-label-ui text-secondary mb-2 tracking-widest uppercase">Admin Headquarters</p>
+<h1 class="font-display-hero text-headline-lg-mobile md:text-display-hero uppercase">Sponsor<br/>Management</h1>
+</div>
+<div class="flex gap-4">
+<button class="bg-secondary text-primary font-data-metric text-xl px-8 py-4 uppercase tracking-wide hover:bg-primary-container hover:text-on-primary transition-colors duration-300">New Sponsor</button>
+<button class="border-2 border-secondary text-secondary font-label-ui text-label-ui px-6 py-4 uppercase hover:bg-secondary hover:text-primary transition-colors duration-300"><span class="material-symbols-outlined align-middle mr-2">download</span> Export</button>
+</div>
+</div>
+</section>
+<!-- Metrics Bento Grid (Overlapping Hero) -->
+<section class="relative z-20 max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop -mt-16 mb-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<div class="bg-surface-container-lowest p-6 border-l-4 border-secondary shadow-lg">
+<p class="font-label-ui text-label-ui text-on-surface-variant mb-1 uppercase">Total Value</p>
+<p class="font-data-metric text-data-metric text-primary">$1.2M</p>
+<p class="font-label-ui text-[12px] text-tertiary mt-2">↑ 15% vs Last Year</p>
+</div>
+<div class="bg-primary-container text-on-primary-container p-6 border-l-4 border-secondary shadow-lg">
+<p class="font-label-ui text-label-ui mb-1 uppercase">Active Sponsors</p>
+<p class="font-data-metric text-data-metric">24</p>
+<p class="font-label-ui text-[12px] opacity-80 mt-2">3 Pending Activation</p>
+</div>
+<div class="bg-surface-container-lowest p-6 border-l-4 border-outline-variant shadow-lg">
+<p class="font-label-ui text-label-ui text-on-surface-variant mb-1 uppercase">Deliverables</p>
+<p class="font-data-metric text-data-metric text-on-surface">142</p>
+<p class="font-label-ui text-[12px] text-on-surface-variant mt-2">89 Completed</p>
+</div>
+<div class="bg-tertiary text-on-tertiary p-6 shadow-lg">
+<p class="font-label-ui text-label-ui mb-1 uppercase">Pending Payments</p>
+<p class="font-data-metric text-data-metric">$450K</p>
+<p class="font-label-ui text-[12px] opacity-80 mt-2">Action Required</p>
+</div>
+</div>
+</section>
+<!-- Controls Toolbar -->
+<section class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop mb-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4 bg-surface-container-lowest p-4 border-b-2 border-primary">
+<div class="w-full md:w-1/3 relative">
+<span class="material-symbols-outlined absolute left-0 top-2 text-outline">search</span>
+<input class="w-full bg-transparent border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 pl-8 py-2 font-label-ui text-label-ui text-on-surface transition-colors rounded-none" placeholder="Search sponsors, tiers..." type="text"/>
+</div>
+<div class="flex gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
+<button class="px-4 py-2 bg-primary text-on-primary font-label-ui text-label-ui uppercase border border-primary whitespace-nowrap">All Tiers</button>
+<button class="px-4 py-2 bg-transparent text-on-surface font-label-ui text-label-ui uppercase border border-outline-variant hover:border-primary whitespace-nowrap">Platinum</button>
+<button class="px-4 py-2 bg-transparent text-on-surface font-label-ui text-label-ui uppercase border border-outline-variant hover:border-primary whitespace-nowrap">Gold</button>
+<button class="px-4 py-2 bg-transparent text-on-surface font-label-ui text-label-ui uppercase border border-outline-variant hover:border-primary whitespace-nowrap">Silver</button>
+</div>
+</div>
+</section>
+<!-- High-Density Data Grid / Editorial Panels -->
+<section class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop mb-24 grid grid-cols-1 gap-8">
+<!-- Sponsor Panel 1 (Platinum - Active) -->
+<article class="relative flex flex-col md:flex-row bg-surface-container-lowest border border-outline-variant group">
+<!-- Action Image -->
+<div class="w-full md:w-1/3 h-48 md:h-auto relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A high-energy, vibrant photograph showing cyclists riding past a large, professionally branded 'Apex Financial' archway during a sunny coastal cycling event. The lighting is bright and dynamic, capturing motion blur on the wheels while the sponsor branding remains crisp and prominent." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwYaR5elDkoIGHOInesSnGWZt-PCfqogvN0WYpe45VIZQknk5fl-ymYbnFOuN269sKJGVTE4WSllCKe12Am_FL7gE5WY_4QAWLFwBeoNexQDioO1mbtB2dhyqkIGVC2MrAmj4LmPItrw3Qpr5HhP_r1SqESoevAuN0AHaLYl-2sDjd8-jlaKbWpyc_gey6rGuwtdWe0PS8vJktGNm_X4WEj1klPn60A_GxSHOlLwEuBddvCMZaHGUaNQ"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+<div class="absolute top-4 left-4 bg-secondary text-primary font-data-metric text-2xl px-3 py-1 uppercase">Platinum</div>
+</div>
+<!-- Data Core -->
+<div class="w-full md:w-2/3 p-6 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-headline-lg text-headline-md text-primary uppercase leading-none">Apex Financial</h3>
+<p class="font-label-ui text-label-ui text-on-surface-variant mt-2">Main Stage Naming Rights &amp; Route Archways</p>
+</div>
+<span class="material-symbols-outlined text-outline hover:text-primary cursor-pointer">more_vert</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+<div>
+<p class="font-label-ui text-[10px] text-outline uppercase tracking-widest mb-1">Payment</p>
+<p class="font-label-ui text-label-ui text-primary font-bold"><span class="w-2 h-2 inline-block rounded-full bg-secondary mr-2"></span>Received</p>
+</div>
+<div>
+<p class="font-label-ui text-[10px] text-outline uppercase tracking-widest mb-1">Activation</p>
+<p class="font-label-ui text-label-ui text-on-surface"><span class="w-2 h-2 inline-block rounded-full bg-[#10b981] mr-2"></span>Live</p>
+</div>
+<div>
+<p class="font-label-ui text-[10px] text-outline uppercase tracking-widest mb-1">Deliverables</p>
+<p class="font-label-ui text-label-ui text-on-surface">18 / 20</p>
+</div>
+<div>
+<p class="font-label-ui text-[10px] text-outline uppercase tracking-widest mb-1">Report</p>
+<p class="font-label-ui text-label-ui text-on-surface">Generating</p>
+</div>
+</div>
+<div class="flex gap-3 mt-auto pt-4 border-t border-outline-variant">
+<button class="text-primary font-label-ui text-label-ui hover:underline uppercase">View Agreement</button>
+<button class="text-primary font-label-ui text-label-ui hover:underline uppercase ml-auto">Manage Assets</button>
+</div>
+</div>
+</article>
+<!-- Sponsor Panel 2 (Gold - Pending) -->
+<article class="relative flex flex-col md:flex-row bg-surface-container-lowest border border-outline-variant group">
+<!-- Action Image -->
+<div class="w-full md:w-1/3 h-48 md:h-auto relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A focused shot of a hydration station at a cycling event, branded with 'AquaVita' logos. Volunteers in branded t-shirts are handing out water bottles to passing cyclists. The scene is bright, energetic, and slightly chaotic, emphasizing the grassroots community feel of the event." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCViGQxrkB3hzZ920qTdBEtpOd18doOePvU7ZT4XNanDUUYmzg4PJclF7Vb4wXYr5rfAgzTtdp3GPZd_LoIPon30Htes_TFjl7njs_1C-YP1cl887WOkUUkPUX-bsflOeI1e6ELGZAkcQZJqqc6pPUJ2bn0vSbijNuR8rm_l5wqmPT-x9heCXSb3-5q7cuWiuryqBX3c-CBKk8xWQgZAOiOReGtMrkJxkr1DCUPajlB3clsOmdgDNPlQQ"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+<div class="absolute top-4 left-4 bg-outline-variant text-on-surface font-data-metric text-2xl px-3 py-1 uppercase">Gold</div>
+</div>
+<!-- Data Core -->
+<div class="w-full md:w-2/3 p-6 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-headline-lg text-headline-md text-primary uppercase leading-none">AquaVita</h3>
+<p class="font-label-ui text-label-ui text-on-surface-variant mt-2">Official Hydration Partner &amp; Pit Stops</p>
+</div>
+<span class="material-symbols-outlined text-outline hover:text-primary cursor-pointer">more_vert</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+<div>
+<p class="font-label-ui text-[10px] text-outline uppercase tracking-widest mb-1">Payment</p>
+<p class="font-label-ui text-label-ui text-tertiary font-bold"><span class="w-2 h-2 inline-block rounded-full bg-tertiary mr-2"></span>Pending 50%</p>
+</div>
+<div>
+<p class="font-label-ui text-[10px] text-outline uppercase tracking-widest mb-1">Activation</p>
+<p class="font-label-ui text-label-ui text-on-surface"><span class="w-2 h-2 inline-block rounded-full bg-outline-variant mr-2"></span>Incomplete</p>
+</div>
+<div>
+<p class="font-label-ui text-[10px] text-outline uppercase tracking-widest mb-1">Deliverables</p>
+<p class="font-label-ui text-label-ui text-on-surface">4 / 12</p>
+</div>
+<div>
+<p class="font-label-ui text-[10px] text-outline uppercase tracking-widest mb-1">Report</p>
+<p class="font-label-ui text-label-ui text-on-surface-variant">Not Started</p>
+</div>
+</div>
+<div class="flex gap-3 mt-auto pt-4 border-t border-outline-variant">
+<button class="text-tertiary font-label-ui text-label-ui hover:underline uppercase flex items-center"><span class="material-symbols-outlined text-[16px] mr-1">warning</span> Send Reminder</button>
+<button class="text-primary font-label-ui text-label-ui hover:underline uppercase ml-auto">Manage Assets</button>
+</div>
+</div>
+</article>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-primary border-t-2 border-secondary shadow-lg lg:hidden">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-ui text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-ui text-[10px]">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary p-2 scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="handshake" style="font-variation-settings: 'FILL' 1;">handshake</span>
+<span class="font-label-ui text-[10px] font-bold">Sponsors</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-label-ui text-[10px]">Profile</span>
+</a>
+</nav>
+</body></html>

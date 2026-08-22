@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Athletic HQ - HQ Event Configuration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#1a1c1c",
+                      "on-surface-variant": "#424750",
+                      "primary-fixed": "#d5e3ff",
+                      "surface-tint": "#2b5fa1",
+                      "surface-container": "#eeeeee",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-tertiary": "#ffffff",
+                      "surface": "#f9f9f9",
+                      "inverse-on-surface": "#f0f1f1",
+                      "surface-container-low": "#f3f3f4",
+                      "outline-variant": "#c2c6d2",
+                      "on-tertiary-fixed-variant": "#900038",
+                      "on-secondary-fixed-variant": "#624000",
+                      "on-primary-fixed-variant": "#014788",
+                      "secondary-container": "#feae23",
+                      "primary-container": "#004687",
+                      "tertiary-fixed": "#ffd9de",
+                      "inverse-surface": "#2f3131",
+                      "inverse-primary": "#a7c8ff",
+                      "primary": "#00305f",
+                      "surface-dim": "#dadada",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#1a1c1c",
+                      "secondary": "#825500",
+                      "on-tertiary-container": "#ff95a8",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#650025",
+                      "background": "#f9f9f9",
+                      "on-primary-fixed": "#001b3b",
+                      "on-error-container": "#93000a",
+                      "on-secondary-container": "#6b4500",
+                      "secondary-fixed-dim": "#ffb950",
+                      "tertiary-fixed-dim": "#ffb2be",
+                      "surface-variant": "#e2e2e2",
+                      "surface-container-high": "#e8e8e8",
+                      "outline": "#737781",
+                      "secondary-fixed": "#ffddb3",
+                      "on-primary-container": "#87b6fe",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "tertiary-container": "#8f0037",
+                      "on-tertiary-fixed": "#400014",
+                      "on-secondary-fixed": "#291800",
+                      "error": "#ba1a1a",
+                      "surface-bright": "#f9f9f9",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "diagonal-offset": "12deg",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "data-metric": ["Anton"],
+                      "label-ui": ["JetBrains Mono"],
+                      "headline-md": ["Hanken Grotesk"],
+                      "body-md": ["Hanken Grotesk"],
+                      "headline-lg": ["Anton"],
+                      "display-hero": ["Anton"],
+                      "headline-lg-mobile": ["Anton"],
+                      "body-lg": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "data-metric": ["48px", {"lineHeight": "100%", "fontWeight": "400"}],
+                      "label-ui": ["14px", {"lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                      "headline-md": ["32px", {"lineHeight": "120%", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}],
+                      "headline-lg": ["64px", {"lineHeight": "100%", "fontWeight": "400"}],
+                      "display-hero": ["96px", {"lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["40px", {"lineHeight": "100%", "fontWeight": "400"}],
+                      "body-lg": ["20px", {"lineHeight": "160%", "fontWeight": "400"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-primary dark:bg-primary text-on-primary dark:text-on-primary fixed top-0 w-full z-50 border-b-2 border-secondary flex justify-between items-center h-16 px-gutter">
+<div class="font-headline-md text-headline-md uppercase tracking-tighter text-secondary">
+            Athletic HQ
+        </div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:bg-primary-container transition-colors p-2 rounded-full active:opacity-90" style="font-variation-settings: 'FILL' 0;">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-primary-container transition-colors p-2 rounded-full active:opacity-90" style="font-variation-settings: 'FILL' 0;">settings</span>
+<span class="material-symbols-outlined cursor-pointer hover:bg-primary-container transition-colors p-2 rounded-full active:opacity-90" style="font-variation-settings: 'FILL' 0;">cloud_done</span>
+</div>
+</header>
+<div class="flex h-screen pt-16">
+<!-- SideNavBar -->
+<nav class="hidden md:flex bg-surface-container-lowest dark:bg-inverse-surface text-primary dark:text-inverse-primary fixed left-0 top-16 bottom-0 w-64 z-40 border-r-2 border-on-surface flex-col h-full py-unit">
+<div class="px-gutter pb-6 pt-4 border-b border-surface-variant">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-md text-body-md">
+                        US
+                    </div>
+<div>
+<div class="font-headline-md text-body-lg text-primary">Command Center</div>
+<div class="font-label-ui text-[12px] text-on-surface-variant">Phase: Live Event</div>
+</div>
+</div>
+<button class="w-full bg-tertiary text-on-primary font-label-ui text-label-ui py-2 px-4 uppercase rounded-DEFAULT flex items-center justify-center gap-2 hover:bg-error transition-colors">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+                    Emergency Broadcast
+                </button>
+</div>
+<div class="flex-1 overflow-y-auto py-4">
+<ul class="space-y-1 px-2">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-high transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+                            HQ Overview
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-high transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+                            Registrations
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-high transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+                            Inventory
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-high transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]">directions_bike</span>
+                            Activities
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-high transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]">video_library</span>
+                            Content
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-DEFAULT font-label-ui text-label-ui uppercase bg-secondary text-on-secondary font-bold border-l-4 border-primary transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined text-[20px]">settings</span>
+                            Configuration
+                        </a>
+</li>
+</ul>
+</div>
+<div class="px-2 pt-4 border-t border-surface-variant">
+<ul class="space-y-1">
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-DEFAULT font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">help</span>
+                            Support
+                        </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 rounded-DEFAULT font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">analytics</span>
+                            System Status
+                        </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 relative min-h-full pb-32">
+<!-- Hero Header -->
+<div class="relative w-full h-[40vh] min-h-[300px] bg-primary overflow-hidden clip-diagonal z-10 flex items-end pb-gutter px-gutter md:px-margin-desktop">
+<div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-multiply" data-alt="A detailed, wide-angle photograph of an athletic event finish line being set up in the early morning light. The scene is busy but organized, with event staff assembling metal trusses, hanging banners, and laying down track mats. The lighting is soft and directional, creating a sense of anticipation and professional preparation. The colors are dominated by deep navy blues and industrial grays, with bright accents of safety orange and event branding. High-contrast, editorial style photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0D-0ymGe7ZWbK8Rr_zPmiRnvcoy8DyT2nv4quzTEX49epGT9cHpMqqkDmSQiv3djqa3RWU_Q0JyYp8-NQSTCWhKBtNJzBJFLO93dcFNPXQVGdMT6pkvaw2KjFvWaKgBEH0H6OwOMD65vVHirR9Jh_TpmUQAhOKYlPqIROLhVJYdyQZEE9ScePqU6F89jVrc1Ri45DH0mnenXnOCVevimZwvSwvVXqvrTtMVbBLq-eOlZm34YUuJjLCw')"></div>
+<div class="relative z-20 max-w-4xl">
+<h1 class="font-display-hero text-display-hero text-on-primary uppercase mb-2">Annual Setup</h1>
+<p class="font-body-md text-body-lg text-primary-fixed-dim max-w-2xl">Configure global event parameters, brand assets, and structural tiers for the upcoming season. Changes here propagate across all public-facing surfaces.</p>
+</div>
+</div>
+<div class="px-gutter md:px-margin-desktop -mt-16 relative z-20 flex flex-col lg:flex-row gap-gutter">
+<!-- Vertical Nav (In-page) -->
+<div class="lg:w-1/4 shrink-0">
+<div class="sticky top-24 bg-surface-container-lowest border-2 border-on-surface p-6 flex flex-col gap-2">
+<button class="w-full text-left font-label-ui text-label-ui uppercase p-3 border-l-4 border-primary bg-surface-container font-bold text-on-surface flex justify-between items-center">
+                            Core Details
+                            <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="w-full text-left font-label-ui text-label-ui uppercase p-3 border-l-4 border-transparent hover:bg-surface-container text-on-surface-variant flex justify-between items-center transition-colors">
+                            Phasing &amp; Dates
+                        </button>
+<button class="w-full text-left font-label-ui text-label-ui uppercase p-3 border-l-4 border-transparent hover:bg-surface-container text-on-surface-variant flex justify-between items-center transition-colors">
+                            Brand Assets
+                        </button>
+<button class="w-full text-left font-label-ui text-label-ui uppercase p-3 border-l-4 border-transparent hover:bg-surface-container text-on-surface-variant flex justify-between items-center transition-colors">
+                            Section Ordering
+                        </button>
+<button class="w-full text-left font-label-ui text-label-ui uppercase p-3 border-l-4 border-transparent hover:bg-surface-container text-on-surface-variant flex justify-between items-center transition-colors">
+                            Sponsors &amp; Tiers
+                        </button>
+<div class="mt-8 pt-6 border-t border-surface-variant">
+<button class="w-full bg-secondary text-on-secondary font-label-ui text-label-ui py-3 px-4 uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors border border-transparent">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+                                Clone Last Year
+                            </button>
+</div>
+</div>
+</div>
+<!-- Config Panel -->
+<div class="lg:w-3/4 flex flex-col gap-gutter">
+<!-- Core Details Panel -->
+<section class="bg-surface-container-lowest border border-surface-variant p-8 relative">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-outline-variant text-[32px]">edit_document</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Core Event Identity</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex flex-col gap-1">
+<label class="font-label-ui text-label-ui text-on-surface-variant uppercase">Event Name</label>
+<input class="bg-transparent border-0 border-b-2 border-on-surface px-0 py-2 font-body-md text-body-lg text-on-surface focus:ring-0 focus:border-primary transition-colors" type="text" value="Coastal Classic 2025"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-ui text-label-ui text-on-surface-variant uppercase">Primary Location</label>
+<input class="bg-transparent border-0 border-b-2 border-on-surface px-0 py-2 font-body-md text-body-lg text-on-surface focus:ring-0 focus:border-primary transition-colors" type="text" value="Dar es Salaam, TZ"/>
+</div>
+<div class="flex flex-col gap-1 md:col-span-2">
+<label class="font-label-ui text-label-ui text-on-surface-variant uppercase">Global Event Tagline</label>
+<input class="bg-transparent border-0 border-b-2 border-on-surface px-0 py-2 font-body-md text-body-lg text-on-surface focus:ring-0 focus:border-primary transition-colors" type="text" value="Ride the Edge of the Continent."/>
+</div>
+</div>
+</section>
+<!-- Save Action -->
+<div class="flex justify-end pt-4">
+<button class="bg-secondary text-on-secondary font-label-ui text-label-ui py-4 px-8 uppercase flex items-center justify-center gap-2 hover:bg-primary transition-colors font-bold tracking-wider">
+                            Save Configuration
+                            <span class="material-symbols-outlined text-[20px]">save</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-dim dark:bg-surface-dim text-on-surface dark:text-on-surface w-full mt-auto border-t border-outline-variant flex justify-between items-center px-gutter md:px-desktop py-unit absolute bottom-0 left-0 right-0">
+<div class="font-label-ui text-label-ui text-primary">
+                    Athletic HQ
+                </div>
+<div class="font-body-md text-[14px]">
+                    © 2024 Elite Performance HQ. All rights reserved.
+                </div>
+<div class="flex gap-4">
+<a class="font-label-ui text-label-ui text-on-surface-variant hover:text-primary underline-offset-4 transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-ui text-label-ui text-on-surface-variant hover:text-primary underline-offset-4 transition-colors" href="#">Terms of Service</a>
+<a class="font-label-ui text-label-ui text-on-surface-variant hover:text-primary underline-offset-4 transition-colors" href="#">API Documentation</a>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

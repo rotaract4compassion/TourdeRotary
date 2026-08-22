@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tour de Rotary DSM - Referrals &amp; Leaderboard Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "inverse-primary": "#a7c8ff",
+                        "inverse-surface": "#2f3131",
+                        "outline": "#737781",
+                        "secondary-fixed": "#ffddb3",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#400014",
+                        "surface-dim": "#dadada",
+                        "primary-fixed": "#d5e3ff",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed": "#291800",
+                        "on-primary-fixed-variant": "#014788",
+                        "surface-tint": "#2b5fa1",
+                        "on-surface-variant": "#424750",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-secondary-container": "#6b4500",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#8f0037",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-primary-fixed": "#001b3b",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "tertiary-fixed": "#ffd9de",
+                        "on-primary-container": "#87b6fe",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary": "#825500",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "primary-container": "#004687",
+                        "on-error": "#ffffff",
+                        "tertiary": "#650025",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed-dim": "#ffb950",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-low": "#f3f3f4",
+                        "secondary-container": "#feae23",
+                        "outline-variant": "#c2c6d2",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary": "#00305f",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb2be"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg"
+                    },
+                    "fontFamily": {
+                        "data-metric": ["Anton"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Anton"],
+                        "display-hero": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .clip-diagonal-bottom {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+        }
+        .clip-diagonal-top {
+            clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0 100%);
+        }
+        .wave-bg {
+            background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0px, rgba(0,0,0,0.02) 2px, transparent 2px, transparent 10px);
+        }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar (Hidden md+) -->
+<header class="sticky top-0 z-50 flex md:hidden justify-between items-center w-full px-margin-mobile py-4 bg-primary text-secondary border-b-2 border-secondary">
+<span class="text-headline-md font-headline-lg-mobile text-on-primary uppercase tracking-tighter">TOUR DE ROTARY DSM</span>
+</header>
+<!-- SideNavBar (Hidden < md) -->
+<nav class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 pt-20 bg-surface-container-lowest border-r border-outline-variant z-40">
+<div class="px-6 pb-8">
+<div class="w-16 h-16 rounded-full bg-surface-dim overflow-hidden mb-4">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="A close up portrait of an active cyclist wearing premium athletic gear, brightly lit in a sunny outdoor setting with coastal vibes, highly detailed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-tI174VS4_kW9hpGzs64Rn-3_GmT4OgyoYnU_Kz4wt2hDBDKdLWzR1Ehk2VDB1ISB0A4sHtCpTJ5u7BfKGAjUPgPAwd7rFZenv1IeTwTNrgW8FKOxF5GbxxPPe2a5wBbA0iDwa8FB0G53SePhmmROfS989XrjKccQXYgI8CXmnOM2PlSrjHEfOptBBfpySd4ipZZV_0GuLB7v4LZa2lNRM1dYHZ7eGoEY-9q_8nTZWAl-Lm1On-Pn8Q"/>
+</div>
+<h2 class="text-headline-md font-headline-md text-primary">Rider Profile</h2>
+<p class="text-label-ui font-label-ui text-on-surface-variant uppercase mt-1">Elite Tier</p>
+</div>
+<div class="flex-1 overflow-y-auto">
+<ul class="flex flex-col">
+<!-- Dashboard -->
+<li>
+<a class="flex items-center px-6 py-4 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-4" data-weight="fill">dashboard</span>
+<span>Dashboard</span>
+</a>
+</li>
+<!-- My Events -->
+<li>
+<a class="flex items-center px-6 py-4 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-primary transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-4" data-weight="fill">event</span>
+<span>My Events</span>
+</a>
+</li>
+<!-- Referrals (Active) -->
+<li>
+<a class="flex items-center px-6 py-4 text-label-ui font-label-ui bg-secondary text-on-secondary font-bold translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined mr-4" data-weight="fill">group_add</span>
+<span>Referrals</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="px-6 py-6 border-t border-outline-variant">
+<button class="w-full bg-primary text-on-primary font-data-metric text-data-metric py-3 px-4 flex items-center justify-center uppercase hover:bg-primary-container transition-colors">
+                Log Ride
+            </button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="md:ml-64 min-h-screen relative wave-bg">
+<!-- Header Section -->
+<section class="w-full px-margin-mobile md:px-margin-desktop py-12 md:py-20 flex flex-col md:flex-row justify-between items-start md:items-end gap-8 relative z-10">
+<div>
+<h1 class="text-display-hero font-display-hero text-primary uppercase leading-none">HQ Referrals</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mt-4">Real-time performance tracking for community growth. Monitor top advocates and conversion metrics.</p>
+</div>
+<div class="flex gap-4">
+<button class="border-2 border-primary text-primary px-6 py-3 font-label-ui text-label-ui uppercase hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined">download</span>
+                    Export Report
+                </button>
+</div>
+</section>
+<!-- Stats Overview (Asymmetric Grid) -->
+<section class="w-full px-margin-mobile md:px-margin-desktop mb-16 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Stat Block -->
+<div class="md:col-span-7 bg-primary text-on-primary p-8 md:p-12 clip-diagonal-bottom relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 bg-[url('placeholder')]" data-alt="Abstract geometric pattern resembling bicycle gears and coastal waves in dark navy and white, creating a subtle background texture for a sports analytics dashboard." style="background-size: cover; background-position: center;"></div>
+<div class="relative z-10">
+<span class="text-label-ui font-label-ui uppercase opacity-80 tracking-widest block mb-2">Total Referrals Initiated</span>
+<div class="text-display-hero font-display-hero text-secondary">2,845</div>
+<div class="flex items-center gap-2 mt-4 text-body-md font-body-md">
+<span class="material-symbols-outlined text-secondary">trending_up</span>
+<span>+15% from last month</span>
+</div>
+</div>
+</div>
+<!-- Secondary Stats Stack -->
+<div class="md:col-span-5 flex flex-col gap-gutter">
+<div class="bg-surface-container-high p-8 border-l-4 border-tertiary">
+<span class="text-label-ui font-label-ui uppercase text-on-surface-variant block mb-2">Conversion Rate</span>
+<div class="text-data-metric font-data-metric text-primary">68.2%</div>
+</div>
+<div class="bg-surface-container-high p-8 border-l-4 border-error">
+<span class="text-label-ui font-label-ui uppercase text-on-surface-variant block mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-error" style="font-size: 1.2em;">warning</span>
+                            Flagged for Review
+                        </span>
+<div class="text-data-metric font-data-metric text-error">12</div>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2 text-sm">Potential duplicates detected</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Split Screen Editorial Layout: Leaderboard & Activity -->
+<section class="w-full mb-20 relative z-10">
+<div class="flex flex-col lg:flex-row min-h-[800px]">
+<!-- Left: Leaderboard (High contrast navy) -->
+<div class="w-full lg:w-7/12 bg-primary text-on-primary pl-margin-mobile pr-margin-mobile md:pl-margin-desktop md:pr-12 py-16 clip-diagonal-top lg:clip-path-none relative">
+<div class="flex justify-between items-end mb-12 border-b border-on-primary/20 pb-4">
+<h2 class="text-headline-lg font-headline-lg uppercase text-secondary">Top Advocates</h2>
+<span class="text-label-ui font-label-ui uppercase opacity-70">This Season</span>
+</div>
+<div class="flex flex-col gap-6">
+<!-- Leaderboard Item 1 -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-6">
+<span class="text-headline-md font-headline-md text-secondary opacity-50 w-8">01</span>
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-secondary group-hover:scale-110 transition-transform">
+<img class="w-full h-full object-cover" data-alt="A portrait of a confident female cyclist looking at the camera, lit by golden hour sunlight near a coastal road, representing a top performing athlete." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAntc43gH6oWAxeFikm6dhiSQicNNcgqa6k_DULa8ifmDwjb39V2oufDEIxcPmlarXLDaU_7HB8py-ulIfn066lZrMK9H3NhgLaqNDGBUG-_ncpnRfTYjQJni0xklbFskCtqUns99hINbZCCovUu4559s-2VcZFcUmlZJqlyUwvZ-Sj0XJwfFjAwTqJMjJPPvQJ1SYzz1ht8vglAgRQ-IIoyi1YjUX1673AvWlJ13ZoA5Tz1Zcrw70BaQ"/>
+</div>
+<div>
+<h3 class="text-body-lg font-body-lg font-bold">Sarah Jenkins</h3>
+<span class="text-label-ui font-label-ui text-secondary opacity-80">Dar es Salaam CC</span>
+</div>
+</div>
+<div class="text-right">
+<div class="text-headline-md font-headline-md">142</div>
+<span class="text-label-ui font-label-ui uppercase opacity-60">Completed</span>
+</div>
+</div>
+<!-- Leaderboard Item 2 -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-6">
+<span class="text-headline-md font-headline-md text-on-primary opacity-50 w-8">02</span>
+<div class="w-16 h-16 rounded-full overflow-hidden border border-on-primary/30 group-hover:scale-110 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Portrait of a smiling male marathon runner in athletic gear, standing on a bright coastal path, conveying energy and community leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvox7BXU8F4FioMV1hY7lSPxsnZvKYiY79l9zN7K1r46znzfyOBBGg5-nMUrye5122Dqxc9dvMlsidYumQu9tsecvNHeZwHKK4jyR5VJ2lwQGT7BxIeEp1Qomw9btygrBOH7dFk12uyaDjyfKLkym0bd83N3TLKfEXeh3Y7kVnmg-w27AwE-Q2JtaQKIg_h0To7wMF1QKvMhc3IYhgVceT9wi7KErdh5LN_B8cfWOEOfwpZhxk3JRBLA"/>
+</div>
+<div>
+<h3 class="text-body-lg font-body-lg font-bold">Michael Omondi</h3>
+<span class="text-label-ui font-label-ui text-on-primary opacity-60">Independent</span>
+</div>
+</div>
+<div class="text-right">
+<div class="text-headline-md font-headline-md">98</div>
+<span class="text-label-ui font-label-ui uppercase opacity-60">Completed</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Fulfillment & Activity (Light mode) -->
+<div class="w-full lg:w-5/12 bg-surface-bright px-margin-mobile md:px-12 py-16">
+<h2 class="text-headline-md font-headline-md text-primary mb-8 uppercase">Reward Fulfillment</h2>
+<div class="space-y-8">
+<!-- Fulfillment Card -->
+<div class="border-2 border-outline-variant p-6 relative overflow-hidden group hover:border-primary transition-colors">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-body-lg font-body-lg font-bold text-primary">Elite Jersey Unlock</h4>
+<span class="text-label-ui font-label-ui text-on-surface-variant uppercase">Threshold: 50 Referrals</span>
+</div>
+<span class="bg-secondary text-on-secondary px-3 py-1 text-label-ui font-label-ui uppercase">Pending (24)</span>
+</div>
+<div class="w-full bg-surface-container h-2 mt-4">
+<div class="bg-primary h-full w-[65%]"></div>
+</div>
+</div>
+<!-- Fulfillment Card -->
+<div class="border-2 border-outline-variant p-6 relative overflow-hidden group hover:border-primary transition-colors">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-body-lg font-body-lg font-bold text-primary">VIP Race Day Access</h4>
+<span class="text-label-ui font-label-ui text-on-surface-variant uppercase">Threshold: 100 Referrals</span>
+</div>
+<span class="bg-surface-dim text-on-surface px-3 py-1 text-label-ui font-label-ui uppercase">All Fulfilled</span>
+</div>
+<div class="w-full bg-surface-container h-2 mt-4">
+<div class="bg-tertiary h-full w-[100%]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Hidden md+) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary text-secondary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="text-label-ui font-label-ui text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined mb-1">calendar_today</span>
+<span class="text-label-ui font-label-ui text-[10px]">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary scale-95 transition-transform p-2" href="#">
+<span class="material-symbols-outlined mb-1" data-weight="fill">group_add</span>
+<span class="text-label-ui font-label-ui text-[10px]">Referrals</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container p-2" href="#">
+<span class="material-symbols-outlined mb-1">account_circle</span>
+<span class="text-label-ui font-label-ui text-[10px]">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HQ System Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-low": "#f3f3f4",
+                      "surface-variant": "#e2e2e2",
+                      "surface-container-highest": "#e2e2e2",
+                      "outline": "#737781",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed-dim": "#ffb2be",
+                      "on-secondary-container": "#6b4500",
+                      "on-background": "#1a1c1c",
+                      "surface-container-high": "#e8e8e8",
+                      "on-secondary-fixed-variant": "#624000",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#d5e3ff",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "inverse-primary": "#a7c8ff",
+                      "on-tertiary-container": "#ff95a8",
+                      "secondary": "#825500",
+                      "inverse-surface": "#2f3131",
+                      "on-tertiary-fixed": "#400014",
+                      "outline-variant": "#c2c6d2",
+                      "surface-container": "#eeeeee",
+                      "background": "#f9f9f9",
+                      "tertiary-fixed": "#ffd9de",
+                      "on-primary-fixed-variant": "#014788",
+                      "surface-dim": "#dadada",
+                      "secondary-fixed": "#ffddb3",
+                      "inverse-on-surface": "#f0f1f1",
+                      "on-primary": "#ffffff",
+                      "primary": "#00305f",
+                      "on-secondary-fixed": "#291800",
+                      "on-primary-container": "#87b6fe",
+                      "secondary-container": "#feae23",
+                      "surface": "#f9f9f9",
+                      "on-surface-variant": "#424750",
+                      "surface-bright": "#f9f9f9",
+                      "primary-container": "#004687",
+                      "on-tertiary-fixed-variant": "#900038",
+                      "surface-tint": "#2b5fa1",
+                      "tertiary-container": "#8f0037",
+                      "secondary-fixed-dim": "#ffb950",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "tertiary": "#650025",
+                      "on-surface": "#1a1c1c",
+                      "on-error": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-fixed": "#001b3b"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "diagonal-offset": "12deg",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "data-metric": [
+                              "Anton"
+                      ],
+                      "display-hero": [
+                              "Anton"
+                      ],
+                      "headline-lg-mobile": [
+                              "Anton"
+                      ],
+                      "label-ui": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg": [
+                              "Anton"
+                      ],
+                      "body-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "150%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "data-metric": [
+                              "48px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero": [
+                              "96px",
+                              {
+                                      "lineHeight": "90%",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-ui": [
+                              "14px",
+                              {
+                                      "lineHeight": "100%",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "100%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "160%",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "120%",
+                                      "fontWeight": "800"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4vw), 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 calc(0% + 4vw), 100% 0, 100% 100%, 0 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col lg:flex-row">
+<!-- Top Navigation (Mobile) -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-mobile py-4 bg-primary lg:hidden border-b-2 border-secondary">
+<div class="text-headline-md font-headline-lg text-on-primary uppercase tracking-tighter">
+            TOUR DE ROTARY DSM
+        </div>
+<button class="text-secondary p-2" id="mobileMenuBtn">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</header>
+<!-- Side Navigation (Desktop) -->
+<aside class="hidden lg:flex flex-col h-screen fixed left-0 top-0 pt-20 w-64 bg-surface-container-lowest border-r border-outline-variant z-40">
+<div class="px-6 mb-8">
+<h1 class="text-headline-md font-headline-lg text-primary uppercase tracking-tighter mb-1">Rider Profile</h1>
+<p class="text-label-ui font-label-ui text-on-surface-variant">Elite Tier</p>
+</div>
+<nav class="flex-1 overflow-y-auto px-4 pb-20">
+<ul class="space-y-2">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary rounded transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                        Dashboard
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary rounded transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="event">event</span>
+                        My Events
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary rounded transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="directions_bike">directions_bike</span>
+                        Training
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary rounded transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+                        Orders
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary rounded transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="token">token</span>
+                        Collectibles
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary rounded transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group_add">group_add</span>
+                        Referrals
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary rounded transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+                        Profile
+                    </a>
+</li>
+</ul>
+</nav>
+<div class="p-4 border-t border-outline-variant bg-surface-container-lowest absolute bottom-0 w-full">
+<ul class="space-y-2 mb-4">
+<li>
+<a class="flex items-center gap-3 px-4 py-2 bg-secondary text-on-secondary font-bold text-label-ui font-label-ui rounded-none translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                        Settings
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 text-label-ui font-label-ui text-on-surface-variant hover:bg-surface-container-low hover:text-on-primary rounded transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+                        Support
+                    </a>
+</li>
+</ul>
+<button class="w-full bg-secondary text-on-secondary py-3 uppercase font-data-metric text-data-metric hover:bg-primary hover:text-on-primary transition-colors text-center text-[24px]">Log Ride</button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-64 relative min-h-screen flex flex-col">
+<!-- Hero Header -->
+<section class="relative bg-primary pt-12 pb-24 px-margin-mobile lg:px-margin-desktop clip-diagonal z-10 overflow-hidden">
+<!-- Decorative Wave -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;"></div>
+<div class="relative z-20 max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div>
+<h1 class="text-headline-lg-mobile lg:text-headline-lg font-headline-lg text-on-primary uppercase mb-2">HQ Settings</h1>
+<p class="text-body-lg font-body-lg text-inverse-primary max-w-2xl">Manage system configurations, integrations, and legal settings for the Tour de Rotary DSM platform.</p>
+</div>
+<div class="flex gap-4">
+<button class="border-2 border-secondary text-secondary bg-transparent hover:bg-secondary hover:text-on-secondary py-3 px-6 text-label-ui font-label-ui uppercase tracking-widest transition-colors">Discard</button>
+<button class="bg-secondary text-on-secondary py-3 px-8 text-label-ui font-label-ui uppercase tracking-widest hover:bg-surface-tint transition-colors">Save Changes</button>
+</div>
+</div>
+</section>
+<!-- Settings Content Grid -->
+<section class="flex-1 px-margin-mobile lg:px-margin-desktop py-12 -mt-16 z-20 pb-32">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Navigation Tabs (Desktop only within content area for quick jump) -->
+<div class="hidden md:block col-span-3">
+<div class="sticky top-24 bg-surface-container-lowest p-6 border-l-4 border-secondary">
+<h3 class="text-label-ui font-label-ui text-outline uppercase mb-6 tracking-widest">Configuration Areas</h3>
+<ul class="space-y-4 text-body-md font-body-md">
+<li><a class="text-primary hover:text-secondary font-bold" href="#org-info">Organisation Info</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary" href="#event-config">Event Config</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary" href="#integrations">Integrations</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary" href="#domain">Domain &amp; Security</a></li>
+<li><a class="text-on-surface-variant hover:text-secondary" href="#privacy">Privacy &amp; Legal</a></li>
+</ul>
+</div>
+</div>
+<!-- Forms Area -->
+<div class="col-span-1 md:col-span-9 space-y-12">
+<!-- Panel: Organisation Info -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 lg:p-10 relative overflow-hidden group" id="org-info">
+<div class="absolute top-0 right-0 w-32 h-32 bg-surface-container-low -mr-16 -mt-16 rotate-45 transform transition-transform group-hover:rotate-90 pointer-events-none"></div>
+<div class="flex items-center gap-4 mb-8 border-b border-outline-variant pb-4">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="corporate_fare">corporate_fare</span>
+<h2 class="text-headline-md font-headline-md text-primary uppercase">Organisation Info</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-label-ui font-label-ui text-outline uppercase block">Organization Name</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-secondary px-0 py-2 text-body-md text-on-surface font-body-md" type="text" value="Tour de Rotary DSM"/>
+</div>
+<div class="space-y-2">
+<label class="text-label-ui font-label-ui text-outline uppercase block">Contact Email</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-secondary px-0 py-2 text-body-md text-on-surface font-body-md" type="email" value="hq@tourderotarydsm.org"/>
+</div>
+<div class="space-y-2 md:col-span-2">
+<label class="text-label-ui font-label-ui text-outline uppercase block">HQ Address</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-secondary px-0 py-2 text-body-md text-on-surface font-body-md" type="text" value="Dar es Salaam, Tanzania"/>
+</div>
+</div>
+</div>
+<!-- Panel: Event Config -->
+<div class="bg-surface-container-lowest border border-outline-variant p-6 lg:p-10 relative overflow-hidden group" id="event-config">
+<div class="flex items-center gap-4 mb-8 border-b border-outline-variant pb-4">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="settings_suggest">settings_suggest</span>
+<h2 class="text-headline-md font-headline-md text-primary uppercase">Global Event Config</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+<div class="space-y-2">
+<label class="text-label-ui font-label-ui text-outline uppercase block">Default Currency</label>
+<select class="w-full bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-secondary px-0 py-2 text-body-md text-on-surface font-body-md">
+<option>TZS (Tanzanian Shilling)</option>
+<option>USD (US Dollar)</option>
+<option>EUR (Euro)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-label-ui font-label-ui text-outline uppercase block">Timezone</label>
+<select class="w-full bg-transparent border-0 border-b-2 border-primary focus:ring-0 focus:border-secondary px-0 py-2 text-body-md text-on-surface font-body-md">
+<option>Africa/Dar_es_Salaam (EAT)</option>
+<option>UTC</option>
+</select>
+</div>
+</div>
+<div class="bg-surface-container p-6 border-l-4 border-secondary">
+<h4 class="text-label-ui font-label-ui text-primary uppercase mb-4">Feature Toggles</h4>
+<div class="space-y-4">
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="form-checkbox text-secondary rounded focus:ring-secondary border-outline" type="checkbox"/>
+<span class="text-body-md font-body-md text-on-surface">Enable Public Leaderboards</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input checked="" class="form-checkbox text-secondary rounded focus:ring-secondary border-outline" type="checkbox"/>
+<span class="text-body-md font-body-md text-on-surface">Allow Team Registrations</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer">
+<input class="form-checkbox text-secondary rounded focus:ring-secondary border-outline" type="checkbox"/>
+<span class="text-body-md font-body-md text-on-surface">Require Medical Clearance Upload</span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Mobile Bottom Nav -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 bg-primary border-t-2 border-secondary shadow-lg lg:hidden">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 w-1/4 h-full hover:bg-primary-container" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="text-label-ui font-label-ui text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 w-1/4 h-full hover:bg-primary-container" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="calendar_today">calendar_today</span>
+<span class="text-label-ui font-label-ui text-[10px]">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 w-1/4 h-full hover:bg-primary-container" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="fitness_center">fitness_center</span>
+<span class="text-label-ui font-label-ui text-[10px]">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary w-1/4 h-full bg-primary-container scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="account_circle">account_circle</span>
+<span class="text-label-ui font-label-ui text-[10px]">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HQ Ops | Registration Management - Tour de Rotary DSM</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#825500",
+                        "on-surface-variant": "#424750",
+                        "surface-container": "#eeeeee",
+                        "on-secondary-fixed": "#291800",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#6b4500",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-bright": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "secondary-fixed-dim": "#ffb950",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#ffd9de",
+                        "outline": "#737781",
+                        "on-primary-fixed-variant": "#014788",
+                        "surface-container-highest": "#e2e2e2",
+                        "secondary-container": "#feae23",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-tint": "#2b5fa1",
+                        "on-primary-container": "#87b6fe",
+                        "tertiary-container": "#8f0037",
+                        "surface-variant": "#e2e2e2",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-surface": "#1a1c1c",
+                        "tertiary": "#650025",
+                        "on-background": "#1a1c1c",
+                        "primary-container": "#004687",
+                        "surface-dim": "#dadada",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "outline-variant": "#c2c6d2",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-primary": "#ffffff",
+                        "primary": "#00305f",
+                        "secondary-fixed": "#ffddb3",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "surface-container-low": "#f3f3f4",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#a7c8ff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#001b3b",
+                        "on-tertiary-fixed": "#400014"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Anton"],
+                        "display-hero": ["Anton"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "data-metric": ["Anton"],
+                        "body-md": ["Hanken Grotesk"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-lg": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>.clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2vw), 0 100%)
+    }
+.clip-diagonal-reverse {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 2vw))
+    }
+.wave-pattern {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDTMgVCbqp1GRs1-2vlmGwi_kV_wzrf4FVJKIkDMTsABrZDDdqloRJlYLuly5zXuyWViUOF_usbLwo5quysTWAAY0DT3pB0pQp103QufOUPBNQzuSksasWgdM4POpW00y2JQu0-1JKH8TYp5lCRSf99EVCbwmfAXAvWiE3u68X5CJfPw_xWbEeb6RI0lm40qbT0EQZ9C3hZaGd_8kBqav17MtjnqmkPB5dwy8XsRIYlpTJbfhJyso0yaQ);
+    background-size: cover;
+    background-position: center
+    }
+/* Custom scrollbar for table container */
+.custom-scrollbar::-webkit-scrollbar {
+    height: 6px;
+    width: 6px
+    }
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: theme("colors.surface-container-high")
+    }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: theme("colors.outline-variant");
+    border-radius: theme("borderRadius.full")
+    }
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+    }
+.material-symbols-outlined.filled {
+    font-variation-settings: "FILL" 1
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased selection:bg-secondary selection:text-on-secondary min-h-screen flex flex-col lg:flex-row">
+<!-- SideNavBar (Desktop) -->
+<nav class="hidden lg:flex flex-col h-screen fixed left-0 top-0 pt-20 h-full w-64 border-r border-outline-variant bg-surface-container-lowest dark:bg-surface-container-lowest text-primary dark:text-primary z-40">
+<div class="px-6 mb-8">
+<h2 class="text-headline-md font-headline-lg text-primary uppercase tracking-tighter mb-1">Rider Profile</h2>
+<p class="text-label-ui font-label-ui text-on-surface-variant">Elite Tier</p>
+</div>
+<div class="flex-1 overflow-y-auto px-4 space-y-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none bg-secondary text-on-secondary font-bold translate-x-1 transition-transform text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined filled">event</span>
+<span>My Events</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined">directions_bike</span>
+<span>Training</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span>Orders</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined">token</span>
+<span>Collectibles</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined">group_add</span>
+<span>Referrals</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-none text-on-surface-variant hover:bg-surface-container-low hover:bg-primary hover:text-on-primary transition-all duration-200 text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined">person</span>
+<span>Profile</span>
+</a>
+</div>
+<div class="p-4 mt-auto border-t border-outline-variant space-y-2">
+<button class="w-full bg-secondary text-on-secondary font-headline-md text-body-md py-3 uppercase tracking-wider hover:bg-primary transition-colors mb-4 rounded-none">
+                Log Ride
+            </button>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors text-label-ui font-label-ui" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span>Support</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 lg:ml-64 relative min-h-screen flex flex-col pb-20 lg:pb-0">
+<!-- Header / Page Title -->
+<header class="px-margin-mobile md:px-margin-desktop py-8 md:py-12 bg-surface-container-lowest border-b-2 border-primary sticky top-0 z-30">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<div>
+<p class="text-label-ui font-label-ui text-secondary mb-2 uppercase tracking-widest">Admin Dashboard</p>
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg-mobile md:font-headline-lg text-primary uppercase">Registration Mgt</h1>
+</div>
+<div class="flex flex-wrap gap-3 w-full md:w-auto">
+<button class="flex-1 md:flex-none px-6 py-3 border-2 border-primary text-primary font-body-md text-label-ui font-bold hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">download</span>
+                        EXPORT CSV
+                    </button>
+<button class="flex-1 md:flex-none px-6 py-3 bg-primary text-on-primary font-headline-md text-label-ui uppercase tracking-wider hover:bg-secondary transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                        NEW ENTRY
+                    </button>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="flex-1 px-margin-mobile md:px-margin-desktop py-8 md:py-12 max-w-[1600px] mx-auto w-full">
+<!-- Bento Analytics Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-12">
+<!-- Stat Card 1 -->
+<div class="bg-surface-container-lowest p-6 border border-outline-variant relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 text-surface-container-highest opacity-50 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined !text-[120px]">groups</span>
+</div>
+<div class="relative z-10">
+<p class="text-label-ui font-label-ui text-on-surface-variant mb-2">TOTAL REGISTRATIONS</p>
+<p class="text-data-metric font-data-metric text-primary">1,248</p>
+<p class="text-label-ui font-label-ui text-secondary mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12% this week
+                        </p>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-primary p-6 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 text-primary-container opacity-50 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined !text-[120px]">payments</span>
+</div>
+<div class="relative z-10">
+<p class="text-label-ui font-label-ui text-on-primary-container mb-2">REVENUE CLEARED</p>
+<p class="text-data-metric font-data-metric text-on-primary">TZS 45M</p>
+<p class="text-label-ui font-label-ui text-tertiary-fixed-dim mt-2 flex items-center gap-1">
+                            89% Collection Rate
+                        </p>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-tertiary p-6 relative overflow-hidden group col-span-1 md:col-span-2 xl:col-span-1">
+<div class="absolute -right-4 -top-4 text-tertiary-container opacity-50 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined !text-[120px]">warning</span>
+</div>
+<div class="relative z-10">
+<p class="text-label-ui font-label-ui text-tertiary-fixed-dim mb-2">PENDING ACTIONS</p>
+<p class="text-data-metric font-data-metric text-on-tertiary">42</p>
+<p class="text-label-ui font-label-ui text-on-tertiary mt-2">Requires manual approval</p>
+</div>
+</div>
+<!-- Stat Card 4 -->
+<div class="bg-secondary-container p-6 relative overflow-hidden group col-span-1 md:col-span-2 xl:col-span-1">
+<div class="absolute -right-4 -top-4 text-secondary opacity-20 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined !text-[120px]">how_to_reg</span>
+</div>
+<div class="relative z-10">
+<p class="text-label-ui font-label-ui text-on-secondary-container mb-2">CHECK-IN RATE</p>
+<p class="text-data-metric font-data-metric text-on-secondary-container">0%</p>
+<p class="text-label-ui font-label-ui text-on-secondary-container mt-2">Event starts in 14 days</p>
+</div>
+</div>
+</div>
+<!-- Filters & Search Toolbar -->
+<div class="bg-surface-container-lowest p-6 border-t-4 border-primary shadow-sm mb-6 flex flex-col xl:flex-row gap-6 justify-between items-start xl:items-center">
+<div class="flex-1 w-full max-w-2xl relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant px-12 py-4 font-label-ui text-body-md focus:outline-none focus:border-primary focus:bg-surface-container-lowest transition-colors placeholder:text-outline" placeholder="Search by name, email, or Reg ID..." type="text"/>
+</div>
+<div class="flex flex-wrap gap-4 w-full xl:w-auto">
+<!-- Custom Select: Status -->
+<div class="relative group min-w-[160px]">
+<select class="w-full appearance-none bg-transparent border-b-2 border-outline-variant px-0 py-2 pr-8 font-label-ui text-on-surface focus:outline-none focus:border-primary cursor-pointer">
+<option value="">All Statuses</option>
+<option value="paid">Paid</option>
+<option value="pending">Pending</option>
+<option value="flagged">Flagged</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">arrow_drop_down</span>
+</div>
+<!-- Custom Select: Tier -->
+<div class="relative group min-w-[160px]">
+<select class="w-full appearance-none bg-transparent border-b-2 border-outline-variant px-0 py-2 pr-8 font-label-ui text-on-surface focus:outline-none focus:border-primary cursor-pointer">
+<option value="">All Tiers</option>
+<option value="elite">Elite Rider</option>
+<option value="fun">Fun Ride</option>
+<option value="virtual">Virtual</option>
+</select>
+<span class="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">arrow_drop_down</span>
+</div>
+<button class="text-primary hover:text-secondary transition-colors flex items-center gap-2 font-label-ui">
+<span class="material-symbols-outlined">filter_list</span>
+                        More Filters
+                    </button>
+</div>
+</div>
+<!-- Bulk Actions Bar (Hidden by default, shown when items selected) -->
+<div class="bg-primary-container text-on-primary-container px-6 py-3 mb-6 flex justify-between items-center opacity-100 transition-opacity">
+<div class="flex items-center gap-4">
+<span class="font-label-ui font-bold">3 Selected</span>
+<div class="h-4 w-px bg-on-primary-container/30"></div>
+<button class="hover:text-on-primary transition-colors font-label-ui flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span> Approve
+                    </button>
+<button class="hover:text-on-primary transition-colors font-label-ui flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">mail</span> Message
+                    </button>
+</div>
+<button class="hover:text-on-primary transition-colors font-label-ui">
+                    Clear Selection
+                </button>
+</div>
+<!-- Data Table Container -->
+<div class="bg-surface-container-lowest border border-outline-variant overflow-x-auto custom-scrollbar">
+<table class="w-full text-left border-collapse min-w-[1000px]">
+<thead>
+<tr class="border-b-2 border-primary bg-surface-container-low">
+<th class="p-4 w-12">
+<input class="form-checkbox h-5 w-5 text-primary border-outline rounded-none focus:ring-primary focus:ring-offset-0 bg-transparent cursor-pointer checked:bg-primary" type="checkbox"/>
+</th>
+<th class="p-4 font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider">Participant</th>
+<th class="p-4 font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider">Activity/Tier</th>
+<th class="p-4 font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider">Payment Status</th>
+<th class="p-4 font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider">Reg Date</th>
+<th class="p-4 font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider">Check-in</th>
+<th class="p-4 font-label-ui text-label-ui text-on-surface-variant uppercase tracking-wider text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/50">
+<!-- Row 1 (Selected/Flagged) -->
+<tr class="hover:bg-surface-bright transition-colors bg-surface-bright">
+<td class="p-4">
+<input checked="" class="form-checkbox h-5 w-5 text-primary border-outline rounded-none focus:ring-primary focus:ring-offset-0 bg-transparent cursor-pointer checked:bg-primary" type="checkbox"/>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 object-cover bg-surface-variant" data-alt="A close up portrait of an athletic cyclist wearing sunglasses and a helmet, lit by bright outdoor sunlight. The background is slightly blurred showing a coastal road. High contrast, editorial photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQCHbJ3N-0XK458JeQjwhCoSir1_cusudCVI75MMFlKiEE-zeNObjY2SeJb86A7e0mqwb4pfFe32mLzDpKvzeGc3ohHEVnjiUKeL9eZS8MZhdTrAERzjQdnK2hCPlvWmIKK1-qs9nONI8v4VjCDpRqc5YcrZgMYqFLZDtR3MrTL1OtTZnLa38kB0PGWBM3EIe01Dqcl6RXxF4f0spC-Tmcm94DxsmOMAJOouYCdiMB2bdDYilvmOWxQw"/>
+<div>
+<p class="font-body-md font-bold text-on-surface">Elena Rodriguez</p>
+<p class="font-label-ui text-xs text-on-surface-variant">ID: TDR-8892 • F, 28-35</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">directions_bike</span>
+<span class="font-label-ui text-sm">Elite 100km</span>
+</div>
+</td>
+<td class="p-4">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-error-container text-on-error-container text-xs font-label-ui border border-error/20">
+<span class="material-symbols-outlined text-[14px]">error</span>
+                                    Payment Failed
+                                </div>
+</td>
+<td class="p-4 font-label-ui text-sm text-on-surface-variant">
+                                Oct 12, 2023<br/><span class="text-xs opacity-70">14:22 EAT</span>
+</td>
+<td class="p-4">
+<span class="material-symbols-outlined text-outline-variant">horizontal_rule</span>
+</td>
+<td class="p-4 text-right">
+<button class="text-on-surface-variant hover:text-primary p-2 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="p-4">
+<input class="form-checkbox h-5 w-5 text-primary border-outline rounded-none focus:ring-primary focus:ring-offset-0 bg-transparent cursor-pointer checked:bg-primary" type="checkbox"/>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center font-headline-md text-sm">
+                                        JM
+                                    </div>
+<div>
+<p class="font-body-md font-bold text-on-surface">James Mkapa</p>
+<p class="font-label-ui text-xs text-on-surface-variant">ID: TDR-8893 • M, 45-55</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">pedal_bike</span>
+<span class="font-label-ui text-sm">Fun Ride 20km</span>
+</div>
+</td>
+<td class="p-4">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-[#e6f4ea] text-[#137333] border border-[#137333]/20 text-xs font-label-ui">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+                                    Cleared (M-Pesa)
+                                </div>
+</td>
+<td class="p-4 font-label-ui text-sm text-on-surface-variant">
+                                Oct 13, 2023<br/><span class="text-xs opacity-70">09:15 EAT</span>
+</td>
+<td class="p-4">
+<span class="material-symbols-outlined text-outline-variant">horizontal_rule</span>
+</td>
+<td class="p-4 text-right">
+<button class="text-on-surface-variant hover:text-primary p-2 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 (Pending) -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="p-4">
+<input class="form-checkbox h-5 w-5 text-primary border-outline rounded-none focus:ring-primary focus:ring-offset-0 bg-transparent cursor-pointer checked:bg-primary" type="checkbox"/>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 object-cover bg-surface-variant" data-alt="A portrait of a young female runner smiling brightly in a coastal setting. She is wearing a bright pink athletic top. The lighting is warm golden hour sunlight. Editorial composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG5v8xXEaB4ayusgwL7dxNa9x2KG6YTZpaFuaR8QCNYk4HggAhlpLvB1z83nes5fTZ6K6shv-exB6azYAuHAfxxnu-EoHDQ3yuyA4_RFbXqVqiZ5pCM1vu0jn-_bAykwQR47pPOob2fWz_U7_rK4wjFDZEcDbQYoTBOAH26qX0iW4_BoaaDbH_DEpC0FVK8C0TsUIARx_IMdflA9OQZMOVxLrVa_ws5tiGOXA_7970YaRHYpMCe0LUfA"/>
+<div>
+<p class="font-body-md font-bold text-on-surface">Sarah Johnson</p>
+<p class="font-label-ui text-xs text-on-surface-variant">ID: TDR-8894 • F, 18-25</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-lg">directions_run</span>
+<span class="font-label-ui text-sm">Charity Walk 5km</span>
+</div>
+</td>
+<td class="p-4">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container-high text-on-surface-variant text-xs font-label-ui border border-outline/20">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+                                    Awaiting Bank Transfer
+                                </div>
+</td>
+<td class="p-4 font-label-ui text-sm text-on-surface-variant">
+                                Oct 13, 2023<br/><span class="text-xs opacity-70">11:45 EAT</span>
+</td>
+<td class="p-4">
+<span class="material-symbols-outlined text-outline-variant">horizontal_rule</span>
+</td>
+<td class="p-4 text-right">
+<button class="text-on-surface-variant hover:text-primary p-2 transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="mt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-ui font-label-ui text-on-surface-variant">Showing 1-10 of 1,248 entries</p>
+<div class="flex gap-2">
+<button class="w-10 h-10 border-2 border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-colors text-on-surface-variant disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 border-2 border-primary bg-primary text-on-primary flex items-center justify-center font-label-ui font-bold">
+                        1
+                    </button>
+<button class="w-10 h-10 border-2 border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-colors text-on-surface-variant font-label-ui">
+                        2
+                    </button>
+<button class="w-10 h-10 border-2 border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-colors text-on-surface-variant font-label-ui">
+                        3
+                    </button>
+<button class="w-10 h-10 border-2 border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-16 lg:hidden bg-primary dark:bg-primary border-t-2 border-secondary shadow-lg">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container text-label-ui font-label-ui w-full h-full" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container text-label-ui font-label-ui w-full h-full" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-[10px] mt-1">Events</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-60 active:bg-primary-container text-label-ui font-label-ui w-full h-full" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<span class="text-[10px] mt-1">Training</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary active:bg-primary-container scale-95 transition-transform text-label-ui font-label-ui w-full h-full" href="#">
+<span class="material-symbols-outlined filled">account_circle</span>
+<span class="text-[10px] mt-1 font-bold">Profile</span>
+</a>
+</nav>
+</body></html>

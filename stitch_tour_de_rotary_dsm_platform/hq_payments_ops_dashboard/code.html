@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Athletic HQ - Payments Command Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;800&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface": "#1a1c1c",
+                        "on-surface-variant": "#424750",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-tint": "#2b5fa1",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-container-low": "#f3f3f4",
+                        "outline-variant": "#c2c6d2",
+                        "on-tertiary-fixed-variant": "#900038",
+                        "on-secondary-fixed-variant": "#624000",
+                        "on-primary-fixed-variant": "#014788",
+                        "secondary-container": "#feae23",
+                        "primary-container": "#004687",
+                        "tertiary-fixed": "#ffd9de",
+                        "inverse-surface": "#2f3131",
+                        "inverse-primary": "#a7c8ff",
+                        "primary": "#00305f",
+                        "surface-dim": "#dadada",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#1a1c1c",
+                        "secondary": "#825500",
+                        "on-tertiary-container": "#ff95a8",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#650025",
+                        "background": "#f9f9f9",
+                        "on-primary-fixed": "#001b3b",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#6b4500",
+                        "secondary-fixed-dim": "#ffb950",
+                        "tertiary-fixed-dim": "#ffb2be",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "outline": "#737781",
+                        "secondary-fixed": "#ffddb3",
+                        "on-primary-container": "#87b6fe",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "tertiary-container": "#8f0037",
+                        "on-tertiary-fixed": "#400014",
+                        "on-secondary-fixed": "#291800",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9f9f9",
+                        "on-secondary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "diagonal-offset": "12deg",
+                        "margin-desktop": "64px"
+                    },
+                    fontFamily: {
+                        "data-metric": ["Anton"],
+                        "label-ui": ["JetBrains Mono"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Anton"],
+                        "display-hero": ["Anton"],
+                        "headline-lg-mobile": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"]
+                    },
+                    fontSize: {
+                        "data-metric": ["48px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "label-ui": ["14px", { "lineHeight": "100%", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }],
+                        "headline-lg": ["64px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "display-hero": ["96px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["40px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }]
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        .clip-diagonal { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), 0 100%); }
+        .clip-diagonal-reverse { clip-path: polygon(0 0, 100% 20px, 100% 100%, 0 100%); }
+        .clip-diagonal-card { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 0 100%); }
+        .wave-pattern {
+            background-image: repeating-radial-gradient(circle at 0 0, transparent 0, transparent 20px, rgba(0,48,95,0.03) 20px, rgba(0,48,95,0.03) 40px);
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #c2c6d2; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #737781; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-primary dark:bg-primary text-on-primary dark:text-on-primary fixed top-0 w-full z-50 border-b-2 border-secondary flat no shadows flex justify-between items-center h-16 px-gutter">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md uppercase tracking-tighter text-secondary">Athletic HQ</span>
+</div>
+<div class="flex-1 flex justify-end mr-4">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-primary opacity-60 text-sm">search</span>
+<input class="w-full bg-primary-container text-on-primary placeholder:text-on-primary/60 border-none rounded-sm pl-9 pr-4 py-1.5 focus:ring-1 focus:ring-secondary font-label-ui text-label-ui" placeholder="Search..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined cursor-pointer active:opacity-90 hover:bg-primary-container transition-colors p-2 rounded-sm" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined cursor-pointer active:opacity-90 hover:bg-primary-container transition-colors p-2 rounded-sm" data-icon="settings">settings</span>
+<span class="material-symbols-outlined cursor-pointer active:opacity-90 hover:bg-primary-container transition-colors p-2 rounded-sm" data-icon="cloud_done">cloud_done</span>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="bg-surface-container-lowest dark:bg-inverse-surface text-primary dark:text-inverse-primary fixed left-0 top-16 bottom-0 w-64 z-40 border-r-2 border-on-surface flat no shadows flex flex-col h-full py-unit hidden md:flex">
+<div class="px-gutter py-6 mb-4 border-b border-surface-container-high">
+<div class="flex items-center gap-3 mb-2">
+<img alt="User profile" class="w-10 h-10 rounded-full border border-primary object-cover" data-alt="A small circular avatar placeholder image with a minimalist high-contrast design in navy and white. The aesthetic is clean and professional, suited for a dashboard interface. The lighting is neutral and even. The mood is corporate and efficient." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe91_kniab9hkmEqORq8-rqqF0ZJBFxx29PQWLda80l1KTZdilMrIpAC0cWYt4yRvhJSyGSksIXnqE7mTqSshVv03dJH55C7P9h7qYI3nG4JNyJK-dTO6KKAPvpzo7lLaaacffF4haIhwCapBp-Img2cHMxo1PWygwA-hDNH39msbo2dP6BYzs7WoiJghRsR3YIUb3TtP8G_3gxey6BEmBCBF_ghCOMA3fUCyAYRRen9ocw_XaV_18Qw"/>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary text-[20px] leading-tight">Command Center</h2>
+<p class="font-label-ui text-label-ui text-on-surface-variant text-[10px]">Phase: Live Event</p>
+</div>
+</div>
+<button class="w-full mt-4 bg-tertiary text-on-tertiary font-label-ui text-label-ui py-2 uppercase tracking-wide hover:bg-tertiary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">warning</span> Emergency Broadcast
+            </button>
+</div>
+<div class="flex-1 overflow-y-auto px-unit">
+<a class="flex items-center gap-4 px-4 py-3 mb-1 font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-high transition-transform duration-150 active:scale-95 rounded-sm" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> HQ Overview
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 mb-1 font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-high transition-transform duration-150 active:scale-95 rounded-sm" href="#">
+<span class="material-symbols-outlined" data-icon="how_to_reg">how_to_reg</span> Registrations
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 mb-1 font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-high transition-transform duration-150 active:scale-95 rounded-sm" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span> Inventory
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 mb-1 font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-high transition-transform duration-150 active:scale-95 rounded-sm" href="#">
+<span class="material-symbols-outlined" data-icon="directions_bike">directions_bike</span> Activities
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 mb-1 font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-high transition-transform duration-150 active:scale-95 rounded-sm" href="#">
+<span class="material-symbols-outlined" data-icon="video_library">video_library</span> Content
+            </a>
+<a class="flex items-center gap-4 px-4 py-3 mb-1 font-label-ui text-label-ui uppercase bg-secondary text-on-secondary font-bold border-l-4 border-primary transition-transform duration-150 active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span> Payments
+            </a>
+</div>
+<div class="px-unit pt-4 border-t border-surface-container-high mt-auto">
+<a class="flex items-center gap-4 px-4 py-2 font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-highest transition-all rounded-sm" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="help">help</span> Support
+            </a>
+<a class="flex items-center gap-4 px-4 py-2 font-label-ui text-label-ui uppercase text-on-surface-variant hover:bg-surface-container-highest transition-all rounded-sm" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="analytics">analytics</span> System Status
+            </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-16 min-h-screen flex flex-col relative z-10 wave-pattern">
+<!-- Header Section -->
+<div class="px-margin-desktop py-12 relative overflow-hidden bg-primary text-on-primary clip-diagonal">
+<div class="absolute right-0 top-0 w-1/3 h-full opacity-10 pointer-events-none" data-alt="A highly detailed, abstract rotary gear watermark pattern. The design is industrial and geometric, rendered in deep navy and subtle off-white tones. The lighting is flat, emphasizing the graphic precision of the shapes. The mood is mechanical, fast, and engineered, fitting an elite sports performance aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAWIjBUBaF4UaH2cLTF2xuarEsxLyj2gEGusWj4Rlck12lsMDcUVtDfp2PPS01g2V4hIq5kjAXH9kNNGcLd4kEJqoDS9BZWH6DkcxyfE8x0H6ujwdYBLc5KmwfxkNLF5niUyPuzC5KWNpFHUoUU5ccIcWsyJCFUge1RQLeMaOfa34c_YxLT35G6u9YIkbCBu6f-yS8QajX8IuF4eeg8GvItEn0P7DxbpgJTL2ralMW1wqjGLAFOFY7auQ')"></div>
+<div class="relative z-10 flex justify-between items-end">
+<div>
+<h1 class="font-display-hero text-display-hero text-on-primary">PAYMENT OPS</h1>
+<p class="font-label-ui text-label-ui text-secondary-fixed mt-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">sync</span> LAST SYNC: JUST NOW
+                    </p>
+</div>
+<button class="bg-secondary text-on-secondary font-data-metric text-[24px] uppercase px-8 py-3 rounded-none hover:bg-primary-fixed-dim hover:text-primary transition-colors flex items-center gap-2 border-2 border-secondary">
+<span class="material-symbols-outlined">download</span> EXPORT REPORT
+                </button>
+</div>
+</div>
+<!-- Split Screen Layout -->
+<div class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-0">
+<!-- Left Side: Transaction Feed (7 Cols) -->
+<div class="lg:col-span-7 bg-surface p-margin-desktop border-r-2 border-outline-variant relative z-20">
+<div class="flex justify-between items-center mb-8">
+<h2 class="font-headline-md text-headline-md text-primary uppercase">Live Feed</h2>
+<div class="flex gap-4">
+<span class="font-label-ui text-label-ui px-3 py-1 bg-surface-container-high border border-outline text-on-surface uppercase cursor-pointer hover:bg-surface-variant">All</span>
+<span class="font-label-ui text-label-ui px-3 py-1 bg-surface border border-outline text-on-surface uppercase cursor-pointer hover:bg-surface-variant">Failed</span>
+</div>
+</div>
+<!-- Feed Items -->
+<div class="space-y-4">
+<!-- Item 1 (Success) -->
+<div class="bg-surface-container-lowest p-6 border-l-4 border-secondary flex justify-between items-center hover:bg-surface-container-low transition-colors group cursor-pointer relative overflow-hidden">
+<div class="flex items-center gap-6 relative z-10">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+</div>
+<div>
+<p class="font-data-metric text-[24px] text-primary leading-none">TZS 150,000</p>
+<p class="font-label-ui text-label-ui text-on-surface-variant mt-1">TX-9982 • M-Pesa • Reg: Half-Marathon</p>
+</div>
+</div>
+<div class="text-right relative z-10">
+<span class="font-label-ui text-label-ui text-primary block">10:42 AM</span>
+<span class="font-label-ui text-label-ui text-on-surface-variant text-[10px] uppercase">Reconciled</span>
+</div>
+</div>
+<!-- Item 2 (Failed) -->
+<div class="bg-surface-container-lowest p-6 border-l-4 border-error flex justify-between items-center hover:bg-surface-container-low transition-colors group cursor-pointer relative overflow-hidden">
+<div class="flex items-center gap-6 relative z-10">
+<div class="w-12 h-12 bg-error-container flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-error">error</span>
+</div>
+<div>
+<p class="font-data-metric text-[24px] text-primary leading-none">TZS 75,000</p>
+<p class="font-label-ui text-label-ui text-on-surface-variant mt-1">TX-9981 • Airtel Money • Reg: 10K</p>
+</div>
+</div>
+<div class="text-right relative z-10">
+<span class="font-label-ui text-label-ui text-primary block">10:38 AM</span>
+<span class="font-label-ui text-label-ui text-error text-[10px] uppercase font-bold">Retry Failed (2/3)</span>
+</div>
+</div>
+<!-- Item 3 (Pending) -->
+<div class="bg-surface-container-lowest p-6 border-l-4 border-outline flex justify-between items-center hover:bg-surface-container-low transition-colors group cursor-pointer relative overflow-hidden">
+<div class="flex items-center gap-6 relative z-10">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-sm">
+<span class="material-symbols-outlined text-outline animate-spin">sync</span>
+</div>
+<div>
+<p class="font-data-metric text-[24px] text-primary leading-none">TZS 300,000</p>
+<p class="font-label-ui text-label-ui text-on-surface-variant mt-1">TX-9980 • Card • Merch: Elite Jersey</p>
+</div>
+</div>
+<div class="text-right relative z-10">
+<span class="font-label-ui text-label-ui text-primary block">10:35 AM</span>
+<span class="font-label-ui text-label-ui text-on-surface-variant text-[10px] uppercase">Awaiting Webhook</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: Analytics & Health (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-margin-desktop">
+<!-- KPIs -->
+<div class="grid grid-cols-2 gap-4 mb-12">
+<div class="bg-primary text-on-primary p-6 clip-diagonal-card">
+<span class="font-label-ui text-label-ui opacity-70 block mb-2 uppercase">Success Rate</span>
+<div class="font-data-metric text-data-metric text-secondary-fixed">98.4%</div>
+<div class="font-label-ui text-[12px] opacity-70 mt-2">↑ 0.2% vs yesterday</div>
+</div>
+<div class="border-2 border-primary p-6">
+<span class="font-label-ui text-label-ui text-primary block mb-2 uppercase">Pending Vol</span>
+<div class="font-data-metric text-[32px] text-primary">4.2M TZS</div>
+<div class="font-label-ui text-[12px] text-on-surface-variant mt-2">12 Active Threads</div>
+</div>
+</div>
+<!-- Provider Health -->
+<div class="mb-12">
+<h3 class="font-headline-md text-[24px] text-primary uppercase border-b-2 border-primary pb-2 mb-6 flex justify-between items-end">
+                        Provider Health
+                        <span class="font-label-ui text-label-ui text-secondary flex items-center gap-1"><div class="w-2 h-2 rounded-full bg-secondary"></div> ALL SYSTEMS GO</span>
+</h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-ui text-label-ui text-primary font-bold">PayMe Africa API</span>
+<span class="font-label-ui text-[12px] text-on-surface-variant">42ms ping</span>
+</div>
+<div class="w-full bg-surface-container h-2">
+<div class="bg-secondary h-2" style="width: 100%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-ui text-label-ui text-primary font-bold">Webhook Deliverability</span>
+<span class="font-label-ui text-[12px] text-on-surface-variant">99.9%</span>
+</div>
+<div class="w-full bg-surface-container h-2">
+<div class="bg-primary h-2" style="width: 95%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<span class="font-label-ui text-label-ui text-primary font-bold">MNO Gateways</span>
+<span class="font-label-ui text-[12px] text-error font-bold">Degraded (Airtel)</span>
+</div>
+<div class="w-full bg-surface-container h-2">
+<div class="bg-error h-2" style="width: 80%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Required -->
+<div class="bg-error-container text-on-error-container p-6">
+<h4 class="font-headline-md text-[20px] uppercase flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined">warning</span> Action Required
+                    </h4>
+<p class="font-body-md text-sm mb-4">3 transactions stuck in retry loop. Manual reconciliation required for batch #8892.</p>
+<button class="bg-error text-on-error font-label-ui text-label-ui px-4 py-2 uppercase tracking-wide hover:opacity-90">Review Batch</button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-dim dark:bg-surface-dim text-on-surface dark:text-on-surface w-full mt-auto border-t border-outline-variant flat flex justify-between items-center px-margin-desktop py-unit md:ml-64 relative z-50">
+<span class="font-label-ui text-label-ui text-primary">Athletic HQ</span>
+<div class="flex gap-6">
+<a class="font-label-ui text-label-ui text-on-surface-variant hover:text-primary underline-offset-4" href="#">Privacy Policy</a>
+<a class="font-label-ui text-label-ui text-on-surface-variant hover:text-primary underline-offset-4" href="#">Terms of Service</a>
+<a class="font-label-ui text-label-ui text-on-surface-variant hover:text-primary underline-offset-4" href="#">API Documentation</a>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm">© 2024 Elite Performance HQ. All rights reserved.</span>
+</footer>
+</body></html>
